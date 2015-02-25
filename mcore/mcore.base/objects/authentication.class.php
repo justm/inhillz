@@ -26,19 +26,9 @@ class Authentication {
     private $loggedIn = false;
     
     /**
-     * @var bool Definuje či je používateľ administrátorom
-     */
-    private $admin = false;
-    
-    /**
      * @var String Typ používateľskej role, kvôli funkciam s definovanými prístupovými právami
      */
     public $role = '';
-    
-    /**
-     * @var bool Definuje či je povolené používanie používateľkého účtu
-     */
-    private $banned = false;
     
     /**
      * @var String Používateľské meno
@@ -99,22 +89,16 @@ class Authentication {
         //Ak používatel existuje
         if( Mcore::base()->getObject('db')->getNumRows() == 1 ){
             $userData = Mcore::base()->getObject('db')->getArrayRows();
-            if( $userData[0]['banned'] != 0 ) {
-                $this->loggedIn = false;
-                $this->loginFailureReason = 'banned';
-                $this->banned = true;
-            }
-            else {
-                $this->loggedIn = true;
-                $this->userID = $uid;
-                
-                $this->admin = ( $userData[0]['admin'] == 1 )? true : false;
-                $this->role = $userData[0]['role_name'];
-                
-                $this->username = $userData[0]['username'];
-                $this->name = $userData[0]['name'];
-                $this->fullname = $userData[0]['name'] . ' ' . $userData[0]['lastname'];
-            }
+            
+            $this->loggedIn = true;
+            $this->userID = $uid;
+
+            $this->role = $userData[0]['role_name'];
+
+            $this->username = $userData[0]['username'];
+            $this->name = $userData[0]['name'];
+            $this->fullname = $userData[0]['name'] . ' ' . $userData[0]['lastname'];
+
         }
         else {
             $this->loggedIn = false;
@@ -142,21 +126,14 @@ class Authentication {
         //Ak používatel existuje
         if( Mcore::base()->getObject('db')->getNumRows() == 1 ){
             $userData = Mcore::base()->getObject('db')->getArrayRows();
-            if( $userData[0]['banned'] != 0 ) {
-                $this->loggedIn = false;
-                $this->loginFailureReason = 'banned';
-                $this->banned = true;
-            }
-            else {
-                $this->loggedIn = true;
-                $this->userID = $_SESSION['magnecomf_session_uid'] = $userData[0]['ID'];
-                
-                $this->admin = ( $userData[0]['admin'] == 1 )? true : false;
-                $this->role = $userData[0]['role_name'];
-                
-                $this->name = $userData[0]['name'];
-                $this->fullname = $userData[0]['name'] . ' ' . $userData[0]['lastname'];
-            }
+            
+            $this->loggedIn = true;
+            $this->userID = $_SESSION['magnecomf_session_uid'] = $userData[0]['ID'];
+
+            $this->role = $userData[0]['role_name'];
+
+            $this->name = $userData[0]['name'];
+            $this->fullname = $userData[0]['name'] . ' ' . $userData[0]['lastname'];
        }
        else {
            $this->loggedIn = false;
@@ -244,14 +221,6 @@ class Authentication {
      */
     public function isLoggedIn() {
         return $this->loggedIn;
-    }
-    
-    /**
-     * Metóda vráti logickú hodnotu, ktorá definuje, či má používateľ administrátorské práva
-     * @return bool
-     */
-    public function isAdmin() {
-        return $this->admin;
     }
     
     /**

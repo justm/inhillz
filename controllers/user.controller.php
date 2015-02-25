@@ -54,4 +54,10 @@ class UserController extends McontrollerCore{
             $this->render( 'login', array( 'user'=> $user ) );
         }
     }
+    
+    public function logout(){
+        
+        Mcore::base()->authenticate->logout();
+        Mcore::base()->urlresolver->redirect("");
+    }
 }

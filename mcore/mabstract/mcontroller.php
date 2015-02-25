@@ -80,6 +80,7 @@ abstract class McontrollerCore {
         }
         else{
             time_nanosleep( 2, 0 );
+            header($_SERVER['SERVER_PROTOCOL'] . ' 401 Unauthorized', true, 401);
             Mcore::base()->urlresolver->replaceByOther('admin/index/1');
         }
     }

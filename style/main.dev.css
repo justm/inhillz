@@ -95,3 +95,10 @@ body{
 .progress-bar-info{
     background-color: #33cc99;
 }
+.row>hr{
+    margin-right: 15px;
+    margin-left: 15px;
+}
+hr{
+    border-top-color: #e7e7e7;
+}

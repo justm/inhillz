@@ -6,7 +6,7 @@
  * @link http://www.folcon.sk/
  * @version 2.0
  * @since Subor je súčasťou aplikácie od verzie 2.0
- * @package controllers
+ * @package extend
  * 
  */
 
@@ -39,8 +39,33 @@ class Helper extends McontrollerCore{
                   
             return MCORE_PROJECT_PATH . $uploadPath . $file['name']; //Vytvorenie URL adresy
         }
-        $error[] = Mcore::t( 'Uploading Failed for file {FILE}', 'global', array( '{FILE}' => $file['name'] ) );
+        $error[] = Mcore::t( 'Uploading failed for file {FILE}', 'global', array( '{FILE}' => $file['name'] ) );
         return FALSE;
+    }
+    
+    /**
+     * Konverzia jednotiek
+     * @param mixed $value
+     * @param String $in_unit
+     * @param String $out_unit
+     * @return mixed
+     */
+    public static function convertUnits( $value, $in_unit, $out_unit ){
+                
+        $conversion = array(
+            'm/s' => array('km/h' => 3.6,
+                           'mph' =>  2.23693629
+                    ),
+            'm'   => array('km' => 0.001,
+                           'mi' => 0.00062137),
+        );
+        
+        if( isset($conversion[$in_unit]) && isset($conversion[$in_unit][$out_unit]) ){
+            
+            return $value * $conversion[$in_unit][$out_unit];
+        }
+        
+        return $value;
     }
     
     /**
@@ -51,5 +76,11 @@ class Helper extends McontrollerCore{
     public static function getHash( $string ){
         
         return sha1( "RW8DLG" . $string );
+    }
+    
+    public static function echoAlert( $message, $type ){
+        
+        echo
+            '<div class="alert ' . $type . '">' . $message . '</div>';
     }
 }

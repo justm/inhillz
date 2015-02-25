@@ -334,44 +334,50 @@ class Mcore {
      */
     public static function mErrorHandler($errno, $errstr, $errfile, $errline) {
         
-        echo '';
-        $eMsg = PHP_EOL . '[' . date('d.m.Y H:i:s') . '], IP:[' . $_SERVER['REMOTE_ADDR'] . '],' . PHP_EOL;
-        switch ($errno) {
-            case E_USER_ERROR:
-            case E_ERROR:
-                $eMsg .= "ERROR [$errno] $errstr" . PHP_EOL; 
-                $eMsg .= "Fatal error on line $errline in file $errfile" . PHP_EOL;
-                break;
-            case E_USER_WARNING:
-            case E_WARNING:
-                $eMsg .= "WARNING [$errno] $errstr" . PHP_EOL;
-                $eMsg .= "Warning on line $errline in file $errfile" . PHP_EOL;
-                break;
-            case E_USER_NOTICE:
-            case E_NOTICE:
-                $eMsg .=  "NOTICE [$errno] $errstr" . PHP_EOL;
-                $eMsg .= "Notice on line $errline in file $errfile" . PHP_EOL;
-                break;
+        if( self::$instance->getSetting( 'DEBUG_LOG_ERRORS' ) ){
+            echo '';
+            $eMsg = PHP_EOL . '[' . date('d.m.Y H:i:s') . '], IP:[' . $_SERVER['REMOTE_ADDR'] . '],' . PHP_EOL;
+            switch ($errno) {
+                case E_USER_ERROR:
+                case E_ERROR:
+                    $eMsg .= "ERROR [$errno] $errstr" . PHP_EOL; 
+                    $eMsg .= "Fatal error on line $errline in file $errfile" . PHP_EOL;
+                    break;
+                case E_USER_WARNING:
+                case E_WARNING:
+                    $eMsg .= "WARNING [$errno] $errstr" . PHP_EOL;
+                    $eMsg .= "Warning on line $errline in file $errfile" . PHP_EOL;
+                    break;
+                case E_USER_NOTICE:
+                case E_NOTICE:
+                    $eMsg .=  "NOTICE [$errno] $errstr" . PHP_EOL;
+                    $eMsg .= "Notice on line $errline in file $errfile" . PHP_EOL;
+                    break;
 
-            default:
-                $eMsg .= "UNKNOWN ERROR type: [$errno] $errstr" . PHP_EOL;
-                $eMsg .= "Unknown error on line $errline in file $errfile" . PHP_EOL;
-                break;
-        }
+                default:
+                    $eMsg .= "UNKNOWN ERROR type: [$errno] $errstr" . PHP_EOL;
+                    $eMsg .= "Unknown error on line $errline in file $errfile" . PHP_EOL;
+                    break;
+            }
 
-        ob_start();
-        debug_print_backtrace( DEBUG_BACKTRACE_IGNORE_ARGS );
-        $eMsg .= 'DEBUG TRACE: ' . ob_get_clean();
+            ob_start();
+            debug_print_backtrace( DEBUG_BACKTRACE_IGNORE_ARGS );
+            $eMsg .= 'DEBUG TRACE: ' . ob_get_clean();
 
-        $file = MCORE_BASE_PATH . 'mcore.base/logs/error.log.txt';
-        file_put_contents( $file, $eMsg, FILE_APPEND | LOCK_EX );
+            $file = self::$instance->getSetting( 'DEBUG_LOG_PATH' ) . 'error.log.txt';
+            
+            if( file_exists( $file ) ) {
+                file_put_contents( $file, $eMsg, FILE_APPEND | LOCK_EX );
+            }
 
-        if( $errno == E_ERROR || $errno == E_USER_ERROR ) {
-            $page = new PageController();
-            $page->error( 500, self::t('Unfortunately, an error occured'), TRUE );
+            if( $errno == E_ERROR || $errno == E_USER_ERROR ) {
+                $page = new PageController();
+                $page->error( 500, self::t('Unfortunately, an error occured'), TRUE );
+            }
         }
         //** Don't execute PHP internal error handler
         return true;
+        
     }
     
     /**
@@ -380,15 +386,21 @@ class Mcore {
      */
     public static function mExceptionHandler($e) {
 
-        $eMsg = '[' . date('d.m.Y H:i:s') . '], IP:[' . $_SERVER['REMOTE_ADDR'] . '],' . PHP_EOL;
-        $eMsg .= 'Caught exception: ' . $e->getMessage() . ', in file ' . $e->getFile() . ' on line ' . $e->getLine() . PHP_EOL;
-        $eMsg .= 'Debug trace: \n' . $e->getTraceAsString() . PHP_EOL . PHP_EOL; 
+        if( self::$instance->getSetting( 'DEBUG_LOG_EXCEPTIONS' ) ){
+            
+            $eMsg = '[' . date('d.m.Y H:i:s') . '], IP:[' . $_SERVER['REMOTE_ADDR'] . '],' . PHP_EOL;
+            $eMsg .= 'Caught exception: ' . $e->getMessage() . ', in file ' . $e->getFile() . ' on line ' . $e->getLine() . PHP_EOL;
+            $eMsg .= 'Debug trace: \n' . $e->getTraceAsString() . PHP_EOL . PHP_EOL; 
 
-        $file = MCORE_BASE_PATH . 'mcore.base/logs/exception.log.txt';
-        file_put_contents($file, $eMsg, FILE_APPEND | LOCK_EX);
-
-        $page = new PageController();
-        $page->error( 500, self::t('Unfortunately, an error occured'), TRUE );
+            $file = self::$instance->getSetting( 'DEBUG_LOG_PATH' ) . 'exception.log.txt';
+            
+            if( file_exists( $file ) ) {
+                file_put_contents( $file, $eMsg, FILE_APPEND | LOCK_EX );
+            }
+            
+            $page = new PageController();
+            $page->error( 500, self::t('Unfortunately, an error occured'), TRUE );
+        }
     }
     
     /**
@@ -407,6 +419,8 @@ class Mcore {
             
             if( array_key_exists( $string, $translates ) ){
                 return str_replace( array_keys($variables), array_values($variables), $translates[$string] );
+            }else{
+                return str_replace( array_keys($variables), array_values($variables), $string );
             }
         }
         return $string;

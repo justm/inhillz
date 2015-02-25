@@ -19,6 +19,14 @@
     ?>
     <div class="row">
     <?php echo MhtmlCore::beginForm('', 'POST', array('role' => 'form' ) ); ?>
+        <div class="form-group col-xs-12">
+            <?php echo MhtmlCore::mLabel( $data->workout, 'title'); ?>
+            <?php echo MhtmlCore::mTextInput( $data->workout, 'title', array('class' => 'form-control')); ?>
+        </div>
+        <div class="form-group col-xs-12">
+            <?php echo MhtmlCore::mLabel( $data->workout, 'description'); ?>
+            <?php echo MhtmlCore::mTextarea( $data->workout, 'description', array('rows' => 4 ,'class' => 'form-control')); ?>
+        </div>
         <div class="form-group col-xs-12 col-sm-6">
             <?php echo MhtmlCore::mLabel( $data->workout, 'id_activity'); ?>
             <?php echo MhtmlCore::mSelect( $data->workout, 'id_activity', $data->activities, array( 'class' => 'form-control' ) ); ?>
@@ -36,20 +44,20 @@
             <?php echo MhtmlCore::mTextInput( $data->workout, 'max_hr', array('class' => 'form-control')); ?>
         </div>
         <div class="form-group col-xs-12 col-sm-6">
+            <?php echo MhtmlCore::mLabel( $data->workout, 'distance'); ?>
+            <?php echo MhtmlCore::mTextInput( $data->workout, 'distance', array('class' => 'form-control')); ?>
+        </div>
+        <div class="form-group col-xs-12 col-sm-6">
             <?php echo MhtmlCore::mLabel( $data->workout, 'avg_speed'); ?>
             <?php echo MhtmlCore::mTextInput( $data->workout, 'avg_speed', array('class' => 'form-control')); ?>
         </div>
         <div class="form-group col-xs-12 col-sm-6">
-            <?php echo MhtmlCore::mLabel( $data->workout, 'distance'); ?>
-            <?php echo MhtmlCore::mTextInput( $data->workout, 'distance', array('class' => 'form-control')); ?>
-        </div>
-        <div class="form-group col-xs-12">
             <?php echo MhtmlCore::mLabel( $data->workout, 'date'); ?>
             <?php echo MhtmlCore::mTextInput( $data->workout, 'date', array('class' => 'form-control')); ?>
         </div>
-        <div class="form-group col-xs-12">
-            <?php echo MhtmlCore::mLabel( $data->workout, 'description'); ?>
-            <?php echo MhtmlCore::mTextarea( $data->workout, 'description', array('rows' => 4 ,'class' => 'form-control')); ?>
+        <div class="form-group col-xs-12 col-sm-6">
+            <?php echo MhtmlCore::mLabel( $data->workout, 'start_time'); ?>
+            <?php echo MhtmlCore::mTextInput( $data->workout, 'start_time', array('class' => 'form-control')); ?>
         </div>
         <div class="clearfix"></div>
         <div class="form-group  col-xs-12 col-sm-6 center-block ajaxForm-submit">

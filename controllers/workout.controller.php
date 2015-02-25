@@ -24,56 +24,17 @@ class WorkoutController extends McontrollerCore{
     public function accessRules() {
         
         return array(
-            '@' => array( 'manual', 'files' ),
+            
         );
     }
-    
+        
     /**
-     * Manuálne zadanie absolvovaného tréningu
+     * Prihlásenie používateľa
      */
-    protected function manual( $id = 0 ){
+    protected function update() {
         
-        $activities = Mcore::base()->db->queryPairs( "SELECT `id`, `name` FROM `activity`", 'id', 'name');
-        if( ( $workout = WorkoutModel::model()->findById( $id ) ) == NULL ){
-            $workout = new WorkoutModel();
-        }
-        
-        if( isset( $_POST['WorkoutModel'] ) ){
-            $workout->setAttributes( $_POST['WorkoutModel'] );
-            $workout->id_user = Mcore::base()->authenticate->getUserID();
-            
-            if( $workout->save( TRUE ) ){ 
-                Mcore::base()->userflash->setFlash( 'workout-saved', 'alert alert-success', Mcore::t('Your workout has been succesfully saved') );
-            }
-        }
-        $this->render('manual', array( 'workout' => $workout, 'activities' => $activities ) );
-    }
-    
-    /**
-     * Upload FIT file
-     */
-    protected function files(){
-        
-        if( !empty($_FILES) ){
-            $error = array();
-            
-            foreach($_FILES as $d => $file){
-                $user_id = Mcore::base()->authenticate->getUserID();
-                
-                $outputname   = $user_id . '_' . Helper::getHash($file['name']) . '.csv';
-                $file['name'] = $user_id . '_' . $file['name'];
-                $inputpath    = Helper::uploadFile($file, 'activities_raw', array('fit'), $error);
-                
-                //** Do the conversion
-                exec(
-                    'java -jar ' . MCORE_APP_PATH . 'libraries/FitCSVTool.jar -b '.
-                    "{$inputpath} " .
-                    MCORE_PROJECT_PATH . "uploads/activities_data/{$outputname}"
-                );
-            }
-        }
-        else{
-            $this->render('files', array() );
+        if( isset($_POST['WorkoutModel']) && isset($_POST['ajaxForm'])){
+            Mcore::var_dump($_POST);
         }
     }
 }

@@ -17,15 +17,15 @@
         echo MhtmlCore::displayFlash();
         //echo MhtmlCore::displayErrors($data->workout);
     ?>
-    <form method="POST" action="<?php echo ENTRY_SCRIPT_URL . 'workout/files/'?>">
+    <form method="POST" action="<?php echo ENTRY_SCRIPT_URL . 'upload/files/'?>">
         <div class="well">
             <input type="file" multiple="multiple" name="workout_files"/>
             <div class="progress hidden">
                 <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em;">0%</div>
             </div>
-        </div>        
+        </div>      
+        <p><?php echo Mcore::t('Works for multiple .fit files 25MB or smaller. Choose up to 25 files.')?></p>
     </form>
-    <p><?php echo Mcore::t('Works for multiple .fit files 25MB or smaller. Choose up to 25 files.')?></p>
 </div>
 
     

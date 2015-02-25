@@ -15,11 +15,13 @@ define( 'APP_URL', 'http://localhost/inhillz/'); //URL adresa frameworku a e-com
 define( 'ROOT_URL', 'http://localhost/inhillz/'); //URL adresa špecifického projektu
 define( 'ENTRY_SCRIPT_URL', 'http://localhost/inhillz/index.php/');
 
-define( 'UPLOADS_PATH', dirname( __FILE__ ) . '/../uploads/');
+define( 'UPLOADS_PATH', dirname( __FILE__ ) . '/uploads/');
 
 define( 'SU_ACCESSKEY', '93bbb6efef128b33fdf073dcb4e4257b' ); //super user access key
 
 define( 'MCORE_TRANSLATES_PATH', dirname(__FILE__) . '/others/translates/');
+
+define( 'EPOCH_TIMESTAMP_OFFSET', 631065600);
 
 /**
  * Pole s konfiguráciu, ktoré je počas behu applikácie dostupné cez Mcore:getSetting('configs')
@@ -32,6 +34,6 @@ $configs = array(
         'db_name' => 'mojtrening',
     ),
     
-    'default_timezone' => 'Europe/Bratislava',
+    'default_timezone' => 'UTC',
 );
 

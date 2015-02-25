@@ -95,8 +95,13 @@ class WorkoutModel extends MmodelCore{
                     'label'       => Mcore::t('Duration','workout'),
                     'placeholder' => Mcore::t('HH:MM:SS','workout'),
                 ),
+            'title' => array(
+                    'label'       => Mcore::t('Activity name','workout'),
+                    'placeholder' => Mcore::t('Name your activity','workout'),
+                ),
             'description' => array(
                     'label'       => Mcore::t('Description','workout'),
+                    'placeholder' => Mcore::t('How did it go?')
                 ),
             'feelings' => array(
                     'label'       => Mcore::t('Feelings','workout'),
@@ -136,6 +141,10 @@ class WorkoutModel extends MmodelCore{
             'date' => array(
                     'label'       => Mcore::t('Date','workout'),
                     'placeholder' => Mcore::t('YYYY-MM-DD','workout'),
+                ),
+            'start_time' => array(
+                    'label'       => Mcore::t('Time','workout'),
+                    'placeholder' => Mcore::t('HH:MM','workout'),
                 ),
             'id_activity' => array(
                     'label'       => Mcore::t('Activity','workout'),
