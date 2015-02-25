@@ -1,0 +1,97 @@
+/* 
+    Created on : August 24, 2014, 21:20:19 
+    Author  : Matus Macak FOLCON, s.r.o | matus.macak@folcon.sk
+    Version : Developer version of global stylesheet, overides bootstrap definitions
+*/ 
+
+/*
+    Colors:
+        #33cc99 - main green
+        #279d76 - border green
+
+        #279d76 - active green
+        #248f6b - border active green 
+        
+*/
+
+/*
+    Classes:
+        .clean - Removes borders background etc. for a clean look
+            use with: .btn
+         
+*/
+
+/*
+    View-port sizes
+    @media(max-width:767px){}
+    @media(min-width:768px){}
+    @media(min-width:992px){}
+    @media(min-width:1200px){}
+*/
+
+/* Bootstrap */
+@import url('bootstrap/css/bootstrap.css'); 
+
+html{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    position: relative;
+    overflow: auto;
+}
+body{
+    height: 100%;
+    background: #fafafa;
+}
+.center-block{
+    float: none;
+}
+.clean.btn{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* .navbar */
+.navbar{
+    border-radius: 0px;
+}
+.navbar-default{
+    background-color: #fff;
+    border-color: #e7e7e7;
+}
+
+/*ID-s*/
+#main-logo{
+    display: inline-block;
+    width: 198px;
+    background: transparent url('content.main/essentials.png') 15px 15px no-repeat;
+}
+
+/* TEMP - changed color to green */
+.btn-info{
+    background-color: #33cc99;
+    border-color: #279d76; 
+}
+.btn-info:hover, .btn-info:focus{
+    background-color: #279d76;
+    border-color: #248f6b; 
+}
+.form-control:focus{
+    border-color: #279d76;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(51, 204, 153, .4);
+}
+
+/* Bootstrap override */
+.input[type=file]{
+    height: 22px;
+}
+.progress{
+    height: 22px;
+    margin-bottom: 0;
+}
+.progress-bar-info{
+    background-color: #33cc99;
+}
