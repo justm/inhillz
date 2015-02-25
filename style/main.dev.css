@@ -94,6 +94,7 @@ body{
 }
 .progress-bar-info{
     background-color: #33cc99;
+<<<<<<< HEAD
 }
 .row>hr{
     margin-right: 15px;
@@ -101,4 +102,6 @@ body{
 }
 hr{
     border-top-color: #e7e7e7;
+=======
+>>>>>>> 58f5ff4abc7d58a1f4e5acaed5ed8d4c5530b5b4
 }
