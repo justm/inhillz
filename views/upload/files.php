@@ -17,7 +17,7 @@
         echo MhtmlCore::displayFlash();
         //echo MhtmlCore::displayErrors($data->workout);
     ?>
-    <form method="POST" action="<?php echo ENTRY_SCRIPT_URL . 'upload/files/'?>">
+    <form method="POST" action="<?php echo ENTRY_SCRIPT_URL . 'upload/files/'?>" class="ajaxForm">
         <div class="well">
             <input type="file" multiple="multiple" name="workout_files"/>
             <div class="progress hidden">

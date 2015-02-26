@@ -77,7 +77,13 @@ body{
 }
 .btn-info:hover, .btn-info:focus{
     background-color: #279d76;
-    border-color: #248f6b; 
+    border-color: #248f6b
+}
+.btn-info.disabled, .btn-info[disabled]
+/*, fieldset[disabled] .btn-info, .btn-info.disabled:hover, .btn-info[disabled]:hover, fieldset[disabled] .btn-info:hover, .btn-info.disabled:focus, .btn-info[disabled]:focus, fieldset[disabled] .btn-info:focus, .btn-info.disabled:active, .btn-info[disabled]:active, fieldset[disabled] .btn-info:active, .btn-info.disabled.active, .btn-info[disabled].active, fieldset[disabled] .btn-info.active */
+{
+    background-color: #99e5cc;
+    border: #279d76
 }
 .form-control:focus{
     border-color: #279d76;
@@ -94,7 +100,6 @@ body{
 }
 .progress-bar-info{
     background-color: #33cc99;
-<<<<<<< HEAD
 }
 .row>hr{
     margin-right: 15px;
@@ -102,6 +107,4 @@ body{
 }
 hr{
     border-top-color: #e7e7e7;
-=======
->>>>>>> 58f5ff4abc7d58a1f4e5acaed5ed8d4c5530b5b4
 }

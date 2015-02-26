@@ -16,16 +16,17 @@
     <div class="col-xs-12 col-md-6">
         <div class="row">
             <div class="form-group col-xs-12">
-                    <?php echo MhtmlCore::mLabel( $data->model, 'id_activity'); ?>
-                    <?php echo MhtmlCore::mSelect( $data->model, 'id_activity', $data->activities, array( 'class' => 'form-control' ) ); ?>
+                <?php echo MhtmlCore::mLabel( $data->model, 'id_activity'); ?>
+                <?php echo MhtmlCore::mSelect( $data->model, 'id_activity', $data->activities, array( 'class' => 'form-control'), TRUE ); ?>
+                <?php echo MhtmlCore::mHiddenInput($data->model, 'id', array(), TRUE); ?>
             </div>
             <div class="form-group col-xs-12">
                 <?php echo MhtmlCore::mLabel( $data->model, 'title'); ?>
-                <?php echo MhtmlCore::mTextInput( $data->model, 'title', array('class' => 'form-control')); ?>
+                <?php echo MhtmlCore::mTextInput( $data->model, 'title', array('class' => 'form-control'), TRUE); ?>
             </div>
             <div class="form-group col-xs-12">
                 <?php echo MhtmlCore::mLabel( $data->model, 'description'); ?>
-                <?php echo MhtmlCore::mTextarea( $data->model, 'description', array('rows' => 4 ,'class' => 'form-control')); ?>
+                <?php echo MhtmlCore::mTextarea( $data->model, 'description', array('rows' => 4 ,'class' => 'form-control'), TRUE); ?>
             </div>
         </div>
     </div>
@@ -35,7 +36,3 @@
     <div class="clearfix"></div>
     <hr/>
 </div>
-
-
-    
-    
