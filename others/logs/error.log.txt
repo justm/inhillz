@@ -1,0 +1,86 @@
+
+[25.02.2015 19:41:05], IP:[147.175.180.60],
+NOTICE [8] Undefined index: label
+Notice on line 196 in file /data/web/inhillz.com/sub/ride/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/data/web/inhillz.com/sub/ride/mcore/mabstract/mhtml.php:196]
+#1  MhtmlCore::mLabel() called at [/data/web/inhillz.com/sub/ride/views/user/login.php:24]
+#2  include(/data/web/inhillz.com/sub/ride/views/user/login.php) called at [/data/web/inhillz.com/sub/ride/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/data/web/inhillz.com/sub/ride/controllers/user.controller.php:54]
+#4  UserController->login() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/data/web/inhillz.com/sub/ride/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/data/web/inhillz.com/sub/ride/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 UploadController->manual() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:294]
+#14 Urlresolver->makeTowards() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:67]
+#15 Urlresolver->resolve() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/data/web/inhillz.com/sub/ride/index.php:44]
+
+[25.02.2015 19:41:05], IP:[147.175.180.60],
+NOTICE [8] Undefined index: placeholder
+Notice on line 321 in file /data/web/inhillz.com/sub/ride/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/data/web/inhillz.com/sub/ride/mcore/mabstract/mhtml.php:321]
+#1  MhtmlCore::createInput() called at [/data/web/inhillz.com/sub/ride/mcore/mabstract/mhtml.php:241]
+#2  MhtmlCore::mTextInput() called at [/data/web/inhillz.com/sub/ride/views/user/login.php:25]
+#3  include(/data/web/inhillz.com/sub/ride/views/user/login.php) called at [/data/web/inhillz.com/sub/ride/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/data/web/inhillz.com/sub/ride/controllers/user.controller.php:54]
+#5  UserController->login() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/data/web/inhillz.com/sub/ride/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/data/web/inhillz.com/sub/ride/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 UploadController->manual() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:294]
+#15 Urlresolver->makeTowards() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:67]
+#16 Urlresolver->resolve() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/data/web/inhillz.com/sub/ride/index.php:44]
+
+[25.02.2015 19:41:05], IP:[147.175.180.60],
+NOTICE [8] Undefined index: label
+Notice on line 196 in file /data/web/inhillz.com/sub/ride/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/data/web/inhillz.com/sub/ride/mcore/mabstract/mhtml.php:196]
+#1  MhtmlCore::mLabel() called at [/data/web/inhillz.com/sub/ride/views/user/login.php:28]
+#2  include(/data/web/inhillz.com/sub/ride/views/user/login.php) called at [/data/web/inhillz.com/sub/ride/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/data/web/inhillz.com/sub/ride/controllers/user.controller.php:54]
+#4  UserController->login() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/data/web/inhillz.com/sub/ride/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/data/web/inhillz.com/sub/ride/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 UploadController->manual() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:294]
+#14 Urlresolver->makeTowards() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:67]
+#15 Urlresolver->resolve() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/data/web/inhillz.com/sub/ride/index.php:44]
+
+[25.02.2015 19:41:05], IP:[147.175.180.60],
+NOTICE [8] Undefined index: placeholder
+Notice on line 321 in file /data/web/inhillz.com/sub/ride/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/data/web/inhillz.com/sub/ride/mcore/mabstract/mhtml.php:321]
+#1  MhtmlCore::createInput() called at [/data/web/inhillz.com/sub/ride/mcore/mabstract/mhtml.php:255]
+#2  MhtmlCore::mPasswordInput() called at [/data/web/inhillz.com/sub/ride/views/user/login.php:29]
+#3  include(/data/web/inhillz.com/sub/ride/views/user/login.php) called at [/data/web/inhillz.com/sub/ride/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/data/web/inhillz.com/sub/ride/controllers/user.controller.php:54]
+#5  UserController->login() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/data/web/inhillz.com/sub/ride/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/data/web/inhillz.com/sub/ride/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 UploadController->manual() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:294]
+#15 Urlresolver->makeTowards() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/objects/urlresolver.class.php:67]
+#16 Urlresolver->resolve() called at [/data/web/inhillz.com/sub/ride/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/data/web/inhillz.com/sub/ride/index.php:44]
