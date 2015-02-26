@@ -17,7 +17,6 @@
     <div class="form-group col-xs-12 col-sm-6 center-block">
         <button type="submit" class="btn btn-lg btn-info btn-block" data-loading-text="Processing..."><?php echo Mcore::t('Save & View'); ?></button>
     </div>
-    <?php echo MhtmlCore::endForm();?>
 </div>
 
 

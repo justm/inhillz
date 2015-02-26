@@ -63,7 +63,14 @@ class UploadController extends McontrollerCore{
      */
     protected function files(){
         
-        if( !empty($_FILES) ){
+        //** Forward request to update workouts
+        if( !empty($_POST['WorkoutModel']) ){
+            $w_controller = new WorkoutController();
+            $w_controller->update();
+        }
+        
+        //** Otherwise handle uploaded files 
+        elseif( !empty($_FILES) ){
             $activities   = Mcore::base()->db->queryPairs( "SELECT `id`, `name` FROM `activity`", 'id', 'name');
             $success      = 0;
                         
@@ -71,8 +78,18 @@ class UploadController extends McontrollerCore{
                 $error   = array();
                 $user_id = Mcore::base()->authenticate->getUserID();
                 
-                $outputname   = $user_id . '_' . Helper::getHash($file['name']) . '.csv';
-                $file['name'] = $user_id . '_' . $file['name'];
+                $outputname    = $user_id . '_' . Helper::getHash($file['name']) . '.csv';
+                $original_name = $file['name'];
+                $file['name']  = $user_id . '_' . $file['name'];
+                
+                //** Do not overwrite duplicates
+                if( ( $duplicate = WorkoutModel::model()->find("raw_file = '{$file['name']}'", 'id, title') ) != NULL ){
+                    Helper::echoAlert( 
+                            Mcore::t('File {FILENAME} is duplicate of <i>{DUPLICATE}</i>. If you still want to process this file, delete the original workout.', 'global', array('{FILENAME}' => $original_name, '{DUPLICATE}' => $duplicate->title) ), 
+                            'alert-danger');
+                    continue;
+                }
+                
                 $inputpath    = Helper::uploadFile($file, 'activities_raw', array('fit'), $error);
                 $outputpath   = MCORE_PROJECT_PATH . "uploads/activities_data/{$outputname}";
                 

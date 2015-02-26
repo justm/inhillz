@@ -1,7 +1,14 @@
 
+/**
+ * @var boolean fSubmitInProgress Defines weather was the form submited and script is waiting for a response
+ * spracovanie alebo nie
+ */
+var fSubmitInProgress = false;
+
 //** Direct file upload
 $(document).on("change",'input[type=file]', function(){
     
+    window["fSubmitInProgress"] = true;
     var $form  = $(this).parents("form");
     var $input = $(this);
     $input.addClass("hidden");
@@ -34,7 +41,9 @@ $(document).on("change",'input[type=file]', function(){
         processData: false,  // tell jQuery not to process the data
         contentType: false,   // tell jQuery not to set contentType
         complete: function ( jqXHR ){
-
+            
+            window["fSubmitInProgress"] = false;
+            
             if( jqXHR.status === 200 ){
                 $form.html(jqXHR.responseText);
             }
@@ -56,17 +65,11 @@ $(document).on("change",'input[type=file]', function(){
     }); 
 });
 
-/**
- * @var boolean fSubmitInProgress Defines weather was the form submited and script is waiting for a response
- * spracovanie alebo nie
- */
-var fSubmitInProgress = false;
-
 //Potrvrdenie formulárov ajaxom
 $(document).on( "submit", ".ajaxForm", function(event){
     
     event.preventDefault();
-    var $btn = $(this).button('loading');
+    var $btn = $(this).find("[type='submit']").button('loading');
     
     if( !window["fSubmitInProgress"] ) {
         window["fSubmitInProgress"] = true;
@@ -74,31 +77,14 @@ $(document).on( "submit", ".ajaxForm", function(event){
             
             var $thisForm = $(this);
             var data = $thisForm.serializeArray();  
-            var formData = {};
+            data.push({name: "ajaxForm", value: 1});
             
-            for (var i = 0; i < data.length; i++) {
-                var splitted = data[i].name.split("[");
-                var model = splitted.shift();
-                if( splitted[0] ){
-                    var name = splitted[0].split("]").shift();
-                    
-                    if( formData.hasOwnProperty(model) ){
-                        formData[model][name] = data[i].value;
-                    }else{
-                        formData[model] = {};
-                        formData[model][name] = data[i].value;
-                    }
-                }else{
-                    formData[model] = data[i].value;
-                }
-            }
-            formData["ajaxForm"] = 1;
         }catch(e) { }
         
         $.ajax({
             type:"POST",
             url: $thisForm.attr("action"),
-            data: formData,
+            data: data,
             crossDomain: true,
             xhrFields: {
                 withCredentials: true
@@ -106,12 +92,22 @@ $(document).on( "submit", ".ajaxForm", function(event){
             success: function( data, status, jqXHR ){
                 
                 window["fSubmitInProgress"] = false;
-                //$btn.button('reset');
+                $btn.button('reset');
+                $thisForm.trigger({type: "ajaxFormUpdate"});
+                
+                if( $thisForm.hasClass("permanentForm") ){ //Append the flash
+                    $thisForm.prepend(data);
+                }
+                else{ //Refresh whole content
+                    $thisForm.wrap("<span id=\"ajaxTarget-container\" />");
+                    $("#ajaxTarget-container").html("");
+                    $(data).hide().appendTo("#ajaxTarget-container").fadeIn().unwrap();
+                }
             },
             error: function(){
                 alert(window["submit_failed"]);
                 window["fSubmitInProgress"] = false;
-                //$btn.button('reset');
+                $btn.button('reset');
             }        
         });
     }

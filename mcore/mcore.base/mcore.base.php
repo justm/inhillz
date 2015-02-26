@@ -413,17 +413,15 @@ class Mcore {
     public static function t( $string, $file = 'global', $variables = array() ){
         
         $filePath = MCORE_TRANSLATES_PATH . MCORE_INTERFACELANG . '/' . $file . '.php';
-        
+                
         if( file_exists( $filePath ) ){
             include $filePath;
             
             if( array_key_exists( $string, $translates ) ){
                 return str_replace( array_keys($variables), array_values($variables), $translates[$string] );
-            }else{
-                return str_replace( array_keys($variables), array_values($variables), $string );
             }
         }
-        return $string;
+        return str_replace( array_keys($variables), array_values($variables), $string );
     }
     
     /**

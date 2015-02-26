@@ -74,8 +74,8 @@ class MhtmlCore {
         $snippet = '';
         $userflashHandler = Mcore::base()->getObject('userflash');
         
-       $flashes = $userflashHandler->getFlashes();
-       if( isset( $flashes ) && !empty( $flashes ) ){
+        $flashes = $userflashHandler->getFlashes();
+        if( !empty( $flashes ) ){
            
            foreach ( $flashes as $flash ){
                $snippet = '<div class="'.$flash->type.'">';
@@ -83,7 +83,7 @@ class MhtmlCore {
                $snippet .= '</div>';
            }
            
-       }
+        }
         return $snippet;
     }
     
@@ -193,13 +193,17 @@ class MhtmlCore {
      */
     public static function mLabel( $model, $attribute, $inputID = '', $options = array() ) {
         
-        $lbl = $model->getTags( $attribute )['label'];
-        $attrsRules = $model->rules();
+        $lbl = '';
         
-        if( empty( $lbl ) ){
+        if( method_exists($model, 'getTags') ){
+            $lbl = $model->getTags( $attribute )['label']; 
+        }
+        if( empty($lbl) ){
             $lbl = $model->labels()[$attribute];
         }
         
+        $attrsRules = $model->rules();
+                
         if( $inputID == '' ) {
             $label = '<label for="' . get_class($model) . '_'.$attribute . '" ';
         }
@@ -234,11 +238,12 @@ class MhtmlCore {
      * @param object $model
      * @param String $attribute
      * @param array $options [optional] 
+     * @param boolean $bulk [optional] Jeden vstup alebo pole []
      * @return String vytvorený HTML element
      */
-    public static function mTextInput( $model, $attribute, $options = array() ){
+    public static function mTextInput( $model, $attribute, $options = array(), $bulk = FALSE ){
         
-        return MhtmlCore::createInput('text', $model, $attribute, $options);
+        return MhtmlCore::createInput('text', $model, $attribute, $options, $bulk);
         
     }
     
@@ -248,11 +253,12 @@ class MhtmlCore {
      * @param object $model
      * @param String $attribute
      * @param array $options [optional] 
+     * @param boolean $bulk [optional] Jeden vstup alebo pole []
      * @return String vytvorený HTML element
      */
-    public static function mPasswordInput( $model, $attribute, $options = array() ){
+    public static function mPasswordInput( $model, $attribute, $options = array(), $bulk = FALSE ){
         
-        return MhtmlCore::createInput('password', $model, $attribute, $options);
+        return MhtmlCore::createInput('password', $model, $attribute, $options, $bulk);
     }
     
     /**
@@ -260,11 +266,12 @@ class MhtmlCore {
      * @param object $model
      * @param String $attribute
      * @param array $options [optional] 
+     * @param boolean $bulk [optional] Jeden vstup alebo pole []
      * @return String vytvorený HTML element
      */
-    public static function mHiddenInput( $model, $attribute, $options = array() ){
+    public static function mHiddenInput( $model, $attribute, $options = array(), $bulk = FALSE ){
         
-        return MhtmlCore::createInput('hidden', $model, $attribute, $options);
+        return MhtmlCore::createInput('hidden', $model, $attribute, $options, $bulk);
     }
     
     /**
@@ -272,23 +279,25 @@ class MhtmlCore {
      * @param object $model
      * @param String $attribute
      * @param array $options [optional] 
+     * @param boolean $bulk [optional] Jeden vstup alebo pole []
      * @return String vytvorený HTML element
      */
-    public static function mRadioButton( $model, $attribute, $options = array() ){
+    public static function mRadioButton( $model, $attribute, $options = array(), $bulk = FALSE ){
         
-        return MhtmlCore::createInput('radio', $model, $attribute, $options);
+        return MhtmlCore::createInput('radio', $model, $attribute, $options, $bulk);
     }
     
     /**
      * Statická metóda ktorá vytvorí input[type=checkbox]
      * @param object $model
      * @param String $attribute
-     * @param array $options [optional] 
+     * @param array $options [optional]
+     * @param boolean $bulk [optional] Jeden vstup alebo pole []
      * @return String vytvorený HTML element
      */
-    public static function mCheckbox( $model, $attribute, $options = array() ){
+    public static function mCheckbox( $model, $attribute, $options = array(), $bulk = FALSE ){
         
-        return MhtmlCore::createInput('checkbox', $model, $attribute, $options);
+        return MhtmlCore::createInput('checkbox', $model, $attribute, $options, $bulk);
     }
     
     /**
@@ -298,13 +307,19 @@ class MhtmlCore {
      * @param String $attribute
      * @param array $options [optional] 
      * @return String vytvorený HTML element
+     * 
+     * @todo Resolve current state: Bulk inputs with same ID - invalid HTML
      */
-    protected static function createInput( $type, $model, $attribute, $options = array() ){
+    protected static function createInput( $type, $model, $attribute, $options = array(), $bulk = FALSE ){
         
         $field = '<input type="' . $type . '" ';
         
         if( !array_key_exists( 'name', $options ) ) {
-            $field .= 'name="' . get_class($model) . '[' . $attribute . ']" ';
+            $field .= 'name="' . get_class($model) . '[' . $attribute . ']' . ($bulk? '[]" ' : '" ') ;
+        }
+        elseif( $bulk ){
+            $field .= 'name="' . $options['name'] . '[' . $attribute . '][]" ';
+            unset($options['name']);
         }
         
         if( property_exists( $model, $attribute ) ) {
@@ -318,8 +333,7 @@ class MhtmlCore {
             $field.= 'id="' . get_class($model) . '_'.$attribute . '" ';
         }
         
-        $placeholder = $model->getTags( $attribute )['placeholder'];
-        if( !empty( $placeholder ) ){
+        if( method_exists( $model, 'getTags') && ($placeholder = $model->getTags( $attribute )['placeholder']) != NULL){
             $field .= 'placeholder="' . $placeholder . '" ';
         }
         
@@ -336,11 +350,19 @@ class MhtmlCore {
      * @param object $model
      * @param String $attribute
      * @param array $options [optional]
+     * @param boolean $bulk [optional] Jeden vstup alebo pole []
      */
-    public static function mTextarea( $model, $attribute, $options = array() ){
+    public static function mTextarea( $model, $attribute, $options = array(), $bulk = FALSE ){
         
         $tArea = '<textarea ';
-        $tArea .= 'name="' . get_class($model) . '[' . $attribute . ']" ';
+
+        if( !array_key_exists( 'name', $options ) ) {
+            $tArea .= 'name="' . get_class($model) . '[' . $attribute . ']' . ($bulk? '[]" ' : '" ') ;
+        }
+        elseif( $bulk ){
+            $tArea .= 'name="' . $options['name'] . '[' . $attribute . '][]" ';
+            unset($options['name']);
+        }
         
         if( !array_key_exists( 'id', $options ) ) {
             $tArea.= 'id="' . get_class($model) . '_'.$attribute . '" ';
@@ -439,11 +461,16 @@ class MhtmlCore {
      * @param array $options [optional] HTML možnosti pre select  
      * @return String HTML Snippet
      */
-    public static function mSelect( $model, $attribute, $values = array() ,$options = array() ){
+    public static function mSelect( $model, $attribute, $values = array() ,$options = array(), $bulk = FALSE ){
         
         $select = '<select ';
+        
         if( !array_key_exists( 'name', $options ) ) {
-            $select .= 'name="' . get_class( $model ) . '[' . $attribute . ']" ';
+            $select .= 'name="' . get_class($model) . '[' . $attribute . ']' . ($bulk? '[]" ' : '" ') ;
+        }
+        elseif( $bulk ){
+            $tArea .= 'name="' . $options['name'] . '[' . $attribute . '][]" ';
+            unset($options['name']);
         }
         
         if( !array_key_exists( 'id', $options ) ) {
@@ -478,19 +505,38 @@ class MhtmlCore {
      * @param array $levels Úrovne navigácie
      * @param boolean $urlChaining Levelové spájanie url adries /kategoria/podkategoria
      * @param boolean $useSubdomain Prva hodnota z pola $levels je vlozena ako subdomena
+     * @param boolean $lastPlain Posledny 
      */
-    public static function createBreadcrumbs( $levels, $urlChaining = TRUE, $useSubdomain = FALSE ) {
-            
+    public static function createBreadcrumbs( $levels, $urlChaining = TRUE, $useSubdomain = FALSE, $lastPlain = FALSE ) {
+        
         $breadcrumbs ='<ol class="breadcrumb">';
-            $breadcrumbs .='<li><a href="' . ROOT_URL . '">' . MAGNECOMF_ESHOPNAME . '</a></li>';
-            $subdomain = $url = '';
-            if( $useSubdomain ){
-                $subdomain = ( array_shift( array_values( $levels ) )->url );
-                $breadcrumbs .= '<li><a href="' . self::createSubdomainLink( $subdomain ) . '">' . array_shift($levels)->name . '</a></li>';
+        
+            $breadcrumbs .= '<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">';
+            $breadcrumbs .= '<a href="' . ROOT_URL . '" itemprop="url">';
+            $breadcrumbs .= '<span itemprop="title">' . MAGNECOMF_ESHOPNAME . '</span>';
+            $breadcrumbs .= '</a></li>';
+            
+            $subdomain = $last = $url = '';
+            
+            //** First item with subdomain link
+            if( $useSubdomain && !empty($levels)){
+                $subdomain    = array_shift( $levels );
+                $breadcrumbs .= '<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">';
+                $breadcrumbs .= '<a href="' . self::createSubdomainLink( $subdomain->url ) . '" title="' . $subdomain->name . '" itemprop="url">';
+                $breadcrumbs .= '<span itemprop="title">' . $subdomain->name . '</span>';
+                $breadcrumbs .= '</a></li>';
             }
             
+            if( $lastPlain && !empty($levels) ){
+                $last = array_pop($levels);
+            }
+            
+            //** Create breadcrumb levels
             foreach ($levels as $level){
                 
+                if( empty( $level ) ){
+                    continue;
+                }
                 if( substr( $level->url, -1, 1 ) == '/') {
                     $level->url = substr( $level->url, 0, -1 );
                 }
@@ -501,10 +547,19 @@ class MhtmlCore {
                     $url = $level->url . '/';
                 }            
                 
-                $breadcrumbs .= '<li><a href="' . self::createSubdomainLink( $subdomain ) . substr( $url, 0, -1 ) . '" title="' . $level->name . '">';
-                $breadcrumbs .= $level->name;
+                $breadcrumbs .= '<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">';
+                $breadcrumbs .= '<a href="' . self::createSubdomainLink( $subdomain->url ) . substr( $url, 0, -1 ) . '" title="' . $level->name . '" itemprop="url">';
+                $breadcrumbs .= '<span itemprop="title">' . $level->name . '</span>';
                 $breadcrumbs .= '</a></li>';
             }
+            
+            //** Append last item
+            if( !empty($last) ){
+                $breadcrumbs .= '<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">';
+                $breadcrumbs .= '<span itemprop="title">' . $last->name . '</span>';
+                $breadcrumbs .= '</li>';
+            }
+             
         return $breadcrumbs . '</ol>';
     }
     
@@ -550,8 +605,8 @@ class MhtmlCore {
 
             //** Right arrow block
             if ( $pagination['current'] != $pagination['total']) {
-                $pg .= '<li><a href="' . $href_start . ( ($pagination['current'] ) * $step );
-                $pg .= 'title="' . Mcore::t('Next page') . '">'; 
+                $pg .= '<li><a href="' . $href_start . ( ($pagination['current'] ) * $step ) . '" ';
+                $pg .= 'title="' . Mcore::t('Next page') . '" rel="nofollow">'; 
                 $pg .= '&raquo;</a></li>';
             }
             else{
@@ -580,14 +635,17 @@ class MhtmlCore {
         if( isset( $_s ) && $_s === TRUE ){
             return preg_replace( '/:\/\/(www\.)?/', "://{$subdomain}.", $url );
         }
-        else{
+        elseif( !empty ($subdomain) ){
             return $url . $subdomain . '/';
+        }
+        else{
+            return $url;
         }
     }
 
     /**
      * Metóda parsuje, zadaný vstup a vytvorí validnú URL adresu
-     * @param String $length Maximalny pocet slov v retazci
+     * @param String $in
      * @return String 
      */
     public static function createUrl( $in ){
@@ -604,7 +662,7 @@ class MhtmlCore {
         // nechá maximálne 1 pomlčku, odstrani pomlcku zozaciatku a z konca
         $out = preg_replace( array('/\-+/', '/\-+$/', '/^\-+/' ), array('-','',''), $out ); 
 
-        return ( substr( $out, 0, 50 ) );
+        return ( substr( $out, 0, 100 ) );
     }
     
     /**

@@ -163,7 +163,7 @@ class Authentication {
     }
     
     /**
-     * Metóda vráti ID prihláseného používateľa
+     * Metóda vráti ID prihláseného používateľa resp. 0 pre nepríhlaseného
      * @return int
      */
     public function getUserID() {
