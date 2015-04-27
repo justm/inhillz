@@ -28,6 +28,11 @@ class PageController extends McontrollerCore{
         );
     }
     
+    public static function controller(){
+        
+        return new PageController();
+    }
+    
     /**
      * Zobrazenie hlavnej stránky, HOMEPAGE
      */

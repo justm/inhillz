@@ -3668,3 +3668,1121 @@ DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/
 #10 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
 #11 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
 >>>>>>> 7a5aa8d3444f89d29c52a3cef23469334af1ab96
+
+[27.02.2015 19:40:25], IP:[127.0.0.1],
+NOTICE [8] Undefined index: label
+Notice on line 199 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:199]
+#1  MhtmlCore::mLabel() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:24]
+#2  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#4  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#14 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#15 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.02.2015 19:40:25], IP:[127.0.0.1],
+NOTICE [8] Undefined index: placeholder
+Notice on line 336 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:336]
+#1  MhtmlCore::createInput() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:246]
+#2  MhtmlCore::mTextInput() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:25]
+#3  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#5  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#15 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#16 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.02.2015 19:40:25], IP:[127.0.0.1],
+NOTICE [8] Undefined index: label
+Notice on line 199 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:199]
+#1  MhtmlCore::mLabel() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:28]
+#2  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#4  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#14 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#15 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.02.2015 19:40:25], IP:[127.0.0.1],
+NOTICE [8] Undefined index: placeholder
+Notice on line 336 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:336]
+#1  MhtmlCore::createInput() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:261]
+#2  MhtmlCore::mPasswordInput() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:29]
+#3  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#5  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#15 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#16 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.02.2015 19:40:27], IP:[127.0.0.1],
+NOTICE [8] Undefined index: label
+Notice on line 199 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:199]
+#1  MhtmlCore::mLabel() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:24]
+#2  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#4  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#14 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#15 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.02.2015 19:40:27], IP:[127.0.0.1],
+NOTICE [8] Undefined index: placeholder
+Notice on line 336 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:336]
+#1  MhtmlCore::createInput() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:246]
+#2  MhtmlCore::mTextInput() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:25]
+#3  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#5  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#15 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#16 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.02.2015 19:40:27], IP:[127.0.0.1],
+NOTICE [8] Undefined index: label
+Notice on line 199 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:199]
+#1  MhtmlCore::mLabel() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:28]
+#2  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#4  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#14 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#15 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.02.2015 19:40:27], IP:[127.0.0.1],
+NOTICE [8] Undefined index: placeholder
+Notice on line 336 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:336]
+#1  MhtmlCore::createInput() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:261]
+#2  MhtmlCore::mPasswordInput() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:29]
+#3  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#5  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#15 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#16 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[03.03.2015 06:41:11], IP:[127.0.0.1],
+NOTICE [8] Undefined index: label
+Notice on line 199 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:199]
+#1  MhtmlCore::mLabel() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:24]
+#2  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#4  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#14 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#15 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[03.03.2015 06:41:11], IP:[127.0.0.1],
+NOTICE [8] Undefined index: placeholder
+Notice on line 336 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:336]
+#1  MhtmlCore::createInput() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:246]
+#2  MhtmlCore::mTextInput() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:25]
+#3  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#5  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#15 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#16 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[03.03.2015 06:41:11], IP:[127.0.0.1],
+NOTICE [8] Undefined index: label
+Notice on line 199 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:199]
+#1  MhtmlCore::mLabel() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:28]
+#2  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#4  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#14 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#15 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[03.03.2015 06:41:11], IP:[127.0.0.1],
+NOTICE [8] Undefined index: placeholder
+Notice on line 336 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:336]
+#1  MhtmlCore::createInput() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:261]
+#2  MhtmlCore::mPasswordInput() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:29]
+#3  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#5  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#15 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#16 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[04.03.2015 06:23:12], IP:[127.0.0.1],
+NOTICE [8] Undefined index: label
+Notice on line 199 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:199]
+#1  MhtmlCore::mLabel() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:24]
+#2  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#4  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#14 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#15 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[04.03.2015 06:23:12], IP:[127.0.0.1],
+NOTICE [8] Undefined index: placeholder
+Notice on line 336 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:336]
+#1  MhtmlCore::createInput() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:246]
+#2  MhtmlCore::mTextInput() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:25]
+#3  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#5  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#15 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#16 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[04.03.2015 06:23:12], IP:[127.0.0.1],
+NOTICE [8] Undefined index: label
+Notice on line 199 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:199]
+#1  MhtmlCore::mLabel() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:28]
+#2  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#4  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#14 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#15 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[04.03.2015 06:23:12], IP:[127.0.0.1],
+NOTICE [8] Undefined index: placeholder
+Notice on line 336 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:336]
+#1  MhtmlCore::createInput() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:261]
+#2  MhtmlCore::mPasswordInput() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:29]
+#3  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#5  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#15 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#16 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[05.03.2015 08:43:30], IP:[127.0.0.1],
+NOTICE [8] Undefined index: label
+Notice on line 199 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:199]
+#1  MhtmlCore::mLabel() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:24]
+#2  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#4  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#14 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#15 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[05.03.2015 08:43:30], IP:[127.0.0.1],
+NOTICE [8] Undefined index: placeholder
+Notice on line 336 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:336]
+#1  MhtmlCore::createInput() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:246]
+#2  MhtmlCore::mTextInput() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:25]
+#3  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#5  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#15 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#16 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[05.03.2015 08:43:30], IP:[127.0.0.1],
+NOTICE [8] Undefined index: label
+Notice on line 199 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:199]
+#1  MhtmlCore::mLabel() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:28]
+#2  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#4  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#14 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#15 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[05.03.2015 08:43:30], IP:[127.0.0.1],
+NOTICE [8] Undefined index: placeholder
+Notice on line 336 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:336]
+#1  MhtmlCore::createInput() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:261]
+#2  MhtmlCore::mPasswordInput() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:29]
+#3  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#5  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#15 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#16 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[06.03.2015 06:32:40], IP:[127.0.0.1],
+NOTICE [8] Undefined index: label
+Notice on line 199 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:199]
+#1  MhtmlCore::mLabel() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:24]
+#2  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#4  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#14 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#15 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[06.03.2015 06:32:40], IP:[127.0.0.1],
+NOTICE [8] Undefined index: placeholder
+Notice on line 336 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:336]
+#1  MhtmlCore::createInput() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:246]
+#2  MhtmlCore::mTextInput() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:25]
+#3  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#5  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#15 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#16 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[06.03.2015 06:32:40], IP:[127.0.0.1],
+NOTICE [8] Undefined index: label
+Notice on line 199 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:199]
+#1  MhtmlCore::mLabel() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:28]
+#2  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#4  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#14 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#15 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[06.03.2015 06:32:40], IP:[127.0.0.1],
+NOTICE [8] Undefined index: placeholder
+Notice on line 336 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:336]
+#1  MhtmlCore::createInput() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:261]
+#2  MhtmlCore::mPasswordInput() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:29]
+#3  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#5  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#15 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#16 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[07.03.2015 11:16:47], IP:[127.0.0.1],
+NOTICE [8] Undefined index: label
+Notice on line 199 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:199]
+#1  MhtmlCore::mLabel() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:24]
+#2  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#4  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#14 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#15 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[07.03.2015 11:16:47], IP:[127.0.0.1],
+NOTICE [8] Undefined index: placeholder
+Notice on line 336 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:336]
+#1  MhtmlCore::createInput() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:246]
+#2  MhtmlCore::mTextInput() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:25]
+#3  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#5  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#15 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#16 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[07.03.2015 11:16:47], IP:[127.0.0.1],
+NOTICE [8] Undefined index: label
+Notice on line 199 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:199]
+#1  MhtmlCore::mLabel() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:28]
+#2  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#4  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#14 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#15 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[07.03.2015 11:16:47], IP:[127.0.0.1],
+NOTICE [8] Undefined index: placeholder
+Notice on line 336 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:336]
+#1  MhtmlCore::createInput() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:261]
+#2  MhtmlCore::mPasswordInput() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:29]
+#3  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#5  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#15 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#16 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[09.03.2015 13:34:11], IP:[127.0.0.1],
+NOTICE [8] Undefined index: label
+Notice on line 221 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:221]
+#1  MhtmlCore::mLabel() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:24]
+#2  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#4  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#14 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#15 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[09.03.2015 13:34:11], IP:[127.0.0.1],
+NOTICE [8] Undefined index: placeholder
+Notice on line 358 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:358]
+#1  MhtmlCore::createInput() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:268]
+#2  MhtmlCore::mTextInput() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:25]
+#3  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#5  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#15 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#16 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[09.03.2015 13:34:11], IP:[127.0.0.1],
+NOTICE [8] Undefined index: label
+Notice on line 221 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:221]
+#1  MhtmlCore::mLabel() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:28]
+#2  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#4  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#14 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#15 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[09.03.2015 13:34:11], IP:[127.0.0.1],
+NOTICE [8] Undefined index: placeholder
+Notice on line 358 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:358]
+#1  MhtmlCore::createInput() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:283]
+#2  MhtmlCore::mPasswordInput() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:29]
+#3  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#5  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#15 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#16 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 14:59:33], IP:[127.0.0.1],
+NOTICE [8] Undefined index: label
+Notice on line 221 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:221]
+#1  MhtmlCore::mLabel() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:24]
+#2  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#4  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#14 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:70]
+#15 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 14:59:34], IP:[127.0.0.1],
+NOTICE [8] Undefined index: placeholder
+Notice on line 358 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:358]
+#1  MhtmlCore::createInput() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:268]
+#2  MhtmlCore::mTextInput() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:25]
+#3  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#5  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#15 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:70]
+#16 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 14:59:34], IP:[127.0.0.1],
+NOTICE [8] Undefined index: label
+Notice on line 221 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:221]
+#1  MhtmlCore::mLabel() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:28]
+#2  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#4  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#14 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:70]
+#15 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 14:59:34], IP:[127.0.0.1],
+NOTICE [8] Undefined index: placeholder
+Notice on line 358 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:358]
+#1  MhtmlCore::createInput() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:283]
+#2  MhtmlCore::mPasswordInput() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:29]
+#3  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#5  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 UploadController->files() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#15 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:70]
+#16 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 15:31:06], IP:[127.0.0.1],
+NOTICE [8] Undefined index: label
+Notice on line 221 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:221]
+#1  MhtmlCore::mLabel() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:24]
+#2  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#4  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 WorkoutController->view() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#14 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#15 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 15:31:06], IP:[127.0.0.1],
+NOTICE [8] Undefined index: placeholder
+Notice on line 358 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:358]
+#1  MhtmlCore::createInput() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:268]
+#2  MhtmlCore::mTextInput() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:25]
+#3  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#5  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 WorkoutController->view() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#15 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#16 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 15:31:06], IP:[127.0.0.1],
+NOTICE [8] Undefined index: label
+Notice on line 221 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:221]
+#1  MhtmlCore::mLabel() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:28]
+#2  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#4  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 WorkoutController->view() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#14 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#15 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 15:31:06], IP:[127.0.0.1],
+NOTICE [8] Undefined index: placeholder
+Notice on line 358 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:358]
+#1  MhtmlCore::createInput() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:283]
+#2  MhtmlCore::mPasswordInput() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:29]
+#3  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:54]
+#5  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 WorkoutController->view() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#15 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#16 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 15:31:14], IP:[127.0.0.1],
+NOTICE [8] Undefined index: label
+Notice on line 221 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:221]
+#1  MhtmlCore::mLabel() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:24]
+#2  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:50]
+#4  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 WorkoutController->view() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#14 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#15 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 15:31:14], IP:[127.0.0.1],
+NOTICE [8] Undefined index: placeholder
+Notice on line 358 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:358]
+#1  MhtmlCore::createInput() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:268]
+#2  MhtmlCore::mTextInput() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:25]
+#3  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:50]
+#5  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 WorkoutController->view() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#15 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#16 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 15:31:14], IP:[127.0.0.1],
+NOTICE [8] Undefined index: label
+Notice on line 221 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:221]
+#1  MhtmlCore::mLabel() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:28]
+#2  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#3  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:50]
+#4  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#5  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#6  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#7  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#8  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#9  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#10 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#11 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#12 McontrollerCore->__call()
+#13 WorkoutController->view() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#14 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#15 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#16 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 15:31:14], IP:[127.0.0.1],
+NOTICE [8] Undefined index: placeholder
+Notice on line 358 in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:358]
+#1  MhtmlCore::createInput() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mhtml.php:283]
+#2  MhtmlCore::mPasswordInput() called at [/home/matus/NetbeansProjects/inhillz/views/user/login.php:29]
+#3  include(/home/matus/NetbeansProjects/inhillz/views/user/login.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#4  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/user.controller.php:50]
+#5  UserController->login() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:294]
+#6  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#7  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#8  Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/controllers/admin.controller.php:36]
+#9  AdminController->index() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#10 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#11 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:120]
+#12 Urlresolver->replaceByOther() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:84]
+#13 McontrollerCore->__call()
+#14 WorkoutController->view() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#15 Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#16 Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#17 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 19:58:08], IP:[127.0.0.1],
+WARNING [2] fopen(1_b678fb4fc7d620de9bd0b05b08fd0c51f1e513c8.csv): failed to open stream: No such file or directory
+Warning on line 93 in file /home/matus/NetbeansProjects/inhillz/libraries/CSVparser.php
+DEBUG TRACE: #0  Mcore::mErrorHandler()
+#1  fopen() called at [/home/matus/NetbeansProjects/inhillz/libraries/CSVparser.php:93]
+#2  CSVparser->openFile() called at [/home/matus/NetbeansProjects/inhillz/libraries/CSVparser.php:73]
+#3  CSVparser->__construct() called at [/home/matus/NetbeansProjects/inhillz/controllers/workout.controller.php:81]
+#4  WorkoutController->view()
+#5  call_user_func_array() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:79]
+#6  McontrollerCore->__call()
+#7  WorkoutController->view() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#8  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#9  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#10 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 19:58:08], IP:[127.0.0.1],
+WARNING [2] array_search() expects parameter 2 to be array, null given
+Warning on line 44 in file /home/matus/NetbeansProjects/inhillz/extend/csv_activity_model.php
+DEBUG TRACE: #0  Mcore::mErrorHandler()
+#1  array_search() called at [/home/matus/NetbeansProjects/inhillz/extend/csv_activity_model.php:44]
+#2  Csv_activity_model->readFile() called at [/home/matus/NetbeansProjects/inhillz/libraries/CSVparser.php:73]
+#3  CSVparser->__construct() called at [/home/matus/NetbeansProjects/inhillz/controllers/workout.controller.php:81]
+#4  WorkoutController->view()
+#5  call_user_func_array() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:79]
+#6  McontrollerCore->__call()
+#7  WorkoutController->view() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#8  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#9  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#10 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 19:58:08], IP:[127.0.0.1],
+WARNING [2] fgetcsv() expects parameter 1 to be resource, boolean given
+Warning on line 47 in file /home/matus/NetbeansProjects/inhillz/extend/csv_activity_model.php
+DEBUG TRACE: #0  Mcore::mErrorHandler()
+#1  fgetcsv() called at [/home/matus/NetbeansProjects/inhillz/extend/csv_activity_model.php:47]
+#2  Csv_activity_model->readFile() called at [/home/matus/NetbeansProjects/inhillz/libraries/CSVparser.php:73]
+#3  CSVparser->__construct() called at [/home/matus/NetbeansProjects/inhillz/controllers/workout.controller.php:81]
+#4  WorkoutController->view()
+#5  call_user_func_array() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:79]
+#6  McontrollerCore->__call()
+#7  WorkoutController->view() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#8  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#9  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#10 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 19:59:37], IP:[127.0.0.1],
+WARNING [2] fopen(1_b678fb4fc7d620de9bd0b05b08fd0c51f1e513c8.csv): failed to open stream: No such file or directory
+Warning on line 93 in file /home/matus/NetbeansProjects/inhillz/libraries/CSVparser.php
+DEBUG TRACE: #0  Mcore::mErrorHandler()
+#1  fopen() called at [/home/matus/NetbeansProjects/inhillz/libraries/CSVparser.php:93]
+#2  CSVparser->openFile() called at [/home/matus/NetbeansProjects/inhillz/libraries/CSVparser.php:73]
+#3  CSVparser->__construct() called at [/home/matus/NetbeansProjects/inhillz/controllers/workout.controller.php:81]
+#4  WorkoutController->view()
+#5  call_user_func_array() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:79]
+#6  McontrollerCore->__call()
+#7  WorkoutController->view() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#8  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#9  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#10 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 19:59:37], IP:[127.0.0.1],
+WARNING [2] array_search() expects parameter 2 to be array, null given
+Warning on line 44 in file /home/matus/NetbeansProjects/inhillz/extend/csv_activity_model.php
+DEBUG TRACE: #0  Mcore::mErrorHandler()
+#1  array_search() called at [/home/matus/NetbeansProjects/inhillz/extend/csv_activity_model.php:44]
+#2  Csv_activity_model->readFile() called at [/home/matus/NetbeansProjects/inhillz/libraries/CSVparser.php:73]
+#3  CSVparser->__construct() called at [/home/matus/NetbeansProjects/inhillz/controllers/workout.controller.php:81]
+#4  WorkoutController->view()
+#5  call_user_func_array() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:79]
+#6  McontrollerCore->__call()
+#7  WorkoutController->view() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#8  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#9  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#10 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 19:59:37], IP:[127.0.0.1],
+WARNING [2] fgetcsv() expects parameter 1 to be resource, boolean given
+Warning on line 47 in file /home/matus/NetbeansProjects/inhillz/extend/csv_activity_model.php
+DEBUG TRACE: #0  Mcore::mErrorHandler()
+#1  fgetcsv() called at [/home/matus/NetbeansProjects/inhillz/extend/csv_activity_model.php:47]
+#2  Csv_activity_model->readFile() called at [/home/matus/NetbeansProjects/inhillz/libraries/CSVparser.php:73]
+#3  CSVparser->__construct() called at [/home/matus/NetbeansProjects/inhillz/controllers/workout.controller.php:81]
+#4  WorkoutController->view()
+#5  call_user_func_array() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:79]
+#6  McontrollerCore->__call()
+#7  WorkoutController->view() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#8  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#9  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#10 Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 20:01:31], IP:[127.0.0.1],
+WARNING [2] Cannot modify header information - headers already sent by (output started at /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:435)
+Warning on line 53 in file /home/matus/NetbeansProjects/inhillz/controllers/page.controller.php
+DEBUG TRACE: #0  Mcore::mErrorHandler()
+#1  header() called at [/home/matus/NetbeansProjects/inhillz/controllers/page.controller.php:53]
+#2  PageController->error() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:402]
+#3  Mcore::mExceptionHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:240]
+#4  Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 20:02:50], IP:[127.0.0.1],
+WARNING [2] Cannot modify header information - headers already sent by (output started at /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:435)
+Warning on line 53 in file /home/matus/NetbeansProjects/inhillz/controllers/page.controller.php
+DEBUG TRACE: #0  Mcore::mErrorHandler()
+#1  header() called at [/home/matus/NetbeansProjects/inhillz/controllers/page.controller.php:53]
+#2  PageController->error() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:402]
+#3  Mcore::mExceptionHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:240]
+#4  Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 20:03:39], IP:[127.0.0.1],
+WARNING [2] Cannot modify header information - headers already sent by (output started at /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:435)
+Warning on line 53 in file /home/matus/NetbeansProjects/inhillz/controllers/page.controller.php
+DEBUG TRACE: #0  Mcore::mErrorHandler()
+#1  header() called at [/home/matus/NetbeansProjects/inhillz/controllers/page.controller.php:53]
+#2  PageController->error() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:402]
+#3  Mcore::mExceptionHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:240]
+#4  Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 20:04:08], IP:[127.0.0.1],
+WARNING [2] Cannot modify header information - headers already sent by (output started at /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:435)
+Warning on line 53 in file /home/matus/NetbeansProjects/inhillz/controllers/page.controller.php
+DEBUG TRACE: #0  Mcore::mErrorHandler()
+#1  header() called at [/home/matus/NetbeansProjects/inhillz/controllers/page.controller.php:53]
+#2  PageController->error() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:402]
+#3  Mcore::mExceptionHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:240]
+#4  Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 20:05:04], IP:[127.0.0.1],
+WARNING [2] Cannot modify header information - headers already sent by (output started at /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:435)
+Warning on line 53 in file /home/matus/NetbeansProjects/inhillz/controllers/page.controller.php
+DEBUG TRACE: #0  Mcore::mErrorHandler()
+#1  header() called at [/home/matus/NetbeansProjects/inhillz/controllers/page.controller.php:53]
+#2  PageController->error() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:402]
+#3  Mcore::mExceptionHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:240]
+#4  Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 20:05:05], IP:[127.0.0.1],
+WARNING [2] Cannot modify header information - headers already sent by (output started at /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:435)
+Warning on line 53 in file /home/matus/NetbeansProjects/inhillz/controllers/page.controller.php
+DEBUG TRACE: #0  Mcore::mErrorHandler()
+#1  header() called at [/home/matus/NetbeansProjects/inhillz/controllers/page.controller.php:53]
+#2  PageController->error() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:402]
+#3  Mcore::mExceptionHandler() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:240]
+#4  Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 21:19:56], IP:[127.0.0.1],
+NOTICE [8] Undefined variable: latlng
+Notice on line 24 in file /home/matus/NetbeansProjects/inhillz/views/workout/view.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/views/workout/view.php:24]
+#1  include(/home/matus/NetbeansProjects/inhillz/views/workout/view.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#2  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/workout.controller.php:84]
+#3  WorkoutController->view()
+#4  call_user_func_array() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:79]
+#5  McontrollerCore->__call()
+#6  WorkoutController->view() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#7  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#8  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#9  Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]
+
+[27.04.2015 21:20:09], IP:[127.0.0.1],
+NOTICE [8] Undefined variable: latlng
+Notice on line 24 in file /home/matus/NetbeansProjects/inhillz/views/workout/view.php
+DEBUG TRACE: #0  Mcore::mErrorHandler() called at [/home/matus/NetbeansProjects/inhillz/views/workout/view.php:24]
+#1  include(/home/matus/NetbeansProjects/inhillz/views/workout/view.php) called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:143]
+#2  McontrollerCore->render() called at [/home/matus/NetbeansProjects/inhillz/controllers/workout.controller.php:84]
+#3  WorkoutController->view()
+#4  call_user_func_array() called at [/home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php:79]
+#5  McontrollerCore->__call()
+#6  WorkoutController->view() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:291]
+#7  Urlresolver->makeTowards() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php:67]
+#8  Urlresolver->resolve() called at [/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php:237]
+#9  Mcore::start() called at [/home/matus/NetbeansProjects/inhillz/index.php:44]

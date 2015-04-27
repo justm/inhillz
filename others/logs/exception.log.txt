@@ -1,0 +1,96 @@
+[27.04.2015 19:58:08], IP:[127.0.0.1],
+Caught exception: Desired view file view was not found., in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php on line 131
+Debug trace: \n#0 /home/matus/NetbeansProjects/inhillz/controllers/workout.controller.php(86): McontrollerCore->render('view', Array)
+#1 [internal function]: WorkoutController->view('408')
+#2 /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php(79): call_user_func_array(Array, Array)
+#3 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(291): McontrollerCore->__call('view', Array)
+#4 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(291): WorkoutController->view('408')
+#5 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(67): Urlresolver->makeTowards('WorkoutControll...', 'view', '408')
+#6 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php(237): Urlresolver->resolve(Array)
+#7 /home/matus/NetbeansProjects/inhillz/index.php(44): Mcore::start(Array)
+#8 {main}
+
+[27.04.2015 19:59:37], IP:[127.0.0.1],
+Caught exception: Desired view file view was not found., in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php on line 131
+Debug trace: \n#0 /home/matus/NetbeansProjects/inhillz/controllers/workout.controller.php(86): McontrollerCore->render('view', Array)
+#1 [internal function]: WorkoutController->view('408')
+#2 /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php(79): call_user_func_array(Array, Array)
+#3 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(291): McontrollerCore->__call('view', Array)
+#4 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(291): WorkoutController->view('408')
+#5 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(67): Urlresolver->makeTowards('WorkoutControll...', 'view', '408')
+#6 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php(237): Urlresolver->resolve(Array)
+#7 /home/matus/NetbeansProjects/inhillz/index.php(44): Mcore::start(Array)
+#8 {main}
+
+[27.04.2015 20:01:31], IP:[127.0.0.1],
+Caught exception: Desired view file view was not found., in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php on line 131
+Debug trace: \n#0 /home/matus/NetbeansProjects/inhillz/controllers/workout.controller.php(86): McontrollerCore->render('view', Array)
+#1 [internal function]: WorkoutController->view('408')
+#2 /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php(79): call_user_func_array(Array, Array)
+#3 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(291): McontrollerCore->__call('view', Array)
+#4 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(291): WorkoutController->view('408')
+#5 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(67): Urlresolver->makeTowards('WorkoutControll...', 'view', '408')
+#6 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php(237): Urlresolver->resolve(Array)
+#7 /home/matus/NetbeansProjects/inhillz/index.php(44): Mcore::start(Array)
+#8 {main}
+
+[27.04.2015 20:02:50], IP:[127.0.0.1],
+Caught exception: Desired view file view was not found., in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php on line 131
+Debug trace: \n#0 /home/matus/NetbeansProjects/inhillz/controllers/workout.controller.php(84): McontrollerCore->render('view', Array)
+#1 [internal function]: WorkoutController->view('409')
+#2 /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php(79): call_user_func_array(Array, Array)
+#3 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(291): McontrollerCore->__call('view', Array)
+#4 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(291): WorkoutController->view('409')
+#5 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(67): Urlresolver->makeTowards('WorkoutControll...', 'view', '409')
+#6 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php(237): Urlresolver->resolve(Array)
+#7 /home/matus/NetbeansProjects/inhillz/index.php(44): Mcore::start(Array)
+#8 {main}
+
+[27.04.2015 20:03:39], IP:[127.0.0.1],
+Caught exception: Desired view file view was not found., in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php on line 131
+Debug trace: \n#0 /home/matus/NetbeansProjects/inhillz/controllers/workout.controller.php(84): McontrollerCore->render('view', Array)
+#1 [internal function]: WorkoutController->view('357')
+#2 /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php(79): call_user_func_array(Array, Array)
+#3 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(291): McontrollerCore->__call('view', Array)
+#4 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(291): WorkoutController->view('357')
+#5 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(67): Urlresolver->makeTowards('WorkoutControll...', 'view', '357')
+#6 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php(237): Urlresolver->resolve(Array)
+#7 /home/matus/NetbeansProjects/inhillz/index.php(44): Mcore::start(Array)
+#8 {main}
+
+[27.04.2015 20:04:08], IP:[127.0.0.1],
+Caught exception: Desired view file view was not found., in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php on line 131
+Debug trace: \n#0 /home/matus/NetbeansProjects/inhillz/controllers/workout.controller.php(84): McontrollerCore->render('view', Array)
+#1 [internal function]: WorkoutController->view('357')
+#2 /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php(79): call_user_func_array(Array, Array)
+#3 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(291): McontrollerCore->__call('view', Array)
+#4 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(291): WorkoutController->view('357')
+#5 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(67): Urlresolver->makeTowards('WorkoutControll...', 'view', '357')
+#6 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php(237): Urlresolver->resolve(Array)
+#7 /home/matus/NetbeansProjects/inhillz/index.php(44): Mcore::start(Array)
+#8 {main}
+
+[27.04.2015 20:05:04], IP:[127.0.0.1],
+Caught exception: Desired view file view was not found., in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php on line 131
+Debug trace: \n#0 /home/matus/NetbeansProjects/inhillz/controllers/workout.controller.php(84): McontrollerCore->render('view', Array)
+#1 [internal function]: WorkoutController->view('357')
+#2 /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php(79): call_user_func_array(Array, Array)
+#3 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(291): McontrollerCore->__call('view', Array)
+#4 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(291): WorkoutController->view('357')
+#5 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(67): Urlresolver->makeTowards('WorkoutControll...', 'view', '357')
+#6 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php(237): Urlresolver->resolve(Array)
+#7 /home/matus/NetbeansProjects/inhillz/index.php(44): Mcore::start(Array)
+#8 {main}
+
+[27.04.2015 20:05:05], IP:[127.0.0.1],
+Caught exception: Desired view file view was not found., in file /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php on line 131
+Debug trace: \n#0 /home/matus/NetbeansProjects/inhillz/controllers/workout.controller.php(84): McontrollerCore->render('view', Array)
+#1 [internal function]: WorkoutController->view('357')
+#2 /home/matus/NetbeansProjects/inhillz/mcore/mabstract/mcontroller.php(79): call_user_func_array(Array, Array)
+#3 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(291): McontrollerCore->__call('view', Array)
+#4 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(291): WorkoutController->view('357')
+#5 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/objects/urlresolver.class.php(67): Urlresolver->makeTowards('WorkoutControll...', 'view', '357')
+#6 /home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php(237): Urlresolver->resolve(Array)
+#7 /home/matus/NetbeansProjects/inhillz/index.php(44): Mcore::start(Array)
+#8 {main}
+

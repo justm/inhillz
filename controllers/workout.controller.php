@@ -3,7 +3,6 @@
  * Súbor obsahuje triedu WorkoutController
  *
  * @author Matus Macak < matus.macak@folcon.sk > 
- * @link http://www.folcon.sk/
  * @version 2.0
  * @since Subor je súčasťou aplikácie od verzie 2.0
  * @package controllers
@@ -24,7 +23,7 @@ class WorkoutController extends McontrollerCore{
     public function accessRules() {
         
         return array(
-            '@' => array( 'update' ),
+            '@' => array( 'update', 'view' ),
         );
     }
         
@@ -58,5 +57,30 @@ class WorkoutController extends McontrollerCore{
                 }
             }
         }
+    }
+    
+    /**
+     * Detailné zobrazenie tréningu
+     * @param int $id
+     */
+    protected function view( $id = 0 ){
+        
+        $workout_basics = WorkoutModel::model()->findById(intval($id));
+
+        if( empty($workout_basics) ){
+            PageController::controller()->error(404);
+        }
+                       
+        /** @todo Check if $workout->data_file not empty, e.g. manual entry */
+        
+        /** this is TEMP, will be read from BigTable */ 
+        $data_model = new Csv_activity_model(MCORE_PROJECT_PATH . 'uploads/activities_data/' . $workout_basics->data_file);
+        $workout_data = $data_model->getRecordData();
+        /** end of TEMP */
+        
+        $this->render('view', array(
+            'workout_basics' => $workout_basics,
+            'workout_data' => $workout_data)
+        );
     }
 }

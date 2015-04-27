@@ -145,43 +145,65 @@ class MhtmlCore {
         
         $ret = '<thead><tr>';
         foreach ( $columns as $column ){
-            $query_string = '?';
-            $classOrder = '';
-            $ret .= '<th ';
-                if( is_array( $options = array_pop( array_values( $column ) ) ) ) {
-                    foreach ( $options as $attribute => $value ){
-                        $ret .= $attribute . '="' . $value . '" ';
-                    }
+            
+            $getSort    = (array) $_GET['sort'];
+            $getOrder   = (array) $_GET['order'];
+            $node_class = '';
+            $ret       .= '<th ';
+            
+            if( is_array( $options = array_pop( array_values( $column ) ) ) ) {
+                foreach ( $options as $attribute => $value ){
+                    $ret .= $attribute . '="' . $value . '" ';
                 }
-                $ret .= '>';
-                
-                $displayName = array_shift( $column );
-                $colName = array_shift( $column );
-                
-                if( !empty( $colName ) ){
-                    if( !empty( $_GET['sort'] ) && $_GET['sort'] == $colName ){
-                        if( !empty($_GET['order']) && $_GET['order'] == strtolower('asc') ){
-                            $query_string = "?sort={$colName}&order=desc";
-                            $classOrder = ' oASC'; // Current is Ascending
-                        }
-                        else{
-                            $classOrder = ' oDESC';
-                        }
+            }
+            $ret .= '>';
+
+            $displayName = array_shift( $column );
+            $colName     = array_shift( $column );
+
+            if( !empty( $colName ) ){
+                if( ($pos = array_search($colName, $getSort)) !== FALSE ){
+
+                    if( !empty($getOrder[$pos]) && $getOrder[$pos] == strtolower('asc') ){
+                        $getOrder[$pos] = 'desc';
+                        $node_class     = 'oASC'; // Current is Ascending
                     }
                     else{
-                        $query_string = "?sort={$colName}&order=asc";
+                        unset($getSort[$pos]);
+                        unset($getOrder[$pos]);
+                        $node_class     = 'oDESC';
                     }
-                    $ret .= '<a href="' . $query_string . '" class="activeTHlink'; 
-                    $ret .= $classOrder .'"';
-                    $ret .= '>' . $displayName . '</a>';
-                } 
-                else{
-                    $ret .= $displayName;
                 }
+                else{
+                    $getSort[]  = $colName;
+                    $getOrder[] = 'asc';
+                }
+                
+                $query_string = self::activeTheadQstring($getSort, $getOrder);
+                
+                $ret .= '<a href="' . $query_string . '" class="activeTHlink '; 
+                $ret .= $node_class .'"';
+                $ret .= '>' . $displayName . '</a>';
+            } 
+            else{
+                $ret .= $displayName;
+            }
             $ret .= '</th>';
         }
         $ret .= '</tr></thead>';
         return $ret;
+    }
+
+    /**
+     * Array map pre vytvorenie query string vo funkcii activeThead()
+     */
+    protected static function activeTheadQstring( $sorts, $orders ){
+        
+        $q = '?';
+        foreach ( $sorts as $key => $sort ){
+            $q .= "sort[]={$sort}&order[]={$orders[$key]}&";
+        }
+        return $q;
     }
 
 
