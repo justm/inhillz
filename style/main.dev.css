@@ -53,6 +53,12 @@ body{
     padding: 0;
     margin: 0;
 }
+.push:after{
+    display: table;
+    content: " ";
+    display: table;
+    height: 20px
+}
 
 /* .navbar */
 .navbar{
@@ -60,7 +66,7 @@ body{
 }
 .navbar-default{
     background-color: #fff;
-    border-color: #e7e7e7;
+    border-color: #ddd;
 }
 
 /*ID-s*/
@@ -70,7 +76,7 @@ body{
     background: transparent url('content.main/essentials.png') 15px 15px no-repeat;
 }
 
-/* TEMP - changed color to green */
+/* Bootstrap override */
 .btn-info{
     background-color: #33cc99;
     border-color: #279d76; 
@@ -89,8 +95,10 @@ body{
     border-color: #279d76;
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(51, 204, 153, .4);
 }
+.panel{
+    border-color: #ddd;
+}
 
-/* Bootstrap override */
 .input[type=file]{
     height: 22px;
 }
@@ -106,5 +114,55 @@ body{
     margin-left: 15px;
 }
 hr{
-    border-top-color: #e7e7e7;
+    border-top-color: #ddd;
+}
+/*Workout view*/
+#chart-canvas{
+    margin: 0 50px
+}
+/*CHART*/
+.chart .datapath{
+    fill:none;
+    stroke-width: 1;
+    stroke: #33CC99;
+}
+.chart .datapath.altitude{
+    fill: #eee;
+    stroke-width: 0;
+}
+.chart .datapath.heart_rate{
+    stroke: #CC3366;
+}
+.chart .datapath.cadence{
+    stroke: #9933cc;
+}
+.chart .datapath.power{
+    stroke: #000;
+}
+.chart .axis{
+    fill: none;
+    stroke: #aaa;
+    stroke-width: 1
+}
+.chart text{
+    fill: #aaa;
+    stroke: none;
+    font-size: 10px;
+}
+.chart .grid .tick,
+.chart .grid line{
+    stroke: #ddd;
+}
+.chart .grid path {
+    stroke-width: 0;
+}
+.chart .line-hover { 
+  stroke: #33CC99;  
+  fill: none;
+  stroke-width: 1px;
+}
+.chart .line-select { 
+  stroke: #000;  
+  fill: none;
+  stroke-width: 1px;
 }

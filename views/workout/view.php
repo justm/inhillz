@@ -10,69 +10,41 @@
  * @var WorkoutModel $data->workout_basics
  * @var Array $data->workout_data
  */
-?><div class="col-xs-12">
-    <div id="map-canvas" style="height:500px"></div>
-</div><?php
-
-    //** Priprava jednotlivych bodov pre vykreslenie na mape
+    //** Priprava jednotlivych bodov pre vykreslenie na mape a grafe
     $deg_to_semic = 180 / pow(2, 31);
     $coordinates  = '';
     $bounds       = '';
+    $chart_data    = '';
     
-    foreach ( $data->workout_data as $r ){
-        if( !empty($r['position_lat']) && !empty($r['position_long']) ) {
-            $latlng       = 'new google.maps.LatLng(' . ($r['position_lat'] * $deg_to_semic) . ',' . ($r['position_long'] * $deg_to_semic) . ')';
-            $bounds      .= 'bounds.extend(' . $latlng . '); ';
-            $coordinates .= $latlng . ', ';
-        }
-    }
-
-    ob_start();
-    
-?><script type="text/javascript">
-    function initialize() {
-               
-        var styles = [{
-            "featureType": "all",
-            "elementType": "all",
-            "stylers": [
-                {"saturation": -100},
-                {"gamma": 0.9}
-            ]
-        }],
-            
-        mapOptions = {
-            mapTypeControlOptions: {
-                mapTypeIds: [google.maps.MapTypeId.TERRAIN, 'map_style']
-            }
-        },
+    /** @todo Rozhodni, ktorú veličinu je možné zobraziť v grafe, tj. ku ktorej sú data*/
         
-        routeCoordinates = [<?php echo $coordinates ?>],
-                        
-        routePath = new google.maps.Polyline({
-            path: routeCoordinates,
-            geodesic: true,
-            strokeColor: '#33CC99',
-            strokeOpacity: 1.0,
-            strokeWeight: 3
-        }),
-                
-        styledMap = new google.maps.StyledMapType(styles,{name: "Workout map"}),      
-        map       = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
-
-        var bounds = new google.maps.LatLngBounds();
-        <?php echo $bounds; ?>
-            
-        map.mapTypes.set('map_style', styledMap);
-        map.setMapTypeId('map_style');        
-        map.fitBounds(bounds);   
-        routePath.setMap(map);
+    for ($i = 0; $i< count($data->workout_data); $i+=4){
+        $r = $data->workout_data[$i];
+        
+        //** map
+        if( !empty($r['position_lat']) && !empty($r['position_long']) ) {
+            $latlng       = 'position_lat:' . ($r['position_lat'] * $deg_to_semic) . ', position_long:' . ($r['position_long'] * $deg_to_semic) . ',';
+            $latlngMaps   = 'new google.maps.LatLng(' . ($r['position_lat'] * $deg_to_semic) . ',' . ($r['position_long'] * $deg_to_semic) . ')';
+            $bounds      .= 'bounds.extend(' . $latlngMaps . '); ';
+            $coordinates .= $latlngMaps . ',';
+        }
+        else{
+            continue;
+        }
+        
+        //** chart
+        if( !empty($r['distance']) && !empty($r['altitude']) ) {
+            $chart_data .= "{i:{$i},distance:" . ($r['distance']/1000) . ",altitude:{$r['altitude']}, {$latlng}";
+        }
+        else{
+            continue;
+        }
+        $chart_data .= empty($r['speed'])? '' : "speed:{$r['speed']},";
+        $chart_data .= empty($r['cadence'])? '' : "cadence:{$r['cadence']},";
+        $chart_data .= empty($r['heart_rate'])? '' : "heart_rate:{$r['heart_rate']},";
+        $chart_data .= "},";
     }
-
-    google.maps.event.addDomListener(window, 'load', initialize);
-</script><?php
-
-    $map_create = ob_get_clean();
-
-    Mcore::base()->cachescript->registerCodeSnippet('<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>', 'map-api', 2);
-    Mcore::base()->cachescript->registerCodeSnippet($map_create, 'map-create', 2);
+    
+    include 'view.map.php';
+    include 'view.basics.php';
+    include 'view.chart.php';

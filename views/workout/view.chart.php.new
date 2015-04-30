@@ -1,0 +1,190 @@
+<?php
+/**
+ * Graf - Časť náhľadu pre detailné zobrazenie tréningu
+ *
+ * @author Matus Macak < matus.macak@folcon.sk > 
+ * @version 2.0
+ * @since Subor je súčasťou aplikácie od verzie 2.0
+ * @package views.workout
+ * 
+ * @var WorkoutModel $data->workout_basics
+ * @var Array $data->workout_data
+ */
+?><div class="col-xs-12">
+    <div class="panel panel-default">
+        <div class="panel-heading"><h2 class="h5"><?php echo Mcore::t('Effort analysis')?></h2></div>
+        <div class="panel-body"><div id="chart-canvas" class="chart"></div></div>
+    </div>
+</div><?php
+
+    ob_start();
+    
+?><script type="text/javascript">
+
+    /**
+     * Množina dát s údajmi o tréningu
+     * @type Array
+     */
+    var chart_data = [<?php echo $chart_data; ?>];
+    
+    /**
+     * Funkcia pre vytvorenie X-ovej osi
+     * @param {function} scale
+     * @returns {function}
+     */
+    function create_xaxis(scale){
+        return d3.svg.axis().scale(scale).orient("bottom");
+    }
+    
+    /**
+     * Funkcia pre vytvorenie Y-ovej osi
+     * @param {function} scale
+     * @returns {function}
+     */
+    function create_yaxis(scale){
+        return d3.svg.axis().scale(scale).ticks(5).orient("left");
+    }
+   
+    /**
+     * Rozmery grafu
+     */
+    var MARGINS = {top: 0, right: 10, bottom: 20, left: 45},
+        WIDTH   = $("#chart-canvas").width(),
+        HEIGHT  = 100;
+
+    /**
+     * @type {function} Funkcia pre rozsah data v zavislosti na x-ovej osi (default: distance)
+     */
+    var x_range = d3.scale.linear()
+                    .range([MARGINS.left, WIDTH-MARGINS.right])
+                    .domain([
+                            d3.min(chart_data, function(d) {return d.distance;}), 
+                            d3.max(chart_data, function(d) {return d.distance;})
+                    ]);
+    
+    /**
+     * @type {array} Pole funkcii pre rozsah data v zavislosti na y-ovej osi 
+     */                
+    var y_range = [];
+    
+    /**
+     * Uchovava funkcie a rozsahy vytvoren0 funkciou initFNs() 
+     * @type Array 
+     */
+    var chart_meta = {altitude:{},/*power:{},heart_rate:{},speed:{},cadance:{}*/};
+    
+    var i = Object.keys(chart_meta).length;
+        
+    var svg = d3.select("#chart-canvas").append("svg")
+        .attr("width", WIDTH + MARGINS.left + MARGINS.right)
+        .attr("height", HEIGHT * i + MARGINS.top + MARGINS.bottom)
+        .append("g")
+        .attr("transform", "translate(" + MARGINS.left + "," + MARGINS.top + ")");
+
+    //** Inicializacia funkcii
+    for(var key in chart_meta){
+        /* @todo Rozhodni, ktorú veličinu je možné zobraziť v grafe, tj. ku ktorej sú data*/
+        try{
+            y_range[key] = d3.scale.linear()
+                        .range([HEIGHT*i, HEIGHT*(i-1)])
+                        .domain([
+                                d3.min(chart_data, function(d) {return d[key];}), 
+                                d3.max(chart_data, function(d) {return d[key];})
+                        ]);
+
+            var draw_fn = d3.svg.area()
+                        .x(function(d) {return x_range(d.distance);})
+                        .y0(0)
+                        .y(function(d) {return y_range[key](d[key]);});
+            
+            chart_meta[key] = {
+                draw_fn: draw_fn,
+                x_range: x_range,
+                y_range: y_range[key],
+                x_axis:'',
+                y_axis:'',
+            }
+            i--;
+        }
+        catch(e){
+            console.log("No data for " + key);
+        };
+    }
+    
+    i = 0;
+    
+    //** Vykreslenie grafu
+    for(var key in chart_meta){
+        
+        //** Path
+        svg.append('svg:path')
+            .attr('d', chart_meta[key].draw_fn(chart_data))
+            .attr("class","path " + key)
+            .attr('shape-rendering','optimizeSpeed')
+            .attr("transform", "translate(" +(-MARGINS.left)+ ",0)");
+
+        i++;
+        //** AXIS
+//        svg.append("g")
+//            .attr("class", "x axis")
+//            .attr('shape-rendering','crispEdges')
+//            .attr("transform", "translate(" +(-MARGINS.left)+ "," + (HEIGHT) + ")")
+//            .call(create_xaxis(xDistance).tickFormat(function(d) {var f = d3.format(".1f"); return f(d) + " km";}));
+//
+//        svg.append("g")
+//            .attr("class", "y axis")
+//            .attr('shape-rendering','crispEdges')
+//            .call(create_yaxis(yAltitude).tickFormat(function(d) {return d + " m";}));
+    }
+
+    var bisect_fn = d3.bisector(function(d) { return d.distance; }).right;
+     
+    //** GRID
+//    svg.append("g")
+//        .attr("class", "x grid")
+//        .attr('shape-rendering','crispEdges')
+//        .attr("transform", "translate(" +(-MARGINS.left)+ ",0)")
+//        .call(create_xaxis(xDistance).tickSize(HEIGHT, 0, 0).tickFormat(""));
+//
+//    svg.append("g")
+//        .attr("class", "y grid")
+//        .attr('shape-rendering','crispEdges')
+//        .call(create_yaxis(yAltitude).tickSize( -WIDTH + MARGINS.left + MARGINS.right, 0, 0).tickFormat(""));
+
+    //** MOUSEOVER
+    var hoverLineGroup = svg.append("g").attr("class", "hover-line");
+    var hoverLine = hoverLineGroup
+        .append("line")
+        .attr("x1", 10)
+        .attr("x2", 10) 
+        .attr("y1", 0)
+        .attr("y2", HEIGHT)
+        .style("opacity", 0);
+
+    d3.select("#chart-canvas")
+        .on("mousemove", function() {
+            var x  = d3.mouse(this)[0];
+            var i  = bisect_fn( chart_data, x_range.invert(x) );
+            
+            chart_data[i]; //<-- real object from data array
+            
+            if(i === 0){ return false; } //Pravy bisector, tj. 0 iba v pripade ak ide o poziciu mimo mnoziny zobrazovanych dat
+            
+            try{
+                window['movement_marker'].setPosition(new google.maps.LatLng(chart_data[i]['position_lat'],chart_data[i]['position_long']));
+                window['movement_marker'].setVisible(true);
+                hoverLine.attr("x1", x - MARGINS.left).attr("x2", x - MARGINS.left).style("opacity", 1);
+            }
+            catch(e){}
+            //console.log(chart_data[i]['altitude']);
+        })
+        .on("mouseout", function() {
+            window['movement_marker'].setVisible(false);
+            hoverLine.style("opacity", 0);
+        });
+</script><?php
+
+    $chart_create = ob_get_clean();
+
+    Mcore::base()->cachescript->registerCodeSnippet('<script src="' . ROOT_URL . 'libraries/d3.min.js"></script>', 'chart-api', 2);
+    Mcore::base()->cachescript->registerCodeSnippet($chart_create, 'chart-create', 2);
