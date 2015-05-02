@@ -65,21 +65,21 @@ class WorkoutController extends McontrollerCore{
      */
     protected function view( $id = 0 ){
         
-        $workout_basics = WorkoutModel::model()->findById(intval($id));
+        $workout_summary = WorkoutModel::model()->findById(intval($id));
 
-        if( empty($workout_basics) ){
+        if( empty($workout_summary) ){
             PageController::controller()->error(404);
         }
                        
         /** @todo Check if $workout->data_file not empty, e.g. manual entry */
         
         /** this is TEMP, will be read from BigTable */ 
-        $data_model = new Csv_activity_model(MCORE_PROJECT_PATH . 'uploads/activities_data/' . $workout_basics->data_file);
+        $data_model = new Csv_activity_model(MCORE_PROJECT_PATH . 'uploads/activities_data/' . $workout_summary->data_file);
         $workout_data = $data_model->getRecordData();
         /** end of TEMP */
         
         $this->render('view', array(
-            'workout_basics' => $workout_basics,
+            'workout_summary' => $workout_summary,
             'workout_data' => $workout_data)
         );
     }

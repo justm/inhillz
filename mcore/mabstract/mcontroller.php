@@ -29,7 +29,7 @@ abstract class McontrollerCore {
     /**
      * @var String názov súboru bez prípony, ktorý predstavuje náhľad
      */
-    protected $viewfile;
+    protected $viewfile = '';
     
     /**
      * @var String Súbor, ktorý sa použíje ako vonkajší kontajner pre zobrazený náhľad 
@@ -56,21 +56,20 @@ abstract class McontrollerCore {
     public function __call( $method, $arguments ) {
         
         $acRules = $this->accessRules();
-        $permission = FALSE;
+        $permission = false;
         foreach ( $acRules as $role => $actions ){
             
-            if( array_search( $method, $actions ) !== FALSE
-                && $role == Mcore::base()->authenticate->role ) {
-                
+            if( $role == Mcore::base()->authenticate->role
+                    && array_search( $method, $actions ) !== FALSE ) {
                 $permission = TRUE;
             }
-            else if( array_search( $method, $actions ) !== FALSE
-                    && $role == '@admin' && Mcore::base()->authenticate->isAdmin() ){
+            else if( $role == '@admin' && Mcore::base()->authenticate->isAdmin()
+                    && array_search( $method, $actions ) !== FALSE ){
 
                 $permission = TRUE;
             }
-            else if( array_search( $method, $actions ) !== FALSE
-                    && $role == '@' && Mcore::base()->authenticate->isLoggedIn() ){
+            else if( $role == '@' && Mcore::base()->authenticate->isLoggedIn()
+                    && array_search( $method, $actions ) !== FALSE ){
 
                 $permission = TRUE;
             }
@@ -80,8 +79,7 @@ abstract class McontrollerCore {
         }
         else{
             time_nanosleep( 2, 0 );
-            header($_SERVER['SERVER_PROTOCOL'] . ' 401 Unauthorized', true, 401);
-            Mcore::base()->urlresolver->replaceByOther('admin/index/1');
+            Mcore::base()->getObject('urlresolver')->replaceByOther('admin/index/1');
         }
     }
     
@@ -113,30 +111,39 @@ abstract class McontrollerCore {
      */
     public function render($viewfile, $variables = array(), $subfolder = '') {
         
-        if( $subfolder == '' ) {
+        if( empty($subfolder) ) {
             $subfolder = $this->viewfolder;
         }
-        //vytvorí cestu k súboru
-        $lang = MCORE_INTERFACELANG;
-        $fileLang = Mcore::mPathResolver( 'views' ) . '/views/' . $subfolder . '/' . $lang . '/' . strtolower($viewfile) . '.php';
-        $file = Mcore::mPathResolver( 'views' ) . '/views/' . $subfolder . '/' . strtolower($viewfile) . '.php';
         
-        if ( file_exists( $fileLang ) ) {
-            $this->viewfile = $fileLang;
-        }  
-        elseif( file_exists( $file ) ){
-            $this->viewfile = $file;
+        $this->viewfile = '';
+        
+        //vytvorenie možných ciest k súboru
+        $viewFiles = array(
+            MCORE_PROJECT_PATH . '/views/' . $subfolder . '/' . MCORE_INTERFACELANG . '/' . strtolower($viewfile) . '.php',
+            MCORE_PROJECT_PATH . '/views/' . $subfolder . '/' . strtolower($viewfile) . '.php',
+            MCORE_APP_PATH . '/views/' . $subfolder . '/' . MCORE_INTERFACELANG . '/' . strtolower($viewfile) . '.php',
+            MCORE_APP_PATH . '/views/' . $subfolder . '/' . strtolower($viewfile) . '.php',
+        );
+        
+        $viewTemplates = array(
+            MCORE_PROJECT_PATH . '/views/default/' . strtolower( $this->template ) . '.php',
+            MCORE_APP_PATH . '/views/default/' . strtolower( $this->template ) . '.php',
+        );
+                
+        foreach ( $viewFiles as $file ) {
+            
+            if( file_exists($file) ){
+                $this->viewfile = $file;
+                break;
+            }
         }
-        else{
+        
+        if( empty($this->viewfile) ){
             throw new Exception( "Desired view file {$viewfile} was not found." );
         }
         
         //Uloží prijaté dáta do premennej a použije ich v náhľade
-        foreach ( $variables as $key => $value ) {
-            $this->data[$key] = $value;
-        }
-        //Pohodlnejšie je použitie typu objekt
-        $data = (object) $this->data;
+        $this->data = $data = (object) $variables;
     
         //pripravi vonkajšiu časť
         ob_start();
@@ -149,7 +156,13 @@ abstract class McontrollerCore {
             
             //** Ak nie je v cache, vytvori novy a ulozi ho do cache
             ob_start();
-            include Mcore::mPathResolver( 'views' ) . '/views/default/' . strtolower( $this->template ) . '.php';
+            foreach ( $viewTemplates as $templateFile ){
+                
+                if( file_exists($templateFile) ){
+                    include $templateFile;
+                    break;
+                }
+            }
             $outer = Mcore::base()->cachescript->flushFiles( ob_get_clean() );
             $this->cacheTemplate( $outer, $this->template );
         }
@@ -167,30 +180,34 @@ abstract class McontrollerCore {
      */
     public function renderPartial($viewfile, $variables = array(), $subfolder = '') {
         
-        if( $subfolder == '' ) {
+        if( empty($subfolder) ) {
             $subfolder = $this->viewfolder;
         }
-        //vytvorí cestu k súboru
-        $lang = MCORE_INTERFACELANG;
-        $fileLang = Mcore::mPathResolver( 'views' ) . '/views/' . $subfolder . '/' . $lang . '/' . strtolower($viewfile) . '.php';
-        $file = Mcore::mPathResolver( 'views' ) . '/views/' . $subfolder . '/' . strtolower($viewfile) . '.php';
         
-        if ( file_exists( $fileLang ) ) {
-            $this->viewfile = $fileLang;
-        }  
-        elseif( file_exists( $file ) ){
-            $this->viewfile = $file;
+        $this->viewfile = '';
+        
+        //vytvorenie možných ciest k súboru
+        $files = array(
+            MCORE_PROJECT_PATH . '/views/' . $subfolder . '/' . MCORE_INTERFACELANG . '/' . strtolower($viewfile) . '.php',
+            MCORE_PROJECT_PATH . '/views/' . $subfolder . '/' . strtolower($viewfile) . '.php',
+            MCORE_APP_PATH . '/views/' . $subfolder . '/' . MCORE_INTERFACELANG . '/' . strtolower($viewfile) . '.php',
+            MCORE_APP_PATH . '/views/' . $subfolder . '/' . strtolower($viewfile) . '.php',
+        );
+                
+        foreach ( $files as $file ) {
+            
+            if( file_exists($file) ){
+                $this->viewfile = $file;
+                break;
+            }
         }
-        else{
+        
+        if( empty($this->viewfile) ){
             throw new Exception( "Desired view file {$viewfile} was not found." );
         }
         
         //Uloží prijaté dáta do premennej a použije ich v náhľade
-        foreach ( $variables as $key => $value ) {
-            $this->data[$key] = $value;
-        }
-        //Pohodlnejšie je použitie typu objekt
-        $data = (object) $this->data;
+        $this->data = $data = (object) $variables;
     
         include( $this->viewfile );
     }
@@ -274,16 +291,28 @@ abstract class McontrollerCore {
      * @return String Podmienka zacinajuca s ORDER BY databazovy dotaz
      */
     protected function getSortCondition( $enableSort ){
-        $sort = "ORDER BY t.id DESC";
-        if( !empty( $_GET['sort'] ) ){
-            if ( ( $column = array_search( $_GET['sort'], $enableSort ) ) !== FALSE ){
-                $sort = "ORDER BY {$column}";
-                if( !empty( $_GET['order'] ) 
-                        && ( strtolower($_GET['order']) == 'asc' || strtolower($_GET['order']) == 'desc' ) ){
-                    $sort .= " {$_GET['order']}";
+        
+        
+        $getSort  = (array) $_GET['sort'];
+        $getOrder = (array) $_GET['order'];
+        $q_string = '';
+        
+        foreach ( $getSort as $key => $sort ) {
+            
+            if ( ( $column = array_search( $sort, $enableSort ) ) !== FALSE ){
+                $q_string .= " {$column} ";
+                
+                if( !empty( $getOrder[$key] ) 
+                        && ( strtolower($getOrder[$key]) == 'asc' || strtolower($getOrder[$key]) == 'desc' ) ){
+                    $q_string .= "$getOrder[$key],";
                 }
             }
         }
-        return $sort;
+        
+        if( empty($q_string) ){
+            $q_string = "t.id DESC ";
+        }
+        
+        return "ORDER BY " . substr($q_string, 0, -1);
     }
 }

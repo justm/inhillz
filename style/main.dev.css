@@ -16,17 +16,33 @@
 
 /*
     Classes:
+        .center-block - Centers an element with fixed size to a center of a viewport
+            use with: .col-*
         .clean - Removes borders background etc. for a clean look
             use with: .btn
-         
+        .chart - Element containing data chart
+            use to style child elements such as:
+            .datapath 
+            .axis
+            .grid
+            .line-hover
+            .line-select
+            .val
+        .push - Adds a horizontal space between elements with clear:both
+        .summary - Element containing workout summary informations, 
+            use to style child elements such as:
+            .summary-inline - Inline blocks of data
+            .summary-lg - Larger font-size
+            .summary-label - Name for measurand
+            .unit - Commonly used with abbr tag
 */
 
 /*
     View-port sizes
-    @media(max-width:767px){}
-    @media(min-width:768px){}
-    @media(min-width:992px){}
-    @media(min-width:1200px){}
+        @media(max-width:767px){}
+        @media(min-width:768px){}
+        @media(min-width:992px){}
+        @media(min-width:1200px){}
 */
 
 /* Bootstrap */
@@ -42,6 +58,7 @@ html{
 body{
     height: 100%;
     background: #fafafa;
+    font-size: 13px;
 }
 .center-block{
     float: none;
@@ -59,7 +76,10 @@ body{
     display: table;
     height: 20px
 }
-
+abbr{
+    border-bottom: none !important;
+    cursor: inherit !important;
+}
 /* .navbar */
 .navbar{
     border-radius: 0px;
@@ -98,7 +118,37 @@ body{
 .panel{
     border-color: #ddd;
 }
+.panel-footer{
+    margin: 0 15px;
+    padding: 10px 0;
+    background: transparent;
+    color: #666;
+    font-size: 95%;
+}
+.panel.panel-info{
+    border-color: #33cc99;
+}
+.panel-info>.panel-heading{
+    color: #33cc99;
+    background-color: transparent;
+    border-color: #33cc99;
+}
+.panel-info>.panel-heading>*{
+    font-weight: bold !important;
+}
 
+.table.table-clean.table-condensed th,
+.table.table-clean.table-condensed td{
+    padding: 3px !important;
+}
+.table.table-clean th,
+.table.table-clean td{
+    border: none !important;
+    padding-left: 0 !important
+}
+.panel .table{
+    margin-bottom: 10px;
+}
 .input[type=file]{
     height: 22px;
 }
@@ -114,17 +164,38 @@ body{
     margin-left: 15px;
 }
 hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-top-color: #ddd;
 }
 /*Workout view*/
 #chart-canvas{
-    margin: 0 50px
+    margin: 0 -10px;
+}
+.summary .summary-inline{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.summary .summary-lg{
+    font-size: 25px
+}
+.summary .summary-label{
+    display: block;
+    font-size: 12px;
+    color: #999;
+    font-weight: normal;
+}
+.summary .summary-lg .unit{
+    font-size: 20px;
+    margin-left: 5px
 }
 /*CHART*/
 .chart .datapath{
     fill:none;
     stroke-width: 1;
     stroke: #33CC99;
+    shape-rendering: optimizeSpeed
 }
 .chart .datapath.altitude{
     fill: #eee;
@@ -141,13 +212,20 @@ hr{
 }
 .chart .axis{
     fill: none;
-    stroke: #aaa;
-    stroke-width: 1
+    stroke: #999;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+.chart .grid{
+    shape-rendering: crispEdges;
 }
 .chart text{
-    fill: #aaa;
+    fill: #999;
     stroke: none;
     font-size: 10px;
+}
+.chart .axis text{
+    fill: #bbb;
 }
 .chart .grid .tick,
 .chart .grid line{
@@ -156,13 +234,26 @@ hr{
 .chart .grid path {
     stroke-width: 0;
 }
-.chart .line-hover { 
+.chart .hover-line { 
   stroke: #33CC99;  
   fill: none;
   stroke-width: 1px;
 }
-.chart .line-select { 
+.chart .select-line { 
   stroke: #000;  
   fill: none;
   stroke-width: 1px;
+}
+.chart .select-rect{
+  fill: rgba(0,0,0,.3);  
+}
+.chart .val text{
+    text-anchor: middle;
+}
+.chart .val.val-current .val-name{
+    font-weight: bold;
+    font-size: 11px
+}
+.chart .val.val-current .val-value{
+    font-size: 20px;
 }

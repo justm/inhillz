@@ -7,7 +7,7 @@
  * @since Subor je súčasťou aplikácie od verzie 2.0
  * @package views.workout
  * 
- * @var WorkoutModel $data->workout_basics
+ * @var WorkoutModel $data->workout_summary
  * @var Array $data->workout_data
  */
     //** Priprava jednotlivych bodov pre vykreslenie na mape a grafe
@@ -25,7 +25,7 @@
         if( !empty($r['position_lat']) && !empty($r['position_long']) ) {
             $latlng       = 'position_lat:' . ($r['position_lat'] * $deg_to_semic) . ', position_long:' . ($r['position_long'] * $deg_to_semic) . ',';
             $latlngMaps   = 'new google.maps.LatLng(' . ($r['position_lat'] * $deg_to_semic) . ',' . ($r['position_long'] * $deg_to_semic) . ')';
-            $bounds      .= 'bounds.extend(' . $latlngMaps . '); ';
+            $bounds      .= 'map_bns.extend(' . $latlngMaps . '); ';
             $coordinates .= $latlngMaps . ',';
         }
         else{
@@ -34,12 +34,12 @@
         
         //** chart
         if( !empty($r['distance']) && !empty($r['altitude']) ) {
-            $chart_data .= "{i:{$i},distance:" . ($r['distance']/1000) . ",altitude:{$r['altitude']}, {$latlng}";
+            $chart_data .= "{i:{$i},distance:" . ($r['distance']/1000) . ",altitude:" . number_format( $r['altitude'], 0 ) . ", {$latlng}";
         }
         else{
             continue;
         }
-        $chart_data .= empty($r['speed'])? '' : "speed:{$r['speed']},";
+        $chart_data .= empty($r['speed'])? '' : "speed:" . number_format( $r['speed']*3.6, 2 ) . ",";
         $chart_data .= empty($r['cadence'])? '' : "cadence:{$r['cadence']},";
         $chart_data .= empty($r['heart_rate'])? '' : "heart_rate:{$r['heart_rate']},";
         $chart_data .= "},";

@@ -165,8 +165,8 @@ class MhtmlCore {
                 if( ($pos = array_search($colName, $getSort)) !== FALSE ){
 
                     if( !empty($getOrder[$pos]) && $getOrder[$pos] == strtolower('asc') ){
-                        $getOrder[$pos] = 'desc';
-                        $node_class     = 'oASC'; // Current is Ascending
+                        $getOrder[$pos] = 'desc'; // this is next value after clicking the link
+                        $node_class     = 'oASC'; // this is current value for CSS
                     }
                     else{
                         unset($getSort[$pos]);
@@ -205,7 +205,6 @@ class MhtmlCore {
         }
         return $q;
     }
-
 
     /**
      * Statická metóda, ktorá vytvorí HTML LABEL tag
@@ -539,23 +538,25 @@ class MhtmlCore {
             $breadcrumbs .= '</a></li>';
             
             $subdomain = $last = $url = '';
-            
-            //** First item with subdomain link
-            if( $useSubdomain && !empty($levels)){
-                $subdomain    = array_shift( $levels );
-                $breadcrumbs .= '<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">';
-                $breadcrumbs .= '<a href="' . self::createSubdomainLink( $subdomain->url ) . '" title="' . $subdomain->name . '" itemprop="url">';
-                $breadcrumbs .= '<span itemprop="title">' . $subdomain->name . '</span>';
-                $breadcrumbs .= '</a></li>';
-            }
+            $entry_url = ENTRY_SCRIPT_URL;
             
             if( $lastPlain && !empty($levels) ){
                 $last = array_pop($levels);
             }
             
+            //** First item with subdomain link
+            if( $useSubdomain && !empty($levels)){
+                $subdomain    = array_shift( $levels );
+                $entry_url    = self::createSubdomainLink($subdomain->url);
+                
+                $breadcrumbs .= '<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">';
+                $breadcrumbs .= '<a href="' . $entry_url . '" title="' . $subdomain->name . '" itemprop="url">';
+                $breadcrumbs .= '<span itemprop="title">' . $subdomain->name . '</span>';
+                $breadcrumbs .= '</a></li>';
+            }
+            
             //** Create breadcrumb levels
             foreach ($levels as $level){
-                
                 if( empty( $level ) ){
                     continue;
                 }
@@ -570,7 +571,7 @@ class MhtmlCore {
                 }            
                 
                 $breadcrumbs .= '<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">';
-                $breadcrumbs .= '<a href="' . self::createSubdomainLink( $subdomain->url ) . substr( $url, 0, -1 ) . '" title="' . $level->name . '" itemprop="url">';
+                $breadcrumbs .= '<a href="' . $entry_url . substr( $url, 0, -1 ) . '" title="' . $level->name . '" itemprop="url">';
                 $breadcrumbs .= '<span itemprop="title">' . $level->name . '</span>';
                 $breadcrumbs .= '</a></li>';
             }

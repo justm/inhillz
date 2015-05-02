@@ -7,7 +7,7 @@
  * @since Subor je súčasťou aplikácie od verzie 2.0
  * @package views.workout
  * 
- * @var WorkoutModel $data->workout_basics
+ * @var WorkoutModel $data->workout_summary
  * @var Array $data->workout_data
  */
 ?><div class="col-xs-12">

@@ -15,6 +15,9 @@
  * 
  * @property int $id 
  * @property String $duration
+ * @property float total_timer_time
+ * @property float total_elapsed_time
+ * @property String title
  * @property int $description
  * @property int $feelings
  * @property int $min_hr
@@ -31,6 +34,7 @@
  * @property int $id_activity
  * @property int $id_user
  * @property int $id_visibility
+ * @property int $start_time
  * @property int $id_label
 
  * 
@@ -38,26 +42,21 @@
 class WorkoutModel extends MmodelCore{
         
     /**
-     * Metóda vráti statický model špecifikovanej triedy
-     * @param string Názov triedy
-     * @return WorkoutModel
+     * @inheritdoc
      */
     public static function model( $className = __CLASS__ ){
         return parent::model( $className );
     }
     
     /**
-     * Metóda vráti názov tabuľky v DB, ku ktorej prislúcha tento model
-     * @return String Názov tabuľky
+     * @inheritdoc
      */
     public function table(){
         return 'training_entry';
     }
     
     /** 
-     * Metóda, ktorá vráti pole definovaných označení pre jednotlivé atribúty modelu
-     * @deprecated since version 2.0
-     * @return array
+     * @inheritdoc
      */
     public function labels() {
         
@@ -83,10 +82,8 @@ class WorkoutModel extends MmodelCore{
         );
     }
     
-     /** 
-     * Metóda, ktorá vráti pole definovaných označení pre jednotlivé atribúty modelu
-     * @return array
-     * @since 2.0
+    /** 
+     * @inheritdoc
      */
     public function tags( ) {
         
@@ -159,8 +156,7 @@ class WorkoutModel extends MmodelCore{
     }
 
     /**
-     * Metóda, ktorá vráti pole definovaných pravidiel pre jednotlivé atribúty modelu
-     * @return array
+     * @inheritdoc
      */
     public function rules() {
         
@@ -170,4 +166,12 @@ class WorkoutModel extends MmodelCore{
         );
     }
     
+    /**
+     * @inheritdoc
+     */
+    protected function afterFind() {
+        $this->start_time         = date('H:i', strtotime($this->start_time) );
+        $this->date               = date('l, F d, Y', strtotime($this->date) );
+        $this->total_elapsed_time = date("H:i:s", strtotime($this->total_elapsed_time) );
+    }
 } 
