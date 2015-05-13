@@ -63,24 +63,20 @@ class WorkoutController extends McontrollerCore{
      * Detailné zobrazenie tréningu
      * @param int $id
      */
-    protected function view( $id = 0 ){
+    public function view( $id = 0 ){
         
-        $workout_summary = WorkoutModel::model()->findById(intval($id));
+        $workout_summary = WorkoutModel::model()->findById($id);
 
         if( empty($workout_summary) ){
             PageController::controller()->error(404);
         }
                        
-        /** @todo Check if $workout->data_file not empty, e.g. manual entry */
-        
-        /** this is TEMP, will be read from BigTable */ 
-        $data_model = new Csv_activity_model(MCORE_PROJECT_PATH . 'uploads/activities_data/' . $workout_summary->data_file);
-        $workout_data = $data_model->getRecordData();
-        /** end of TEMP */
+        $analyzer = new Analyzer();
+        $workout_data = $analyzer->detect_climbs($workout_summary);
         
         $this->render('view', array(
             'workout_summary' => $workout_summary,
             'workout_data' => $workout_data)
         );
-    }
+    }    
 }

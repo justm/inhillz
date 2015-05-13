@@ -170,8 +170,8 @@ class WorkoutModel extends MmodelCore{
      * @inheritdoc
      */
     protected function afterFind() {
-        $this->start_time         = date('H:i', strtotime($this->start_time) );
+        $this->start_time         = date('H:i', $this->start_time );
         $this->date               = date('l, F d, Y', strtotime($this->date) );
-        $this->total_elapsed_time = date("H:i:s", strtotime($this->total_elapsed_time) );
+        $this->total_elapsed_time = date("H:i:s", $this->total_elapsed_time );
     }
 } 

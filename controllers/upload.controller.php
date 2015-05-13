@@ -33,7 +33,7 @@ class UploadController extends McontrollerCore{
     protected function manual( $id = 0 ){
         
         $activities = Mcore::base()->db->queryPairs( "SELECT `id`, `name` FROM `activity`", 'id', 'name');
-        if( ( $workout = WorkoutModel::model()->findById( $id ) ) == NULL ){
+        if( ( $workout = WorkoutModel::model()->findById($id) ) == NULL ){
             $workout = new WorkoutModel();
             $workout->start_time = time() - 3600;
         }
@@ -107,9 +107,9 @@ class UploadController extends McontrollerCore{
                 );
                     
                 //** Read CSV file and get totals
-                $data_model   = new Csv_activity_model($outputpath);
-                $session_data = $data_model->getSessionData();
-                $data_units   = $data_model->getUnits();  
+                $data_model   = new Csv_activity_parser($outputpath);
+                $session_data = $data_model->get_session();
+                $data_units   = $data_model->get_units();  
                 
                 //** Create DB entry
                 $w_model = new WorkoutModel();

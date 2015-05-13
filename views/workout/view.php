@@ -16,8 +16,15 @@
     $bounds       = '';
     $chart_data    = '';
     
-    /** @todo Rozhodni, ktorú veličinu je možné zobraziť v grafe, tj. ku ktorej sú data*/
+    //** Rozhodne, ktorú veličinu je možné zobraziť v grafe, tj. ku ktorej sú data
+    $chart_def  = !empty( array_column($data->workout_data, 'cadence') )?   'cadence:{name:"Cadence",precision:0,unit:"rpm"},' : '';   
+    $chart_def .= !empty( array_column($data->workout_data, 'heart_rate') )?'heart_rate:{name:"Heart Rate",precision:0,unit:"bpm"},' : '';   
+    $chart_def .= !empty( array_column($data->workout_data, 'speed') )?     'speed:{name:"Speed",precision:2,unit:"kph"},' : '';   
+    $chart_def .= !empty( array_column($data->workout_data, 'est_power') )? 'est_power:{name:"Est. Power",precision:0,unit:"W"},' : '';   
+    $chart_def .= !empty( array_column($data->workout_data, 'power') )?     'power:{name:"Power",precision:0,unit:"W"},' : '';   
+    $chart_def .= !empty( array_column($data->workout_data, 'altitude') )?  'altitude:{name:"Altitude",precision:0,unit:"m"},' : '';   
         
+    //** Pripraví data
     for ($i = 0; $i< count($data->workout_data); $i+=4){
         $r = $data->workout_data[$i];
         
@@ -34,17 +41,19 @@
         
         //** chart
         if( !empty($r['distance']) && !empty($r['altitude']) ) {
-            $chart_data .= "{i:{$i},distance:" . ($r['distance']/1000) . ",altitude:" . number_format( $r['altitude'], 0 ) . ", {$latlng}";
+            $chart_data .= "{i:{$i},distance:" . ($r['distance']/1000) . ",altitude:" . round($r['altitude']) . ", {$latlng}";
         }
         else{
             continue;
         }
-        $chart_data .= empty($r['speed'])? '' : "speed:" . number_format( $r['speed']*3.6, 2 ) . ",";
+        $chart_data .= empty($r['speed'])? '' : "speed:" . round( $r['speed']*3.6, 2 ) . ",";
         $chart_data .= empty($r['cadence'])? '' : "cadence:{$r['cadence']},";
         $chart_data .= empty($r['heart_rate'])? '' : "heart_rate:{$r['heart_rate']},";
+        $chart_data .= empty($r['power'])? '' : "power:{$r['power']},";
+        $chart_data .= empty($r['est_power'])? 'est_power:0,' : "est_power:{$r['est_power']},";
         $chart_data .= "},";
     }
-    
+        
     include 'view.map.php';
     include 'view.basics.php';
     include 'view.chart.php';

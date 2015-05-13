@@ -99,13 +99,7 @@
      * Uchovava funkcie a rozsahy potrebne pre nanesenie jednotlivych veličín na graf
      * @type Array 
      */
-    var chart_def = {
-        cadence:{name:"Cadence",precision:0,unit:"rpm"},
-        heart_rate:{name:"Heart Rate",precision:0,unit:"bpm"},
-        speed:{name:"Speed",precision:2,unit:"kph"},
-        altitude:{name:"Altitude",precision:0,unit:"m"}
-        /*power:{}*/
-    };
+    var chart_def = {<?php echo $chart_def; ?>};
     
     var charts_count, i;
     charts_count = i = Object.keys(chart_def).length;

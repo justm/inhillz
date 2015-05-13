@@ -282,7 +282,7 @@ abstract class MmodelCore {
      */
     public function findById($id, $columns = '*', $joins = '') {
 
-        if (intval($id) === $id) {
+        if ( $id == number_format(intval($id),0) ) {
             $condition = "t.`id`= {$id}";
         } elseif (!isset($id)) {
             $condition = "t.`id`= 0";

@@ -208,7 +208,10 @@ hr{
     stroke: #9933cc;
 }
 .chart .datapath.power{
-    stroke: #000;
+    stroke: #3399cc;
+}
+.chart .datapath.est_power{
+    stroke: #999;
 }
 .chart .axis{
     fill: none;
