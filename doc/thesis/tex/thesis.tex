@@ -13,6 +13,8 @@
 \usepackage{enumitem} %itemize
 \usepackage{tikz} % plus minus symbol
 
+\usepackage{mathtools} %math formulas
+
 \usepackage[toc,page]{appendix}
 
 \usepackage[left=3.5cm,top=2.5cm,bottom=2.5cm,right=2cm]{geometry}%page margin
@@ -98,12 +100,52 @@ Technologickı pokrok je bezpochyby dôvodom, preèo sa rôzne inteligentné zariaden
 
 \newpage
 \section{Analıza problému}
-Lorem ipsum
+Pre správne pochopenie problematiky sa musíme oboznámi so zauívanım spôsobom merania vıkonu cyklistu. Vıkon je meranı špeciálnym zariadením, ktoré je vo väèšine prípadoch zabudované priamo v komponente bicykla. Musí sa jedna o komponent, ktorı sa priamo stará o prenos sily  pôsobiacej na pedál do pohonu zadného kolesa. Môe to by teda náboj zadného kolesa, jedna alebo obe k¾uky stredového zloenia prípadne pedále. To, kde je zriadenie umiestnené záleí od konkrétneho vırobcu a jeho techniky merania. Zariadenie nazıvame meraè vıkonu\footnote{z angl.: Power Meter}. \\
+\indent Najdôleitejším prvkom meraèa je tenzometer. Ide o súèiastku, s uzavretnım elektrickım okruhom a konštatnım elektrickım odporom. Ak je tenzometer vystevenı pôsobeniu mechanickej sily, dochádza k jeho deformácii, zmene odporu a vïaka piezolektrickému javu aj k zmene napätia. Správnou konfiguráciou je teda moné zisti presnú silu pôsobiacu na túto súèiastku.\\ 
+\indent Ako sme uviedli v predchádzajúcej èasti, vıkon je mierou toho ako rıchlo vykonáva urèitá silu prácu. Vezmime do úvahy jednoduchı vzah: 
+\begin{equation} \label{eq:power_trivial1}
+P = F \cfrac{d}{t}
+\end{equation}
+Vıkon \emph{P} je rovnı sile, ktorú je potrebné vyvinú aby sme teleso s danou hmotnosou premiestnili po dráhe \emph{d} za èas \emph{t}. Dráha prekonaná za èas predstavuje rıchlos, preto môeme vzah \emph{\ref{eq:power_trivial1}} upravi na nasledovnı tvar:
+\begin{equation} \label{eq:power_trivial2}
+P = F v 
+\end{equation}
+A to je podstatou fungovania meraèa vıkonu. Sila zmeraná tenzometrom je násobená aktuálnou rıchlosou a táto hodnota je odoslaná do zobrazovacieho zariadenia.\\
+\indent Prvı meraè vıkonu bol dostupnı verejnosti v roku 1989. Jednalo sa o znaèku SRM (Schoberer Rad Messtechnik), ktorá svoj produkt testovala s profesionálnymi športovcami od zaèiatku osemdesiatych rokov.\cite{cyclingweekly_power}
 
 \newpage
-\subsection{Porovnanie existujúcich systémov}
+\subsection{Hárdver pre meranie}
+\subsection{Protokoly prenosu dát}
+
+\newpage
+\subsection{Softvér pre vyhodnotenie}
+\subsubsection{Strava}
+\subsubsection{Bike Calculator}
+
+\newpage
+\subsection{Valivı odpor}
+Valivım odporom môeme nazva silu, ktorá vzniká keï sa teleso kruhového prierezu (v našom prípade koleso bicykla) vá¾a po pevnej podloke. Fyzikálnou podstatou tohoto javu je hysterézia, ktorı nastáva pri deformácia podloky resp. kolesa pôsobením normálovej tlakovej sily. V reálnych podmienkach samozrejme podloka ani galuska kolesa nie sú dokonale pruné. Preto reakcia na normálovú tlakovú silu je posunutá o vzdialenos $\xi$.\cite{encyklopedie_fyziky}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.0]{images/rolling_resistance.png}
+\caption{Valivı odpor\cite{encyklopedie_fyziky}}
+\end{figure}
+\noindent Silu \emph{F}, ktorou predmet udríme v rovnomernom pohybe vyjadríme vzahom:
+\begin{equation} \label{eq:rolling_trivial1}
+F = F_n tg\alpha
+\end{equation}
+Pre malé uhly je $tg\alpha = sin\alpha$ a pre koleso s polomerom \emph{R} je $sin\alpha = \cfrac{\xi}{R}$. Dosadením do vzahu \ref{eq:rolling_trivial1} dostávame:
+\begin{equation} \label{eq:rolling_trivial2}
+F = \cfrac{\xi}{R} F_n
+\end{equation}
+V praxi by ale bolo ve¾mi nároèné zmera vzdialenos $\xi$, preto sa podiel vo vzahu \ref{eq:rolling_trivial2} èasto nahrádza koeficientom valivého odporu $C_r_r$. Koeficient môeme nájs pre rôzne typy pneumatík v tabu¾kách. Definovaním štandardov pri testovaní pneumatík ako je napríklad štandard SAE J2452\cite{sae_test} sa vymedzujú podmienky testu. Pre potreby tejto práce je dôleité uvaova podloku, povrch vozovky, ako dokonale pevnú a koeficienty valivého odporu galusiek alebo plášov cestného bicykla v rozsahu od 0.002 do 0.006\cite{roller_data}. Kım koeficient je pod¾a tabu¾ky nezávislı od tlaku, pretoe test predpokladá konštatné, ideálne nahustenie pneumatiky, v praxi tomu tak by nemusí. Venujme teda nieko¾ko ïalších riadkov faktorom, ktoré ovplyvòujú valivı odpor.\\
+\indent \textbf{Tlak v pneumatike}. Èím vyššie je nahustenie pneumatiky, tım je nišia jej deformáciia a teda aj valivı odpor. \textbf{Šírka pneumatiky}. Pôsobením normálovej tlakovej sily je kadá pneumatika mierne deformovaná, avšak širšia sa deformuje viac do svojej šírky (menšie $\xi$), kım ušia je deformovaná pozdåne, pneumatika strací viac zo svojho kruhového tvaru a rastie $\xi$. Širšia pneumatika má pri rovnakom tlaku oproti ušej pneumatike niší valivı odpor ale ušiu je moné husti na vyšší tlak pri dosiahnutí rovnakého komfortu jazdy. Ušie pneumatiky majú navyše niší aerodynamickı odpor, ktorému sa budeme venova neskôr. Ïalšími faktormi, ktoré ovplyvòujú valivı odpor sú aj štruktúra a materiál pneumatiky, priemer kolesa, hmotnos záae, mikro-trenie medzi povrchom a pneumatikou.\\
+\indent Nako¾ko je na trhu nespoèetné mnostvo modelov galusiek a plášov pre bicykle, nie je moné k ním uchováva a neustále aktualizova koeficient valivého odporu $C_r_r$. Urèitú úlohu hrá aj tlak v pneumatike, ktorı kadı cyklista volí pod¾a svojich osobnıch preferencií, poadovanıch jazdnıch vlastností a komfortu. Poadova tlak v pneumatike ako vstup do systému od pouívate¾a povaujeme za ve¾mi nekomfortné a preto vyvodzujeme záver, e práve hodnota $C_r_r$ bude predmetom odhadu v našom algoritme.
 
 
+
+
+\newpage
 \begin{Verbatim}[baselinestretch=0.75]
 <script type="text/javascript">
 </script>
@@ -118,18 +160,38 @@ Vısledkom našej práce je ...
   
   \begin{thebibliography}{99}
   \bibitem{kontrolovany_trening}
-  DÍVALD, L.: \emph{Kontrolovanı tréning}. Bratislava: Laurenc Dívald, 2009. 116. ISBN 978-80-970358-1-5
+  DÍVALD, L.: \emph{Kontrolovanı tréning}. Bratislava: Laurenc Dívald, 2009. 116s. ISBN 978-80-970358-1-5
+  
+  \bibitem{physiology_of_sport}
+  KENNEY, W. L. - WILMORE, J. H. - COSTILL, D. L.: \emph{Physiology of Sport and Exercise}, 5. vydanie. Champaign: Human Kinetics, 2011. 640s. ISBN: 860-1401254188 
   
   \bibitem{obecna_fyzika}
-  HALLIDAY, D. - RESNICK, R. - WALKER, J.: \emph{Fyzika :vysokoškolská uèebnice obecné fyziky}. Brno: Vysoké uèení technické, 2000. 1278. ISBN 80-214-1868-0
+  HALLIDAY, D. - RESNICK, R. - WALKER, J.: \emph{Fyzika: vysokoškolská uèebnice obecné fyziky}. Brno: Vysoké uèení technické, 2000. 1278s. ISBN 80-214-1868-0
+  
+  \bibitem{bicycle_science}
+  WILSON, D. G.: \emph{Bicycling Science}, 3. vydanie. Cambridge: The MIT Press, 2004. 485s. ISBN: 978-0262731546
   
   \bibitem{handbook_rolling_resistance}
-  CLARK, S. K. - DODGE, R. N.: \emph{A Handbook for the Rolling Resistance of Pneumatic Tires}. Michigan: University of Michigan, 1979. 156. ASIN: B0006XMSXI
+  CLARK, S. K. - DODGE, R. N.: \emph{A Handbook for the Rolling Resistance of Pneumatic Tires}. Michigan: University of Michigan, 1979. 156s. ASIN: B0006XMSXI
   
-  \bibitem{schwable}
-  SCHWALBE: \emph{Rolling Resistance}. [cit. 14.4.2015]. Dostupné na World Wide Web:
-  <http://www.schwalbetires.com/tech_info/rolling_resistance>
+  \bibitem{standard_atmosphere}
+  ISO 2533:1975 : \emph{Standard Atmosphere} - International Organization for Standardization
   
+  \bibitem{sae_test}
+  SAE J2452:1999 : \emph{Stepwise Coastdown Methodology for Measuring Tire Rolling Resistance} - Society of Automotive Engineers
+  
+  \bibitem{schwalbe}
+  SCHWALBE: \emph{Rolling Resistance}. [cit. 14. 4. 2015]. Dostupné na World Wide Web:
+  <http://www.schwalbetires.com/tech\_info/rolling\_resistance>
+  
+  \bibitem{cyclingweekly_power}
+  CYCLING-WEEKLY: \emph{Power meters: Everything you need to know}. [cit. 15. 4. 2015]. Dostupné na World Wide Web: <http://www.cyclingweekly.co.uk/news/power-meters-everything-you-need-to-know-35563>
+  
+  \bibitem{encyklopedie_fyziky}
+  REICHL, J. - VŠETIÈKA, M.: \emph{Encyklopedie fyziky - Valivı odpor}. [cit. 25. 4. 2015]. Dostupné na World Wide Web: <http://fyzika.jreichl.com/main.article/view/37-valivy-odpor>
+   
+  \bibitem{roller_data}
+  BIKETECH-REVIEW: \emph{Roller Data}. [cit. 25. 4. 2015]. Dostupné na World Wide Web: <http://www.biketechreview.com/tires/rolling-resistance/475-roller-data>
   
 \end{thebibliography}
 
