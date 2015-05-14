@@ -1,0 +1,144 @@
+\documentclass[a4paper, 12pt]{article}
+\title{Aproximácia wattového vıkonu športovca}
+\author{Matúš Maèák}
+\usepackage[slovak]{babel} %language
+\usepackage[cp1250]{inputenc} %encoding
+\usepackage[T1]{fontenc} %specify which font encoding is used
+\usepackage[pdftex]{graphicx}
+\usepackage{eurosym} %euro symbol
+
+\usepackage{indentfirst} %paragraph indent
+\setlength{\parindent}{0.5in}
+
+\usepackage{enumitem} %itemize
+\usepackage{tikz} % plus minus symbol
+
+\usepackage[toc,page]{appendix}
+
+\usepackage[left=3.5cm,top=2.5cm,bottom=2.5cm,right=2cm]{geometry}%page margin
+
+\usepackage{float} %images positionning
+\usepackage{fancyvrb}%formating pieces of code
+
+\usepackage{fancyhdr} %headers
+\pagestyle{fancy}
+
+\linespread{1.4} %line spacing
+% B E G I N   OF   D O C U M E N T
+\begin{document}
+\thispagestyle{empty} % hide page number
+\setcounter{page}{1} %start of numbering
+\section*{Prehlásenie autora}
+\vspace{10mm}
+Èestne prehlasujem, e táto diplomová práca je mojim pôvodnım autorskım dielom, na ktorom som pracoval samostatne na základe vlastnıch teoretickıch a praktickıch poznatkov získanıch poèas štúdia a informácií z dostupnej literatúry. Všetky zdroje, literatúru a pramene, ktoré som pri vypracovaní pouil, riadne citujem s uvedením plného odkazu na príslušnı zdroj. Uvedenú prácu som vypracoval pod vedením Ing. Stanislava Marèeka.\\
+\vspace{10mm}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}} c} % l r text align left right 
+    Bratislava, dòa 21. 05. 2015 & \\
+    & . . . . . . . . . . . . . . . . . . . .  \\
+    & Bc. Matúš Maèák\\
+  \end{tabular*}
+\end{table}
+
+\newpage
+
+\thispagestyle{empty}
+\section*{Poïakovanie}
+\vspace{10mm}
+Ïakujem rodine, priate¾ke Anne a môjmu trénerovi, Mgr. Patrikovi Kurilovi, ktorı ma o tréningu nauèil všetko èo som mohol vyui pri návrhu algoritmu.
+
+\newpage
+\thispagestyle{empty}
+\section*{Abstrakt}
+\noindent Univerzita: Slovenská technická univerzita v Bratislave\\
+Fakulta: Fakulta elektrotechniky a informatiky\\
+Študijnı program: Aplikovaná informatika\\
+Školiace pracovisko: Ústav informatiky a matematiky\\
+Autor: Bc. Matúš Maèák\\
+Názov práce: Aproximácia wattového vıkonu športovca\\
+Vedúci práce: Ing. Stanislav Marèek\\
+Bratislava 2015
+\\\\
+\indent Diplomová práca sa zaoberá h¾adaním algoritmu pre odhadnutie wattového vıkonu športovca, cyklistu. V úvode práce je vysvetlená dôleitos sledovania vıkonu ako hlavného ukazovate¾a v tréningu. Popisuje zariadenia, aplikácie a štandardy, ktoré sú vyvinuté za úèelom sledovania tréningovıch údajov. Jadro práce pojednáva o problematike odhadovania vıkonu z rôznych údajov a prezentuje riešenie, ktoré umoòuje urèi pribliné hodnoty vıkonu bez jeho priameho merania. Záver práce je venovanı rozboru a analıze presnosti údajov odhadnutıch algoritmom.
+\\\\   
+\indent K¾úèové slová: šport, cyklistika, vıkon,  
+
+\newpage
+\thispagestyle{empty}
+\section*{Abstract}
+\noindent University: Slovak Technical University in Bratislava\\
+Faculty: Faculty of Electrical Engineering and Information Technology\\
+Study programme: Applied Informatics\\
+Training workplace: Institute of Computer Science and Mathematics\\
+Author: Matúš Maèák\\
+Title: Aproximácia wattového vıkonu športovca\\
+Thesis supervisor: Ing. Stanislav Marèek\\
+Bratislava 2015
+\\\\
+\indent This master thesis describes the research of algorithm for estimating the power effort of an athlete, cyclist. First part explains the importance of monitoring the power as the main indicator in training. It describes devices, software and standards that are developed to track sport activity. The main part deals with common problems in power estimation from various data and presents the solution that allows approximating the value of athlete's power without a direct measurement. The conclusion is devoted to review and analyze the accuracy of the algorithm.
+\\\\
+\indent Keywords: sport, cycling, power,
+
+\newpage 
+\thispagestyle{empty}
+\tableofcontents %table of contents
+
+\newpage
+\thispagestyle{empty} %my fancy header
+\listoffigures
+
+\newpage
+\addtocounter{section}{-1}
+\section{Úvod}
+Technologickı pokrok je bezpochyby dôvodom, preèo sa rôzne inteligentné zariadenia stávajú naším najdôleitejším nástrojom pri kadodennej rutine ale aj v krízovıch situáciách. Inak tomu nie je ani v športe, najmä ak sa jedná o tie vytrvalostné. Na pulte takmer kadej športovej predajne sú k dispozícii meraèe srdcového tepu, èasu alebo vzdialenosti pod¾a GPS a podobne. Nielen tréning pod¾a vlastného pocitu ale podriadenie tréningovej záae údajom na meracom zariadení sa stáva k¾úèom k postupnému zvyšovaniu vıkonnosti. Vysoká dostupnos technológií a \emph{know-how} vyrovnáva schopnosti konkurencie. Víazia športové drustvá, ktoré okrem mimoriadneho talentu dokáu tréning najlepšie zmera, vyhodnoti a opätovne naplánova.\\
+\indent V práci sa zameriavame na analızu vytrvalostného športu - cyklistiky, ktorú môeme v globále urobi z údajov ako je dåka tréningu v hodinách, tzv. tréningovı objem, vzdialenos, rıchlos, resp. tempo, tepová frekvencia. Tréning pod¾a tepovej frekvencie môe by pre športovca obrovskım prínosom za predpokladu, e má správne stanovené tréningové zóny, ktoré by mali odzrkad¾ova zaaenie organizmu\cite{kontrolovany_trening}. Tepovú frekvenciu u môeme v dnešnej dobe povaova za pomerne nenákladnı spôsob usmernenia tréningu, no má však jednu nevıhodu. Tep srdca reaguje na stúpajúce zaaenie s miernım oneskorením a môe by skreslenı pri vıkyve vnútornej rovnováhy organizmu. V cyklistike kde na reálny vıkon, vyjadrite¾nı fyzikálnou velièinou, vplıva ve¾ké mnostvo faktorov je aktuálna rıchlos síce okamitım ale ve¾mi nepresnım ukazovate¾om. Preto je meraè rıchlosti aj tepovej frekvencie postupne nahrádzanı meraèom vıkonu.\\
+\indent Meranie vıkonu v cyklistike nám poskytuje okamitú odpoveï na otázky: ako ve¾mi sa športovec namáha, akou silou pôsobí na pedále. Subjektívny pocit námahy nahrádza konkrétny èíselnı údaj, štandardne vyjadrenı v jednotkách \emph{Watt [W]}. Problémom je však cenová dostupnos takéhoto merania. U profesionálnych športovcov mono cenová nároènos nehrá rolu, avšak sú aj športoví nadšenci, amatérski pretekári, ktorí si chcú zmera svoj progres prípadne sa porovna s najlepšími. Keïe vıkon je fyzikálna velièina, miera toho ako rıchlo vykonáva urèitá sila prácu\cite{obecna_fyzika}, malo by by moné ho vypoèíta na základe údajov ako je stúpanie, rıchlos, vzdialenos. Práve tımto vıpoètom a následne odhadom vıkonu športovca sa venujeme v tejto práci.
+
+\newpage
+\section{Analıza problému}
+Lorem ipsum
+
+\newpage
+\subsection{Porovnanie existujúcich systémov}
+
+
+\begin{Verbatim}[baselinestretch=0.75]
+<script type="text/javascript">
+</script>
+\end{Verbatim}
+
+\newpage
+\section{Záver}
+Vısledkom našej práce je ... 
+
+\newpage
+\lhead{}%clear left side header, from this point to the end of the document
+  
+  \begin{thebibliography}{99}
+  \bibitem{kontrolovany_trening}
+  DÍVALD, L.: \emph{Kontrolovanı tréning}. Bratislava: Laurenc Dívald, 2009. 116. ISBN 978-80-970358-1-5
+  
+  \bibitem{obecna_fyzika}
+  HALLIDAY, D. - RESNICK, R. - WALKER, J.: \emph{Fyzika :vysokoškolská uèebnice obecné fyziky}. Brno: Vysoké uèení technické, 2000. 1278. ISBN 80-214-1868-0
+  
+  \bibitem{handbook_rolling_resistance}
+  CLARK, S. K. - DODGE, R. N.: \emph{A handbook for the rolling resistance of pneumatic tires}. Michigan: University of Michigan, 1979. 88. ASIN: B0006XMSXI
+  
+  \bibitem{schwable}
+  SCHWALBE: \emph{Rolling Resistance}. [cit. 14.4.2015]. Dostupné na World Wide Web:
+  <http://www.schwalbetires.com/tech_info/rolling_resistance>
+  
+  
+\end{thebibliography}
+
+\newpage
+\section*{Obsah CD nosièa}
+\noindent Obsah priloeného CD nosièa je nasledovnı:
+\begin{itemize}
+  \item v prieèinku \emph{dokument} sa nachádza text diplomovej práce vo formáte PDF
+  \item v prieèinku \emph{aplikácia} sú zdrojové súbory vıslednej funkènej aplikácie, a~tie skript pre vytvorenie tabuliek v databáze
+  \item v prieèinku \emph{dokumentácia} je dokumentácia zdrojového kódu vo formáte HTML obsahujúca popis jednotlivıch tried a ich metód, a tie príslušné diagramy tried
+\end{itemize}
+\end{document}
