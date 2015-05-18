@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.3.3)  14 MAY 2015 22:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.15)  18 MAY 2015 20:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **thesis.tex
 (./thesis.tex
 LaTeX2e <2011/06/27>
-Babel <3.9f> and hyphenation patterns for 2 languages loaded.
+Babel <3.9f> and hyphenation patterns for 28 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
@@ -26,35 +26,21 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2013/05/16 v3.9f The Babel package
 
+(/usr/share/texlive/texmf-dist/tex/generic/babel-slovak/slovak.ldf
+Language: slovak 2008/07/06 v3.1a Slovak support from the babel system
 
-! Package babel Error: Unknow option `slovak'. Either you misspelled it
-(babel)                or the language definition file slovak.ldf was not found
-.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.293 \ProcessOptions*
-                      
-Valid options are: shorthands=..., KeepShorthandsActive,
-activeacute, activegrave, noconfigs, safe=, main=, math=
-headfoot=, strings=, config=, or a language name.
-
-
-! Package babel Error: You haven't specified a language option.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.326 ...ry to proceed from here, type x to quit.}
-                                                  
-You need to specify a language, either as a global option
-or as an optional argument to the \usepackage command;
-You shouldn't try to proceed from here, type x to quit.
-
-) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2013/05/16 v3.9f Babel common definitions
+\babel@savecnt=\count87
+\U@D=\dimen103
+)
+Package babel Info: Making ^ an active character on input line 123.
+Package babel Info: Making " an active character on input line 126.
+Package babel Info: Making ' an active character on input line 129.
+\cs@wordlen=\count88
+Package babel Info: Making - an active character on input line 294.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
@@ -96,10 +82,10 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count87
+\Gread@gobject=\count89
 ))
-\Gin@req@height=\dimen103
-\Gin@req@width=\dimen104
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
 )
 (/usr/share/texlive/texmf-dist/tex/latex/eurosym/eurosym.sty
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
@@ -111,10 +97,10 @@ Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 (/usr/share/texlive/texmf-dist/tex/generic/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip43
-\enit@outerparindent=\dimen105
+\enit@outerparindent=\dimen106
 \enit@toks=\toks17
 \enit@inbox=\box27
-\enitdp@description=\count88
+\enitdp@description=\count90
 )
 (/usr/share/texmf/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texmf/tex/latex/pgf/basiclayer/pgf.sty
@@ -145,20 +131,20 @@ Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
 (/usr/share/texmf/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
 \pgfkeys@tmptoks=\toks21
 ))
-\pgf@x=\dimen106
-\pgf@y=\dimen107
-\pgf@xa=\dimen108
-\pgf@ya=\dimen109
-\pgf@xb=\dimen110
-\pgf@yb=\dimen111
-\pgf@xc=\dimen112
-\pgf@yc=\dimen113
+\pgf@x=\dimen107
+\pgf@y=\dimen108
+\pgf@xa=\dimen109
+\pgf@ya=\dimen110
+\pgf@xb=\dimen111
+\pgf@yb=\dimen112
+\pgf@xc=\dimen113
+\pgf@yc=\dimen114
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count89
-\c@pgf@countb=\count90
-\c@pgf@countc=\count91
-\c@pgf@countd=\count92
+\c@pgf@counta=\count91
+\c@pgf@countb=\count92
+\c@pgf@countc=\count93
+\c@pgf@countd=\count94
 
 (/usr/share/texmf/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
@@ -173,8 +159,8 @@ File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
 )))
 (/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
-\pgfsyssoftpath@smallbuffer@items=\count93
-\pgfsyssoftpath@bigbuffer@items=\count94
+\pgfsyssoftpath@smallbuffer@items=\count95
+\pgfsyssoftpath@bigbuffer@items=\count96
 )
 (/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
@@ -203,8 +189,8 @@ Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen114
-\pgfmath@count=\count95
+\pgfmath@dimen=\dimen115
+\pgfmath@count=\count97
 \pgfmath@box=\box29
 \pgfmath@toks=\toks22
 \pgfmath@stack@operand=\toks23
@@ -219,51 +205,51 @@ Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)))
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count96
+\c@pgfmathroundto@lastzeros=\count98
 ))
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
-\pgf@picminx=\dimen115
-\pgf@picmaxx=\dimen116
-\pgf@picminy=\dimen117
-\pgf@picmaxy=\dimen118
-\pgf@pathminx=\dimen119
-\pgf@pathmaxx=\dimen120
-\pgf@pathminy=\dimen121
-\pgf@pathmaxy=\dimen122
-\pgf@xx=\dimen123
-\pgf@xy=\dimen124
-\pgf@yx=\dimen125
-\pgf@yy=\dimen126
-\pgf@zx=\dimen127
-\pgf@zy=\dimen128
+\pgf@picminx=\dimen116
+\pgf@picmaxx=\dimen117
+\pgf@picminy=\dimen118
+\pgf@picmaxy=\dimen119
+\pgf@pathminx=\dimen120
+\pgf@pathmaxx=\dimen121
+\pgf@pathminy=\dimen122
+\pgf@pathmaxy=\dimen123
+\pgf@xx=\dimen124
+\pgf@xy=\dimen125
+\pgf@yx=\dimen126
+\pgf@yy=\dimen127
+\pgf@zx=\dimen128
+\pgf@zy=\dimen129
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
-\pgf@path@lastx=\dimen129
-\pgf@path@lasty=\dimen130
+\pgf@path@lastx=\dimen130
+\pgf@path@lasty=\dimen131
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
-\pgf@shorten@end@additional=\dimen131
-\pgf@shorten@start@additional=\dimen132
+\pgf@shorten@end@additional=\dimen132
+\pgf@shorten@start@additional=\dimen133
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
 \pgfpic=\box30
 \pgf@hbox=\box31
 \pgf@layerbox@main=\box32
-\pgf@picture@serial@count=\count97
+\pgf@picture@serial@count=\count99
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
-\pgflinewidth=\dimen133
+\pgflinewidth=\dimen134
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
-\pgf@pt@x=\dimen134
-\pgf@pt@y=\dimen135
-\pgf@pt@temp=\dimen136
+\pgf@pt@x=\dimen135
+\pgf@pt@y=\dimen136
+\pgf@pt@temp=\dimen137
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -279,8 +265,8 @@ File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
-\pgf@max=\dimen137
-\pgf@sys@shading@range@num=\count98
+\pgf@max=\dimen138
+\pgf@sys@shading@range@num=\count100
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
@@ -307,8 +293,8 @@ File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
 )
 (/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen138
-\pgf@nodesepend=\dimen139
+\pgf@nodesepstart=\dimen139
+\pgf@nodesepend=\dimen140
 )
 (/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
@@ -318,8 +304,8 @@ Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
 (/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex))
 (/usr/share/texmf/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
-\pgffor@iter=\dimen140
-\pgffor@skip=\dimen141
+\pgffor@iter=\dimen141
+\pgffor@skip=\dimen142
 \pgffor@stack=\toks25
 \pgffor@toks=\toks26
 ))
@@ -328,29 +314,29 @@ Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
 
 (/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
-\pgf@plot@mark@count=\count99
-\pgfplotmarksize=\dimen142
+\pgf@plot@mark@count=\count101
+\pgfplotmarksize=\dimen143
 )
-\tikz@lastx=\dimen143
-\tikz@lasty=\dimen144
-\tikz@lastxsaved=\dimen145
-\tikz@lastysaved=\dimen146
-\tikzleveldistance=\dimen147
-\tikzsiblingdistance=\dimen148
+\tikz@lastx=\dimen144
+\tikz@lasty=\dimen145
+\tikz@lastxsaved=\dimen146
+\tikz@lastysaved=\dimen147
+\tikzleveldistance=\dimen148
+\tikzsiblingdistance=\dimen149
 \tikz@figbox=\box35
 \tikz@tempbox=\box36
-\tikztreelevel=\count100
-\tikznumberofchildren=\count101
-\tikznumberofcurrentchild=\count102
-\tikz@fig@count=\count103
+\tikztreelevel=\count102
+\tikznumberofchildren=\count103
+\tikznumberofcurrentchild=\count104
+\tikz@fig@count=\count105
 
 (/usr/share/texmf/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
-\pgfmatrixcurrentrow=\count104
-\pgfmatrixcurrentcolumn=\count105
-\pgf@matrix@numberofcolumns=\count106
+\pgfmatrixcurrentrow=\count106
+\pgfmatrixcurrentcolumn=\count107
+\pgf@matrix@numberofcolumns=\count108
 )
-\tikz@expandcount=\count107
+\tikz@expandcount=\count109
 
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopat
 hs.code.tex
@@ -360,15 +346,15 @@ Package: mathtools 2013/02/12 v1.13 mathematical typesetting tools
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count108
-\calc@Bcount=\count109
-\calc@Adimen=\dimen149
-\calc@Bdimen=\dimen150
+\calc@Acount=\count110
+\calc@Bcount=\count111
+\calc@Adimen=\dimen150
+\calc@Bdimen=\dimen151
 \calc@Askip=\skip44
 \calc@Bskip=\skip45
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count110
+\calc@Ccount=\count112
 \calc@Cskip=\skip46
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mh/mhsetup.sty
@@ -385,46 +371,46 @@ Package: amstext 2000/06/29 v2.01
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks27
-\ex@=\dimen151
+\ex@=\dimen152
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen152
+\pmbraise@=\dimen153
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count111
+\inf@bad=\count113
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count112
-\leftroot@=\count113
+\uproot@=\count114
+\leftroot@=\count115
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count114
-\DOTSCASE@=\count115
+\classnum@=\count116
+\DOTSCASE@=\count117
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box37
 \strutbox@=\box38
-\big@size=\dimen153
+\big@size=\dimen154
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count116
-\c@MaxMatrixCols=\count117
+\macc@depth=\count118
+\c@MaxMatrixCols=\count119
 \dotsspace@=\muskip10
-\c@parentequation=\count118
-\dspbrk@lvl=\count119
+\c@parentequation=\count120
+\dspbrk@lvl=\count121
 \tag@help=\toks28
-\row@=\count120
-\column@=\count121
-\maxfields@=\count122
+\row@=\count122
+\column@=\count123
+\maxfields@=\count124
 \andhelp@=\toks29
-\eqnshift@=\dimen154
-\alignsep@=\dimen155
-\tagshift@=\dimen156
-\tagwidth@=\dimen157
-\totwidth@=\dimen158
-\lineht@=\dimen159
+\eqnshift@=\dimen155
+\alignsep@=\dimen156
+\tagshift@=\dimen157
+\tagwidth@=\dimen158
+\totwidth@=\dimen159
+\lineht@=\dimen160
 \@envbody=\toks30
 \multlinegap=\skip48
 \multlinetaggap=\skip49
@@ -434,15 +420,15 @@ LaTeX Info: Redefining \] on input line 2666.
 )
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count123
-\l_MT_multwidth_dim=\dimen160
+\g_MT_multlinerow_int=\count125
+\l_MT_multwidth_dim=\dimen161
 \origjot=\skip50
-\l_MT_shortvdotswithinadjustabove_dim=\dimen161
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen162
-\l_MT_above_intertext_sep=\dimen163
-\l_MT_below_intertext_sep=\dimen164
-\l_MT_above_shortintertext_sep=\dimen165
-\l_MT_below_shortintertext_sep=\dimen166
+\l_MT_shortvdotswithinadjustabove_dim=\dimen162
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen163
+\l_MT_above_intertext_sep=\dimen164
+\l_MT_below_intertext_sep=\dimen165
+\l_MT_above_shortintertext_sep=\dimen166
+\l_MT_below_shortintertext_sep=\dimen167
 )
 (/usr/share/texlive/texmf-dist/tex/generic/appendix/appendix.sty
 Package: appendix 1998/11/29 v1.0 extra appendix facilities
@@ -464,22 +450,22 @@ Package ifvtex Info: VTeX not detected.
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count124
-\Gm@cntv=\count125
-\c@Gm@tempcnt=\count126
-\Gm@bindingoffset=\dimen167
-\Gm@wd@mp=\dimen168
-\Gm@odd@mp=\dimen169
-\Gm@even@mp=\dimen170
-\Gm@layoutwidth=\dimen171
-\Gm@layoutheight=\dimen172
-\Gm@layouthoffset=\dimen173
-\Gm@layoutvoffset=\dimen174
+\Gm@cnth=\count126
+\Gm@cntv=\count127
+\c@Gm@tempcnt=\count128
+\Gm@bindingoffset=\dimen168
+\Gm@wd@mp=\dimen169
+\Gm@odd@mp=\dimen170
+\Gm@even@mp=\dimen171
+\Gm@layoutwidth=\dimen172
+\Gm@layoutheight=\dimen173
+\Gm@layouthoffset=\dimen174
+\Gm@layoutvoffset=\dimen175
 \Gm@dimlist=\toks32
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count127
+\c@float@type=\count129
 \float@exts=\toks33
 \float@box=\box39
 \@float@everytoks=\toks34
@@ -490,11 +476,11 @@ Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
 <2008/02/07> (tvz)
-\FV@CodeLineNo=\count128
+\FV@CodeLineNo=\count130
 \FV@InFile=\read2
 \FV@TabBox=\box41
-\c@FancyVerbLine=\count129
-\FV@StepNumber=\count130
+\c@FancyVerbLine=\count131
+\FV@StepNumber=\count132
 \FV@OutFile=\write4
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
@@ -525,16 +511,16 @@ LaTeX Font Info:    ... okay on input line 30.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count131
-\scratchdimen=\dimen175
+\scratchcounter=\count133
+\scratchdimen=\dimen176
 \scratchbox=\box42
-\nofMPsegments=\count132
-\nofMParguments=\count133
+\nofMPsegments=\count134
+\nofMParguments=\count135
 \everyMPshowfont=\toks35
-\MPscratchCnt=\count134
-\MPscratchDim=\dimen176
-\MPnumerator=\count135
-\makeMPintoPDFobject=\count136
+\MPscratchCnt=\count136
+\MPscratchDim=\dimen177
+\MPnumerator=\count137
+\makeMPintoPDFobject=\count138
 \everyMPtoPDFconversion=\toks36
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -653,6 +639,27 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [7]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 107.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 107.
+
+<images/bpm_watt_comparsion.png, id=33, 654.94687pt x 101.62968pt>
+File: images/bpm_watt_comparsion.png Graphic file (type png)
+
+<use images/bpm_watt_comparsion.png>
+Package pdftex.def Info: images/bpm_watt_comparsion.png used on input line 117.
+
+(pdftex.def)             Requested size: 392.97116pt x 60.97827pt.
+
+Overfull \hbox (0.61398pt too wide) in paragraph at lines 112--120
+\T1/cmr/m/n/12 hor-mo-n·lna rov-no-v·ha, krvn˝ ob-raz a inÈ fak-tory ne-us-t·le
+ ovplyv-¨uj˙ tep srdca. Mierny
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.61858pt.
@@ -666,127 +673,276 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9]
+[9 <./images/bpm_watt_comparsion.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 15.04742pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 15.04742pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11] <images/fit_protocol.png, id=51, 559.33969pt x 231.86626pt>
+File: images/fit_protocol.png Graphic file (type png)
+
+<use images/fit_protocol.png>
+Package pdftex.def Info: images/fit_protocol.png used on input line 146.
+(pdftex.def)             Requested size: 363.56648pt x 150.71127pt.
+
+<images/fit_file1.png, id=52, 703.12688pt x 174.6525pt>
+File: images/fit_file1.png Graphic file (type png)
+
+<use images/fit_file1.png>
+Package pdftex.def Info: images/fit_file1.png used on input line 153.
+(pdftex.def)             Requested size: 421.87938pt x 104.7923pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 15.04742pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12 <./images/fit_protocol.png> <./images/fit_file1.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.61858pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10] <images/rolling_resistance.png, id=48, 135.50626pt x 148.30406pt>
+[13] <images/strava_overview.png, id=62, 872.50969pt x 427.5975pt>
+File: images/strava_overview.png Graphic file (type png)
+
+<use images/strava_overview.png>
+Package pdftex.def Info: images/strava_overview.png used on input line 181.
+(pdftex.def)             Requested size: 348.9977pt x 171.03596pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14] <images/strava_analysis.png, id=66, 738.50906pt x 664.73344pt>
+File: images/strava_analysis.png Graphic file (type png)
+
+<use images/strava_analysis.png>
+Package pdftex.def Info: images/strava_analysis.png used on input line 190.
+(pdftex.def)             Requested size: 332.326pt x 299.12729pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15 <./images/strava_overview.png>]
+<images/strava_uphill_chart_watts.png, id=70, 738.50906pt x 287.57437pt>
+File: images/strava_uphill_chart_watts.png Graphic file (type png)
+
+<use images/strava_uphill_chart_watts.png>
+Package pdftex.def Info: images/strava_uphill_chart_watts.png used on input lin
+e 198.
+(pdftex.def)             Requested size: 443.10886pt x 172.54594pt.
+
+Overfull \hbox (2.09113pt too wide) in paragraph at lines 198--199
+ [][] 
+ []
+
+<images/strava_uphill_chart_deviceGPS.png, id=71, 728.7225pt x 128.73094pt>
+File: images/strava_uphill_chart_deviceGPS.png Graphic file (type png)
+
+<use images/strava_uphill_chart_deviceGPS.png>
+Package pdftex.def Info: images/strava_uphill_chart_deviceGPS.png used on input
+ line 206.
+(pdftex.def)             Requested size: 437.23688pt x 77.23914pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16 <./images/strava_analysis.png> <./images/strava_uphill_chart_watts.png (PNG
+ copy)>]
+<images/strava_uphill_chart_mobileGPS.png, id=75, 728.7225pt x 128.73094pt>
+File: images/strava_uphill_chart_mobileGPS.png Graphic file (type png)
+
+<use images/strava_uphill_chart_mobileGPS.png>
+Package pdftex.def Info: images/strava_uphill_chart_mobileGPS.png used on input
+ line 214.
+(pdftex.def)             Requested size: 437.23688pt x 77.23914pt.
+
+<images/bikecalculator_calc.png, id=76, 277.78781pt x 333.49594pt>
+File: images/bikecalculator_calc.png Graphic file (type png)
+
+<use images/bikecalculator_calc.png>
+Package pdftex.def Info: images/bikecalculator_calc.png used on input line 225.
+
+(pdftex.def)             Requested size: 166.67395pt x 200.09909pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17 <./images/strava_uphill_chart_deviceGPS.png (PNG copy)> <./images/strava_up
+hill_chart_mobileGPS.png (PNG copy)>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[18 <./images/bikecalculator_calc.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[19]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 15.04742pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[20] <images/rolling_resistance.png, id=90, 135.50626pt x 148.30406pt>
 File: images/rolling_resistance.png Graphic file (type png)
 
 <use images/rolling_resistance.png>
-Package pdftex.def Info: images/rolling_resistance.png used on input line 130.
+Package pdftex.def Info: images/rolling_resistance.png used on input line 271.
 (pdftex.def)             Requested size: 135.5059pt x 148.30368pt.
 
 ! Double subscript.
-l.141 ...hr·dza koeficientom valivÈho odporu $C_r_
+l.282 ...hr·dza koeficientom valivÈho odporu $C_r_
                                                   r$. Koeficient mÙûeme n·js...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.143 ...alizovaù koeficient valivÈho odporu $C_r_
+l.284 ...alizovaù koeficient valivÈho odporu $C_r_
                                                   r$. UrËit˙ ˙lohu hr· aj tl...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.143 ...vyvodzujeme z·ver, ûe pr·ve hodnota $C_r_
+l.284 ...vyvodzujeme z·ver, ûe pr·ve hodnota $C_r_
                                                   r$ bude predmetom odhadu v...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.61858pt.
+ Make it at least 15.04742pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11 <./images/rolling_resistance.png>]
+[21 <./images/rolling_resistance.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.61858pt.
+ Make it at least 15.04742pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 149.
+[22]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 288.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
+! FancyVerb Error:
+  Empty verbatim environment
+.
+\FV@Error ... {FancyVerb Error:
+\space \space #1
+}
+                                                  
+l.289 \end{Verbatim}
+                    
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 15.04742pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[23]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.61858pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.61858pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
-[]\T1/cmr/m/n/12 CYCLING-WEEKLY: \T1/cmr/m/it/12 Power me-ters: Ev-ery-thing yo
-u need to
+[24]
+Underfull \hbox (badness 1270) in paragraph at lines 312--313
+\T1/cmr/m/it/12 of Pneuma-tic Ti-res\T1/cmr/m/n/12 . Mi-chi-gan: Uni-ver-sity o
+f Mi-chi-gan, 1979. 156s. ASIN:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
-\T1/cmr/m/it/12 know\T1/cmr/m/n/12 . [cit. 15. 4. 2015]. Dos-tupnÈ na World Wid
+Underfull \hbox (badness 10000) in paragraph at lines 325--326
+[]\T1/cmr/m/n/12 CYCLING-WEEKLY: \T1/cmr/m/it/12 Po-wer me-ters: Eve-ryt-hing y
+ou need to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 325--326
+\T1/cmr/m/it/12 know\T1/cmr/m/n/12 . [cit. 15. 4. 2015]. Do-stupnÈ na World Wid
 e Web:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
+Underfull \hbox (badness 10000) in paragraph at lines 325--326
 \T1/cmr/m/n/12 <http://www.cyclingweekly.co.uk/news/power-meters-everything-you
 -need-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
-[]\T1/cmr/m/n/12 REICHL, J. - VíETIÉKA, M.: \T1/cmr/m/it/12 En-cyk-lo-pe-die fy
-ziky - Valiv˝
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
-\T1/cmr/m/it/12 odpor\T1/cmr/m/n/12 . [cit. 25. 4. 2015]. Dos-tupnÈ na World Wi
-de Web:
+Underfull \hbox (badness 5563) in paragraph at lines 334--335
+[]\T1/cmr/m/n/12 STRAVA: \T1/cmr/m/it/12 About\T1/cmr/m/n/12 . [cit. 10. 3. 201
+5]. Do-stupnÈ na World Wide Web:
  []
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 14.61858pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 202.
-
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 202.
-
+[25]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 14.61858pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16] (./thesis.aux) ) 
+[26]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[27] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 12740 strings out of 495031
- 227895 string characters out of 6181532
- 283812 words of memory out of 5000000
- 15653 multiletter control sequences out of 15000+600000
+ 13256 strings out of 494440
+ 235246 string characters out of 6165319
+ 302645 words of memory out of 5000000
+ 16191 multiletter control sequences out of 15000+600000
  16245 words of font info for 40 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 56i,11n,55p,982b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 360 hyphenation exceptions out of 8191
+ 56i,15n,55p,1095b,422s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc
 }</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/
@@ -798,12 +954,11 @@ share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/ty
 pe1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/
 sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/s
 hare/texmf/fonts/type1/public/cm-super/sfsl1200.pfb></usr/share/texmf/fonts/typ
-e1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
-ftt1200.pfb>
-Output written on thesis.pdf (16 pages, 233142 bytes).
+e1/public/cm-super/sfti1200.pfb>
+Output written on thesis.pdf (27 pages, 941106 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
+ 158 PDF objects out of 1000 (max. 8388607)
+ 104 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 63 words of extra memory for PDF output out of 10000 (max. 10000000)
 

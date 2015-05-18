@@ -65,7 +65,7 @@ Bratislava 2015
 \\\\
 \indent Diplomová práca sa zaoberá h¾adaním algoritmu pre odhadnutie wattového vıkonu športovca, cyklistu. V úvode práce je vysvetlená dôleitos sledovania vıkonu ako hlavného ukazovate¾a v tréningu. Popisuje zariadenia, aplikácie a štandardy, ktoré sú vyvinuté za úèelom sledovania tréningovıch údajov. Jadro práce pojednáva o problematike odhadovania vıkonu z rôznych údajov a prezentuje riešenie, ktoré umoòuje urèi pribliné hodnoty vıkonu bez jeho priameho merania. Záver práce je venovanı rozboru a analıze presnosti údajov odhadnutıch algoritmom.
 \\\\   
-\indent K¾úèové slová: šport, cyklistika, vıkon,  
+\indent K¾úèové slová: šport, cyklistika, vıkon, ANT+
 
 \newpage
 \thispagestyle{empty}
@@ -75,13 +75,13 @@ Faculty: Faculty of Electrical Engineering and Information Technology\\
 Study programme: Applied Informatics\\
 Training workplace: Institute of Computer Science and Mathematics\\
 Author: Matúš Maèák\\
-Title: Aproximácia wattového vıkonu športovca\\
+Title: Approximation of athlete power output\\
 Thesis supervisor: Ing. Stanislav Marèek\\
 Bratislava 2015
 \\\\
 \indent This master thesis describes the research of algorithm for estimating the power effort of an athlete, cyclist. First part explains the importance of monitoring the power as the main indicator in training. It describes devices, software and standards that are developed to track sport activity. The main part deals with common problems in power estimation from various data and presents the solution that allows approximating the value of athlete's power without a direct measurement. The conclusion is devoted to review and analyze the accuracy of the algorithm.
 \\\\
-\indent Keywords: sport, cycling, power,
+\indent Keywords: sport, cycling, power, ANT+
 
 \newpage 
 \thispagestyle{empty}
@@ -95,12 +95,69 @@ Bratislava 2015
 \addtocounter{section}{-1}
 \section{Úvod}
 Technologickı pokrok je bezpochyby dôvodom, preèo sa rôzne inteligentné zariadenia stávajú naším najdôleitejším nástrojom pri kadodennej rutine ale aj v krízovıch situáciách. Inak tomu nie je ani v športe, najmä ak sa jedná o tie vytrvalostné. Na pulte takmer kadej športovej predajne sú k dispozícii meraèe srdcového tepu, èasu alebo vzdialenosti pod¾a GPS a podobne. Nielen tréning pod¾a vlastného pocitu ale podriadenie tréningovej záae údajom na meracom zariadení sa stáva k¾úèom k postupnému zvyšovaniu vıkonnosti. Vysoká dostupnos technológií a \emph{know-how} vyrovnáva schopnosti konkurencie. Víazia športové drustvá, ktoré okrem mimoriadneho talentu dokáu tréning najlepšie zmera, vyhodnoti a opätovne naplánova.\\
-\indent V práci sa zameriavame na analızu vytrvalostného športu - cyklistiky, ktorú môeme v globále urobi z údajov ako je dåka tréningu v hodinách, tzv. tréningovı objem, vzdialenos, rıchlos, resp. tempo, tepová frekvencia. Tréning pod¾a tepovej frekvencie môe by pre športovca obrovskım prínosom za predpokladu, e má správne stanovené tréningové zóny, ktoré by mali odzrkad¾ova zaaenie organizmu\cite{kontrolovany_trening}. Tepovú frekvenciu u môeme v dnešnej dobe povaova za pomerne nenákladnı spôsob usmernenia tréningu, no má však jednu nevıhodu. Tep srdca reaguje na stúpajúce zaaenie s miernım oneskorením a môe by skreslenı pri vıkyve vnútornej rovnováhy organizmu. V cyklistike kde na reálny vıkon, vyjadrite¾nı fyzikálnou velièinou, vplıva ve¾ké mnostvo faktorov je aktuálna rıchlos síce okamitım ale ve¾mi nepresnım ukazovate¾om. Preto je meraè rıchlosti aj tepovej frekvencie postupne nahrádzanı meraèom vıkonu.\\
-\indent Meranie vıkonu v cyklistike nám poskytuje okamitú odpoveï na otázky: ako ve¾mi sa športovec namáha, akou silou pôsobí na pedále. Subjektívny pocit námahy nahrádza konkrétny èíselnı údaj, štandardne vyjadrenı v jednotkách \emph{Watt [W]}. Problémom je však cenová dostupnos takéhoto merania. U profesionálnych športovcov mono cenová nároènos nehrá rolu, avšak sú aj športoví nadšenci, amatérski pretekári, ktorí si chcú zmera svoj progres prípadne sa porovna s najlepšími. Keïe vıkon je fyzikálna velièina, miera toho ako rıchlo vykonáva urèitá sila prácu\cite{obecna_fyzika}, malo by by moné ho vypoèíta na základe údajov ako je stúpanie, rıchlos, vzdialenos. Práve tımto vıpoètom a následne odhadom vıkonu športovca sa venujeme v tejto práci.
+\indent V práci sa zameriavame na analızu vytrvalostného športu - cyklistiky, ktorú môeme v globále urobi z údajov ako je dåka tréningu v hodinách, tzv. tréningovı objem, vzdialenos, rıchlos, resp. tempo, tepová frekvencia. Tréning pod¾a tepovej frekvencie môe by pre športovca obrovskım prínosom za predpokladu, e má správne stanovené tréningové zóny, ktoré by mali odzrkad¾ova zaaenie organizmu \cite{kontrolovany_trening}. Tepovú frekvenciu u môeme v dnešnej dobe povaova za pomerne nenákladnı spôsob usmernenia tréningu, no má však jednu nevıhodu. Tep srdca reaguje na stúpajúce zaaenie s miernım oneskorením a môe by skreslenı pri vıkyve vnútornej rovnováhy organizmu. V cyklistike kde na reálny vıkon, vyjadrite¾nı fyzikálnou velièinou, vplıva ve¾ké mnostvo faktorov je aktuálna rıchlos síce okamitım ale ve¾mi nepresnım ukazovate¾om. Preto je meraè rıchlosti aj tepovej frekvencie postupne nahrádzanı meraèom vıkonu.\\
+\indent Meranie vıkonu v cyklistike nám poskytuje okamitú odpoveï na otázky: ako ve¾mi sa športovec namáha, akou silou pôsobí na pedále. Subjektívny pocit námahy nahrádza konkrétny èíselnı údaj, štandardne vyjadrenı v jednotkách \emph{Watt [W]}. Problémom je však cenová dostupnos takéhoto merania. U profesionálnych športovcov mono cenová nároènos nehrá rolu, avšak sú aj športoví nadšenci, amatérski pretekári, ktorí si chcú zmera svoj progres prípadne sa porovna s najlepšími. Keïe vıkon je fyzikálna velièina, miera toho ako rıchlo vykonáva urèitá sila prácu \cite{obecna_fyzika}, malo by by moné ho vypoèíta na základe údajov ako je stúpanie, rıchlos, vzdialenos. Práve tımto vıpoètom a následne odhadom vıkonu športovca sa venujeme v tejto práci.
 
 \newpage
 \section{Analıza problému}
-Pre správne pochopenie problematiky sa musíme oboznámi so zauívanım spôsobom merania vıkonu cyklistu. Vıkon je meranı špeciálnym zariadením, ktoré je vo väèšine prípadoch zabudované priamo v komponente bicykla. Musí sa jedna o komponent, ktorı sa priamo stará o prenos sily  pôsobiacej na pedál do pohonu zadného kolesa. Môe to by teda náboj zadného kolesa, jedna alebo obe k¾uky stredového zloenia prípadne pedále. To, kde je zriadenie umiestnené záleí od konkrétneho vırobcu a jeho techniky merania. Zariadenie nazıvame meraè vıkonu\footnote{z angl.: Power Meter}. \\
+\subsection{Vıznam velièiny vıkon v tréningu cyklistu}
+Ako sme spomenuli v úvode, obrovská dostupnos informácií a prostriedkov umoòuje vykonáva kontrolovanı tréning takmer kadému záujemcovi. Pokia¾ máme záujem o perspektívne zlepšovanie, prvım krokom by malo by absolvovanie vıkonnostného testu u športového lekára, alebo inak nazıvaného aj funkèného testu. Lekár by na základe anamnézy, predchádzajúcich skúseností so športom a aktuálnej vıkonnosti mal odporuèi primerané tréningové zaaenie. Èo je však najdôleitejšie, mal by stanovi aj tréningové zóny, v ktorıch by sa športovec pri tréningu mal pohybova a v akom trvaní, teda odporuèi tréningovı plán \cite{kontrolovany_trening}. Tréning cyklistu nemôe by postavenı iba na odjazdení urèitej vzdialenosti v èo najkratšom èase a ani trénovaní vytrvalosti tım, e sa trénuje èo najdlhšie. Tréning cyklistu je zloenı z rôznych intenzít, úsekov, opakovaní a cvièení, kedy sa trénujúci športovec vedome pohybuje v urèite tréningovej zóne aby docielil ideálny tréningovı impulz.\\
+\indent Zámerne pouívame slovné spojenie tréningová zóna a nielen tepová zóna, hoci sa tieto slovné spojenia èasto zamieòajú. Tréningová zóna je však úroveò fyzického zaaenia, ktoré priebieha v ¾udskom organizme. Najjednoduchšie odporúèané delenie je: 
+\begin{itemize}
+ \item Aeróbne pásmo ?? laktat
+ \item Zmiešané pásmo ??
+ \item Anaeróbny prah ??
+ \item Anaeróbne pásmo ??
+\end{itemize}
+Ako sú tréningové zóny kontrolované poèas tréningu je len na samotnıch monostiach športovca. Najideálnejším ukazovate¾om by bola hladinu laktátu v krvi. Túto metódu však do kadodenného tréningu aplikova nemôeme nako¾ko odber krvi z prsta alebo ucha a následné vyhodnotenie vzorky je zdåhavé. Najdostupnejšia je metóda merania tepovej frekvencie, ktorá však nie je vdı spo¾ahlivá.\\
+\indent Kadı ¾udskı organizmus je unikátny komplexnı biologickı systém. Tlak krvi, hormonálna rovnováha, krvnı obraz a iné faktory neustále ovplyvòujú tep srdca. Mierny rozdiel v tepovej frekvencii pri rovnakej záai môeme pozorova u pri porovnaní tréningu ráno a veèer. Pred prichádzajúcim ochorením, môeme zaznamena zvıšenie tepovej frekvencie. Niší tep športovci vykazujú po nieko¾kıch dòoch nároèného tréningu. Tie sme sa stretli s prípadmi, kedy subjektívny pocit športovca bol únava a oproti normálu mal mierne zníenú tepovú frekvenciu ale jeho wattovı vıkon v nároènom tréningu bol porovnate¾nı, niekedy aj lepší ako v iné dni. Vyšší tep sa dá jasne pozorova u pri ve¾mi miernej dehydratácii, napr. na konci dlhého tréningu v teplom poèasí. Sledovanie faktorov, ktoré ovplyvòujú tepovú frekvenciu nie je predmetom tejto práce. Je však dôleité poznamena, e z poh¾adu finaènej nároènosti a vıpovednej hodnoty je tepová frekvencia stále ve¾mi dobrım kontrolnım mechanizmom pre riadenie tréningu. \\
+\indent Okamité hodnoty, ktoré reprezentujú aaenie organizmu a ve¾mi dobrú presnos získame meraním vıkonu. Môeme urèi intenzitu pri krátkych zrıchlenıch úsekoch, kedy tepová frekvencia ešte nestihne vystúpi na hodnotu zodpovedajúcu fyzickému zaaeniu. Môeme presnejšie analyzova podanı vıkon pri dlhších úsekoch v maximálnom úsilí, kedy zrıchlenie/spomalenie môe odzrkad¾ova tepová frekvencia o $\pm$ 1 tep ale rozdiel vo vıkone môe by aj o $\pm$ 10\%. Obr. \ref{fig:bpm_watt_comparsion} zobrazuje, ako sa môe meni vıkon športovca v porovnaní s tepovou frekvenciou.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{images/bpm_watt_comparsion.png}
+\caption{Zjednodušená štruktúra FIT súboru}
+\label{fig:bpm_watt_comparsion}
+\end{figure}
+Z priebehu môeme pozorova, ako odpoèinutı športovec absolvuje úsek v tréningu. Poèas desiatich minút mal udriava vıkon vyšší ako 340W. Vidíme, e na stúpajúce záaenie telo reaguje zvıšením tepovej frekvencie, zároveò sa v zaaovanıch svaloch tvoré kyselina mlieèna (laktát). Kım prvıch pä minút športovec absolvoval s priemernım vıkonom 410W, po zahltení svalov laktátom a ustálení tepovej frekvencie, u danı vıkon udriava nedokáe a postupne záa zvo¾òuje na priemernıch 320W. Kım tepová frekvencia kolíše v rozsahu $\pm$1 tep, priemernı vıkon v druhej polovici je o 20W niší ne poadované zaaenie. Zmena však stále nie je dostatoèná na to, aby mohlo dôjs k èiastoènému zotaveniu svalu, hladina laktátu v krvi je stále vysoká, na èo telo reaguje vysokou tepovou frekvenciou. Hoci po skonèení tréningu má športovec pocit vyèerpanosti, nepredviedol tréning pod¾a plánovaného konceptu. Zdokonalenie podobnıch chıb môe vies k lepšiemu rozloeniu síl a lepšiemu vystupòovaniu vıkonu, napr. v závere preteku. Pri analıze vıkonu sú tieto chyby jasne vidite¾né.
+
+\subsection{Štandardy pre prenos tréningovıch dát}
+V predchádzajúcich èastich sme nieko¾ko krát spomenuli športové hodinky alebo cyklopoèítaè. Ich spoloènou funkciou je prijímanie dát z rôznych snímaèov, zobrazenie dát a tie aj uloenie pre neskoršie vyhodnotenie. Na trhu je ve¾ké mnostvo vırobcov, ktoré uprednosòujú vlastné formy prenosu a formu ukladania dát. Existujú však aj \emph{open-source} protokoly, ktoré umoòujú interoperabilitu medzi zariadeniami rôznych znaèiek prípadne aj inteligentnımi telefónmi. Vo vıskume sme sa na rozbor problematiky a následné vyhodnotenie presnosti rozhodli pouíva zariadenie na meranie vıkonu PowerTap G3 (rok vıroby 2013) a cyklopoèítaè Garmin Edge 500 (rok vıroby 2014). Preto chceme v nasledujúcej èasti popísa štandardy, ktoré tieto zariadenia vyuívajú, a teda sa bezprostredne dotıkajú našej práce.
+\subsubsection{GPX}
+GPX je rozšírenie formátu XML vytvorené za úèelom štandardizácie prenosu GPS súradníc a trás pre navigaèné systémy. Prvá verzia bolo vydaná v roku 2002 a neskôr aktualizovaná v roku 2004. Neskoršie rozšírenie od firmy Garmin - schéma \emph{GpxExtensions} umoòuje medzi GPS súradníce pridáva body záujmu\footnote{z angl. Points of interest}, meni zobrazenie trasy a podobne. Neskôr Garmin pridal aj ïalšiu schému TrackPointExtension, ktorú u bolo moné vyui aj v zariadeniach, ktoré súvisia so športom. Okrem informácii o trase je moné do súboru uloi aj údaje o tepovej frekvencii, teplote, rıchlosti a ïalšie. 
+\subsubsection{TCX}
+TCX alebo plnım názvom Training Center XML je dátovı formát predstavenı v roku 2007 opä firmou Garmin ako súèas ich Training Center produktov. Formát XML je ve¾mi podobnı štandardu GPX avšak postupnos súradníc reprezentuje skôr ako fyzickú aktivitu ne len trasu. Predstavuje štandard prenosu údajov zo športovıch meraèov ako je  tepová frekvencia, kalórie, frekvencia šliapania (bicykel) alebo kroku (beh) a mnohé ïalšie. Tie môe obsahova sumarizované údaje pre celú aktivitu alebo aj jednotlivé okruhy.
+\subsubsection{ANT}
+ANT je nízko-energetickı\footnote{z angl. Ultra-low power} bezdrôtovı protokol prenosu dát medzi zariadeniami. Robustnı ale ve¾mi flexibilnı protokol, ktorı nachádza vyuititie v PAN\footnote{PAN - personal area network} alebo LAN\footnote{LAN - local area network} sieach. Je ideálny pre športové aktivity, fitness a welness.\\
+\indent ANT prenos dát prebieha na frekvencii medzi 2400MHz a 2524MHz s vınimkou frekvencie 2457MHz, ktorá je rezervovaná pre ANT+ zariadenia.\\
+\indent ANT+ je mnoina definícií, ktoré upresòujú, èo reprezentujú informácie posielané v sieti ANT. Definícia sa nazıva \emph{device profile} a obvykle je vytvorená na základe urèitého prípadu pouitia. Napríklad senzor rıchlosti na bicykli bude odosiela informácie o rıchlosti a implementuje profil \emph{Speed monitor}.\\
+\indent Kadé ANT+ zariadenie musí pristupova do ANT+ siete so sieovım k¾úèom a implementova minimálne jeden \emph{device profile}. Zariadenie s danım profilom je moné spoji s ïalšími zariadeniami, ktoré implementujú rovnakı profil. Jedno zariadenie môe samozrejme implementova aj viac profilov. Napr. športové hodinky môu prijíma údaje o rıchlosti, tepovej frekvencii, vıkone a pre kadı údaj implementujú samostanı \emph{device profile}.\\
+\indent ANT+ sieti obvykle rozlišujeme dva typy zariadení. Zariadenie, ktoré meria, pod¾a špecifikácie nazıvané \emph{sensor} a zariadenie, ktoré zobrazuje, \emph{display}. ANT+ umoòuje pripojenie jedného alebo aj viacerıch zariadení typu \emph{sensor} na jedno zariadenie typu \emph{display}. Na jednıch športovıch hodinkách teda môeme zobrazi viacero meranıch velièín, alebo pripoji jedno zariadenie typu \emph{sensor} na viac zariadení typu \emph{display}.
+\subsubsection{FIT}
+The Flexible and Interoperable Data Transfer (FIT) protokol bol navrhnutı špeciálne pre ukladanie a prenos dát pochádzajúcich zo športovıch aktivít. Definuje nieko¾ko šablón pre ukladanie dát, tzv. \emph{Fit message}. Môu v nich by uloené informácie o pouívate¾skom profile, dáta zo športovej aktivity a podobne. Bol navrhnutı tak aby bol kompaktnı, interoperabilnı a rozšírite¾nı.\\
+FIT protokol pozostáva z:
+\begin{itemize}
+ \item Definície štrukúry .fit súboru
+ \item Definície dátovıch polí a dátovıch typov pre jednotlivé \emph{Fit messages}
+ \item Vıvojového nástroja, tzv. SDK\footnote{SDK - Software developement kit}, ktorı umoòuje vygenerova potrebnı zdrojovı kód pre nakonfigurovanie produktov vyuívajúcich FIT protokol. Obsahuje aj nástroj pre konverziu binárneho .fit súboru do .csv dátového súboru a opaène. 
+\end{itemize}
+FIT súbor obsahuje dátové reazce, prièom kadı reazec zostavenı z hlavièky a obsahu. Obsah dátového reazca môe by buï špecifikácia dát v nasledujúcom reazci alebo správa, ktorá obsahuje nieko¾ko polí s údajmi, viï obr.\ref{fig:fit_protocol}. 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.65]{images/fit_protocol.png}
+\caption{Zjednodušená štruktúra FIT súboru}
+\label{fig:fit_protocol}
+\end{figure}
+Na konverziu bitového FIT súboru vyuijeme konverznı nástroj v jazyku JAVA. Vıstupom konverzie sú dva CSV súbory. Prvı súbor je textovou reprezentáciou dát z FIT súboru, èo znamená, e niektoré riadky sú definíciou nasledujúcich údajov a niektoré riadky nesú údaje. Zároveò je potrebné si všimnú, e údaje nie sú rozdelené fixne pod¾a ståpcov ale ståpec \emph{Field N} oznamuje, èo reprezentuje hodnota v ståpci \emph{Value N}, ståpec \emph{Units N} definuje jednotky pre túto hodnotu, prièom N > 0. Jeden ståpec \emph{Field N} nemusí nies vdy rovnakı údaj. Príklad uvádzame na obr. \ref{fig:fit_file1}.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{images/fit_file1.png}
+\caption{CSV súbor po konverzii z FIT}
+\label{fig:fit_file1}
+\end{figure}
+Druhı súbor, ktorı je vıstupom z konverzie má príponou \emph{\_data.csv} a obsahuje všetky dáta usporiadané vo forme ståpcov. Jeden ståpec reprezentuje vdy konkrétny údaj pod¾a hlavièky, napr. \emph{evemt.timestamp[s]}, \emph{record.altitude[m]}, \emph{record.speed[m/s]}... Jednotky sú úvádzané v hranatej zátvorke v záhlaví ståpca. Oba súbory, teda obsahujú všetky dáta, rozdielna je iba ich postupnos. Rozhodli sme sa pouíva prvú spomenutú štruktúru, z ktorej sú najdôleitejšíe riadky kde ståpec \emph{Type} nadobúda hodnotu \emph{Data} a v ståpci \emph{Message} sú hodnoty \emph{record} pre jednotlivé body v tréningu, \emph{session} pre sumarizáciu alebo \emph{lap} pre informáciu o stlaèení medzièasu.
+
+\subsection{Meranie vıkonu}
+Pre správne pochopenie problematiky sa musíme oboznámi so zauívanım spôsobom merania vıkonu cyklistu. Vıkon je meranı špeciálnym snímaèom, ktoré je vo väèšine prípadoch zabudovanı priamo v komponente bicykla. Musí sa jedna o komponent, ktorı sa priamo stará o prenos sily  pôsobiacej na pedál do pohonu zadného kolesa. Môe to by teda náboj zadného kolesa, jedna alebo obe k¾uky stredového zloenia prípadne pedále. To, kde je snímaè umiestnenı záleí od konkrétneho vırobcu a jeho techniky merania. Snímaè nazıvame meraè vıkonu\footnote{z angl.: Power Meter}. \\
 \indent Najdôleitejším prvkom meraèa je tenzometer. Ide o súèiastku, s uzavretnım elektrickım okruhom a konštatnım elektrickım odporom. Ak je tenzometer vystevenı pôsobeniu mechanickej sily, dochádza k jeho deformácii, zmene odporu a vïaka piezolektrickému javu aj k zmene napätia. Správnou konfiguráciou je teda moné zisti presnú silu pôsobiacu na túto súèiastku.\\ 
 \indent Ako sme uviedli v predchádzajúcej èasti, vıkon je mierou toho ako rıchlo vykonáva urèitá silu prácu. Vezmime do úvahy jednoduchı vzah: 
 \begin{equation} \label{eq:power_trivial1}
@@ -110,25 +167,108 @@ Vıkon \emph{P} je rovnı sile, ktorú je potrebné vyvinú aby sme teleso s danou h
 \begin{equation} \label{eq:power_trivial2}
 P = F v 
 \end{equation}
-A to je podstatou fungovania meraèa vıkonu. Sila zmeraná tenzometrom je násobená aktuálnou rıchlosou a táto hodnota je odoslaná do zobrazovacieho zariadenia.\\
-\indent Prvı meraè vıkonu bol dostupnı verejnosti v roku 1989. Jednalo sa o znaèku SRM (Schoberer Rad Messtechnik), ktorá svoj produkt testovala s profesionálnymi športovcami od zaèiatku osemdesiatych rokov.\cite{cyclingweekly_power}
+A to je podstata fungovania meraèa vıkonu. Sila zmeraná tenzometrom je odoslaná do cyklopoèítaèa/športovıch hodiniek, tam je násobená aktuálnou rıchlosou a zobrazí sa vıkon v jednotkách \emph{Watt}. Nako¾ko je ve¾mi nároèné pri jazde na bicykli udriava aj pribline konštatnı vıkon, èasto sa nezobrazuje momentová hodnota ale priemer za 3s, 5s alebo 10 a 30 sekúnd.\\
+\indent Prvı meraè vıkonu bol dostupnı verejnosti v roku 1989. Jednalo sa o znaèku SRM (Schoberer Rad Messtechnik), ktorá svoj produkt testovala s profesionálnymi športovcami od zaèiatku osemdesiatych rokov.\cite{cyclingweekly_power}\\
+\indent Väèšina vırobcov v súèasnosti úvádza pre svoje meraèe presnos do 2\%. Moné odchılky môu by spôsobené stratou pri prenose sily z pedálu na pohon zadného kolesa, tj. napnutím reaze, prunosou rámu, prunosou kolesa, kalibráciou meraèa atï. Je dôleité si uvedomi, e iaden meraè, ktorı je súèasou bicykla z tıchto dôvodov nebude ukazova presnı vıkon podávanı športovcom. Ak však športovec dlhodobo pouíva rovnakú metódu merania, porovnávanie jeho vıkonov má ve¾kı vıznam.
 
-\newpage
-\subsection{Hárdver pre meranie}
-\subsection{Protokoly prenosu dát}
-
-\newpage
-\subsection{Softvér pre vyhodnotenie}
+\subsection{Softvér pre vyhodnotenie tréningu}
 \subsubsection{Strava}
+Strava je portál, ktorı sa snaí zdruova komunity športovcov po celom svete. Nosnım pilierom Strava je webová aplikácia na adrese \emph{http://www.strava.com}, ktorá ponúka komplexnú analızu tréningovıch dát a mnostvo sociálnych funkcií. Ako uvádza priamo Strava, umoòuje pouívate¾ovi zai tzv. \emph{social fitness}, èo by malo predstavova spojenie, porovnanie a súaenie s ïalšími športovcami \cite{strava}. Okrem webovej aplikácie je moné vyui aj mobilnú aplikáciu pre platformu Android a iOS. Primárne je Strava urèená pre becov a cyklistov, grafy a analıza sú najpodrobnejšie. Trénigovı denník si však môu vies aj ïalší športovci.\\
+\indent Princíp fungovania Strava môeme popísa tromi krokmi. Prvım je absolvovanie tréningu a jeho záznam na zariadenie s GPS, resp. na ich mobilnú aplikáciu. Druhım krokom je uloenie tréningového záznamu na server Strava. Vïaka vyuitiu API vırobcov ako je Garmin, Suunto, TomTom, Timex a niektorıch dalších umoòuje Strava priame uloenie tréningovıch dát na server ihneï po pripojení zariadenia/športovıch hodiniek do poèítaèa. Priame ukladanie funguje na platformách Windows a OSX. Ak pouívate¾ pouíva inı operaènı systém alebo má záujem uloi tréning z iného zariadenia, môe tak urobi nahraním súboru, ktorı je vo formáte GPX, TCX alebo FIT. Tretím krokom je u zobrazenie detailu tréningu a analıza.\\
+\indent Portál Strava sme sa rozhodli popísa z dôvodu, e ako jeden z prvıch prináša aproximáciu wattového vıkonu cyklistu z GPS dát. Skôr ne popíšeme kladné a záporné stránky samotnej aproximácie vıkonu, pozrime sa na pouívate¾ské rohranie webovej aplikácie, konkrétne na èas s detailom tréningu.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{images/strava_overview.png}
+\caption{Strava - detail tréningu}
+\label{fig:strava_overview}
+\end{figure}
+
+V pravej èasti obrazovky môeme vidie celkové a priemerné údaje z tréningu. Jedná sa o dáta, ktoré boli uloené cyklopoèítaèom Garmin Edge 500 - vzdialenos, èas, nastúpané metre, rıchlos, tepová frekvencia, frekvencia šliapania, teplota. Èervenú hodnotu \emph{Suffer Score} poèíta Strava na základe èasu, ktorı športovec strávil v jednotlivıch záaovıch zónach pod¾a tepovej frekvencie. Nako¾ko sme pri tréningu mali k dispozícii aj meraè vıkonu Power Tap G3, Strava nám na základe váeného priemerného vıkonu vypoèíta tréningové zaaenie (\emph{Training Load}) a intenzitu tréningu (\emph{Intensity}). Intenzita tréningu je percentuálny pomer váeného priemerného vıkonu a FTP hodnoty vıkonu\footnote{FTP - Functional treshold power - Hodnota, na ktorej športovec dokáe pracova 30 minút \cite{physiology_of_sport}}. Presnı vıpoèet hodnoty tréningového zaaenia Strava verejne neuvádza ale zo skúsenosti môeme konštatova, e sa jedná o urèitı násobok váeného priemerného vıkonu, dåky tréningu a ïalšieho koeficientu.\\
+\indent V prostrednej èasti obr. \ref{fig:strava_overview} môeme vidie názov tréningu, pod ktorım ho športovec uloil a dátum absolvovania. Po kliknutí na \emph{Analysis} v menu v ¾avej èasti obrazovky sa nám naèíta sekcia s mapou a grafmi, ktoré zobrazujú priebeh celého tréningu, hodnoty aktuálne nadmorskej vıšky, rıchlosti, tepovej frekvencie, frekvencie šliapania a teploty v jednotlivıch pozíciách, viï obr. \ref{fig:strava_analysis}.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.45]{images/strava_analysis.png}
+\caption{Strava - Analıza tréningu}
+\label{fig:strava_analysis}
+\end{figure}
+
+Prejdime k analıze vıkonu na portále Strava, aby sme ju mohli porovna vzh¾adom na naše ciele. Ako vzorku dát budeme zobrazova úsek na trase Tatranská Štrba, Štrbské pleso v dåke 1500m. Absolvovali sme tri rôzne tréningy, pri prvom sme zmerali aj vıkon zariadením Power Tap G3 a dáta zaznamenávali do cyklopoèítaèa Garmin Edge 500. Na obr. \ref{fig:strava_watts} môeme vidie reálnu hodnotu vıkonu, športovec sa snail o plynulı rovnomernı vıkon bez vıkyvov. 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.60]{images/strava_uphill_chart_watts.png}
+\caption{Strava - Graf vıkonu}
+\label{fig:strava_watts}
+\end{figure}
+
+Druhı tréning bol zaznamenanı tie cyklopoèítaèom Garmin Edge 500 ale bez merania vıkonu. Na obr. \ref{fig:strava_estwatts}  môeme vidie vıkon odhadnutı algoritmom Strava z rıchlosti a nadmorskej vıšky. Môeme pozorova ve¾ké vıkyvy odhadnutého vıkonu v rozmedzí od 0W do 867W, pritom dosahová rıchlos je plynulá a bez vıkyvov.  
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.60]{images/strava_uphill_chart_deviceGPS.png}
+\caption{Strava - Graf odhadnutého vıkonu pod¾a GPS}
+\label{fig:strava_estwatts}
+\end{figure}
+
+Poslednı záznam je meranı mobilnou aplikáciou Strava, viï obr. \ref{fig:strava_estwatts_agps}. V tréningu sme vıkon opä nemerali a grafe môeme vidie odhadnuté hodnoty. Obrovské vıkyvy prisudzujeme odchılkam v pozícii aj nadmorskej vıške. Pouitı mobilnı telefón Samsung Galaxy S4 mini nedisponuje barometrickım vıškomerom, hodnota nadmorskej vıšky je získaná z pozície. Ako je známe, GPS èip v mobilnıch telefónoch nedosahuje takú vysokú presnos ako špeciálne športové zariadenia a pozícia je èasto korigovaná aj mobilnımi sieami.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.60]{images/strava_uphill_chart_mobileGPS.png}
+\caption{Strava - Graf odhadnutého vıkonu pod¾a Assisted GPS}
+\label{fig:strava_estwatts_agps}
+\end{figure}
+
+\indent Z prezentovanıch testov môeme vyvodi záver, e odhad vıkonu portálom Strava nie je presnı. Chybné sú najmä hodnoty, ktoré skáèu z 0 na do maximálnych hodnôt a to aj napriek tomu, e športovec sa pohyboval takmer, koštantnou rıchlosou a snail sa dodra rovnakú frekvenciu šliapania. Hoci nepoznáme presnı algoritmus vıpoètu v Strava, myslíme si príèinou nepresnosti je zvolenie prive¾mi malıch úsekov, na ktorıch sú vypoèítavané èiastkové vıkony, resp. sú vypoèítavané medzi jednotlivımi bodmi uloenımi zariadením. Na malom úseku môe by odchılka v nadmorskej vıške, nako¾ko barometrickı vıškomer ju urèuje pod¾a tlaku, môe to by samozrejme aj nepresnos GPS alebo malá frekvencia ukladania jednotlivıch bodov tréningu, prièom nie sú zachytené všetky zmeny terénu, atï.
+
 \subsubsection{Bike Calculator}
+Druhı systém relevantnı nášmu vıskumu nájdeme na webovej stránke\\ \emph{http://www.bikecalculator.com}. Bike Calculator je údajne najpopulárnejšia kalkulaèka vıkonu cyklistu fungujúca od roku 1997 \cite{bikecalculator}. U na prvı poh¾ad je jasné, e sa jedná iba o kalkulaèku a iaden vstup zo športovıch hodiniek alebo meraèa nie je monı. Stránka disponuje krátkym vysvetlením fyzikálneho problému vıpoètu vıkonu a formulárom, do ktorého je moné zada hodnoty pre vıpoèet a vısledok je vyhodnotenı okamite.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.60]{images/bikecalculator_calc.png}
+\caption{Bike Calculator - Kalkulaèka vıkonu cyklistu}
+\label{fig:bikecalculator_form}
+\end{figure}
+
+Otestovali sme ho pre viacero úsekov, ktoré sme zmerali na tréningu meraèom vıkonu. V tabu¾ke \ref{table:bikecalculator_table} úvádzame porovnanie nameranıch a vypoèítanıch hodnôt.
+\begin{table}[h]
+\begin{tabular}{cccccccc}
+\hline
+\textbf{Úsek} & \textbf{\begin{tabular}[c]{@{}c@{}}dåka\\ {[}m{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}priemer.\\ stúpanie\\ {[}\%{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}priemer.\\ rıchlos\\ {[}km/h{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}reálny\\ vıkon\\ {[}W{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Bike\\ Calculator\\ {[}W{]}\end{tabular}} & \textbf{Rozdiel} & \textbf{\begin{tabular}[c]{@{}c@{}}Rozdiel\\ {[}\%{]}\end{tabular}} \\ \hline
+1. & 1000 & 7.4 & 13.5 & 269 & 247 & -22 & -8.18\% \\ \hline
+2. & 1000 & 8.5 & 13.0 & 285 & 269 & -16 & -5.61\% \\ \hline
+3. & 1000 & 10.2 & 11.9 & 285 & 289 & 4 & 1.40\% \\ \hline
+4. & 1500 & 4.9 & 26.1 & 267 & 261 & -6 & -2.25\% \\ \hline
+5. & 1500 & 6.6 & 15.6 & 272 & 263 & -9 & -3.31\% \\ \hline
+6. & 1500 & 9.2 & 11.7 & 273 & 258 & -15 & -5.49\% \\ \hline
+7. & 2700 & 3.0 & 20.4 & 201 & 197 & -4 & -1.99\% \\ \hline
+\end{tabular}
+\end{table}
+
+%pokraèovanie tabu¾ky
+\begin{table}[h]
+\begin{tabular}{cccccccc}
+\hline
+\textbf{Úsek} & \textbf{\begin{tabular}[c]{@{}c@{}}dåka\\ {[}m{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}priemer.\\ stúpanie\\ {[}\%{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}priemer.\\ rıchlos\\ {[}km/h{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}reálny\\ vıkon\\ {[}W{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Bike\\ Calculator\\ {[}W{]}\end{tabular}} & \textbf{Rozdiel} & \textbf{\begin{tabular}[c]{@{}c@{}}Rozdiel\\ {[}\%{]}\end{tabular}} \\ \hline
+8. & 2700 & 4.8 & 24.1 & 357 & 346 & -11 & -3.08\% \\ \hline
+9. & 2700 & 5.2 & 17.5 & 257 & 245 & -12 & -4.67\% \\ \hline
+10. & 1500 & 0.7 & 30.5 & 180 & 214 & 34 & 18.89\% \\ \hline
+11. & 1500 & 1.2 & 26.5 & 211 & 177 & -34 & -16.11\% \\ \hline
+12. & 1500 & 2.3 & 23.8 & 187 & 210 & 23 & 12.30\% \\ \hline
+\end{tabular}
+\caption{Bike Calculator - porovnanie vıpoètu}
+\label{table:bikecalculator_table}
+\end{table}
+\indent Z tabu¾ky si môeme všimnú, e celková dåka segmentu neovplyvòuje rozdiel medzi reálnou a vypoèítavanou hodnotou. Zámerne však neuvádzame úseky dlhé iba nieko¾ko metrov, aby sme mohli poukáza na fakt, e práve stúpajúci sklon (priem. stúpanie) robí vıpoèet presnejším. Ako môeme vidie vo formulári na obr. \ref{fig:bikecalculator_form}, pre typ pneumatík a tie pozíciu športovca na bicykli je vstup vıber z predvolenıch hodnôt. Pre typ pneumatík sú to tri hodnoty, a to pláše, galusky alebo MTB. Pozíciu môeme zvoli pod¾a bicykla - mierne vzpriamená, vzpriamená, zohnutá, aerodynamická. Pod¾a vybraného vstupu Bike Calculator pouije predvolenı koeficient valivého odporu, resp. aerodynamického odporu. Koeficient aerodynamického odporu je však závislı aj od obleèenia cyklistu, od bicykla, od kolies. Koeficient valivého odporu je rozdielny pre jednotlivé modely plášov, hodnotu ich nahustenia. Teda môeme poveda, e je rozdielnı pre kadú jednu dvojicu športovec-bicykel. Dôkladnejšie vysvetlenie tejto problematiky uvádzame v kapitole \ref{Physics}.
+
+\newpage
+\section{Pôsobenie síl} \label{Physics}
+\subsection{Gravitaèná sila}
 
 \newpage
 \subsection{Valivı odpor}
-Valivım odporom môeme nazva silu, ktorá vzniká keï sa teleso kruhového prierezu (v našom prípade koleso bicykla) vá¾a po pevnej podloke. Fyzikálnou podstatou tohoto javu je hysterézia, ktorı nastáva pri deformácia podloky resp. kolesa pôsobením normálovej tlakovej sily. V reálnych podmienkach samozrejme podloka ani galuska kolesa nie sú dokonale pruné. Preto reakcia na normálovú tlakovú silu je posunutá o vzdialenos $\xi$.\cite{encyklopedie_fyziky}
+Valivım odporom môeme nazva silu, ktorá vzniká keï sa teleso kruhového prierezu (v našom prípade koleso bicykla) vá¾a po pevnej podloke. Fyzikálnou podstatou tohoto javu je hysterézia, ktorı nastáva pri deformácia podloky resp. kolesa pôsobením normálovej tlakovej sily. V reálnych podmienkach samozrejme podloka ani galuska kolesa nie sú dokonale pruné. Preto reakcia na normálovú tlakovú silu je posunutá o vzdialenos $\xi$ \cite{encyklopedie_fyziky}.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=1.0]{images/rolling_resistance.png}
-\caption{Valivı odpor\cite{encyklopedie_fyziky}}
+\caption{Valivı odpor \cite{encyklopedie_fyziky}}
 \end{figure}
 \noindent Silu \emph{F}, ktorou predmet udríme v rovnomernom pohybe vyjadríme vzahom:
 \begin{equation} \label{eq:rolling_trivial1}
@@ -138,16 +278,13 @@ Pre malé uhly je $tg\alpha = sin\alpha$ a pre koleso s polomerom \emph{R} je $si
 \begin{equation} \label{eq:rolling_trivial2}
 F = \cfrac{\xi}{R} F_n
 \end{equation}
-V praxi by ale bolo ve¾mi nároèné zmera vzdialenos $\xi$, preto sa podiel vo vzahu \ref{eq:rolling_trivial2} èasto nahrádza koeficientom valivého odporu $C_r_r$. Koeficient môeme nájs pre rôzne typy pneumatík v tabu¾kách. Definovaním štandardov pri testovaní pneumatík ako je napríklad štandard SAE J2452\cite{sae_test} sa vymedzujú podmienky testu. Pre nás dôleité koeficienty valivého odporu galusiek alebo plášov cestného bicykla sa pohybujú v rozsahu od 0.002 do 0.006\cite{roller_data}. Kım koeficient je pod¾a tabu¾ky nezávislı od tlaku, pretoe test predpokladá konštatné, ideálne nahustenie pneumatiky, v praxi tomu tak by nemusí. Venujme teda nieko¾ko ïalších riadkov faktorom, ktoré ovplyvòujú valivı odpor.\\
-\indent \boldmath{Tlak v pneumatike}
-
-
-
-
+V praxi by ale bolo ve¾mi nároèné zmera vzdialenos $\xi$, preto sa podiel vo vzahu \ref{eq:rolling_trivial2} èasto nahrádza koeficientom valivého odporu $C_r_r$. Koeficient môeme nájs pre rôzne typy pneumatík v tabu¾kách. Definovaním štandardov pri testovaní pneumatík ako je napríklad štandard SAE J2452 \cite{sae_test} sa vymedzujú podmienky testu. Pre potreby tejto práce je dôleité uvaova podloku, povrch vozovky, ako dokonale pevnú a koeficienty valivého odporu galusiek alebo plášov cestného bicykla v rozsahu od 0.002 do 0.006 \cite{roller_data}. Kım koeficient je pod¾a tabu¾ky nezávislı od tlaku, pretoe test predpokladá konštatné, ideálne nahustenie pneumatiky, v praxi tomu tak by nemusí. Venujme teda nieko¾ko ïalších riadkov faktorom, ktoré ovplyvòujú valivı odpor.\\
+\indent \textbf{Tlak v pneumatike}. Èím vyššie je nahustenie pneumatiky, tım je nišia jej deformáciia a teda aj valivı odpor. \textbf{Šírka pneumatiky}. Pôsobením normálovej tlakovej sily je kadá pneumatika mierne deformovaná, avšak širšia sa deformuje viac do svojej šírky (menšie $\xi$), kım ušia je deformovaná pozdåne, pneumatika strací viac zo svojho kruhového tvaru a rastie $\xi$. Širšia pneumatika má pri rovnakom tlaku oproti ušej pneumatike niší valivı odpor ale ušiu je moné husti na vyšší tlak pri dosiahnutí rovnakého komfortu jazdy. Ušie pneumatiky majú navyše niší aerodynamickı odpor, ktorému sa budeme venova neskôr. Ïalšími faktormi, ktoré ovplyvòujú valivı odpor sú aj štruktúra a materiál pneumatiky, priemer kolesa, hmotnos záae, mikro-trenie medzi povrchom a pneumatikou.\\
+\indent Nako¾ko je na trhu nespoèetné mnostvo modelov galusiek a plášov pre bicykle, nie je moné k ním uchováva a neustále aktualizova koeficient valivého odporu $C_r_r$. Urèitú úlohu hrá aj tlak v pneumatike, ktorı kadı cyklista volí pod¾a svojich osobnıch preferencií, poadovanıch jazdnıch vlastností a komfortu. iada tlak v pneumatike ako vstup do systému od pouívate¾a povaujeme za ve¾mi nekomfortné a preto vyvodzujeme záver, e práve hodnota $C_r_r$ bude predmetom odhadu v našom algoritme.
 \newpage
+\subsection{Aerodynamickı odpor}
+\section{Opis riešenia}
 \begin{Verbatim}[baselinestretch=0.75]
-<script type="text/javascript">
-</script>
 \end{Verbatim}
 
 \newpage
@@ -192,6 +329,12 @@ Vısledkom našej práce je ...
   \bibitem{roller_data}
   BIKETECH-REVIEW: \emph{Roller Data}. [cit. 25. 4. 2015]. Dostupné na World Wide Web: <http://www.biketechreview.com/tires/rolling-resistance/475-roller-data>
   
+  \bibitem{strava}
+  STRAVA: \emph{About}. [cit. 10. 3. 2015]. Dostupné na World Wide Web: <https://www.strava.com/about>
+  
+  \bibitem{bikecalculator}
+  BIKECALCULATOR: \emph{How to use}. [cit. 10. 3. 2015]. Dostupné na World Wide Web: <http://bikecalculator.com/how.html>
+   
 \end{thebibliography}
 
 \newpage
