@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.15)  18 MAY 2015 20:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.15)  19 MAY 2015 23:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -496,18 +496,18 @@ Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix
 ) (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -604,22 +604,22 @@ ABD: EveryShipout initializing macros
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 57--69
+Underfull \hbox (badness 10000) in paragraph at lines 58--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--69
+Underfull \hbox (badness 10000) in paragraph at lines 58--70
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 73--85
+Underfull \hbox (badness 10000) in paragraph at lines 74--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--85
+Underfull \hbox (badness 10000) in paragraph at lines 74--86
 
  []
 
@@ -639,23 +639,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [7]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 107.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 108.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 107.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 108.
 
 <images/bpm_watt_comparsion.png, id=33, 654.94687pt x 101.62968pt>
 File: images/bpm_watt_comparsion.png Graphic file (type png)
 
 <use images/bpm_watt_comparsion.png>
-Package pdftex.def Info: images/bpm_watt_comparsion.png used on input line 117.
+Package pdftex.def Info: images/bpm_watt_comparsion.png used on input line 118.
 
 (pdftex.def)             Requested size: 392.97116pt x 60.97827pt.
 
-Overfull \hbox (0.61398pt too wide) in paragraph at lines 112--120
+Overfull \hbox (0.61398pt too wide) in paragraph at lines 113--121
 \T1/cmr/m/n/12 hor-mo-n·lna rov-no-v·ha, krvn˝ ob-raz a inÈ fak-tory ne-us-t·le
  ovplyv-¨uj˙ tep srdca. Mierny
  []
@@ -667,6 +667,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [8]
+Overfull \hbox (1.38115pt too wide) in paragraph at lines 125--126
+[]\T1/cmr/m/n/12 V pred-ch·-dza-j˙-cich £as-tiach sme nie-ko©-ko-kr·t spo-me-nu
+li ≤por-tovÈ ho-dinky alebo
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.61858pt.
@@ -691,14 +696,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: images/fit_protocol.png Graphic file (type png)
 
 <use images/fit_protocol.png>
-Package pdftex.def Info: images/fit_protocol.png used on input line 146.
+Package pdftex.def Info: images/fit_protocol.png used on input line 147.
 (pdftex.def)             Requested size: 363.56648pt x 150.71127pt.
 
 <images/fit_file1.png, id=52, 703.12688pt x 174.6525pt>
 File: images/fit_file1.png Graphic file (type png)
 
 <use images/fit_file1.png>
-Package pdftex.def Info: images/fit_file1.png used on input line 153.
+Package pdftex.def Info: images/fit_file1.png used on input line 154.
 (pdftex.def)             Requested size: 421.87938pt x 104.7923pt.
 
 
@@ -718,7 +723,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: images/strava_overview.png Graphic file (type png)
 
 <use images/strava_overview.png>
-Package pdftex.def Info: images/strava_overview.png used on input line 181.
+Package pdftex.def Info: images/strava_overview.png used on input line 182.
 (pdftex.def)             Requested size: 348.9977pt x 171.03596pt.
 
 
@@ -731,7 +736,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: images/strava_analysis.png Graphic file (type png)
 
 <use images/strava_analysis.png>
-Package pdftex.def Info: images/strava_analysis.png used on input line 190.
+Package pdftex.def Info: images/strava_analysis.png used on input line 191.
 (pdftex.def)             Requested size: 332.326pt x 299.12729pt.
 
 
@@ -746,10 +751,10 @@ File: images/strava_uphill_chart_watts.png Graphic file (type png)
 
 <use images/strava_uphill_chart_watts.png>
 Package pdftex.def Info: images/strava_uphill_chart_watts.png used on input lin
-e 198.
+e 199.
 (pdftex.def)             Requested size: 443.10886pt x 172.54594pt.
 
-Overfull \hbox (2.09113pt too wide) in paragraph at lines 198--199
+Overfull \hbox (2.09113pt too wide) in paragraph at lines 199--200
  [][] 
  []
 
@@ -758,7 +763,7 @@ File: images/strava_uphill_chart_deviceGPS.png Graphic file (type png)
 
 <use images/strava_uphill_chart_deviceGPS.png>
 Package pdftex.def Info: images/strava_uphill_chart_deviceGPS.png used on input
- line 206.
+ line 207.
 (pdftex.def)             Requested size: 437.23688pt x 77.23914pt.
 
 
@@ -774,14 +779,14 @@ File: images/strava_uphill_chart_mobileGPS.png Graphic file (type png)
 
 <use images/strava_uphill_chart_mobileGPS.png>
 Package pdftex.def Info: images/strava_uphill_chart_mobileGPS.png used on input
- line 214.
+ line 215.
 (pdftex.def)             Requested size: 437.23688pt x 77.23914pt.
 
 <images/bikecalculator_calc.png, id=76, 277.78781pt x 333.49594pt>
 File: images/bikecalculator_calc.png Graphic file (type png)
 
 <use images/bikecalculator_calc.png>
-Package pdftex.def Info: images/bikecalculator_calc.png used on input line 225.
+Package pdftex.def Info: images/bikecalculator_calc.png used on input line 226.
 
 (pdftex.def)             Requested size: 166.67395pt x 200.09909pt.
 
@@ -809,34 +814,73 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19]
+[19] <images/inclined_plane.png, id=87, 348.9035pt x 246.521pt>
+File: images/inclined_plane.png Graphic file (type png)
+
+<use images/inclined_plane.png>
+Package pdftex.def Info: images/inclined_plane.png used on input line 282.
+(pdftex.def)             Requested size: 174.45131pt x 123.2602pt.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 15.04742pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[20] <images/rolling_resistance.png, id=90, 135.50626pt x 148.30406pt>
+[20 <./images/inclined_plane.png>]
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 314.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 15.04742pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[21] <images/altitute_watt_comparsion.png, id=100, 546.54187pt x 308.65312pt>
+File: images/altitute_watt_comparsion.png Graphic file (type png)
+
+<use images/altitute_watt_comparsion.png>
+Package pdftex.def Info: images/altitute_watt_comparsion.png used on input line
+ 328.
+(pdftex.def)             Requested size: 437.23409pt x 246.92282pt.
+
+<images/temperature_watt_comparsion.png, id=101, 532.99126pt x 301.125pt>
+File: images/temperature_watt_comparsion.png Graphic file (type png)
+
+<use images/temperature_watt_comparsion.png>
+Package pdftex.def Info: images/temperature_watt_comparsion.png used on input l
+ine 336.
+(pdftex.def)             Requested size: 426.39359pt x 240.90031pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 15.04742pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[22 <./images/altitute_watt_comparsion.png (PNG copy)>]
+<images/rolling_resistance.png, id=105, 135.50626pt x 148.30406pt>
 File: images/rolling_resistance.png Graphic file (type png)
 
 <use images/rolling_resistance.png>
-Package pdftex.def Info: images/rolling_resistance.png used on input line 271.
+Package pdftex.def Info: images/rolling_resistance.png used on input line 348.
 (pdftex.def)             Requested size: 135.5059pt x 148.30368pt.
 
-! Double subscript.
-l.282 ...hr·dza koeficientom valivÈho odporu $C_r_
-                                                  r$. Koeficient mÙûeme n·js...
-I treat `x_1_2' essentially like `x_1{}_2'.
 
-! Double subscript.
-l.284 ...alizovaù koeficient valivÈho odporu $C_r_
-                                                  r$. UrËit˙ ˙lohu hr· aj tl...
-I treat `x_1_2' essentially like `x_1{}_2'.
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 15.04742pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
-! Double subscript.
-l.284 ...vyvodzujeme z·ver, ûe pr·ve hodnota $C_r_
-                                                  r$ bude predmetom odhadu v...
-I treat `x_1_2' essentially like `x_1{}_2'.
+[23 <./images/temperature_watt_comparsion.png (PNG copy)>]
+<images/crr_watt_comparsion.png, id=109, 546.54187pt x 291.33844pt>
+File: images/crr_watt_comparsion.png Graphic file (type png)
+
+<use images/crr_watt_comparsion.png>
+Package pdftex.def Info: images/crr_watt_comparsion.png used on input line 367.
+
+(pdftex.def)             Requested size: 437.23409pt x 233.07106pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -844,17 +888,41 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21 <./images/rolling_resistance.png>]
+[24 <./images/rolling_resistance.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 372--376
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--376
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 15.04742pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[22]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 288.
+[25 <./images/crr_watt_comparsion.png (PNG copy)>]
+<images/force_comparsion.png, id=117, 455.45157pt x 255.95625pt>
+File: images/force_comparsion.png Graphic file (type png)
 
- (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+<use images/force_comparsion.png>
+Package pdftex.def Info: images/force_comparsion.png used on input line 381.
+(pdftex.def)             Requested size: 364.36174pt x 204.76526pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 15.04742pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[26 <./images/force_comparsion.png (PNG copy)>]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 389.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 ! FancyVerb Error:
@@ -864,7 +932,7 @@ File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 \space \space #1
 }
                                                   
-l.289 \end{Verbatim}
+l.390 \end{Verbatim}
                     
 This error message was generated by an \errmessage
 command, so I can't give any explicit help.
@@ -877,39 +945,39 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23]
+[27]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.61858pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[24]
-Underfull \hbox (badness 1270) in paragraph at lines 312--313
+[28]
+Underfull \hbox (badness 1270) in paragraph at lines 413--414
 \T1/cmr/m/it/12 of Pneuma-tic Ti-res\T1/cmr/m/n/12 . Mi-chi-gan: Uni-ver-sity o
 f Mi-chi-gan, 1979. 156s. ASIN:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--326
+Underfull \hbox (badness 10000) in paragraph at lines 426--427
 []\T1/cmr/m/n/12 CYCLING-WEEKLY: \T1/cmr/m/it/12 Po-wer me-ters: Eve-ryt-hing y
 ou need to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--326
+Underfull \hbox (badness 10000) in paragraph at lines 426--427
 \T1/cmr/m/it/12 know\T1/cmr/m/n/12 . [cit. 15. 4. 2015]. Do-stupnÈ na World Wid
 e Web:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--326
+Underfull \hbox (badness 10000) in paragraph at lines 426--427
 \T1/cmr/m/n/12 <http://www.cyclingweekly.co.uk/news/power-meters-everything-you
 -need-
  []
 
 
-Underfull \hbox (badness 5563) in paragraph at lines 334--335
+Underfull \hbox (badness 5563) in paragraph at lines 435--436
 []\T1/cmr/m/n/12 STRAVA: \T1/cmr/m/it/12 About\T1/cmr/m/n/12 . [cit. 10. 3. 201
 5]. Do-stupnÈ na World Wide Web:
  []
@@ -920,45 +988,48 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25]
+[29]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.61858pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26]
+[30]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.61858pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[27] (./thesis.aux) ) 
+[31] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 13256 strings out of 494440
- 235246 string characters out of 6165319
- 302645 words of memory out of 5000000
- 16191 multiletter control sequences out of 15000+600000
+ 13294 strings out of 494440
+ 236357 string characters out of 6165319
+ 301761 words of memory out of 5000000
+ 16224 multiletter control sequences out of 15000+600000
  16245 words of font info for 40 fonts, out of 8000000 for 9000
  360 hyphenation exceptions out of 8191
- 56i,15n,55p,1095b,422s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,15n,55p,1102b,422s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc
-}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/t
-ype1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super
-/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/
-share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/ty
-pe1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/
-sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/s
-hare/texmf/fonts/type1/public/cm-super/sfsl1200.pfb></usr/share/texmf/fonts/typ
-e1/public/cm-super/sfti1200.pfb>
-Output written on thesis.pdf (27 pages, 941106 bytes).
+}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/
+sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/s
+hare/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/typ
+e1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
+frm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/sh
+are/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type
+1/public/cm-super/sfsl1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sf
+ti1200.pfb>
+Output written on thesis.pdf (31 pages, 1119540 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
+ 190 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 63 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 

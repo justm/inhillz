@@ -1,5 +1,5 @@
 \select@language {slovak}
-\contentsline {figure}{\numberline {1}{\ignorespaces Zjednodu\v sen\'a \v strukt\'ura FIT s\'uboru}}{9}
+\contentsline {figure}{\numberline {1}{\ignorespaces Porovnanie v\'ykonu a tepovej frekvencie pri z\'a\v ta\v zi}}{9}
 \contentsline {figure}{\numberline {2}{\ignorespaces Zjednodu\v sen\'a \v strukt\'ura FIT s\'uboru}}{12}
 \contentsline {figure}{\numberline {3}{\ignorespaces CSV s\'ubor po konverzii z FIT}}{12}
 \contentsline {figure}{\numberline {4}{\ignorespaces Strava - detail tr\'eningu}}{15}
@@ -8,4 +8,9 @@
 \contentsline {figure}{\numberline {7}{\ignorespaces Strava - Graf odhadnut\'eho v\'ykonu pod\v la GPS}}{17}
 \contentsline {figure}{\numberline {8}{\ignorespaces Strava - Graf odhadnut\'eho v\'ykonu pod\v la Assisted GPS}}{17}
 \contentsline {figure}{\numberline {9}{\ignorespaces Bike Calculator - Kalkula\v cka v\'ykonu cyklistu}}{18}
-\contentsline {figure}{\numberline {10}{\ignorespaces Valiv\'y odpor \cite {encyklopedie_fyziky}}}{21}
+\contentsline {figure}{\numberline {10}{\ignorespaces Teleso na naklonenej rovine}}{20}
+\contentsline {figure}{\numberline {11}{\ignorespaces Z\'avislos\v t potrebn\'eho v\'ykonu od nadmorskej v\'y\v sky}}{22}
+\contentsline {figure}{\numberline {12}{\ignorespaces Z\'avislos\v t potrebn\'eho v\'ykonu od teploty vzduchu}}{23}
+\contentsline {figure}{\numberline {13}{\ignorespaces Valiv\'y odpor \cite {encyklopedie_fyziky}}}{24}
+\contentsline {figure}{\numberline {14}{\ignorespaces Z\'avislos\v t potrebn\'eho v\'ykonu od koeficientu odporu pneumatiky}}{25}
+\contentsline {figure}{\numberline {15}{\ignorespaces Podiel silov\'ych zlo\v ziek v z\'avislosti od st\'upaj\'uceho sklonu vozovky}}{26}

@@ -13,7 +13,7 @@
 \contentsline {subsubsection}{\numberline {1.4.2}Bike Calculator}{18}
 \contentsline {section}{\numberline {2}P\^osobenie s\IeC {\'\i }l}{20}
 \contentsline {subsection}{\numberline {2.1}Gravita\v cn\'a sila}{20}
-\contentsline {subsection}{\numberline {2.2}Valiv\'y odpor}{21}
-\contentsline {subsection}{\numberline {2.3}Aerodynamick\'y odpor}{23}
-\contentsline {section}{\numberline {3}Opis rie\v senia}{23}
-\contentsline {section}{\numberline {4}Z\'aver}{24}
+\contentsline {subsection}{\numberline {2.2}Aerodynamick\'y odpor}{21}
+\contentsline {subsection}{\numberline {2.3}Valiv\'y odpor}{24}
+\contentsline {section}{\numberline {3}Opis rie\v senia}{27}
+\contentsline {section}{\numberline {4}Z\'aver}{28}
