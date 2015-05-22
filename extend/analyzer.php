@@ -34,6 +34,24 @@ class Analyzer {
      * @var array
      */
     private $data_record = [];
+    
+    /**
+     * Sumár tréningu
+     * @var WorkoutModel
+     */
+    private $workout;
+    
+    /**
+     * Športovec
+     * @var UserModel
+     */
+    private $athlete;
+    
+    /**
+     * Bicykel
+     * @var GearModel
+     */
+    private $bike;
             
     /**
      * Metóda, ktorá spúšťa analýzu tréningu
@@ -42,9 +60,24 @@ class Analyzer {
      */
     public function analyze( WorkoutModel $workout ){
         
-        /** @todo Check activity type */
-        /** @todo Check if $workout->data_file not empty, e.g. manual entry */
-        /** @todo Run detect_climbs */
+        $this->data_record = ActivityModel::get_record($workout->id, $workout->data_file);
+        $this->workout = $workout;
+        
+        if ($workout->id_activity == 1){
+            
+            if( empty(array_column($this->data_record, 'est_power')) ){
+                
+                $this->athlete = UserModel::model()->findById($this->workout->id_user);
+                $this->bike = GearModel::model()->findById($this->workout->id_gear);
+                
+                if( !empty($this->athlete) && !empty($this->bike) ){
+                    $this->detect_climbs();
+                    //ActivityModel::save_record($this->data_record, $workout->id);
+                }
+            }
+        }
+        
+        return $this->data_record;
     }
     
     /**
@@ -53,11 +86,9 @@ class Analyzer {
      * - dlhsie ako 500m, 
      * - priemerné stúpanie majú viac ako 3% 
      * - násobok dĺžka*gradient dosahuje viac ako 40bodov
-     * @param WorkoutModel $workout
      */
-    public function detect_climbs( WorkoutModel $workout ){
+    public function detect_climbs( ){
         
-        $this->data_record = ActivityModel::get_record($workout->data_file);
         $climbs = [];
         
         for( $i = 0; $i < count($this->data_record); $i++ ){
@@ -83,22 +114,21 @@ class Analyzer {
                             $start['index'],
                             $end['index'],
                             $end['distance'] - $start['distance'],
-                            $end['altitude'] - $start['altitude']
+                            abs($end['altitude'] - $start['altitude'])
                         );
         }
+        
         
         //** Odstrani nevyhovujuce stúpania
         foreach ( $climbs as $k => $climb ){
             
-            if( !($climb->get_length() > 500 && $climb->grade() >= 0.03 && $climb->get_length() * $climb->grade() > 40) ){
+            if( !($climb->get_length() >= 500 && $climb->grade() >= 0.03 && $climb->get_length() * $climb->grade() > 40) ){
                 unset($climbs[$k]);
             }
             else{
                 $this->detect_segments($climb);
             }
         }
-        
-        return $this->data_record;
     }
     
     /**
@@ -120,7 +150,7 @@ class Analyzer {
             
             //** Spočíta gradient
             $length = $this->data_record[$i+$step]['distance'] - $this->data_record[$i]['distance'];
-            $elevat = $this->data_record[$i+$step]['altitude'] - $this->data_record[$i]['altitude'];
+            $elevat = abs($this->data_record[$i+$step]['altitude'] - $this->data_record[$i]['altitude']); 
             $grade  = $elevat / $length;
             
             //** Check data consistency
@@ -134,8 +164,8 @@ class Analyzer {
                 /**  Môže nastať situácia kedy koncový bod by mal patriť do nového segmentu ale začiatočný ešte do aktuálneho, preto overenie s krokom 1 */
                 $l1 = $this->data_record[$i+$step/2]['distance'] - $this->data_record[$i]['distance'];
                 $l2 = $this->data_record[$i+$step/2]['distance'] - $this->data_record[$i]['distance'];
-                $e1 = $this->data_record[$i+$step]['altitude'] - $this->data_record[$i+$step/2]['altitude'];
-                $e2 = $this->data_record[$i+$step]['altitude'] - $this->data_record[$i+$step/2]['altitude'];
+                $e1 = abs($this->data_record[$i+$step]['altitude'] - $this->data_record[$i+$step/2]['altitude']);
+                $e2 = abs($this->data_record[$i+$step]['altitude'] - $this->data_record[$i+$step/2]['altitude']);
                 
                 if( abs($e1/$l1 - $e2/$l2) > 0.005 ){
                     $i--;
@@ -147,7 +177,7 @@ class Analyzer {
                             $t_start,
                             $seg_end,
                             $this->data_record[$seg_end]['distance'] - $this->data_record[$t_start]['distance'],
-                            $this->data_record[$seg_end]['altitude'] - $this->data_record[$t_start]['altitude']
+                            abs($this->data_record[$seg_end]['altitude'] - $this->data_record[$t_start]['altitude'])
                         );
                 $this->estimate_power($seg);
             }
@@ -160,14 +190,9 @@ class Analyzer {
      * @param SegmentModel $segment
      */
     public function estimate_power( SegmentModel $segment ){
-                
-        /* TEMP load from DB */
-        $athlete = new stdClass();
-        $bike = new stdClass();
-        $athlete->weight = 70;
-        $bike->weight = 7;
-        $bike->cda_coef = 0.48;
-        $bike->crr_coef = 0.00313;
+                                
+        $athlete = $this->athlete;
+        $bike    = $this->bike;
                 
         $Fg = ($athlete->weight + $bike->weight) * $this->constants['g'] * $segment->grade(); // Gravity
         $Fr = ($athlete->weight + $bike->weight) * $this->constants['g'] * cos(asin($segment->grade())) * $bike->crr_coef; // Rolling resistance
@@ -189,3 +214,31 @@ class Analyzer {
         }
     }
 }
+
+/*
+///*** Zistenie presnosti algoritmu
+    $odch = [];
+    for ( $j = $climb->get_index_start()+2; $j < $climb->get_index_end(); $j++){
+        $odch[] = abs(
+                    ($this->data_record[$j]['power'] + $this->data_record[$j-1]['power'] + $this->data_record[$j-2]['power'])/3
+                    - $this->data_record[$j]['est_power']
+                );
+        $pow[] = $this->data_record[$j]['power'];
+        $epow[] = $this->data_record[$j]['est_power'];
+    }
+    unset( $odch[array_search(max($odch), $odch)] );
+    unset( $odch[array_search(min($odch), $odch)] );
+
+    $p_avg = array_sum($pow) / count($pow);
+    $ep_avg = array_sum($epow) / count($epow);
+    $o_avg = array_sum($odch) / count($odch);
+
+    echo 
+        '<tr>',
+            '<td>' . $climb->get_length() . '</td>',
+            '<td>' . round($p_avg) . '</td>',
+            '<td>' . round($ep_avg) . '</td>',
+            '<td>' . number_format( abs($p_avg - $ep_avg ),2 ) . ' (' . number_format( 100 * abs( $p_avg - $ep_avg )/$p_avg, 1) . '%)</td>',
+            '<td>' . number_format($o_avg,2) . ' (' . ( number_format( 100 * $o_avg/$p_avg, 1) ) . '%)</td>',
+        '</tr>';
+ */

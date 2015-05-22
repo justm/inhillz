@@ -16,4 +16,13 @@
 \contentsline {subsection}{\numberline {2.2}Aerodynamick\'y odpor}{21}
 \contentsline {subsection}{\numberline {2.3}Valiv\'y odpor}{24}
 \contentsline {section}{\numberline {3}Opis rie\v senia}{27}
-\contentsline {section}{\numberline {4}Z\'aver}{28}
+\contentsline {subsection}{\numberline {3.1}Pou\v zit\'e technol\'ogie a rie\v senia}{27}
+\contentsline {subsection}{\numberline {3.2}Pr\IeC {\'\i }pady pou\v zitia}{29}
+\contentsline {subsection}{\numberline {3.3}Diagram aktiv\IeC {\'\i }t}{31}
+\contentsline {subsection}{\numberline {3.4}Implement\'acia}{32}
+\contentsline {subsubsection}{\numberline {3.4.1}Nahranie a konverzia s\'uboru}{32}
+\contentsline {subsubsection}{\numberline {3.4.2}Detekcia st\'upan\IeC {\'\i }}{34}
+\contentsline {subsubsection}{\numberline {3.4.3}Aproxim\'acia v\'ykonu}{37}
+\contentsline {subsubsection}{\numberline {3.4.4}Zobrazenie tr\'eningu}{38}
+\contentsline {subsection}{\numberline {3.5}Porovnanie v\'ysledkov}{42}
+\contentsline {section}{\numberline {4}Z\'aver}{46}
