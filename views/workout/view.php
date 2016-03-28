@@ -1,11 +1,14 @@
 <?php
+
+use inhillz\models\WorkoutModel;
+
 /**
  * Náhľad pre detailné zobrazenie záznamu o tréningu
  *
- * @author Matus Macak < matus.macak@folcon.sk > 
- * @version 2.0
- * @since Subor je súčasťou aplikácie od verzie 2.0
- * @package views.workout
+ * @package    inhillz\views
+ * @author     Matus Macak <matus.macak@orchidsphere.com>
+ * @link       http://ride.inhillz.com/
+ * @version    2.0
  * 
  * @var WorkoutModel $data->workout_summary
  * @var Array $data->workout_data

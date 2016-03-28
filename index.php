@@ -2,46 +2,33 @@
 /**
  * Súbor predstavuje vstupný bod celej aplikácie
  *
- * @author Matus Macak < matus.macak@folcon.sk > 
- * @link http://www.folcon.sk/
- * @version 2.0
- * @since Subor je súčasťou aplikácie od verzie 2.0
- * @package root
+ * @package    root
+ * @author     Matus Macak <matus.macak@orchidsphere.com>
+ * @link       http://ride.inhillz.com/
+ * @version    2.0
  * 
  */
 
 //** Výpis chybových oznámení PHP
-error_reporting( E_ERROR | E_WARNING | E_PARSE ); 
+error_reporting( E_ALL ); 
 ini_set('display_errors', 1);
 
+use \orchidphp\Orchid;
 
-define( 'MCORE_BASE_PATH', dirname( __FILE__ ) . '/mcore/'); //jadro frameworku
-define( 'MCORE_APP_PATH', dirname( __FILE__ ) . '/'); // controllers, libraries, javascript, models
-define( 'MCORE_PROJECT_PATH', dirname( __FILE__ ) . '/'); // project specific files = config, extend, style, views, 
-define( 'MCORE_INTERFACELANG', 'en' );
+define('VENDOR_PATH', __DIR__ . '/../../orchidcore/orchidcore/vendor/'); //dev
+//define('VENDOR_PATH', __DIR__ . '/orchidcore/vendor/'); // production
 
-require_once( MCORE_PROJECT_PATH . 'config.root.php' );
-require_once( MCORE_PROJECT_PATH . "config/main.config.php" );
+require 'config/main.config.php';
+require VENDOR_PATH . 'orchidsphere/orchidphp/Orchid.php';
 
-require_once( MCORE_BASE_PATH . '/mcore.base/mcore.base.php' );
-$mcore = Mcore::base();
-        
-//** Nižšie sú zaregistrované povinné objekty aplikácie
-$mcore->prepareObject( 'mysqldatabase', 'db' );
-$mcore->prepareObject( 'urlresolver', 'urlresolver');
+Orchid::base()->autoloader()->addNamespacesArray([
+    'orchidsphere'        => VENDOR_PATH . 'orchidsphere/',
+], true);
 
-//** Voliteľné rozšírenia
-$mcore->prepareObject( 'authentication', 'authenticate');
-$mcore->prepareObject( 'userflash', 'userflash');
+Orchid::base()->prepareObject('\inhillz\components\Authentication', 'authenticate');
 
-//** Nastavenia
-include MCORE_PROJECT_PATH . 'config/settings.config.php';
- 
 /**
  * Štart aplikácie
- * !!! Neuvadzať žiadne echo alebo print vypisy nad tieto riadky !!!
  */
-$mcore->start( array_merge( $configs, $additional_configs ) );
-/**
- * !!! Ďalšie nastavenie alebo objekty registrované po spustení aplikácie metódou start() nebudú použíté !!!
- */   
+Orchid::base()->start($configs);
+ 

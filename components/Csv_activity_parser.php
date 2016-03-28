@@ -1,21 +1,17 @@
 <?php
+
+namespace inhillz\components;
+
 /**
- * Súbor obsahuje triedu Csv_activity_parser
+ * Trieda Csv_activity_parser pre načítanie a ukladanie dátami o tréningu z CSV súboru
  *
- * @author Matus Macak < matus.macak@folcon.sk > 
- * @link http://www.folcon.sk/
- * @version 2.0
- * @since Subor je súčasťou aplikácie od verzie 2.0
- * @package extend
+ * @package    inhillz\components
+ * @author     Matus Macak <matus.macak@orchidsphere.com>
+ * @link       http://ride.inhillz.com/
+ * @version    2.0
  * 
  */
-
-require MCORE_APP_PATH . 'libraries/CSVparser.php';
-
-/**
- * Trieda pre načítanie a ukladanie dátami o tréningu z CSV súboru
- */
-class Csv_activity_parser extends CSVparser{
+class Csv_activity_parser extends \orchidsphere\dataexchange\CSVparser{
     
     /**
      * Priemerné a celkové údaje o aktivite
@@ -92,6 +88,13 @@ class Csv_activity_parser extends CSVparser{
      */
     public function get_units() {
         return (object) $this->units;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    protected function modify() {
+        
     }
 }
 

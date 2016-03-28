@@ -93,7 +93,7 @@ abbr{
 #main-logo{
     display: inline-block;
     width: 198px;
-    background: transparent url('content.main/essentials.png') 15px 15px no-repeat;
+    background: transparent url('essentials.png') 15px 15px no-repeat;
 }
 
 /* Bootstrap override */

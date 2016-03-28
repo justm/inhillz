@@ -1,19 +1,19 @@
 <?php
-/**
- * Súbor obsahuje triedu Helper
- *
- * @author Matus Macak < matus.macak@folcon.sk > 
- * @link http://www.folcon.sk/
- * @version 2.0
- * @since Subor je súčasťou aplikácie od verzie 2.0
- * @package extend
- * 
- */
+
+namespace inhillz\components;
+
+use orchidphp\Orchid;
 
 /**
- * Trieda pre pomocné operácie
+ * Súbor obsahuje triedu Helper pre pomocné operácie
+ *
+ * @package    inhillz\components
+ * @author     Matus Macak <matus.macak@orchidsphere.com>
+ * @link       http://ride.inhillz.com/
+ * @version    2.0
+ * 
  */
-class Helper extends McontrollerCore{
+class Helper extends \orchidphp\AbstractController{
     
     /**
      * Metoda uploaduje jeden súbor do zvoleného podadresára v adresári uploads.
@@ -32,14 +32,14 @@ class Helper extends McontrollerCore{
         $extension  = array_pop( $exp );
                  
         if( array_search( strtolower($extension), $supported ) === FALSE ){
-            $error[] = Mcore::t( '{FILE} is not supported file type', 'global', array( '{FILE}' => $file['name'] ) );
+            $error[] = Orchid::t( '{FILE} is not supported file type', 'global', array( '{FILE}' => $file['name'] ) );
             return FALSE;
         }
-        else if( move_uploaded_file( $file['tmp_name'], MCORE_PROJECT_PATH . $uploadPath . $file['name'] ) ){
+        else if( move_uploaded_file( $file['tmp_name'], PROJECT_PATH . $uploadPath . $file['name'] ) ){
                   
-            return MCORE_PROJECT_PATH . $uploadPath . $file['name']; //Vytvorenie URL adresy
+            return PROJECT_PATH . $uploadPath . $file['name']; //Vytvorenie URL adresy
         }
-        $error[] = Mcore::t( 'Uploading failed for file {FILE}', 'global', array( '{FILE}' => $file['name'] ) );
+        $error[] = Orchid::t( 'Uploading failed for file {FILE}', 'global', array( '{FILE}' => $file['name'] ) );
         return FALSE;
     }
     

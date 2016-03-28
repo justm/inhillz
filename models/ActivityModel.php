@@ -1,17 +1,18 @@
 <?php
-/**
- * Súbor obsahuje triedu ActivityModel 
- *
- * @author Matus Macak < matus.macak@folcon.sk > 
- * @link http://www.folcon.sk/
- * @version 2.0
- * @since Subor je súčasťou aplikácie od verzie 2.0
- * @package models
- * 
- */
+
+namespace inhillz\models;
+
+use inhillz\components\Csv_activity_parser;
+use orchidphp\Orchid;
 
 /**
  * Trieda ActivityModel predstavuje dátový model údajov zo športového merača
+ *
+ * @package    inhillz\models
+ * @author     Matus Macak <matus.macak@orchidsphere.com>
+ * @link       http://ride.inhillz.com/
+ * @version    2.0
+ * 
  */
 class ActivityModel {
 
@@ -25,15 +26,15 @@ class ActivityModel {
      */
     public static function get_record( $id, $data_file ){
               
-        Mcore::base()->db->executeQuery(
+        Orchid::base()->db->executeQuery(
             "SELECT * FROM " . self::$table . " WHERE id_training_entry = {$id}"
         );
         
-        if( Mcore::base()->db->getNumRows() > 0 ){
-            return Mcore::base()->db->getArrayRows();
+        if( Orchid::base()->db->getNumRows() > 0 ){
+            return Orchid::base()->db->getArrayRows();
         }
         else{
-            $data_model  = new Csv_activity_parser(MCORE_PROJECT_PATH . 'uploads/activities_data/' . $data_file);
+            $data_model  = new Csv_activity_parser(PROJECT_PATH . 'uploads/activities_data/' . $data_file);
             $data_stream = $data_model->get_record();
             
             //self::save_record($data_stream, $id);
@@ -50,8 +51,8 @@ class ActivityModel {
         
         return;
         
-        Mcore::base()->getObject('db')->executeQuery( "SHOW columns FROM `" . self::$table . "`" );
-        $_r      = Mcore::base()->getObject('db')->getArrayRows();
+        Orchid::base()->getObject('db')->executeQuery( "SHOW columns FROM `" . self::$table . "`" );
+        $_r      = Orchid::base()->getObject('db')->getArrayRows();
         $columns = array_column( $_r, 'Field' );
         
         $pattern = array_fill_keys($columns, "NULL");
@@ -73,6 +74,6 @@ class ActivityModel {
         
         $insert = "INSERT INTO " . self::$table . " ({$fields}) VALUES {$values} ON DUPLICATE KEY UPDATE {$update}";
         
-        Mcore::base()->db->executeQuery($insert);
+        Orchid::base()->db->executeQuery($insert);
     }
 }

@@ -1,18 +1,22 @@
 <?php
+
+use inhillz\models\WorkoutModel;
+use orchidphp\Orchid;
+
 /**
  * Graf - Časť náhľadu pre detailné zobrazenie tréningu
  *
- * @author Matus Macak < matus.macak@folcon.sk > 
- * @version 2.0
- * @since Subor je súčasťou aplikácie od verzie 2.0
- * @package views.workout
+ * @package    inhillz\views
+ * @author     Matus Macak <matus.macak@orchidsphere.com>
+ * @link       http://ride.inhillz.com/
+ * @version    2.0
  * 
  * @var WorkoutModel $data->workout_summary
- * @var Array $data->workout_data
+ * @var array $data->workout_data
  */
 ?><div class="col-xs-12">
     <div class="panel panel-default">
-        <div class="panel-heading"><h2 class="h5"><?php echo Mcore::t('Effort analysis')?></h2></div>
+        <div class="panel-heading"><h2 class="h5"><?php echo Orchid::t('Effort analysis')?></h2></div>
         <div class="panel-body"><div id="chart-canvas" class="chart"></div></div>
     </div>
 </div><?php
@@ -406,5 +410,5 @@
 
     $chart_create = ob_get_clean();
 
-    Mcore::base()->cachescript->registerCodeSnippet('<script src="' . ROOT_URL . 'libraries/d3.min.js"></script>', 'chart-api', 2);
-    Mcore::base()->cachescript->registerCodeSnippet($chart_create, 'chart-create', 2);
+    Orchid::base()->cachescript->registerCodeSnippet('<script src="' . ROOT_URL . 'javascript/d3.min.js"></script>', 'chart-api', 2);
+    Orchid::base()->cachescript->registerCodeSnippet($chart_create, 'chart-create', 2);

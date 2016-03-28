@@ -1,24 +1,25 @@
 <?php
-/**
- * Súbor obsahuje triedu UploadController
- *
- * @author Matus Macak < matus.macak@folcon.sk > 
- * @version 2.0
- * @since Subor je súčasťou aplikácie od verzie 2.0
- * @package controllers
- * 
- */
+
+namespace inhillz\controllers;
+
+use inhillz\components\Csv_activity_parser;
+use inhillz\components\Helper;
+use inhillz\models\WorkoutModel;
+use orchidphp\Orchid;
 
 /**
- * Ovládač UploadController 
+ * Súbor obsahuje ovládač UploadController
+ * Vytvorenie záznamu o tréningu
+ *
+ * @package    inhillz\controllers
+ * @author     Matus Macak <matus.macak@orchidsphere.com>
+ * @link       http://ride.inhillz.com/
+ * @version    2.0
  */
-class UploadController extends McontrollerCore{
+class UploadController extends \orchidphp\AbstractController{
     
     /**
-     * Metóda definuje prístupové práva k metódam. Každá metóda, ktorá má prejsť kontrolou práv
-     * musí byť v rámci triedy definovaná ako protected
-     * 
-     * @return array
+     * @inhritdoc
      */
     public function accessRules() {
         
@@ -31,8 +32,7 @@ class UploadController extends McontrollerCore{
      * Manuálne zadanie absolvovaného tréningu
      */
     protected function manual( $id = 0 ){
-        
-        $activities = Mcore::base()->db->queryPairs( "SELECT `id`, `name` FROM `activity`", 'id', 'name');
+           $activities = Orchid::base()->db->queryPairs( "SELECT `id`, `name` FROM `activity`", 'id', 'name');
         if( ( $workout = WorkoutModel::model()->findById($id) ) == NULL ){
             $workout = new WorkoutModel();
             $workout->start_time = date('H:i', time() - 3600); //start an hour ago
@@ -41,21 +41,21 @@ class UploadController extends McontrollerCore{
         if( isset( $_POST['WorkoutModel'] ) ){
             $workout->setAttributes( $_POST['WorkoutModel'] );
             
-            $workout->id_user = Mcore::base()->authenticate->getUserID();
+            $workout->id_user = Orchid::base()->authenticate->getUserID();
             $workout->start_time = strtotime( $_POST['WorkoutModel']['date'] . ' ' . $_POST['WorkoutModel']['start_time'] . ':00');
             
             $t_time = explode(':', $_POST['WorkoutModel']['duration']);
             $workout->total_timer_time = $workout->total_elapsed_time = $t_time[0] * 3600 + $t_time[1] * 60 + $t_time[2];
             
             if( $workout->save( TRUE ) ){ 
-                Mcore::base()->userflash->setFlash( 'workout-saved', 'alert alert-success', Mcore::t('Your workout has been succesfully saved') );
+                Orchid::base()->userflash->setFlash( 'workout-saved', 'alert alert-success', Orchid::t('Your workout has been succesfully saved') );
             }
             
             $workout->start_time = date('H:i', $workout->start_time);
         }
         
         $this->render('manual', array( 'workout' => $workout, 'activities' => $activities ) );
-    }
+    } 
     
     /**
      * Upload and process FIT file
@@ -70,12 +70,12 @@ class UploadController extends McontrollerCore{
         
         //** Otherwise handle uploaded files 
         elseif( !empty($_FILES) ){
-            $activities   = Mcore::base()->db->queryPairs( "SELECT `id`, `name` FROM `activity`", 'id', 'name');
+            $activities   = Orchid::base()->db->queryPairs( "SELECT `id`, `name` FROM `activity`", 'id', 'name');
             $success      = 0;
                         
             foreach($_FILES as $d => $file){
                 $error   = array();
-                $user_id = Mcore::base()->authenticate->getUserID();
+                $user_id = Orchid::base()->authenticate->getUserID();
                 
                 $outputname    = $user_id . '_' . Helper::getHash($file['name']) . '.csv';
                 $original_name = $file['name'];
@@ -84,13 +84,13 @@ class UploadController extends McontrollerCore{
                 //** Do not overwrite duplicates
                 if( ( $duplicate = WorkoutModel::model()->find("raw_file = '{$file['name']}'", 'id, title') ) != NULL ){
                     Helper::echoAlert( 
-                            Mcore::t('File {FILENAME} is duplicate of <i>{DUPLICATE}</i>. If you still want to process this file, delete the original workout.', 'global', array('{FILENAME}' => $original_name, '{DUPLICATE}' => $duplicate->title) ), 
+                            Orchid::t('File {FILENAME} is duplicate of <i>{DUPLICATE}</i>. If you still want to process this file, delete the original workout.', 'global', array('{FILENAME}' => $original_name, '{DUPLICATE}' => $duplicate->title) ), 
                             'alert-danger');
                     continue;
                 }
                 
                 $inputpath    = Helper::uploadFile($file, 'activities_raw', array('fit'), $error);
-                $outputpath   = MCORE_PROJECT_PATH . "uploads/activities_data/{$outputname}";
+                $outputpath   = PROJECT_PATH . "uploads/activities_data/{$outputname}";
                 
                 if( !empty($error) ){
                     Helper::echoAlert( implode('<br/>', $error), 'alert-danger');
@@ -102,7 +102,7 @@ class UploadController extends McontrollerCore{
                 
                 //** Do the conversion
                 exec(
-                    'java -jar ' . MCORE_APP_PATH . 'libraries/FitCSVTool.jar -b '.
+                    'java -jar ' . APP_PATH . 'assets/FitCSVTool.jar -b '.
                     "{$inputpath} {$outputpath}"
                 );
                     

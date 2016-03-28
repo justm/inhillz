@@ -1,11 +1,15 @@
 <?php
+
+use inhillz\models\WorkoutModel;
+use orchidphp\Orchid;
+
 /**
  * Mapa - Časť náhľadu pre detailné zobrazenie tréningu
  *
- * @author Matus Macak < matus.macak@folcon.sk > 
- * @version 2.0
- * @since Subor je súčasťou aplikácie od verzie 2.0
- * @package views.workout
+ * @package    inhillz\views
+ * @author     Matus Macak <matus.macak@orchidsphere.com>
+ * @link       http://ride.inhillz.com/
+ * @version    2.0
  * 
  * @var WorkoutModel $data->workout_summary
  * @var Array $data->workout_data
@@ -116,6 +120,6 @@
 
     $map_create = ob_get_clean();
 
-    Mcore::base()->cachescript->registerCodeSnippet('<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>', 'map-api', 2);
-    Mcore::base()->cachescript->registerCodeSnippet($map_create, 'map-create', 2);
+    Orchid::base()->cachescript->registerCodeSnippet('<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>', 'map-api', 2);
+    Orchid::base()->cachescript->registerCodeSnippet($map_create, 'map-create', 2);
 

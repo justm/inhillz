@@ -1,24 +1,25 @@
 <?php
-/**
- * Súbor obsahuje triedu WorkoutController
- *
- * @author Matus Macak < matus.macak@folcon.sk > 
- * @version 2.0
- * @since Subor je súčasťou aplikácie od verzie 2.0
- * @package controllers
- * 
- */
+
+namespace inhillz\controllers;
+
+use inhillz\components\Analyzer;
+use inhillz\components\Helper;
+use inhillz\models\WorkoutModel;
+use orchidphp\Orchid;
 
 /**
- * Ovládač WorkoutController 
+ * Súbor obsahuje ovládač WorkoutController
+ * 
+ * @package    inhillz\controllers
+ * @author     Matus Macak <matus.macak@orchidsphere.com>
+ * @link       http://ride.inhillz.com/
+ * @version    2.0
+ * 
  */
-class WorkoutController extends McontrollerCore{
+class WorkoutController extends \orchidphp\AbstractController{
     
     /**
-     * Metóda definuje prístupové práva k metódam. Každá metóda, ktorá má prejsť kontrolou práv
-     * musí byť v rámci triedy definovaná ako protected
-     * 
-     * @return array
+     * @inheritdoc
      */
     public function accessRules() {
         
@@ -35,7 +36,7 @@ class WorkoutController extends McontrollerCore{
         if( isset($_POST['WorkoutModel']) && isset($_POST['ajaxForm'])){
             
             $ids_w    = implode( ',', $_POST['WorkoutModel']['id'] );
-            $id_user  = Mcore::base()->authenticate->getUserID();
+            $id_user  = Orchid::base()->authenticate->getUserID();
             $workouts = WorkoutModel::model()->findAll("id IN ({$ids_w}) AND id_user = {$id_user}", 't.*', '', 'id');
                         
             for ($it = 0; $it < count($workouts); $it++ ){
@@ -65,7 +66,7 @@ class WorkoutController extends McontrollerCore{
      */
     public function view( $id = 0 ){
         
-        $workout_summary = WorkoutModel::model()->findById($id);
+	$workout_summary = WorkoutModel::model()->findById(intval($id));
 
         if( empty($workout_summary) ){
             PageController::controller()->error(404);

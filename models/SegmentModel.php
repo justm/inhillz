@@ -1,17 +1,13 @@
 <?php
 /**
- * Súbor obsahuje triedu SegmentModel 
- *
- * @author Matus Macak < matus.macak@folcon.sk > 
- * @link http://www.folcon.sk/
- * @version 2.0
- * @since Subor je súčasťou aplikácie od verzie 2.0
- * @package models
+ * Trieda SegmentModel 
+ * Objektová reprezentácia úseku s konštatným stúpaním získaná z tréningových dát
  * 
- */
-
-/**
- * Trieda SegmentModel, objektová reprezentácia úseku s konštatným stúpaním získaná z tréningových dát
+ * @package    inhillz\models
+ * @author     Matus Macak <matus.macak@orchidsphere.com>
+ * @link       http://ride.inhillz.com/
+ * @version    2.0
+ * 
  */
 class SegmentModel {
     

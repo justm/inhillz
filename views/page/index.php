@@ -2,11 +2,10 @@
 /**
  * Súbor predstavuje náhľad pre domovskú stránku
  *
- * @author Matus Macak < matusmacak@folcon.sk > 
- * @link http://www.folcon.sk/
- * @version 2.0
- * @since Subor je súčasťou aplikácie od verzie 2.0
- * @package views.page
+ * @package    inhillz\views
+ * @author     Matus Macak <matus.macak@orchidsphere.com>
+ * @link       http://ride.inhillz.com/
+ * @version    2.0
  */
  
  echo 'Your new app is ready to go';

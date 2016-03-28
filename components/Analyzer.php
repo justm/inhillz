@@ -1,17 +1,21 @@
 <?php
-/**
- * Súbor obsahuje triedu Analyzer
- *
- * @author Matus Macak < matus.macak@folcon.sk > 
- * @version 2.0
- * @since Subor je súčasťou aplikácie od verzie 2.0
- * @package controllers
- * 
- */
+
+namespace inhillz\components;
+
+use inhillz\models\ActivityModel;
+use inhillz\models\GearModel;
+use inhillz\models\UserModel;
+use inhillz\models\WorkoutModel;
+use orchidphp\Orchid;
 
 /**
  * Trieda Analyzer vykonáva výpočet odhadovaného výkonu.
  * Zároveň získava koeficienty potrebné pre výpočet odhadovaného výkonu z existujúcich tréningov
+ *
+ * @package    inhillz\components
+ * @author     Matus Macak <matus.macak@orchidsphere.com>
+ * @link       http://ride.inhillz.com/
+ * @version    2.0
  */
 class Analyzer {
     
@@ -111,7 +115,7 @@ class Analyzer {
      */
     public function learn() {
         $avg_cda =  array_sum( array_column($this->learn_data, 'cda_coef') ) / count( array_column($this->learn_data, 'cda_coef') );
-        Mcore::var_dump( $avg_cda );
+        Orchid::var_dump( $avg_cda );
         
         $calc_pw = []; // Hodnoty výkonu vypočítané podľa odhadnutého koeficientu
                 
@@ -119,7 +123,7 @@ class Analyzer {
             foreach ( $this->learn_data as $s ){
                 $calc_pw[] = $this->calculate_power($s['segment'], $s['crr_coef'], $avg_cda, $this->bike->weight + $this->athlete->weight);
                 
-                //Mcore::var_dump( [array_sum($calc_pw)/count($calc_pw), $s['P']] );
+                //Orchid::var_dump( [array_sum($calc_pw)/count($calc_pw), $s['P']] );
             }
         } while( 0 /*Nejaka presnost*/ );   
         
