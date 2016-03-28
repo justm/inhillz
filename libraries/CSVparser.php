@@ -151,6 +151,6 @@ class CSVparser {
     protected function logMsg( $msg ){
         
         list($usec, $sec) = explode(" ", microtime()); 
-        echo "<br/>[".date("H:i:s", $sec) . "." . $usec ."] ".$msg."\n";
+        "<br/>[".date("H:i:s", $sec) . "." . $usec ."] ".$msg."\n";
     }
 }

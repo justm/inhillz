@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="New document 1">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;">
+      <path
+         id="path4249"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;">
+      <path
+         id="path4261"
+         style="fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="929.50144"
+     inkscape:cy="789.46768"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1060"
+     inkscape:window-x="-2"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       orientation="1,0"
+       position="100.0051,799.03066"
+       id="guide2987" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="150.00765,796.00021"
+       id="guide2989" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="200.0102,750.54334"
+       id="guide2991" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="250.01276,734.3809"
+       id="guide2993" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="299.91072,1020.7589"
+       id="guide2995" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="350.01786,792.96975"
+       id="guide2997" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="400,944.28572"
+       id="guide2999" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="449.64286,821.42857"
+       id="guide3001" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="500.35714,760.71429"
+       id="guide3003" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="124.64286,900"
+       id="guide3005" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="175,825"
+       id="guide3007" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="225,792.14286"
+       id="guide3009" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="275,787.5"
+       id="guide3011" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="324.64286,772.14286"
+       id="guide3013" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="374.64286,761.78572"
+       id="guide3015" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="425,757.85714"
+       id="guide3017" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#f2f2f2;stroke:#ff0000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 569.68527,328.89257 c 0,0 69.38478,-31.15719 123.85882,-69.35449 55.02504,-38.58366 55.69123,-147.64077 122.23982,-168.780437 l 27.85314,-8.84778 0,247.186277 z"
+       id="path2985"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssc"
+       inkscape:export-filename="/home/matus/NetbeansProjects/inhillz/doc/thesis/tex/images/segment_determination.png"
+       inkscape:export-xdpi="180.09059"
+       inkscape:export-ydpi="180.09059" />
+    <path
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:0.99999994000000003;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.99999997999999990, 0.99999998999999995;stroke-dashoffset:0"
+       d="M 624.37385,301.82033 761.11487,145.63065"
+       id="path3032"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/matus/NetbeansProjects/inhillz/doc/thesis/tex/images/segment_determination.png"
+       inkscape:export-xdpi="180.09059"
+       inkscape:export-ydpi="180.09059" />
+    <path
+       sodipodi:nodetypes="cc"
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:0.99999994000000003;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.99999997999999990, 0.99999998999999995;stroke-dashoffset:0"
+       d="M 569.68527,328.27088 706.30909,248.28255"
+       id="path3804"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/matus/NetbeansProjects/inhillz/doc/thesis/tex/images/segment_determination.png"
+       inkscape:export-xdpi="180.09059"
+       inkscape:export-ydpi="180.09059" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.99999994000000003;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.99999997999999990, 0.99999998999999995;stroke-dashoffset:0;opacity:1"
+       d="M 679.06245,269.50245 815.78391,89.103863"
+       id="path3806"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/matus/NetbeansProjects/inhillz/doc/thesis/tex/images/segment_determination.png"
+       inkscape:export-xdpi="180.09059"
+       inkscape:export-ydpi="180.09059" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3808"
+       style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="matrix(3.3499957,0,0,3.3499957,-1189.593,-669.4344)"
+       inkscape:export-filename="/home/matus/NetbeansProjects/inhillz/doc/thesis/tex/images/segment_determination.png"
+       inkscape:export-xdpi="180.09059"
+       inkscape:export-ydpi="180.09059"><flowRegion
+         id="flowRegion3810"><rect
+           id="rect3812"
+           width="12.857142"
+           height="13.035714"
+           x="531.96429"
+           y="280.39789" /></flowRegion><flowPara
+         id="flowPara3814"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Prosto;-inkscape-font-specification:Prosto">1</flowPara></flowRoot>    <flowRoot
+       transform="matrix(3.3499957,0,0,3.3499957,-1113.0639,-753.23551)"
+       style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="flowRoot3816"
+       xml:space="preserve"
+       inkscape:export-filename="/home/matus/NetbeansProjects/inhillz/doc/thesis/tex/images/segment_determination.png"
+       inkscape:export-xdpi="180.09059"
+       inkscape:export-ydpi="180.09059"><flowRegion
+         id="flowRegion3818"><rect
+           y="280.39789"
+           x="531.96429"
+           height="13.035714"
+           width="12.857142"
+           id="rect3820" /></flowRegion><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Prosto;-inkscape-font-specification:Prosto"
+         id="flowPara3832">2</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3824"
+       style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="matrix(3.3499957,0,0,3.3499957,-982.16794,-831.49606)"
+       inkscape:export-filename="/home/matus/NetbeansProjects/inhillz/doc/thesis/tex/images/segment_determination.png"
+       inkscape:export-xdpi="180.09059"
+       inkscape:export-ydpi="180.09059"><flowRegion
+         id="flowRegion3826"><rect
+           id="rect3828"
+           width="12.857142"
+           height="13.035714"
+           x="531.96429"
+           y="280.39789" /></flowRegion><flowPara
+         id="flowPara3830"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Prosto;-inkscape-font-specification:Prosto">3</flowPara><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Prosto;-inkscape-font-specification:Prosto"
+         id="flowPara3836" /></flowRoot>    <path
+       inkscape:export-ydpi="180.09059"
+       inkscape:export-xdpi="180.09059"
+       inkscape:export-filename="/home/matus/NetbeansProjects/inhillz/doc/thesis/tex/images/segment_determination.png"
+       sodipodi:nodetypes="cssc"
+       inkscape:connector-curvature="0"
+       id="path3838"
+       d="m 861.61936,328.89257 c 0,0 69.38478,-31.15719 123.85882,-69.35449 55.02502,-38.58366 55.69122,-147.64077 122.23982,-168.780437 l 27.8531,-8.84778 0,247.186277 z"
+       style="fill:#f2f2f2;stroke:#ff0000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       inkscape:export-ydpi="180.09059"
+       inkscape:export-xdpi="180.09059"
+       inkscape:export-filename="/home/matus/NetbeansProjects/inhillz/doc/thesis/tex/images/segment_determination.png"
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path3840"
+       d="M 916.30794,301.82033 1053.049,145.63065"
+       style="opacity:0.3;fill:none;stroke:#000000;stroke-width:0.99999994000000003;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.99999997999999990, 0.99999998999999995;stroke-dashoffset:0" />
+    <path
+       inkscape:export-ydpi="180.09059"
+       inkscape:export-xdpi="180.09059"
+       inkscape:export-filename="/home/matus/NetbeansProjects/inhillz/doc/thesis/tex/images/segment_determination.png"
+       inkscape:connector-curvature="0"
+       id="path3842"
+       d="M 861.61936,328.27088 998.24318,248.28255"
+       style="opacity:0.3;fill:none;stroke:#000000;stroke-width:0.99999994000000003;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.99999997999999990, 0.99999998999999995;stroke-dashoffset:0"
+       sodipodi:nodetypes="cc" />
+    <path
+       inkscape:export-ydpi="180.09059"
+       inkscape:export-xdpi="180.09059"
+       inkscape:export-filename="/home/matus/NetbeansProjects/inhillz/doc/thesis/tex/images/segment_determination.png"
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path3844"
+       d="M 970.99654,269.50245 1107.718,89.103863"
+       style="fill:none;stroke:#000000;stroke-width:0.99999994000000003;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.99999997999999990, 0.99999998999999995;stroke-dashoffset:0;opacity:0.3" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 916.33929,301.82647 87.75231,-59.10155 49.212,-97.05917"
+       id="path3872"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/matus/NetbeansProjects/inhillz/doc/thesis/tex/images/segment_determination.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180" />
+    <path
+       style="fill:#ff0000;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-start:none;marker-mid:none;marker-end:url(#Arrow1Mend)"
+       d="m 859.13474,192.21729 65.15484,0"
+       id="path3874"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/matus/NetbeansProjects/inhillz/doc/thesis/tex/images/segment_determination.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180" />
+  </g>
+</svg>

@@ -5,13 +5,14 @@
         <group>
             <file>file:/home/matus/NetbeansProjects/inhillz/controllers/workout.controller.php</file>
             <file>file:/home/matus/NetbeansProjects/inhillz/style/main.dev.css</file>
-            <file>file:/home/matus/NetbeansProjects/inhillz/mcore/mcore.base/mcore.base.php</file>
             <file>file:/home/matus/NetbeansProjects/inhillz/views/workout/view.chart.php</file>
+            <file>file:/home/matus/NetbeansProjects/inhillz/models/activity.model.php</file>
+            <file>file:/home/matus/NetbeansProjects/inhillz/extend/csv_activity_parser.php</file>
             <file>file:/home/matus/NetbeansProjects/inhillz/views/workout/view.basics.php</file>
+            <file>file:/home/matus/NetbeansProjects/inhillz/controllers/upload.controller.php</file>
+            <file>file:/home/matus/NetbeansProjects/inhillz/extend/analyzer.php</file>
             <file>file:/home/matus/NetbeansProjects/inhillz/views/workout/view.map.php</file>
             <file>file:/home/matus/NetbeansProjects/inhillz/views/workout/view.php</file>
-            <file>file:/home/matus/NetbeansProjects/inhillz/extend/csv_activity_model.php</file>
-            <file>file:/home/matus/NetbeansProjects/inhillz/controllers/analyze.controller.php</file>
             <file>file:/home/matus/NetbeansProjects/inhillz/models/workout.model.php</file>
             <file>file:/home/matus/NetbeansProjects/inhillz/models/segment.model.php</file>
         </group>

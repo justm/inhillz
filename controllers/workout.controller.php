@@ -72,7 +72,7 @@ class WorkoutController extends McontrollerCore{
         }
                        
         $analyzer = new Analyzer();
-        $workout_data = $analyzer->detect_climbs($workout_summary);
+        $workout_data = empty($workout_summary->data_file)? [] : $analyzer->analyze($workout_summary);
         
         $this->render('view', array(
             'workout_summary' => $workout_summary,

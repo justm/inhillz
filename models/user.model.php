@@ -98,4 +98,12 @@ class UserModel extends MmodelCore{
             'format' => array( 'email' => ' email,'), //format => attribute
         );
     }
+    
+    public function findById($id, $columns = '*', $joins = '') {
+        return parent::findById(
+                $id, 
+                'f.weight, f.height, f.max_hr, f.rest_hr, t.*', 
+                'LEFT JOIN user_fitness f on t.id_user_fitness = f.id' 
+        );
+    }
 } 
