@@ -272,7 +272,7 @@ Jednotlivé zloky, ktoré pôsobia na cyklistu poèas jazdy sa menia v závislosti o
 Kım aerodynamickı odpor je najviac pociovanı pri jazde po rovine, jeho podiel klesá spolu s narastajúcim sklonom vozovky a zaèína prevláda zloka gravitaènej sily. Valivı odpor je spôsobenı kontaktom pneumatiky s povrchom vozovky, konkrétne ich deformáciou a mikrotrením.\\
 \indent Princíp superkompenzácie hovorí, e vısledná sila pôsobiaca na teleso je rovná vektorovému súètu všetkıch síl pôsobiacich na dané teleso \cite{encyklopedie_fyziky}.
 \begin{equation} \label{eq:supercompensation}
-\vec{F} = \sum_{\substack{i}}\vec{F}_i
+P\ =\ v\ \sum{F}
 \end{equation}
 
 \subsection{Gravitaèná sila}
@@ -356,7 +356,7 @@ F = F_n\ \tan \alpha
 
 \noindent Pre malé uhly je $tg\alpha = sin\alpha$ a pre koleso s polomerom \emph{R} je $sin\alpha = \cfrac{\xi}{R}$. Dosadením do vzahu \ref{eq:rolling_trivial1} dostávame:
 \begin{equation} \label{eq:rolling_trivial2}
-F = \cfrac{\xi}{R}\ F_n
+F_r = C_{rr}\ F_n
 \end{equation}
 
 \noindent Normálovú silu na naklonenej rovine vypoèítame pod¾a vzahu \ref{eq:force_normal}.\\
@@ -835,7 +835,7 @@ function chart_draw(chart_data){
   }
 \end{Verbatim}
 
-Vykres¾ovanie osí grafu nebudeme rozvádza dopodrobna. Graf disponuje interaktivitou. Po prechode myšou na konrétnu pozíciu sa ved¾a grafu zobrazia hodnoty pre danı body a na mape sa zobrazí ukazovate¾ pozície. Kliknutím na graf a ahaním je moné vybra èas tréningu. Graf sa priblíi a na mape sa zvırazní vybraná èas rozdielnou farbou. Viï nasledujúci obrázok.
+Vykres¾ovanie osí grafu nebudeme rozvádza dopodrobna. Graf disponuje interaktivitou. Po prechode myšou na konkrétnu pozíciu sa ved¾a grafu zobrazia hodnoty pre danı body a na mape sa zobrazí ukazovate¾ pozície. Kliknutím na graf a ahaním je moné vybra èas tréningu. Graf sa priblíi a na mape sa zvırazní vybraná èas rozdielnou farbou. Viï nasledujúci obrázok.
 
 \begin{figure}[H]
 \centering
@@ -844,7 +844,7 @@ Vykres¾ovanie osí grafu nebudeme rozvádza dopodrobna. Graf disponuje interaktiv
 \end{figure}
 
 \subsection{Porovnanie vısledkov}
-Záver tejto kapitoly venujeme porovnaniu odhadnutıch hodnôt s hodnotami, ktoré boli reálne zmerané meraèom vıkonu. Nako¾ko zriadenie PowerTap G3, ktoré sme pri práci pouívali nám vypovedalo slubu, neboli sme schopnı aproximáciu otestova v plnej miere tak ako sme plánovali. Vısledky, ktoré prezentujeme sú na základe dát, získanıch v období september 2014 a máj 2015 tromi rôznymi športovcami a tromi rozdielnımi meraèmi vıkonu. Jedná sa o stúpania v rôznych nadmorskıch vıškach, od 0 do 1200 m n.m. v rôznych teplotnıch podmienkach, od 0 do 35°C a s rôznym priemernım sklonom, od 4 do 12\%. Porovnávame priemernı reálny a odhadnutı vıkon pre celé stúpanie. Taktie hodnoty vıkonu zaznamenané v danıch bodoch oproti aproximovanım hodnotám pre tieto body. V druhom prípade neporovnávame priamo momentovı vıkon ale trojsekundovı priemer v danom bode, ktorı je relevantnejšou referenènou vzorkou. U kadého športovca uvádzame aj ukáku grafu s porovnaním aproximovanej a reálnej hodnoty vo vybranom stúpaní.\\\\
+Záver tejto kapitoly venujeme porovnaniu odhadnutıch hodnôt s hodnotami, ktoré boli reálne zmerané meraèom vıkonu. Nako¾ko zriadenie PowerTap G3, ktoré sme pri práci pouívali nám vypovedalo slubu, neboli sme schopnı aproximáciu otestova v plnej miere tak ako sme plánovali. Vısledky, ktoré prezentujeme, sú na základe dát, získanıch v období september 2014 a máj 2015 tromi rôznymi športovcami a tromi rozdielnımi meraèmi vıkonu. Jedná sa o stúpania v rôznych nadmorskıch vıškach, od 0 do 1200 m n.m. v rôznych teplotnıch podmienkach, od 0 do 35°C a s rôznym priemernım sklonom, od 4 do 12\%. Porovnávame priemernı reálny a odhadnutı vıkon pre celé stúpanie. Taktie hodnoty vıkonu zaznamenané v danıch bodoch oproti aproximovanım hodnotám pre tieto body. V druhom prípade neporovnávame priamo momentovı vıkon ale trojsekundovı priemer v danom bode, ktorı je relevantnejšou referenènou vzorkou. U kadého športovca uvádzame aj ukáku grafu s porovnaním aproximovanej a reálnej hodnoty vo vybranom stúpaní.\\\\
 \textbf{Športovec è.1}\\
 Hmotnos: 72 kg\\
 Hmotnos bicykla: 8 kg\\
@@ -932,14 +932,14 @@ Meraè vıkonu: Stages for Shimano Dura-ace, ¾avá k¾uka.\\
 \caption{Športovec 3 - porovnanie aproximovanıch a reálnych hodnôt}
 \end{figure}
 
-Z uvedenıch porovnaní môeme konštatova, e implementovanı algoritmus dosahuje maximálnu odchılku 4.4\% no štandardne sa pohybuje od 0.5\% do 3.0\%. Takúto presnos povaujeme dostaèujúcu na to aby, pod¾a nej športovec mohol urèi intenzitu zaaenia. Ak sa pozrieme na porovnanie hodnôt v jednotlivıch bodoch, presnos u nie je tak vysoká. Priemerná odchılka sa pohybuje od 7\% do 25\%. Skôr ne zhodnotíme tieto vısledky, pozrime sa na priebeh vıkonu v grafoch. U športovca 1 a 2 jasne vidie ako priebeh aproximovaného vıkonu kopíruje priebeh reálneho vıkonu. Ak vieme vïaka vıpoètu zobrazi pribline rovnakı priebeh vıkonu a v priemere dosiahnú odchılku 0.5 a 3\% môeme to povaova za dobré vısledky. Rozdiel v momentovıch hodnotách je spôsobenı nerovnomernım šliapaním do pedálov, môu ho spôsobova aj nerovnosti na vozovke, ktoré zanedbávame a mnostvo ïalších faktorov. 
+Z uvedenıch porovnaní môeme konštatova, e implementovanı algoritmus dosahuje maximálnu odchılku 4.4\% no štandardne sa pohybuje od 0.5\% do 3.0\%. Takúto presnos povaujeme dostaèujúcu na to aby, pod¾a nej športovec mohol urèi intenzitu zaaenia. Ak sa pozrieme na porovnanie hodnôt v jednotlivıch bodoch, presnos u nie je tak vysoká. Priemerná odchılka sa pohybuje od 7\% do 25\%. Skôr, ne zhodnotíme tieto vısledky, pozrime sa na priebeh vıkonu v grafoch. U športovca 1 a 2 jasne vidie, ako priebeh aproximovaného vıkonu kopíruje priebeh reálneho vıkonu. Ak vieme vïaka vıpoètu zobrazi pribline rovnakı priebeh vıkonu a v priemere dosiahnú odchılku 0.5 a 3\%, môeme to povaova za dobré vısledky. Rozdiel v momentovıch hodnotách je spôsobenı nerovnomernım šliapaním do pedálov, môu ho spôsobova aj nerovnosti na vozovke, ktoré zanedbávame a mnostvo ïalších faktorov. 
 U športovca 3 sú hodnoty zmerané na pretekoch, kde dochádza k väèším vıkyvom v šliapaní a vidíme aj väèšie odchılky, ktoré môu by spôsobené jazdou v skupine.  
 
 \newpage
 \section{Záver}
-Vısledkom našej práce je algoritmus, ktorı aproximuje vıkon cyklistu v k¾úèovıch stúpaniach z jeho pohybu na trase tréningu. Algoritmus pozostáva zo štyroch krokov: detekcia stúpaní, rozdelenie stúpaní na èiastkové segmenty, odhad koeficientov potrebnıch k vıpoètu, a samotného vıpoèetu vıkonu.
+Vısledkom našej práce je algoritmus, ktorı aproximuje vıkon cyklistu v k¾úèovıch stúpaniach z jeho pohybu na trase tréningu. Algoritmus pozostáva zo štyroch krokov: detekcia stúpaní, rozdelenie stúpaní na èiastkové segmenty, odhad koeficientov potrebnıch k vıpoètu, a samotného vıpoètu vıkonu.
 Algoritmus sme implementovali do webovej aplikácie, ktorá umoòuje nahranie súboru s údajmi o športovej aktivite a jej vyhodnotenie. Aplikácia podporuje formát súboru FIT, ktorı bene pouívajú zriadenia pracujúce s protokolom ANT+. \\
-\indent Je zrejmé, e presnı momentovı vıkon športovca z pozície, rıchlosti a zmeny nadmorskej vıšky nikdy presne urèi nebudeme vedie. Podstatou nášho algoritmu, je rozdelenie celého stúpania na menšie èasti s nemennım sklonom, tzv. segmenty. Pre tieto èasti následne vypoèítame vıkon, akoby ho športovec podával celı èas konštantnı. Vytıèenie segmentov v rámci stúpania sme sa snaili navhrnú tak, aby segmenty boli dostatoène dlhé. Body s miernou odchılkou v pozícii alebo nadmorskej vıške by  nemali vytvára takú odchılku vo vıpoète, ako sa domnievame, e tomu je na portále Strava. Ba druhej streane sa však segmenty snaíme udra relatívne krátke aby sme v nich mohli aspoò èiastoène zachyti náhle, nieko¾ko sekundové zmeny tempa. V skutoènosti teda nepredpovedáme momentovı vıkon ale nieko¾ko sekundovı priemernı vıkon. Myslíme si, e je to jediná monos ako z dostupnıch dá vıkon aproximova a po porovnaní reálnych a vypoèítanıch hodnôt na nieko¾kıch rôznych vzorkách a dosiahnutıch odchılkach sme sa v tomto názore utvrdili.\\
+\indent Je zrejmé, e presnı momentovı vıkon športovca z pozície, rıchlosti a zmeny nadmorskej vıšky nikdy presne urèi nebudeme vedie. Podstatou nášho algoritmu, je rozdelenie celého stúpania na menšie èasti s nemennım sklonom, tzv. segmenty. Pre tieto èasti následne vypoèítame vıkon, akoby ho športovec podával celı èas konštantnı. Vytıèenie segmentov v rámci stúpania sme sa snaili navhrnú tak, aby segmenty boli dostatoène dlhé. Body s miernou odchılkou v pozícii alebo nadmorskej vıške by  nemali vytvára takú odchılku vo vıpoète, ako sa domnievame, e tomu je na portále Strava. Na druhej strane sa však segmenty snaíme udra relatívne krátke, aby sme v nich mohli aspoò èiastoène zachyti náhle, nieko¾ko sekundové zmeny tempa. V skutoènosti teda nepredpovedáme momentovı vıkon ale nieko¾ko sekundovı priemernı vıkon. Myslíme si, e je to jediná monos ako z dostupnıch dát vıkon aproximova a po porovnaní reálnych a vypoèítanıch hodnôt na nieko¾kıch rôznych vzorkách a dosiahnutıch odchılkach sme sa v tomto názore utvrdili.\\
 \indent Cie¾om tejto práce nebolo konkurova existújúcim systémom v mnostve funkcionality. Cie¾om práce bolo umoni finanène dostupnı tréning, ktorı je riadenı pod¾a hodnôt vıkonu športovca. Takıto systém môe by vıhodnı pre menšie športové tímy, ktoré si nemôu dovoli zakúpenie zariadenia na meranie vıkonu pre kadého èlena, ale disponujú aspoò jednım takımto zariadením. Pri pouití našej aproximácie vıkonu by postaèilo poèiatoèné "nakalibrovanie" nieko¾kımi tréningami s meraèom vıkonu a v kadom ïalšom tréningu by bol vıkon odhadnutı. \\
 \indent Na záver práce nám u len ostáva skonštatova, e v tomto vıskume je stále priestor na doplnenie. Pri dostatoènom testovaní v rôznych podmienkach, ideálne však vo veternom tuneli by mohol by vytvorenı algoritmus pre aproximáciu vıkonu aj v rovinatıch èastiach tréningu, ktorı nám momentálne chıba. I keï práve stúpania sú k¾úèovım miestom, kde sa rozhodujú preteky, nemálo nároènıch tréningov a pretekov je situovanıch v rovinatom prostredí.
 

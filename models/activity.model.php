@@ -48,6 +48,8 @@ class ActivityModel {
      */
     public static function save_record( $data_stream, $id_training_entry ){
         
+        return;
+        
         Mcore::base()->getObject('db')->executeQuery( "SHOW columns FROM `" . self::$table . "`" );
         $_r      = Mcore::base()->getObject('db')->getArrayRows();
         $columns = array_column( $_r, 'Field' );

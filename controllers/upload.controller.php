@@ -35,7 +35,7 @@ class UploadController extends McontrollerCore{
         $activities = Mcore::base()->db->queryPairs( "SELECT `id`, `name` FROM `activity`", 'id', 'name');
         if( ( $workout = WorkoutModel::model()->findById($id) ) == NULL ){
             $workout = new WorkoutModel();
-            $workout->start_time = time() - 3600;
+            $workout->start_time = date('H:i', time() - 3600); //start an hour ago
         }
         
         if( isset( $_POST['WorkoutModel'] ) ){
@@ -50,10 +50,10 @@ class UploadController extends McontrollerCore{
             if( $workout->save( TRUE ) ){ 
                 Mcore::base()->userflash->setFlash( 'workout-saved', 'alert alert-success', Mcore::t('Your workout has been succesfully saved') );
             }
+            
+            $workout->start_time = date('H:i', $workout->start_time);
         }
         
-        $workout->start_time = date('H:i', $workout->start_time);
-
         $this->render('manual', array( 'workout' => $workout, 'activities' => $activities ) );
     }
     
