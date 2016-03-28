@@ -16,4 +16,4 @@ $mcore->storeSetting( dirname( __FILE__ ) . '/../others/logs/', 'DEBUG_LOG_PATH'
 
 $mcore->storeSetting( FALSE,  'MCORE_CACHETEMPLATE_USE' );
 $mcore->storeSetting( 1440,  'MCORE_CACHETEMPLATE_REFRESH' ); //cache refresh v minútach
-$mcore->storeSetting( FALSE, 'MCORE_SUBDOMAIN_USE' ); //používanie subdomén
+$mcore->storeSetting( TRUE, 'MCORE_SUBDOMAIN_USE' ); //používanie subdomén

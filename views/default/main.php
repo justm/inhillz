@@ -26,7 +26,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a id="main-logo" class="navbar-brand" href="http://inhillz.com/"></a>
+                    <a id="main-logo" class="navbar-brand" href="http://inhillz.com/en/diary"></a>
                 </div>
 <!--                    <form class="navbar-form" role="search" id="mhsr" action="<?php // echo ENTRY_SCRIPT_URL ?>page/find/" method="GET">
                     <div class="input-group" id="mhsr-inner">

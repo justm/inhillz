@@ -65,7 +65,7 @@ class WorkoutController extends McontrollerCore{
      */
     public function view( $id = 0 ){
         
-        $workout_summary = WorkoutModel::model()->findById($id);
+	$workout_summary = WorkoutModel::model()->findById(intval($id));
 
         if( empty($workout_summary) ){
             PageController::controller()->error(404);

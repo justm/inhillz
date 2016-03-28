@@ -11,13 +11,13 @@
  */
 
 //**Globálne konštanty
-define( 'APP_URL', 'http://localhost/inhillz/'); //URL adresa frameworku a e-commerce aplikácie
-define( 'ROOT_URL', 'http://localhost/inhillz/'); //URL adresa špecifického projektu
-define( 'ENTRY_SCRIPT_URL', 'http://localhost/inhillz/index.php/');
+//define( 'APP_URL', 'http://localhost/inhillz/'); //URL adresa frameworku a e-commerce aplikácie
+//define( 'ROOT_URL', 'http://localhost/inhillz/'); //URL adresa špecifického projektu
+//define( 'ENTRY_SCRIPT_URL', 'http://localhost/inhillz/index.php/');
 
-//define( 'APP_URL', 'http://ride.inhillz.com/'); //URL adresa frameworku a e-commerce aplikácie
-//define( 'ROOT_URL', 'http://ride.inhillz.com/'); //URL adresa špecifického projektu
-//define( 'ENTRY_SCRIPT_URL', 'http://ride.inhillz.com/');
+define( 'APP_URL', 'http://ride.inhillz.com/'); //URL adresa frameworku a e-commerce aplikácie
+define( 'ROOT_URL', 'http://ride.inhillz.com/'); //URL adresa špecifického projektu
+define( 'ENTRY_SCRIPT_URL', 'http://ride.inhillz.com/');
 
 define( 'UPLOADS_PATH', dirname( __FILE__ ) . '/uploads/');
 
@@ -32,15 +32,15 @@ define( 'EPOCH_TIMESTAMP_OFFSET', 631065600);
  */
 $configs = array(
     'db' => array(
-        'db_host' => 'localhost',
-        'db_user' => 'root',
-        'db_pass' => '', 
-        'db_name' => 'mojtrening',
-
 //        'db_host' => 'localhost',
-//        'db_user' => 'inhillz',
-//        'db_pass' => '7frokhoub', 
-//        'db_name' => 'hillzsqldb',
+//        'db_user' => 'root',
+//        'db_pass' => '', 
+//        'db_name' => 'mojtrening',
+
+        'db_host' => 'localhost',
+        'db_user' => 'inhillz',
+        'db_pass' => '7frokhoub', 
+        'db_name' => 'hillzsqldb',
     ),
     
     'default_timezone' => 'UTC',
