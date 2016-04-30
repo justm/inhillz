@@ -16,7 +16,7 @@ use orchidphp\Orchid;
  * @version    2.0
  * 
  */
-class WorkoutController extends \orchidphp\AbstractController{
+class WorkoutController extends AbstractWebController{
     
     /**
      * @inheritdoc
@@ -33,9 +33,9 @@ class WorkoutController extends \orchidphp\AbstractController{
      */
     protected function update() {
                 
-        if( isset($_POST['WorkoutModel']) && isset($_POST['ajaxForm'])){
+        if(isset($_POST['WorkoutModel']) && isset($_POST['ajaxForm'])){
             
-            $ids_w    = implode( ',', $_POST['WorkoutModel']['id'] );
+            $ids_w    = implode(',', $_POST['WorkoutModel']['id']);
             $id_user  = Orchid::base()->authenticate->getUserID();
             $workouts = WorkoutModel::model()->findAll("id IN ({$ids_w}) AND id_user = {$id_user}", 't.*', '', 'id');
                         

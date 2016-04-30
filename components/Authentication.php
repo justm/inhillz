@@ -85,7 +85,7 @@ class Authentication extends \orchidphp\Authentication{
      */
     public function postAuthenticate($e, $p) {
         
-        echo $sql = "SELECT u.ID as id, u.username, u.email, u.name, u.lastname, r.name as role_name
+        $sql = "SELECT u.ID as id, u.username, u.email, u.name, u.lastname, r.name as role_name
                 FROM user u LEFT JOIN `role` r on u.id_role = r.id WHERE
                 u.email = '{$e}' AND u.password = '" . $this->getHash($p) . "'";
 

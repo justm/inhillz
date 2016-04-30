@@ -16,7 +16,12 @@ use orchidphp\Orchid;
  * @link       http://ride.inhillz.com/
  * @version    2.0
  */
-class UploadController extends \orchidphp\AbstractController{
+class UploadController extends AbstractWebController{
+    
+    /**
+     * @inheritdoc
+     */
+    public $sidebar = 'upload/nav.php';
     
     /**
      * @inhritdoc
@@ -102,43 +107,43 @@ class UploadController extends \orchidphp\AbstractController{
                 
                 //** Do the conversion
                 exec(
-                    'java -jar ' . APP_PATH . 'assets/FitCSVTool.jar -b '.
+                    'java -jar ' . APP_PATH . 'resources/FitCSVTool.jar -b '.
                     "{$inputpath} {$outputpath}"
                 );
                     
                 //** Read CSV file and get totals
                 $data_model   = new Csv_activity_parser($outputpath);
-                $session_data = $data_model->get_session();
-                $data_units   = $data_model->get_units();  
+                $session_data = $data_model->getSession();
+                $data_units   = $data_model->getUnits();  
                 
                 //** Create DB entry
                 $w_model = new WorkoutModel();
                 
-                $w_model->id_user = $user_id;
+                $w_model->id_user     = $user_id;
                 $w_model->id_activity = 1;
-                $w_model->start_time = $session_data->start_time + EPOCH_TIMESTAMP_OFFSET;
-                $w_model->title = date("Y/m/d", $w_model->start_time) . ' Activity';
+                $w_model->start_time  = $session_data->start_time + EPOCH_TIMESTAMP_OFFSET;
+                $w_model->title       = date("Y/m/d", $w_model->start_time) . ' Activity';
                 
-                $w_model->raw_file = $file['name'];
+                $w_model->raw_file  = $file['name'];
                 $w_model->data_file = $outputname;
                 
-                $w_model->avg_hr = $session_data->avg_heart_rate;
-                $w_model->max_hr = $session_data->max_heart_rate;
-                $w_model->distance = Helper::convertUnits($session_data->total_distance, $data_units->distance, 'km');
+                $w_model->avg_hr    = $session_data->avg_heart_rate;
+                $w_model->max_hr    = $session_data->max_heart_rate;
+                $w_model->distance  = Helper::convertUnits($session_data->total_distance, $data_units->distance, 'km');
                 $w_model->avg_speed = Helper::convertUnits($session_data->avg_speed, $data_units->speed, 'km/h');
-                $w_model->ascent = $session_data->total_ascent;
+                $w_model->ascent    = $session_data->total_ascent;
                 $w_model->avg_watts = $session_data->avg_power;
-                $w_model->total_timer_time = $session_data->total_timer_time;
+                $w_model->total_timer_time   = $session_data->total_timer_time;
                 $w_model->total_elapsed_time = $session_data->total_elapsed_time;
                                 
                 //** Duration and Date might be deprecated since 2.0
                 $w_model->duration = date("H:i:s",$session_data->total_timer_time);
-                $w_model->date = date("Y-m-d", $w_model->start_time);
+                $w_model->date     = date("Y-m-d", $w_model->start_time);
                 
-               if( $w_model->save(TRUE) ){
-                    $this->renderPartial('update.form', array('model' => $w_model, 'activities' => $activities), 'workout');
-               }
-                
+                if( $w_model->save(TRUE) ){
+                    $w_model->distance = round($w_model->distance, 2);
+                    $this->renderPartial('update.form', array('model' => $w_model, 'activities' => $activities, 'record' => $data_model->getRecordStrips(15)), 'workout');
+                }
             }
             
             if($success){

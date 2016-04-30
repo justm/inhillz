@@ -27,7 +27,63 @@ use orchidphp\Orchid;
         </div>      
         <p><?php echo Orchid::t('Works for multiple .fit files 25MB or smaller. Choose up to 25 files.')?></p>
     </form>
-</div>
+</div><?php
 
+    //** Priprava javascript kódu pre mapy, ktorý sa vloží na koniec <body>
+    ob_start();
     
+?><script type="text/javascript">
     
+    function map_draw(mapcanvas_id, coordinates) {
+              
+        var map,
+            route_path,
+            map_bns,
+            style;
+    
+        var map_styles = [{
+            "featureType": "all",
+            "elementType": "all",
+            "stylers": [
+                {"saturation": -100},
+                {"gamma": 1.0}
+            ]
+        }],
+            
+        map_options = {
+            scrollwheel:      false,
+            disableDefaultUI: true,
+            mapTypeControlOptions: {
+                mapTypeIds: [google.maps.MapTypeId.TERRAIN, 'map_style']
+            }
+        };
+                
+        style = new google.maps.StyledMapType(map_styles,{name: "Workout map"});
+        
+        route_path = new google.maps.Polyline({
+            path: coordinates,
+            geodesic: true,
+            strokeColor: '#33CC99',
+            strokeOpacity: 1.0,
+            strokeWeight: 3
+        });
+                 
+        map = new google.maps.Map(document.getElementById(mapcanvas_id),map_options);
+        
+        map_bns = new google.maps.LatLngBounds();
+        for(var i = 0; i < coordinates.length; i++){
+            map_bns.extend(coordinates[i]);
+        }
+            
+        map.mapTypes.set('map_style', style);
+        map.setMapTypeId('map_style');        
+        map.fitBounds(map_bns);   
+        route_path.setMap(map);
+    }
+    
+</script><?php
+
+    $map_script = ob_get_clean();
+
+    Orchid::base()->cachescript->registerCodeSnippet('<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>', 'map-api', 2);
+    Orchid::base()->cachescript->registerCodeSnippet($map_script, 'map-script', 2);

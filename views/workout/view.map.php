@@ -48,7 +48,7 @@ use orchidphp\Orchid;
             }
         },
                 
-        style = new google.maps.StyledMapType(map_styles,{name: "Workout map"})
+        style = new google.maps.StyledMapType(map_styles,{name: "Workout map"});
         
         route_coordinates = [<?php echo $coordinates ?>];
                         

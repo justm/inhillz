@@ -14,7 +14,7 @@ use orchidphp\Orchid;
  * @version    2.0
  * 
  */
-class UserController extends \orchidphp\AbstractController{
+class UserController extends AbstractWebController{
     
     /**
      * @inheritdoc

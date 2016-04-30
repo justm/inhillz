@@ -12,7 +12,12 @@ use orchidphp\Orchid;
  * @link       http://ride.inhillz.com/
  * @version    2.0
  */
-class PageController extends \orchidphp\AbstractController{
+class PageController extends AbstractWebController{
+    
+    /**
+     * @inheritdoc
+     */
+    public $seoTitle = 'Cycling performance analyzer';
     
     /**
      * @inheritdoc

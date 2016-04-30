@@ -16,7 +16,7 @@ use orchidphp\Orchid;
  * @var array $data->activities
  */
 ?>
-<div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 center-block">
+<div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
     <?php
         echo HTMLhelper::displayFlash();
         echo HTMLhelper::displayErrors($data->workout);
@@ -55,7 +55,7 @@ use orchidphp\Orchid;
             <?php echo HTMLhelper::mLabel( $data->workout, 'avg_speed'); ?>
             <?php echo HTMLhelper::mTextInput( $data->workout, 'avg_speed', array('class' => 'form-control')); ?>
         </div>
-        <div class="form-group col-xs-12 col-sm-6">
+        <div class="form-group col-xs-12 col-sm-6 date">
             <?php echo HTMLhelper::mLabel( $data->workout, 'date'); ?>
             <?php echo HTMLhelper::mTextInput( $data->workout, 'date', array('class' => 'form-control')); ?>
         </div>
@@ -69,7 +69,21 @@ use orchidphp\Orchid;
         </div>
     <?php echo HTMLhelper::endForm(); ?>
     </div>
-</div>
+</div><?php
 
-    
-    
+    Orchid::base()->cachescript->registerCssFile(
+            APP_URL.'resources/datepicker/datepicker3.css',
+            'datepicker-css'
+    );
+    Orchid::base()->cachescript->registerCodeSnippet(
+        '<script src="'.APP_URL.'resources/datepicker/bootstrap-datepicker.js"></script>
+        <script type="text/javascript">
+            $(".date input").datepicker({
+                format: "yyyy-mm-dd",
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                autoclose: true
+            });
+        </script>',
+        'datepicker-js',2
+    );

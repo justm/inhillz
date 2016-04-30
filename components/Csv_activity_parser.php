@@ -32,6 +32,24 @@ class Csv_activity_parser extends \orchidsphere\dataexchange\CSVparser{
     private $units;
     
     /**
+     * @var bool Non-verbose
+     */
+    protected $log_enable = FALSE;
+    
+    /**
+     * Initialize parser and read file
+     * @param string $file_name
+     * @param bool $read_header
+     * @param char $delimeter
+     * @param char $enclosure
+     */
+    public function __construct($file_name, $read_header = TRUE, $delimeter = ',', $enclosure = '"') {
+        
+        parent::__construct($file_name, $read_header, $delimeter, $enclosure);
+        $this->openFile()->readFile();
+    }
+
+    /**
      * Vytiahnutie dát zo súboru a rozdelenie do potrebnej štruktúry
      * @return Csv_activity_parser
      */
@@ -70,7 +88,7 @@ class Csv_activity_parser extends \orchidsphere\dataexchange\CSVparser{
      * 
      * @return stdClass
      */
-    public function get_session() {
+    public function getSession() {
         return (object) $this->session;
     }
 
@@ -78,15 +96,26 @@ class Csv_activity_parser extends \orchidsphere\dataexchange\CSVparser{
      * 
      * @return array
      */
-    public function get_record() {
+    public function getRecord() {
         return $this->record;
     }
 
     /**
+     * Returns every N-th element of record data, where N is specified by $step
+     * @param int $step
+     * @return array
+     */
+    public function getRecordStrips($step) {
+        
+        $keys   = range(0, count($this->record), $step);
+        return array_values(array_intersect_key($this->record, array_combine($keys, $keys)));
+    }
+            
+    /**
      * 
      * @return stdClass
      */
-    public function get_units() {
+    public function getUnits() {
         return (object) $this->units;
     }
 

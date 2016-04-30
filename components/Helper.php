@@ -16,6 +16,12 @@ use orchidphp\Orchid;
 class Helper extends \orchidphp\AbstractController{
     
     /**
+     * Hodnota na prepočítanie stupňov do semicircles
+     * @var float 
+     */
+    public static $deg_to_semic = 45/536870912;
+    
+    /**
      * Metoda uploaduje jeden súbor do zvoleného podadresára v adresári uploads.
      * @param $_FILE $file
      * @param String $subdirectory Podaresár, alebo aj viac úrovní
@@ -78,9 +84,28 @@ class Helper extends \orchidphp\AbstractController{
         return sha1( "RW8DLG" . $string );
     }
     
+    /**
+     * Vytovrí HTML div so správou
+     * @param string $message
+     * @param string $type
+     */
     public static function echoAlert( $message, $type ){
         
         echo
             '<div class="alert ' . $type . '">' . $message . '</div>';
+    }
+    
+    /**
+     * Vrati pole pozícii z tréningového záznamu
+     * @param type $record
+     */
+    public static function getPositionsFromRecord($record){
+
+        return array_map(
+                function($point){
+                    if(isset($point['position_lat']) && isset($point['position_long'])){
+                        return ($point['position_lat'] * (45/536870912)) . ',' . ($point['position_long'] * (45/536870912));
+                    }
+                }, $record);
     }
 }

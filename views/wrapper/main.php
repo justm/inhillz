@@ -5,9 +5,12 @@
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="<?php echo ROOT_URL . 'style/content.main/favicon.ico'?>"/>
-        <link rel="stylesheet" href="<?php echo ROOT_URL . 'style/main.dev.css'?>"/>
-        <script type="text/javascript" src="<?php echo APP_URL . 'javascript/jquery-1.11.0.min.js'?>"></script>
-    </head>
+        <link rel="stylesheet" href="<?php echo ROOT_URL . 'style/main.css'?>"/>
+        <script type="text/javascript" src="<?php echo APP_URL . 'javascript/jquery-1.11.0.min.js'?>"></script><?php
+        
+        $this->printMeta();
+        
+    ?></head>
     <body>
         <nav class="navbar navbar-default" role="navigation" id="mh">
             <div class="container">
@@ -32,14 +35,29 @@
                 </div>
             </div>
         </nav>
-        <div class="container" id="main-container">
-            <div class="row"><?php 
+        <div class="container" id="main-container"><?php
+        
+            if(!empty($this->sidebar)){
+                echo '<div class="row">';
+                    echo '<div class="hidden-xs col-md-3 col-lg-2">';
+                        include APP_PATH . 'views/' . $this->sidebar;
+                    echo '</div>';
+                    echo '<div class="col-md-9 col-lg-10">';
+            }
+            
+            ?><div class="row"><?php 
 
               echo $content;
 
-            ?></div>
-        </div>
-        <script type="text/javascript" src="<?php echo ROOT_URL . 'style/bootstrap/js/bootstrap.js'?>"></script>
+            ?></div><?php
+            
+            if(!empty($this->sidebar)){
+                echo '</div>'; //** End of main-container with sidebar
+                echo '</div>'; //** End of row inside #main-container
+            }
+            
+        ?></div>
+        <script type="text/javascript" src="<?php echo APP_URL . 'javascript/bootstrap.min.js'?>"></script>
         <script type="text/javascript" src="<?php echo APP_URL . 'javascript/alerts.js'?>"></script>
         <script type="text/javascript" src="<?php echo APP_URL . 'javascript/main.dev.js'?>"></script>
         <script type="text/javascript">

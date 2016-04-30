@@ -49,9 +49,11 @@ $configs = [
         ],
         'trailingSlash' => TRUE,
         'errorHandler' => 'page/error',
+        'userLogin' => 'user/login',
         'subdomains' => FALSE,
     ],
     'page' => [
+        'name' => 'InHillz',
         'breadcrumbRoot' => 'InHillz',
         'default_timezone' => 'UTC',
     ],

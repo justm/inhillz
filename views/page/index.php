@@ -1,4 +1,7 @@
 <?php
+
+use orchidphp\Orchid;
+
 /**
  * Súbor predstavuje náhľad pre domovskú stránku
  *
@@ -7,5 +10,8 @@
  * @link       http://ride.inhillz.com/
  * @version    2.0
  */
- 
- echo 'Your new app is ready to go';
+?><div class="col-xs-12"><?php
+
+    echo 'Welcome ' . Orchid::base()->authenticate->getFullName();
+
+?></div>

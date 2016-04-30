@@ -35,7 +35,7 @@ class ActivityModel {
         }
         else{
             $data_model  = new Csv_activity_parser(PROJECT_PATH . 'uploads/activities_data/' . $data_file);
-            $data_stream = $data_model->get_record();
+            $data_stream = $data_model->getRecord();
             
             //self::save_record($data_stream, $id);
             
