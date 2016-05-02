@@ -14,7 +14,7 @@ use inhillz\models\WorkoutModel;
  * @var Array $data->workout_data
  */
     //** Priprava jednotlivych bodov pre vykreslenie na mape a grafe
-    $deg_to_semic = 180 / pow(2, 31);
+    $semic_to_deg = 180 / pow(2, 31);
     $coordinates  = '';
     $bounds       = '';
     $chart_data    = '';
@@ -33,8 +33,8 @@ use inhillz\models\WorkoutModel;
         
         //** map
         if( !empty($r['position_lat']) && !empty($r['position_long']) ) {
-            $latlng       = 'position_lat:' . ($r['position_lat'] * $deg_to_semic) . ', position_long:' . ($r['position_long'] * $deg_to_semic) . ',';
-            $latlngMaps   = 'new google.maps.LatLng(' . ($r['position_lat'] * $deg_to_semic) . ',' . ($r['position_long'] * $deg_to_semic) . ')';
+            $latlng       = 'position_lat:' . ($r['position_lat'] * $semic_to_deg) . ', position_long:' . ($r['position_long'] * $semic_to_deg) . ',';
+            $latlngMaps   = 'new google.maps.LatLng(' . ($r['position_lat'] * $semic_to_deg) . ',' . ($r['position_long'] * $semic_to_deg) . ')';
             $bounds      .= 'map_bns.extend(' . $latlngMaps . '); ';
             $coordinates .= $latlngMaps . ',';
         }

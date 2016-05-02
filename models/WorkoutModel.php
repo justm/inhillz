@@ -158,7 +158,7 @@ class WorkoutModel extends \orchidphp\AbstractModel{
     public function rules() {
         
         return array(
-            'required' => ' ',
+            'required' => ' total_timer_time, ',
             'length' => array(),
         );
     }

@@ -25,7 +25,7 @@ use orchidphp\Orchid;
                 <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em;">0%</div>
             </div>
         </div>      
-        <p><?php echo Orchid::t('Works for multiple .fit files 25MB or smaller. Choose up to 25 files.')?></p>
+        <p><?php echo Orchid::t('Works for multiple .fit, .gpx files {SIZE} or smaller. Choose up to {COUNT} files.', 'global', ['{SIZE}' => get_cfg_var('upload_max_filesize'), '{COUNT}' => get_cfg_var('max_file_uploads')])?></p>
     </form>
 </div><?php
 

@@ -2,8 +2,8 @@
 
 namespace inhillz\controllers;
 
-use inhillz\components\Csv_activity_parser;
 use inhillz\components\Helper;
+use inhillz\components\ActivityParser;
 use inhillz\models\WorkoutModel;
 use orchidphp\Orchid;
 
@@ -79,14 +79,15 @@ class UploadController extends AbstractWebController{
             $success      = 0;
                         
             foreach($_FILES as $d => $file){
+                
                 $error   = array();
                 $user_id = Orchid::base()->authenticate->getUserID();
                 
-                $outputname    = $user_id . '_' . Helper::getHash($file['name']) . '.csv';
+                $outputname    = $user_id . '_' . Helper::getHash($file['name']);
                 $original_name = $file['name'];
                 $file['name']  = $user_id . '_' . $file['name'];
                 
-                //** Do not overwrite duplicates
+                //** Check for duplicates,  do not overwrite
                 if( ( $duplicate = WorkoutModel::model()->find("raw_file = '{$file['name']}'", 'id, title') ) != NULL ){
                     Helper::echoAlert( 
                             Orchid::t('File {FILENAME} is duplicate of <i>{DUPLICATE}</i>. If you still want to process this file, delete the original workout.', 'global', array('{FILENAME}' => $original_name, '{DUPLICATE}' => $duplicate->title) ), 
@@ -94,9 +95,9 @@ class UploadController extends AbstractWebController{
                     continue;
                 }
                 
-                $inputpath    = Helper::uploadFile($file, 'activities_raw', array('fit'), $error);
-                $outputpath   = PROJECT_PATH . "uploads/activities_data/{$outputname}";
-                
+                //** Upload
+                $inputpath = Helper::uploadFile($file, 'activities_raw', array('fit', 'gpx'), $error);
+
                 if( !empty($error) ){
                     Helper::echoAlert( implode('<br/>', $error), 'alert-danger');
                     continue;
@@ -105,28 +106,43 @@ class UploadController extends AbstractWebController{
                     $success = 1;
                 }
                 
-                //** Do the conversion
-                exec(
-                    'java -jar ' . APP_PATH . 'resources/FitCSVTool.jar -b '.
-                    "{$inputpath} {$outputpath}"
-                );
+                //** Convert .fit file to .csv
+                if(pathinfo($inputpath, PATHINFO_EXTENSION) == 'fit') {
+                    $outputname  .= '.csv';
+                    $outputpath   = PROJECT_PATH . "uploads/activities_data/{$outputname}";
+                    exec(
+                        'java -jar ' . APP_PATH . 'resources/FitCSVTool.jar -b '.
+                        "{$inputpath} {$outputpath}"
+                    );
+                }
+                else{
+                    $outputname  .= '.gpx';
+                    $outputpath   = PROJECT_PATH . "uploads/activities_data/{$outputname}";
+                    copy($inputpath, $outputpath);
+                }
                     
-                //** Read CSV file and get totals
-                $data_model   = new Csv_activity_parser($outputpath);
+                //** Read file and get totals
+                $data_model = new ActivityParser($outputpath);
+                
+                if(!empty($data_model->error)){
+                    Helper::echoAlert($data_model->error, 'alert-danger');
+                    return FALSE;
+                }
+
                 $session_data = $data_model->getSession();
                 $data_units   = $data_model->getUnits();  
-                
+
                 //** Create DB entry
                 $w_model = new WorkoutModel();
-                
+
                 $w_model->id_user     = $user_id;
                 $w_model->id_activity = 1;
-                $w_model->start_time  = $session_data->start_time + EPOCH_TIMESTAMP_OFFSET;
+                $w_model->start_time  = $session_data->start_time;
                 $w_model->title       = date("Y/m/d", $w_model->start_time) . ' Activity';
-                
+
                 $w_model->raw_file  = $file['name'];
                 $w_model->data_file = $outputname;
-                
+
                 $w_model->avg_hr    = $session_data->avg_heart_rate;
                 $w_model->max_hr    = $session_data->max_heart_rate;
                 $w_model->distance  = Helper::convertUnits($session_data->total_distance, $data_units->distance, 'km');
@@ -135,11 +151,11 @@ class UploadController extends AbstractWebController{
                 $w_model->avg_watts = $session_data->avg_power;
                 $w_model->total_timer_time   = $session_data->total_timer_time;
                 $w_model->total_elapsed_time = $session_data->total_elapsed_time;
-                                
+
                 //** Duration and Date might be deprecated since 2.0
                 $w_model->duration = date("H:i:s",$session_data->total_timer_time);
                 $w_model->date     = date("Y-m-d", $w_model->start_time);
-                
+
                 if( $w_model->save(TRUE) ){
                     $w_model->distance = round($w_model->distance, 2);
                     $this->renderPartial('update.form', array('model' => $w_model, 'activities' => $activities, 'record' => $data_model->getRecordStrips(15)), 'workout');

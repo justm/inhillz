@@ -2,7 +2,7 @@
 
 namespace inhillz\models;
 
-use inhillz\components\Csv_activity_parser;
+use inhillz\components\ActivityParser;
 use orchidphp\Orchid;
 
 /**
@@ -34,7 +34,7 @@ class ActivityModel {
             return Orchid::base()->db->getArrayRows();
         }
         else{
-            $data_model  = new Csv_activity_parser(PROJECT_PATH . 'uploads/activities_data/' . $data_file);
+            $data_model  = new ActivityParser(PROJECT_PATH . 'uploads/activities_data/' . $data_file);
             $data_stream = $data_model->getRecord();
             
             //self::save_record($data_stream, $id);
@@ -68,9 +68,9 @@ class ActivityModel {
             $values .= '(' . implode(',', array_merge($pattern, $row)) . '),';
         }
         
-        $fields = substr( $fields, 0, -1 ); //odstránenie koncového znaku ","
-        $values = substr( $values, 0, -1 ); 
-        $update = substr( $update, 0, -1 ); 
+        $fields = trim($fields, ','); //odstránenie koncového znaku ","
+        $values = trim($values, ','); 
+        $update = trim($update, ','); 
         
         $insert = "INSERT INTO " . self::$table . " ({$fields}) VALUES {$values} ON DUPLICATE KEY UPDATE {$update}";
         
