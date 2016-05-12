@@ -31,17 +31,17 @@ define('EPOCH_TIMESTAMP_OFFSET', 631065600);
 
 $configs = [
     'db' => [
-        'db_dns'  => 'mysql:host=localhost;dbname=inhillz;charset=utf8',
-        'db_host' => 'localhost',
-        'db_user' => 'root',
-        'db_pass' => '', 
-        'db_name' => 'inhillz',
+//        'db_dns'  => 'mysql:host=localhost;dbname=inhillz;charset=utf8',
+//        'db_host' => 'localhost',
+//        'db_user' => 'root',
+//        'db_pass' => '', 
+//        'db_name' => 'inhillz',
         //** Production
-//        'db_dns'  => 'mysql:host=37.9.170.84;dbname=hillzsqldb;charset=utf8',
-//        'db_host' => '37.9.170.84', 
-//        'db_user' => 'inhillz',
-//        'db_pass' => '7frokhoub', 
-//        'db_name' => 'hillzsqldb',
+        'db_dns'  => 'mysql:host=37.9.170.84;dbname=hillzsqldb;charset=utf8',
+        'db_host' => '37.9.170.84', 
+        'db_user' => 'inhillz',
+        'db_pass' => '7frokhoub', 
+        'db_name' => 'hillzsqldb',
     ],
     'urlResolver' => [
         'urlRules' => [ 

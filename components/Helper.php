@@ -23,7 +23,7 @@ class Helper extends \orchidphp\AbstractController{
     
     /**
      * Metoda uploaduje jeden súbor do zvoleného podadresára v adresári uploads.
-     * @param $_FILE $file
+     * @param array $file
      * @param string $subdirectory Podaresár, alebo aj viac úrovní
      * @param array $supported Pole s podporovanými typmi
      * @param array $error Flag, v ktorom je uvedená chybová hláška v prípade že upload zlyhá
@@ -137,5 +137,18 @@ class Helper extends \orchidphp\AbstractController{
            * (1 - cos(($lon2 - $lon1) * $p))/2;
 
         return 12742 * 1000 * asin(sqrt($a)); // 12742 = 2 * R; R = 6371 km
+    }
+    
+    /**
+     * Vrati náhodne desatiné číslo medzi $min a $max
+     * @param float $min
+     * @param float $max
+     * @param int $precision Ak $precision = 0 vráti náhodný int
+     * @return float
+     */
+    public static function random($min, $max, $precision = 9){
+       
+        $h = pow(10, $precision);
+	return rand($min * $h, $max * $h) / $h;
     }
 }

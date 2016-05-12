@@ -50,8 +50,8 @@ use orchidphp\Orchid;
                 </tr>
                 <tr>
                     <td><?php echo Orchid::t('Cadence'); ?></td>
-                    <td><?php echo $data->workout_summary->cadence; ?></td>
-                    <td></td>
+                    <td><?php echo $data->workout_summary->avg_cadence; ?></td>
+                    <td><?php echo $data->workout_summary->max_cadence; ?></td>
                 </tr>
                 <tr>
                     <td><?php echo Orchid::t('Elevation'); ?></td>

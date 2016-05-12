@@ -149,6 +149,9 @@ class UploadController extends AbstractWebController{
                 $w_model->avg_speed = Helper::convertUnits($session_data->avg_speed, $data_units->speed, 'km/h');
                 $w_model->ascent    = $session_data->total_ascent;
                 $w_model->avg_watts = $session_data->avg_power;
+                $w_model->max_watts = $session_data->max_power;
+                $w_model->avg_cadence = $session_data->avg_cadence;
+                $w_model->max_cadence = $session_data->max_cadence;
                 $w_model->total_timer_time   = $session_data->total_timer_time;
                 $w_model->total_elapsed_time = $session_data->total_elapsed_time;
 

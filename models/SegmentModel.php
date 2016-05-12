@@ -1,4 +1,7 @@
 <?php
+
+namespace inhillz\models;
+
 /**
  * Trieda SegmentModel 
  * Objektová reprezentácia úseku s konštatným stúpaním získaná z tréningových dát
