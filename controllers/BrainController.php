@@ -15,7 +15,7 @@ use inhillz\models\WorkoutModel;
  * @link       http://ride.inhillz.com/
  * @version    2.0
  */
-class SupervisorController extends AbstractWebController{
+class BrainController extends AbstractWebController{
     
     /**
      * Uloží tréningy absolvovane s meračom výkonu

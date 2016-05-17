@@ -39,6 +39,21 @@ class NeuralNet {
     private $layers = [];
 
     /**
+     * @var array Vstupy pre aktuálny výpočet 
+     */
+    private $inputs = [];
+    
+    /**
+     * @var array výsledok výpočtu count($outputs) == $numOutputs
+     */
+    private $outputs = [];
+    
+    /**
+     * @var array Viacrozmerne pole s výstupmi pre každú vrstvu
+     */
+    private $partialOutputs = [];
+    
+    /**
      * Konštruktor
      */
     public function __construct() {
@@ -55,10 +70,10 @@ class NeuralNet {
         
 	if ($this->numHiddenLayers > 0) {
             
-            // Prva vrstva
+            // Prva skryta vrstva
             array_push($this->layers, new NeuronLayer($this->numNeuronsPerLayer, $this->numInputs));
     
-            for ($i = 0; $i < $this->numHiddenLayers - 1; $i) {
+            for ($i = 0; $i < $this->numHiddenLayers - 1; $i) { //dalsie skryte vrstvy
                 array_push($this->layers, new NeuronLayer($this->numNeuronsPerLayer, $this->numNeuronsPerLayer));
             }
 
@@ -79,14 +94,11 @@ class NeuralNet {
 
         $weights = [];
 	
-	//všetky vrstvy
-	for ($i = 0; $i < $this->numHiddenLayers + 1; $i++) {
+	for ($i = 0; $i < $this->numHiddenLayers + 1; $i++) { //všetky vrstvy
 
-            //všetky neurony
-            for ($j = 0; $j < $this->layers[$i]->numNeurons; $j++) {
+            for ($j = 0; $j < $this->layers[$i]->numNeurons; $j++) { //všetky neurony
                 
-                //všetky váhy
-                for ($k = 0; $k < $this->layers[$i]->neurons[$j]->numInputs; $k++) {
+                for ($k = 0; $k < $this->layers[$i]->neurons[$j]->numInputs; $k++) { //všetky váhy
                     array_push($weights, $this->layers[$i]->neurons[$j]->weights[$k]);
                 }
             }
@@ -103,14 +115,11 @@ class NeuralNet {
         
         $num_weights = 0;
 	
-	//všetky vrstvy
-	for ($i = 0; $i < $this->numHiddenLayers + 1; $i++) {
+	for ($i = 0; $i <= $this->numHiddenLayers; $i++) { //všetky vrstvy
 
-            //všetky neurony
-            for ($j = 0; $j < $this->layers[$i]->numNeurons; $j++) {
+            for ($j = 0; $j < $this->layers[$i]->numNeurons; $j++) { //všetky neurony
                 
-                //všetky váhy
-                for ($k = 0; $k < $this->layers[$i]->neurons[$j]->numInputs; $k++) {
+                for ($k = 0; $k < $this->layers[$i]->neurons[$j]->numInputs; $k++) { //všetky váhy
                     $num_weights++;
                 }
             }
@@ -127,15 +136,31 @@ class NeuralNet {
         
         $weight_iter = 0;
         
-        //všetky vrstvy
-	for ($i = 0; $i < $this->numHiddenLayers + 1; $i++) {
+	for ($i = 0; $i <= $this->numHiddenLayers; $i++) { //všetky vrstvy
 
-            //všetky neurony
-            for ($j = 0; $j < $this->layers[$i]->numNeurons; $j++) {
+            for ($j = 0; $j < $this->layers[$i]->numNeurons; $j++) { //všetky neurony
                 
-                //všetky váhy
-                for ($k = 0; $k < $this->layers[$i]->neurons[$j]->numInputs; $k++) {
+                for ($k = 0; $k < $this->layers[$i]->neurons[$j]->numInputs; $k++) { //všetky váhy
                     $this->layers[$i]->neurons[$j]->weights[$k] = $weights[$weight_iter++];
+                }
+            }
+	}
+    }
+    
+    /**
+     * 
+     * @param array $deltas
+     * @param float $learnRate
+     */
+    private function updateWeights($deltas, $learnRate){
+        
+	for ($i = 0; $i <= $this->numHiddenLayers; $i++) { //všetky vrstvy
+
+            for ($j = 0; $j < $this->layers[$i]->numNeurons; $j++) { //všetky neurony
+                
+                for ($k = 0; $k < ($i==0? $this->numInputs : $this->layers[$i-1]->numNeurons); $k++) { //všetky v8hy                  
+                    $weightDelta = $learnRate * $deltas[$i][$j] * ($i == 0 ? $this->inputs[$k] : $this->partialOutputs[$i-1][$k]);
+                    $this->layers[$i]->neurons[$j]->weights[$k] += $weightDelta;
                 }
             }
 	}
@@ -149,8 +174,8 @@ class NeuralNet {
     public function compute($in){
         
         // Výsledok = výstup pre každú vrstvu
-        $outputs = [];
-        $inputs  = array_values($in); //remove keys
+        $this->partialOutputs = $this->outputs = $outputs = [];
+        $this->inputs = $inputs = array_values($in); //remove keys
         
 	if (count($inputs) != $this->numInputs){
             return $outputs;
@@ -160,11 +185,10 @@ class NeuralNet {
 	for ( $i = 0; $i < $this->numHiddenLayers + 1; $i++) {	
             
             if ( $i > 0 ) {
-                $inputs = $outputs;
+               $inputs = $outputs; //vystup predchadzajucej vrstvy je vstup do aktualnej
             }
 
-            $outputs = [];
-            
+            $outputs     = [];
             $weight_iter = 0;
 
             // Všetky neuróny
@@ -185,23 +209,102 @@ class NeuralNet {
 
                 $weight_iter = 0;
             }
+            
+            $this->partialOutputs[] = $outputs;
 	}
 
+        $this->outputs = $outputs;
 	return $outputs;
     }
     
+    /**
+     * Trénovanie siete
+     * @param array $trainData
+     * [
+     *    0 => ['inputs' => [], 'outputs' => []],
+     *    1 => ['inputs' => [], 'outputs' => []],
+     *    ...
+     *    n => ['inputs' => [], 'outputs' => []],
+     * ]
+     */
     public function train($trainData){
         
         $epoch = 0;
-        $learnRate = Params::$learnRate;
+        
+        echo '<pre>';
+        $log = fopen(__DIR__ . '/mse.log', 'w');
+        
+        echo 'Net: ';
+        var_dump($this->layers);
         
         while($epoch < Params::$numEpochs){
             
             $mse = $this->meanSquaredError($trainData);
-            var_dump($mse);
-            break;
+            
+            if($mse < Params::$mseTarget) {
+                break;
+            }
+            
+            foreach ($trainData as $sample) {
+                $inputs  = $sample['inputs'];
+                $desired = $sample['outputs'];
+                $outputs = $this->compute($inputs); 
+
+                echo 'Inputs: ';
+                var_dump($inputs);
+                
+                echo 'Desired: ';
+                var_dump($desired);
+                
+                echo 'Outputs: ';
+                var_dump($outputs);
+                
+                $errors  = $this->computeDeltas($outputs, $desired);
+                $this->updateWeights($errors, Params::$learnRate);
+                
+                echo 'Net: ';
+                var_dump($this->layers);
+                exit();
+            }
+            
             $epoch++;
+            
+            fwrite($log, $mse . PHP_EOL);
         }
+        
+        var_dump($this->getWeights());
+    }
+    
+    /**
+     * Back-propagate
+     * 
+     * @param array $outputs Výstupy siete
+     * @param array $desired Trénovacie (požadované) výstupy
+     * @return array Chyby po vrstvach pre kazdy neuron
+     */
+    private function computeDeltas($outputs, $desired){
+        
+        $deltas = [];
+        $l      = count($this->layers) - 1;
+        
+        for($k = 0; $k < count($outputs); $k++){ 
+            $derivative     = (1 - $outputs[$k]) * $outputs[$k]; //log sigmoid
+            $deltas[$l][$k] = $derivative * ($desired[$k] - $outputs[$k]); 
+        } // called "delta rule" as well
+                
+        for($l = count($this->layers)-2; $l >= 0; $l--){ //hidden layers
+
+            for($i = 0; $i < $this->layers[$l]->numNeurons; $i++){
+                $sum = 0.0;
+
+                for($j = 0; $j < $this->layers[$l+1]->numNeurons; $j++){
+                    $sum += $this->layers[$l+1]->neurons[$j]->weights[$i] * $deltas[$l+1][$j];
+                }
+                $deltas[$l][$i] = $sum * (1 - $this->partialOutputs[$l][$i]) * $this->partialOutputs[$l][$i]; 
+            }
+        }
+        
+        return $deltas;
     }
     
     /**
@@ -218,20 +321,18 @@ class NeuralNet {
     private function meanSquaredError($trainData) {
 
         $sumSquaredError = 0.0;
-        $xValues = []; 
-        $tValues = []; 
+        $inputs = []; 
+        $desired = []; 
 
-        for ($i = 0; $i < count($trainData); ++$i) {
+        foreach ($trainData as $sample) {
+            $inputs  = $sample['inputs'];
+            $desired = $sample['outputs'];
 
-                $xValues = $trainData[$i]['inputs'];
-                $tValues = $trainData[$i]['outputs'];
-                
-                $yValues = $this->compute($xValues); // compute output using current weights
+            $yValues = $this->compute($inputs); // compute output using current weights
 
-                for ($j = 0; $j < $this->numOutputs; ++$j) {
-                    $err = $tValues[$j] - $yValues[$j];
-                    $sumSquaredError += $err * $err;
-                }
+            for ($j = 0; $j < $this->numOutputs; ++$j) {
+                $sumSquaredError += pow($desired[$j] - $yValues[$j], 2);
+            }
         }
 
         return $sumSquaredError / count($trainData);
