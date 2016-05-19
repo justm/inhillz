@@ -3,32 +3,32 @@
 namespace inhillz\components\ann;
 
 /**
- * Params
+ * Neural net params
  * 
  * @namespace  inhillz\components\ann; 
- * @package    \app\controllers
  * @author     Matus Macak <matus.macak@orchidsphere.com>
- * @copyright  2015 OrchidSphere
- * @link       http://orchidsphere.com/
- * @license    License here
- * @version    1.0.0
+ * @link       http://ride.inhillz.com/
+ * @version    2.0.0
  */
 class Params {
 
-    public static $iNumInputs = 6;
-    public static $iNumHidden = 1;
-    public static $iNumNeuronsPerLayer = 8;
-    public static $iNumOutputs = 1;
+    public static $numInputs = 6;
+    public static $numOutputs = 1;
+    public static $numHidden = 2;
+    public static $numNeuronsPerLayer = 15;
 
+    public static $activationFunction = ['sigmoid', 'sigmoid', 'linear'];
+    
     //for tweeking the sigmoid function
-    public static $dActivationResponse = 1;
+    public static $sigmoidActivationResponse = 1;
+    
     //bias value
-    public static $dBias = -1;
+    public static $bias = -1;
     
-    public static $numEpochs = 1000;
-    public static $learnRate = 0.1;
+    public static $numEpochs = 200;
+    public static $learnRate = 0.01;
     
-    public static $mseTarget = 0.02;
+    public static $mseTarget = 0.0000002;
     
     //---------------------------------------GA parameters
 //    public static $dCrossoverRate = 0.7;

@@ -235,9 +235,11 @@ class Analyzer {
     /**
      * Vypočíta priemerný výkon pre vstupný segment
      * @param SegmentModel $segment
-     * @return float
+     * @param bool $computeStrict Ak je TRUE a v dátach je nulová hodnota výkonu, metóda vráti FALSE. 
+     * Použitie pri operáciach kedy sú prázdne/nulové hodnoty výkonu nežiadúce
+     * @return float|bool
      */
-    public function averagePower(SegmentModel $segment){
+    public function averagePower(SegmentModel $segment, $computeStrict = FALSE){
         
         $sum = $cnt = 0;
         for($i = $segment->get_index_start(); $i < $segment->get_index_end(); $i++){
@@ -245,6 +247,9 @@ class Analyzer {
             if(!empty($this->data_record[$i]['power'])){
                 $sum += $this->data_record[$i]['power'];
                 $cnt++;
+            }
+            elseif($computeStrict){
+                return FALSE;
             }
         }
         

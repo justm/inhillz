@@ -58,14 +58,17 @@ class NeuralNet {
      */
     public function __construct() {
 	
-        $this->numInputs          = Params::$iNumInputs;
-	$this->numOutputs         = Params::$iNumOutputs;
-	$this->numHiddenLayers    = Params::$iNumHidden;
-	$this->numNeuronsPerLayer = Params::$iNumNeuronsPerLayer;
+        $this->numInputs          = Params::$numInputs;
+	$this->numOutputs         = Params::$numOutputs;
+	$this->numHiddenLayers    = Params::$numHidden;
+	$this->numNeuronsPerLayer = Params::$numNeuronsPerLayer;
 
 	$this->createNet();
     }
 
+    /**
+     * Vytvorenie neurónovej siete
+     */
     public function createNet(){
         
 	if ($this->numHiddenLayers > 0) {
@@ -73,7 +76,7 @@ class NeuralNet {
             // Prva skryta vrstva
             array_push($this->layers, new NeuronLayer($this->numNeuronsPerLayer, $this->numInputs));
     
-            for ($i = 0; $i < $this->numHiddenLayers - 1; $i) { //dalsie skryte vrstvy
+            for ($i = 0; $i < $this->numHiddenLayers - 1; $i++) { //dalsie skryte vrstvy
                 array_push($this->layers, new NeuronLayer($this->numNeuronsPerLayer, $this->numNeuronsPerLayer));
             }
 
@@ -154,16 +157,26 @@ class NeuralNet {
      */
     private function updateWeights($deltas, $learnRate){
         
+        // Váhy vstupov
 	for ($i = 0; $i <= $this->numHiddenLayers; $i++) { //všetky vrstvy
 
             for ($j = 0; $j < $this->layers[$i]->numNeurons; $j++) { //všetky neurony
                 
-                for ($k = 0; $k < ($i==0? $this->numInputs : $this->layers[$i-1]->numNeurons); $k++) { //všetky v8hy                  
+                for ($k = 0; $k < ($i==0? $this->numInputs : $this->layers[$i-1]->numNeurons); $k++) { //všetky váhy                  
                     $weightDelta = $learnRate * $deltas[$i][$j] * ($i == 0 ? $this->inputs[$k] : $this->partialOutputs[$i-1][$k]);
-                    $this->layers[$i]->neurons[$j]->weights[$k] += $weightDelta;
+                    $this->layers[$i]->neurons[$j]->weights[$k] -= $weightDelta;
                 }
             }
 	}
+        
+        // Váhy pre bias
+        for ($i = 0; $i <= $this->numHiddenLayers; $i++) { //všetky vrstvy
+            
+            for ($j = 0; $j < $this->layers[$i]->numNeurons; $j++) { //všetky neurony
+                $b = $this->layers[$i]->neurons[$j]->numInputs; //bias index - má vždy poslednú váhu
+                $this->layers[$i]->neurons[$j]->weights[$b] -=  $learnRate * $deltas[$i][$j]; 
+            }
+        }
     }
     
     /**
@@ -182,14 +195,13 @@ class NeuralNet {
         }
 	
 	// Všetky vrstvy
-	for ( $i = 0; $i < $this->numHiddenLayers + 1; $i++) {	
+	for ($i = 0; $i <= $this->numHiddenLayers; $i++) {	
             
-            if ( $i > 0 ) {
+            if ($i > 0) {
                $inputs = $outputs; //vystup predchadzajucej vrstvy je vstup do aktualnej
             }
 
-            $outputs     = [];
-            $weight_iter = 0;
+            $outputs = [];
 
             // Všetky neuróny
             for ($j=0; $j < $this->layers[$i]->numNeurons; $j++) {
@@ -198,16 +210,13 @@ class NeuralNet {
                 $num_imputs = $this->layers[$i]->neurons[$j]->numInputs;
                 
                 // Všetky váhy
-                for ($k = 0; $k < $num_imputs - 1; $k++) {
-                    
-                    $netinput += $this->layers[$i]->neurons[$j]->weights[$k] * $inputs[$weight_iter++];
+                for ($k = 0; $k < $num_imputs; $k++) {
+                    $netinput += $this->layers[$i]->neurons[$j]->weights[$k] * $inputs[$k];
                 }
-                $netinput += $this->layers[$i]->neurons[$j]->weights[$num_imputs-1] * Params::$dBias;
+                $netinput += $this->layers[$i]->neurons[$j]->weights[$num_imputs] * Params::$bias;
 
-                // Filter sigmoid
-                array_push($outputs, $this->sigmoid($netinput, Params::$dActivationResponse));
-
-                $weight_iter = 0;
+                // aktivačná funkcia
+                array_push($outputs, $this->transfer($i, $netinput));
             }
             
             $this->partialOutputs[] = $outputs;
@@ -229,50 +238,40 @@ class NeuralNet {
      */
     public function train($trainData){
         
-        $epoch = 0;
+        $end = $epoch = 0;
         
         echo '<pre>';
         $log = fopen(__DIR__ . '/mse.log', 'w');
         
-        echo 'Net: ';
-        var_dump($this->layers);
-        
         while($epoch < Params::$numEpochs){
+            echo '<br/><br/>Epoch ' . $epoch . '<br/>';
+            $cmse = 0;
             
-            $mse = $this->meanSquaredError($trainData);
-            
-            if($mse < Params::$mseTarget) {
-                break;
-            }
-            
-            foreach ($trainData as $sample) {
+            foreach ($trainData as $index => $sample) {
                 $inputs  = $sample['inputs'];
                 $desired = $sample['outputs'];
+                
                 $outputs = $this->compute($inputs); 
+                $deltas  = $this->computeDeltas($outputs, $desired);
+                $this->updateWeights($deltas, Params::$learnRate);
+                
+                $cmse += $mse = $this->meanSquaredError($outputs, $desired);
 
-                echo 'Inputs: ';
-                var_dump($inputs);
-                
-                echo 'Desired: ';
-                var_dump($desired);
-                
-                echo 'Outputs: ';
-                var_dump($outputs);
-                
-                $errors  = $this->computeDeltas($outputs, $desired);
-                $this->updateWeights($errors, Params::$learnRate);
-                
-                echo 'Net: ';
-                var_dump($this->layers);
-                exit();
+                echo $index . ' - ' . $mse . ' ';
+//                echo 'Inputs: '; var_dump($inputs);
+                echo 'Desired: ' . $desired[0] . ' ';
+                echo 'Outputs: ' . $outputs[0] . '<br/>';
             }
             
-            $epoch++;
+            fwrite($log, $cmse / count($trainData) . PHP_EOL);
             
-            fwrite($log, $mse . PHP_EOL);
+            if($cmse < Params::$mseTarget){
+                break;
+            }
+            $epoch++;
         }
         
-        var_dump($this->getWeights());
+//        var_dump($this->getWeights());
     }
     
     /**
@@ -288,8 +287,8 @@ class NeuralNet {
         $l      = count($this->layers) - 1;
         
         for($k = 0; $k < count($outputs); $k++){ 
-            $derivative     = (1 - $outputs[$k]) * $outputs[$k]; //log sigmoid
-            $deltas[$l][$k] = $derivative * ($desired[$k] - $outputs[$k]); 
+            $derivative     = $this->deriveTransfer($l, $outputs[$k]);
+            $deltas[$l][$k] = (-1) * $derivative * ($desired[$k] - $outputs[$k]); 
         } // called "delta rule" as well
                 
         for($l = count($this->layers)-2; $l >= 0; $l--){ //hidden layers
@@ -300,7 +299,7 @@ class NeuralNet {
                 for($j = 0; $j < $this->layers[$l+1]->numNeurons; $j++){
                     $sum += $this->layers[$l+1]->neurons[$j]->weights[$i] * $deltas[$l+1][$j];
                 }
-                $deltas[$l][$i] = $sum * (1 - $this->partialOutputs[$l][$i]) * $this->partialOutputs[$l][$i]; 
+                $deltas[$l][$i] = $sum * $this->deriveTransfer($l, $this->partialOutputs[$l][$i]); 
             }
         }
         
@@ -308,42 +307,101 @@ class NeuralNet {
     }
     
     /**
-     * Počíta mean squared error na jednej dávke trénovacích dát
-     * @param array $trainData
-     * [
-     *    0 => ['inputs' => [], 'outputs' => []],
-     *    1 => ['inputs' => [], 'outputs' => []],
-     *    ...
-     *    n => ['inputs' => [], 'outputs' => []],
-     * ]
+     * Počíta mean squared error
+     * 
+     * @param type $outputs
+     * @param type $desired
      * @return float
      */
-    private function meanSquaredError($trainData) {
+    private function meanSquaredError($outputs, $desired) {
 
         $sumSquaredError = 0.0;
-        $inputs = []; 
-        $desired = []; 
 
-        foreach ($trainData as $sample) {
-            $inputs  = $sample['inputs'];
-            $desired = $sample['outputs'];
-
-            $yValues = $this->compute($inputs); // compute output using current weights
-
-            for ($j = 0; $j < $this->numOutputs; ++$j) {
-                $sumSquaredError += pow($desired[$j] - $yValues[$j], 2);
-            }
+        for ($j = 0; $j < $this->numOutputs; ++$j) {
+            $sumSquaredError += pow($desired[$j] - $outputs[$j], 2) / 2;
         }
 
-        return $sumSquaredError / count($trainData);
+        return $sumSquaredError;
     }
     
     /**
-     * Sigmoid
+     * --------------------------------------------------
+     * @todo Aktivačné funkcie by mali mať vrstvy, logicky
+     * --------------------------------------------------
+     */
+    
+    /**
+     * Volá aktivačnú funkciu podľa konfigurácie vrstvy
+     * @param int $layer
+     * @param float $value
+     */
+    private function transfer($layer, $value){
+        
+        $method = Params::$activationFunction[$layer];
+        
+        if(method_exists($this, $method)) {
+            
+            return call_user_func(array($this, $method), $value);
+        }
+        else {
+            trigger_error('Neznáma aktivačná funkcia: ' . $method, E_USER_ERROR);
+        }
+    }
+    
+    /**
+     * Volá deriváciu aktivačnej funkcie podľa konfigurácie vrstvy
+     * @param type $layer
+     * @param type $value
+     */
+    private function deriveTransfer($layer, $value) {
+        
+        $method = 'derive' . ucfirst(Params::$activationFunction[$layer]);
+        
+        if(method_exists($this, $method)) {
+            
+            return call_user_func(array($this, $method), $value);
+        }
+        else {
+            trigger_error('Neznáma derivácia aktivačnej funkcie: ' . $method, E_USER_ERROR);
+        }
+    }
+    
+    /**
+     * Lineárna aktivačná funkcia
+     * @param float $value
      * @return float
      */
-    public function sigmoid($activation, $response){
+    private function linear($value){
         
-        return ( 1 / ( 1 + exp(-$activation / $response)));
+        return $value;
+    }
+    
+    /**
+     * Derivácia lineárnej aktivačnej funkcie
+     * @param float $value
+     * @return int
+     */
+    private function deriveLinear($value){
+        
+        return 1;
+    }
+    
+    /**
+     * Sigmoid aktivačná funkcia 
+     * @param float $value
+     * @return float
+     */
+    private function sigmoid($value){
+        
+        return ( 1 / ( 1 + exp(-$value / Params::$sigmoidActivationResponse)));
+    }
+    
+    /**
+     * Derivácia sigmoid funkcie
+     * @return float
+     */
+    private function deriveSigmoid($value){
+        
+        return (1 - $value) * $value;
     }
 }
