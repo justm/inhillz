@@ -3,7 +3,6 @@
 \author{Matúš Maèák}
 \usepackage[slovak]{babel} %language
 \usepackage[cp1250]{inputenc} %encoding
-\usepackage[T1]{fontenc} %specify which font encoding is used
 \usepackage[pdftex]{graphicx}
 \usepackage{eurosym} %euro symbol
 
@@ -25,6 +24,8 @@
 
 \usepackage{fancyhdr} %headers
 \pagestyle{fancy}
+
+\usepackage{textcomp} %angular brackets
 
 \linespread{1.4} %line spacing
 % B E G I N   OF   D O C U M E N T
@@ -148,7 +149,7 @@ FIT súbor obsahuje dátové reazce, prièom kadı reazec je zostavenı z hlavièky 
 \caption{Zjednodušená štruktúra FIT súboru}
 \label{fig:fit_protocol}
 \end{figure}
-Na konverziu bitového FIT súboru vyuijeme konverznı nástroj v jazyku JAVA. Vıstupom konverzie sú dva CSV súbory. Prvı súbor je textovou reprezentáciou dát z FIT súboru, èo znamená, e niektoré riadky sú definíciou nasledujúcich údajov a niektoré riadky nesú údaje. Zároveò je potrebné si všimnú, e údaje nie sú rozdelené fixne pod¾a ståpcov. Ståpec \emph{Field N} oznamuje, èo reprezentuje hodnota v ståpci \emph{Value N}, ståpec \emph{Units N} definuje jednotky pre túto hodnotu, prièom N > 0. Jeden ståpec \emph{Field N} nemusí nies vdy rovnakı údaj. Príklad uvádzame na obr. \ref{fig:fit_file1}.
+Na konverziu bitového FIT súboru vyuijeme konverznı nástroj v jazyku JAVA. Vıstupom konverzie sú dva CSV súbory. Prvı súbor je textovou reprezentáciou dát z FIT súboru, èo znamená, e niektoré riadky sú definíciou nasledujúcich údajov a niektoré riadky nesú údaje. Zároveò je potrebné si všimnú, e údaje nie sú rozdelené fixne pod¾a ståpcov. Ståpec \emph{Field N} oznamuje, èo reprezentuje hodnota v ståpci \emph{Value N}, ståpec \emph{Units N} definuje jednotky pre túto hodnotu, prièom N \textrangle{} 0. Jeden ståpec \emph{Field N} nemusí nies vdy rovnakı údaj. Príklad uvádzame na obr. \ref{fig:fit_file1}.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{images/fit_file1.png}
@@ -485,7 +486,7 @@ if( !empty($_FILES) ){
 }
 else{
     /* V opaènom prípade sa zobrazí formulár */
-    $this->render('files', array() );
+    $this-\textrangle{}render('files', array() );
 }
 \end{Verbatim}
 Aplikácia umoòuje nahra viac súborov súèasne. Jediné obmedzenie je na strane servera, v konfigurácii PHP treba obmedzi parametre \emph{upload\_max\_filesize} a \emph{post\_max\_size} na poadovanú ve¾kos. Pred presunutím súboru na server sa skontroluje, èi sa jedná o súbor FIT a PHP funkciou \emph{move\_uploaded\_file} je následne presunutı do zloky \emph{/uploads/activities\_raw/}, pod názvom s nasledujúcim tvarom: \emph{IDpouívate¾a\_hashNázvu.fit}.\\
@@ -501,22 +502,22 @@ exec(
 Ïalším krokom v metóde \emph{files()} je spracovanie CSV súboru, k èomu je urèená trieda \emph{Csv\_activity\_parser}. Tá dedí od všeobecnej triedy \emph{CSVparser}, ktorú sme naimplementovali ako súèas kniníc vo frameworku a postará sa o otvorenie súboru a naèítanie hlavièky. Keïe v CSV súbore je ve¾ké mnostvo riadkov, metóda, ktorá èíta zo súboru musí by èo najrıchlejšia. V tomto stave pouívate¾ stále èaká na spracovanie jeho vstupnıch súborov. Nišie uvedenı kód uloí do po¾a všetky riadky s príznakom \emph{session} alebo \emph{record}.
 
 \begin{Verbatim}[baselinestretch=0.75]
-while(($row = fgetcsv($this->f, 0, $this->dlm, $this->enc)) != NULL){
+while(($row = fgetcsv($this-\textrangle{}f, 0, $this-\textrangle{}dlm, $this-\textrangle{}enc)) != NULL){
             
     if( $row[2] == 'record' && $row[0] == 'Data' ){   
 	$i = $field1_start;
 	
-	while( $i+2 <= count($row) ){
-	    $this->record[$data_index][$row[$i]] = $row[$i+1];
-	    $this->units[$row[$i]] = $row[$i+2];
+	while( $i+2 \textlangle{}= count($row) ){
+	    $this-\textrangle{}record[$data_index][$row[$i]] = $row[$i+1];
+	    $this-\textrangle{}units[$row[$i]] = $row[$i+2];
 	    $i+=3;
 	}
 	$data_index++;
     }
     elseif( $row[2] == 'session' && $row[0] == 'Data'){
 	$i = $field1_start;
-	while( $i+2 <= count($row) ){
-	    $this->session[$row[$i]] = $row[$i+1];
+	while( $i+2 \textlangle{}= count($row) ){
+	    $this-\textrangle{}session[$row[$i]] = $row[$i+1];
 	    $i+=3;
 	}
     }   
@@ -528,19 +529,19 @@ Presunieme pozornos spä do triedy \emph{UploadController}. Na konci metódy \em
 \begin{Verbatim}[baselinestretch=0.75]
 $w_model = new WorkoutModel(); 
                 
-$w_model->id_user = $user_id;
-$w_model->start_time = $session_data->start_time + EPOCH_TIMESTAMP_OFFSET;
+$w_model-\textrangle{}id_user = $user_id;
+$w_model-\textrangle{}start_time = $session_data-\textrangle{}start_time + EPOCH_TIMESTAMP_OFFSET;
 
 /* Kvôli struènosti vynechané priradzovanie niektorıch údajov */
 
-$w_model->total_timer_time = $session_data->total_timer_time;
-$w_model->total_elapsed_time = $session_data->total_elapsed_time;
+$w_model-\textrangle{}total_timer_time = $session_data-\textrangle{}total_timer_time;
+$w_model-\textrangle{}total_elapsed_time = $session_data-\textrangle{}total_elapsed_time;
 
-if( $w_model->save(TRUE) ){
+if( $w_model-\textrangle{}save(TRUE) ){
 
-    $this->renderPartial(
+    $this-\textrangle{}renderPartial(
 	  'update.form', 
-	  array('model' => $w_model, 'activities' => $activities), 
+	  array('model' =\textrangle{} $w_model, 'activities' =\textrangle{} $activities), 
 	  'workout'
     );
 }
@@ -571,15 +572,15 @@ class SegmentModel {
 	$index_start, $index_end, $length, $elevation 
     ) {
         
-        $this->index_start = $index_start;
-        $this->index_end   = $index_end;
-        $this->length      = $length;
-        $this->elevation   = $elevation;
+        $this-\textrangle{}index_start = $index_start;
+        $this-\textrangle{}index_end   = $index_end;
+        $this-\textrangle{}length      = $length;
+        $this-\textrangle{}elevation   = $elevation;
     }
     
     /** Vypoèíta sklon stúpania pre segment */
     public function grade(){        
-        return $this->elevation / $this->length;
+        return $this-\textrangle{}elevation / $this-\textrangle{}length;
     }
       
     /* ... get metódy */
@@ -592,11 +593,11 @@ Detekciu úsekov ako aj aproximáciu vıkonu, ku ktorej sa dostaneme neskôr, má na 
 public function detect_climbs( WorkoutModel $workout ){
     /* ... Naèítanie dát */
     
-    for( $i = 0; $i < count($this->data); $i++ ){
-	if( empty($this->data[$i]['distance']) ){ continue; }
+    for( $i = 0; $i \textlangle{} count($this-\textrangle{}data); $i++ ){
+	if( empty($this-\textrangle{}data[$i]['distance']) ){ continue; }
 	
 	$start = [ /* index, distance, altitude */ ];
-	while($this->data[$i]['altitude']<$this->data[$i+1]['altitude']){ 
+	while($this-\textrangle{}data[$i]['altitude']\textlangle{}$this-\textrangle{}data[$i+1]['altitude']){ 
 	    $i++; 
 	}
 	$end = [ /* index, distance, altitude */ ];
@@ -609,11 +610,11 @@ public function detect_climbs( WorkoutModel $workout ){
     }
     
     //** Odstrani nevyhovujuce stúpania
-    foreach ( $climbs as $k => $climb ){
+    foreach ( $climbs as $k =\textrangle{} $climb ){
 	
-	if( !($climb->get_length() >= 500 
-	    && $climb->grade() >= 0.03 
-	    && $climb->get_length() * $climb->grade() > 40) )
+	if( !($climb-\textrangle{}get_length() \textrangle{}= 500 
+	    && $climb-\textrangle{}grade() \textrangle{}= 0.03 
+	    && $climb-\textrangle{}get_length() * $climb-\textrangle{}grade() \textrangle{} 40) )
 	{
 	    unset($climbs[$k]);
 	}
@@ -637,15 +638,15 @@ private function detect_segments( SegmentModel $climb ){
 
 $step = 10;
 
-for( $i = $i+1; $i <= $climb->get_index_end() - $step; $i++ ){
+for( $i = $i+1; $i \textlangle{}= $climb-\textrangle{}get_index_end() - $step; $i++ ){
             
     //** Spoèíta gradient
-    $length = $this->data[$i+$step]['distance'] 
-	    - $this->data[$i]['distance'];
-    $elevat = abs($this->data[$i+$step]['altitude'] 
-	    - $this->data[$i]['altitude']); 
+    $length = $this-\textrangle{}data[$i+$step]['distance'] 
+	    - $this-\textrangle{}data[$i]['distance'];
+    $elevat = abs($this-\textrangle{}data[$i+$step]['altitude'] 
+	    - $this-\textrangle{}data[$i]['altitude']); 
     $grade  = $elevat / $length;
-    if( abs($grade - $grade_prev) > 0.005 && $i-$seg_start > $step){
+    if( abs($grade - $grade_prev) \textrangle{} 0.005 && $i-$seg_start \textrangle{} $step){
 	/* Rozdelenie segmentu */
 	/* Pokraèuje v detekcii presného zaèiatku a konca */
     }
@@ -662,37 +663,37 @@ public function estimate_power( SegmentModel $sg ){
     /* ... naèítanie údajov o športovcovi a bicykli */
 	    
     /* Gravitaèná sila */
-    $Fg = ($athlete->weight + $bike->weight) 
-        * $this->constants['g'] 
-        * $sg->grade(); 
+    $Fg = ($athlete-\textrangle{}weight + $bike-\textrangle{}weight) 
+        * $this-\textrangle{}constants['g'] 
+        * $sg-\textrangle{}grade(); 
     
     /* Valivı odpor */
-    $Fr = ($athlete->weight + $bike->weight) 
-        * $this->constants['g'] 
-        * cos(asin($sg->grade())) 
-        * $bike->crr_coef; 
+    $Fr = ($athlete-\textrangle{}weight + $bike-\textrangle{}weight) 
+        * $this-\textrangle{}constants['g'] 
+        * cos(asin($sg-\textrangle{}grade())) 
+        * $bike-\textrangle{}crr_coef; 
     
-    $p1 = $this->constants['p0'] * pow(
-	    1-( $this->constants['L'] 
-	      * $this->data[$sg->get_index_start()]['altitude'] 
-	      / $this->constants['T0'] ), 
-	    $this->constants['gm_lr']
+    $p1 = $this-\textrangle{}constants['p0'] * pow(
+	    1-( $this-\textrangle{}constants['L'] 
+	      * $this-\textrangle{}data[$sg-\textrangle{}get_index_start()]['altitude'] 
+	      / $this-\textrangle{}constants['T0'] ), 
+	    $this-\textrangle{}constants['gm_lr']
 	); 
-    $ro = $p1 * $this->constants['M'] 
-	/ ( $this->constants['R'] 
-	  * ($this->data[$sg->get_index_start()]['temperature']+273.15) ); 
+    $ro = $p1 * $this-\textrangle{}constants['M'] 
+	/ ( $this-\textrangle{}constants['R'] 
+	  * ($this-\textrangle{}data[$sg-\textrangle{}get_index_start()]['temperature']+273.15) ); 
     
-    $v  = $sg->get_length() 
-	/ ( $this->data[$sg->get_index_end()]['timestamp'] 
-	  - $this->data[$sg->get_index_start()]['timestamp'] );
+    $v  = $sg-\textrangle{}get_length() 
+	/ ( $this-\textrangle{}data[$sg-\textrangle{}get_index_end()]['timestamp'] 
+	  - $this-\textrangle{}data[$sg-\textrangle{}get_index_start()]['timestamp'] );
     
-    $Fd = 0.5 * $ro * $bike->cda_coef * pow($v, 2);
+    $Fd = 0.5 * $ro * $bike-\textrangle{}cda_coef * pow($v, 2);
     
     $P  = ($Fg + $Fd + $Fr) * $v;
     
     /* Zápis hodnoty */
-    for($i = $sg->get_index_start(); $i < $sg->get_index_end(); $i++){
-	$this->data[$i]['est_power'] = round($P);
+    for($i = $sg-\textrangle{}get_index_start(); $i \textlangle{} $sg-\textrangle{}get_index_end(); $i++){
+	$this-\textrangle{}data[$i]['est_power'] = round($P);
     }
 }
 \end{Verbatim}
@@ -702,14 +703,14 @@ Hlavnou poiadavkou pri zobrazení tréningu s GPS údajmi, je monos prehliada a
 \indent Prvú poiadavku splníme vïaka API od Google Maps. Aplikaèné rozhranie umoòuje zobrazi a vycentrova mapu pre konkrétnu polohu alebo mnoinu bodov, vykresli body alebo ich spojením priamo vytvori krivku. Prikreslením ïalšej krivky do mapy môeme zvırazni konkrétny úsek v tréningu pod¾a priblíenia/selekcie v grafe. Do mapy je taktie moné prida ukazovate¾ pozície. O vykreslenie mapy s tımito monosami sa postará nasledovnı kód, ktorı sa nachádza v náh¾adovom súbore \emph{/views/workout/view.chart.php}. Keïe sa jedná o Javascript, je len odoslanı do prehliadaèa a svoju funkciu vykoná sa a na strane klienta. Vısledok je následne zobrazenı na obr. \ref{fig:inhillz_map}
 
 \begin{Verbatim}[baselinestretch=0.75]
-<script type="text/javascript">
+\textlangle{}script type="text/javascript"\textrangle{}
     
 function map_initialize() {
   /* ... definovanie štılu a nastavení mapy */
 	  
   style = new google.maps.StyledMapType(map_styles);
   
-  route_coordinates = [<?php echo $coordinates ?>];
+  route_coordinates = [\textlangle{}?php echo $coordinates ?\textrangle{}];
 		  
   route_path = new google.maps.Polyline({
       path: route_coordinates,
@@ -726,7 +727,7 @@ function map_initialize() {
   });
   
   map_bns = new google.maps.LatLngBounds();
-  <?php echo $bounds; ?> //Body tréningu cez ktoré sa mapa centruje
+  \textlangle{}?php echo $bounds; ?\textrangle{} //Body tréningu cez ktoré sa mapa centruje
       
   map.mapTypes.set('map_style', style);
   map.setMapTypeId('map_style');        
@@ -736,7 +737,7 @@ function map_initialize() {
 
 function map_selection(dt){
   
-  for(var i = 0; i < dt.length; i++){
+  for(var i = 0; i \textlangle{} dt.length; i++){
       selection_coordinates.push(
 	  new google.maps.LatLng( dt[i].position_lat, dt[i].position_long )
       );
@@ -764,7 +765,7 @@ function map_reset(){
 }
 
 google.maps.event.addDomListener(window, 'load', map_initialize);
-</script>
+\textlangle{}/script\textrangle{}
 \end{Verbatim}
 
 \begin{figure}[H]
@@ -777,7 +778,7 @@ google.maps.event.addDomListener(window, 'load', map_initialize);
 Ïa¾šia èas programového kódu v tomto náh¾ade sa postará o vykreslenie grafu. Štandard HTML5 umoòuje do HTML kódu vklada SVG grafiku. Na zobrazenie priebehu celého tréningu pouijeme kninicu \emph{D3.js}. Kninica u¾ahèuje prácu s jednotlivımi elementami SVG, nako¾ko s nimi pracuje ako s objektami, ktoré majú vlastné metódy. Programovı kód vykres¾ujúci kompletnı graf s priebehom tréningu je pomerne rozsiahly, preto uvedieme len najdôleitejšie èasti.
 
 \begin{Verbatim}[baselinestretch=0.75,numbers=left]
-var chart_def = {<?php echo $chart_def; ?>};
+var chart_def = {\textlangle{}?php echo $chart_def; ?\textrangle{}};
     
 var charts_count, i;
 charts_count = i = Object.keys(chart_def).length;
@@ -788,7 +789,7 @@ var root = d3.select("#chart-canvas").append("svg")
 
 chart_draw(chart_data);
 \end{Verbatim}
-Premennú \emph{\$chart\_def} inicializujeme ešte v PHP, obsahuje definície velièín, ktorá sa majú zobrazi, tj. ku ktorım existujú dáta. Táto premenná obsahuje aj jednotky pre jednotlivé velièiny a poèet desatinnıch miest pri zobrazení. Riadok 6 zabezpeèí vloenie elementu \emph{<svg>} do HTML s fixnou vıškou a šírkou. O vykreslenie sa bude stara funkcia \emph{chart\_draw()}.
+Premennú \emph{\$chart\_def} inicializujeme ešte v PHP, obsahuje definície velièín, ktorá sa majú zobrazi, tj. ku ktorım existujú dáta. Táto premenná obsahuje aj jednotky pre jednotlivé velièiny a poèet desatinnıch miest pri zobrazení. Riadok 6 zabezpeèí vloenie elementu \emph{\textlangle{}svg\textrangle{}} do HTML s fixnou vıškou a šírkou. O vykreslenie sa bude stara funkcia \emph{chart\_draw()}.
 
 \begin{Verbatim}[baselinestretch=0.75]
 function chart_draw(chart_data){
@@ -955,38 +956,38 @@ Algoritmus sme implementovali do webovej aplikácie, ktorá umoòuje nahranie súbo
   WILSON, D. G.: \emph{Bicycling Science}, 3. vydanie. Cambridge: The MIT Press, 2004. 485s. ISBN: 978-0262731546
   
   \bibitem{d3js}
-  MBOSTOCK: \emph{D3}. [cit. 20. 12. 2014]. Dostupné na World Wide Web: <https://github.com/mbostock/d3>
+  MBOSTOCK: \emph{D3}. [cit. 20. 12. 2014]. Dostupné na World Wide Web: \textlangle{}https://github.com/mbostock/d3\textrangle{}
   
   \bibitem{thisisant}
-  THIS IS ANT: \emph{Developer}. [cit. 20. 12. 2014]. Dostupné na World Wide Web: <http://www.thisisant.com/developer>
+  THIS IS ANT: \emph{Developer}. [cit. 20. 12. 2014]. Dostupné na World Wide Web: \textlangle{}http://www.thisisant.com/developer\textrangle{}
   
   \bibitem{encyklopedie_fyziky}
-  REICHL, J. - VŠETIÈKA, M.: \emph{Encyklopedie fyziky - Valivı odpor}. [cit. 25. 4. 2015]. Dostupné na World Wide Web: <http://fyzika.jreichl.com/main.article/view/37-valivy-odpor>
+  REICHL, J. - VŠETIÈKA, M.: \emph{Encyklopedie fyziky - Valivı odpor}. [cit. 25. 4. 2015]. Dostupné na World Wide Web: \textlangle{}http://fyzika.jreichl.com/main.article/view/37-valivy-odpor\textrangle{}
   
   \bibitem{obecna_fyzika}
   HALLIDAY, D. - RESNICK, R. - WALKER, J.: \emph{Fyzika: vysokoškolská uèebnice obecné fyziky}. Brno: Vysoké uèení technické, 2000. 1278s. ISBN 80-214-1868-0
   
   \bibitem{bootstrap}
-  BOOTSTRAP: \emph{Getting started}. [cit. 20. 12. 2014]. Dostupné na World Wide Web: <http://getbootstrap.com/getting-started/>
+  BOOTSTRAP: \emph{Getting started}. [cit. 20. 12. 2014]. Dostupné na World Wide Web: \textlangle{}http://getbootstrap.com/getting-started/\textrangle{}
   
   \bibitem{kontrolovany_trening}
   DÍVALD, L.: \emph{Kontrolovanı tréning}. Bratislava: Laurenc Dívald, 2009. 116s. ISBN 978-80-970358-1-5
   
   \bibitem{bikecalculator}
-  BIKECALCULATOR: \emph{How to use}. [cit. 10. 3. 2015]. Dostupné na World Wide Web: <http://bikecalculator.com/how.html>
+  BIKECALCULATOR: \emph{How to use}. [cit. 10. 3. 2015]. Dostupné na World Wide Web: \textlangle{}http://bikecalculator.com/how.html\textrangle{}
   
   \bibitem{physiology_of_sport}
   KENNEY, W. L. - WILMORE, J. H. - COSTILL, D. L.: \emph{Physiology of Sport and Exercise}, 5. vydanie. Champaign: Human Kinetics, 2011. 640s. ISBN: 860-1401254188 
     
   \bibitem{cyclingweekly_power}
-  CYCLING-WEEKLY: \emph{Power meters: Everything you need to know}. [cit. 15. 4. 2015]. Dostupné na World Wide Web: <http://www.cyclingweekly.co.uk/news/power-meters-everything-you-need-to-know-35563>
+  CYCLING-WEEKLY: \emph{Power meters: Everything you need to know}. [cit. 15. 4. 2015]. Dostupné na World Wide Web: \textlangle{}http://www.cyclingweekly.co.uk/news/power-meters-everything-you-need-to-know-35563\textrangle{}
   
   \bibitem{roller_data}
-  BIKETECH-REVIEW: \emph{Roller Data}. [cit. 25. 4. 2015]. Dostupné na World Wide Web: <http://www.biketechreview.com/tires/rolling-resistance/475-roller-data>
+  BIKETECH-REVIEW: \emph{Roller Data}. [cit. 25. 4. 2015]. Dostupné na World Wide Web: \textlangle{}http://www.biketechreview.com/tires/rolling-resistance/475-roller-data\textrangle{}
   
   \bibitem{schwalbe}
   SCHWALBE: \emph{Rolling Resistance}. [cit. 14. 4. 2015]. Dostupné na World Wide Web:
-  <http://www.schwalbetires.com/tech\_info/rolling\_resistance>
+  \textlangle{}http://www.schwalbetires.com/tech\_info/rolling\_resistance\textrangle{}
   
   \bibitem{standard_atmosphere}
   ISO 2533:1975 : \emph{Standard Atmosphere} - International Organization for Standardization
@@ -995,10 +996,10 @@ Algoritmus sme implementovali do webovej aplikácie, ktorá umoòuje nahranie súbo
   SAE J2452:1999 : \emph{Stepwise Coastdown Methodology for Measuring Tire Rolling Resistance} - Society of Automotive Engineers
   
   \bibitem{strava}
-  STRAVA: \emph{About}. [cit. 10. 3. 2015]. Dostupné na World Wide Web: <https://www.strava.com/about>
+  STRAVA: \emph{About}. [cit. 10. 3. 2015]. Dostupné na World Wide Web: \textlangle{}https://www.strava.com/about\textrangle{}
   
   \bibitem{drag_equation}
-  NASA: \emph{The Drag Equation}. [cit. 16. 4. 2015]. Dostupné na World Wide Web: <https://www.grc.nasa.gov/www/k-12/airplane/drageq.html>
+  NASA: \emph{The Drag Equation}. [cit. 16. 4. 2015]. Dostupné na World Wide Web: \textlangle{}https://www.grc.nasa.gov/www/k-12/airplane/drageq.html\textrangle{}
   
 \end{thebibliography}
 
