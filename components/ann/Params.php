@@ -25,8 +25,8 @@ class Params {
     //bias value
     public static $bias = -1;
     
-    public static $numEpochs = 200;
-    public static $learnRate = 0.01;
+    public static $numEpochs = 100;
+    public static $learnRate = 0.001;
     
     public static $mseTarget = 0.0000002;
     

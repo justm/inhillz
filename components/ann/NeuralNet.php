@@ -404,4 +404,24 @@ class NeuralNet {
         
         return (1 - $value) * $value;
     }
+    
+    /**
+     * Hyperbolický tangens aktivačná funkcia
+     * @param float $value
+     * @return float
+     */
+    private function tanh($value){
+        
+        return (exp(2 * $value) - 1) / (exp(2 * $value) + 1);
+    }
+    
+    /**
+     * Derivácia hyperbolického tangensu
+     * @param type $value
+     * @return float
+     */
+    private function deriveTanh($value){
+
+        return 1 / pow(cosh($value),2);
+    }
 }

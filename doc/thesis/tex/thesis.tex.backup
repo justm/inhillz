@@ -3,7 +3,6 @@
 \author{Matúš Maèák}
 \usepackage[slovak]{babel} %language
 \usepackage[cp1250]{inputenc} %encoding
-\usepackage[T1]{fontenc} %specify which font encoding is used
 \usepackage[pdftex]{graphicx}
 \usepackage{eurosym} %euro symbol
 
@@ -25,6 +24,8 @@
 
 \usepackage{fancyhdr} %headers
 \pagestyle{fancy}
+
+\usepackage{textcomp} %angular brackets
 
 \linespread{1.4} %line spacing
 % B E G I N   OF   D O C U M E N T
@@ -115,14 +116,14 @@ Ako sú tréningové zóny kontrolované poèas tréningu je len na samotnıch monostia
 \indent Okamité hodnoty, ktoré reprezentujú zaaenie organizmu a ve¾mi dobrú presnos, získame meraním vıkonu. Môeme urèi intenzitu pri krátkych zrıchlenıch úsekoch, kedy tepová frekvencia ešte nestihne vystúpi na hodnotu zodpovedajúcu fyzickému zaaeniu. Môeme presnejšie analyzova podanı vıkon pri dlhších úsekoch v maximálnom úsilí, kedy zrıchlenie/spomalenie môe odzrkad¾ova zmena tepová frekvencia o 1 tep, ale rozdiel vo vıkone môe by aj o 10\%. Obr. \ref{fig:bpm_watt_comparsion} zobrazuje, ako sa môe meni vıkon športovca v porovnaní s tepovou frekvenciou.
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.6]{images/bpm_watt_comparsion.png}
+\includegraphics[scale=0.65]{images/bpm_watt_comparsion.png}
 \caption{Porovnanie vıkonu a tepovej frekvencie pri záai}
 \label{fig:bpm_watt_comparsion}
 \end{figure}
 Z priebehu kriviek môeme pozorova, ako odpoèinutı športovec absolvuje úsek v tréningu. Poèas desiatich minút mal udriava vıkon vyšší ako 340 W. Vidíme, e na stúpajúce záaenie telo reaguje zvıšením tepovej frekvencie, zároveò sa v zaaovanıch svaloch tvorí kyselina mlieèna (laktát). Prvıch pä minút športovec absolvoval s priemernım vıkonom 410W. Po zahltení svalov laktátom a ustálení tepovej frekvencie u danı vıkon udriava nedokázal a postupne záa zvo¾òuje na priemernıch 320W. Kım tepová frekvencia kolíše v rozsahu $\pm$1 tep, priemernı vıkon v druhej polovici je o 20W niší ne poadované zaaenie. Zmena však stále nie je dostatoèná na to, aby mohlo dôjs k èiastoènému zotaveniu svalov, hladina laktátu v krvi je stále vysoká, na èo telo reaguje vysokou tepovou frekvenciou. Hoci po skonèení tréningu má športovec pocit vyèerpanosti, neabsolvoval tréning pod¾a plánovaného konceptu. Zdokonalenie podobnıch chıb môe vies k lepšiemu rozloeniu síl a lepšiemu vystupòovaniu vıkonu, napr. v závere pretekov. Pri analıze vıkonu sú tieto chyby jasne vidite¾né.
 
 \subsection{Štandardy pre prenos tréningovıch dát}
-V predchádzajúcich èastiach sme nieko¾kokrát spomenuli športové hodinky alebo cyklopoèítaè. Ich spoloènou funkciou je prijímanie dát z rôznych snímaèov, zobrazenie dát, a tie aj uloenie pre neskoršie vyhodnotenie. Na trhu je ve¾ké mnostvo vırobcov, ktorı uprednosòujú vlastné formy prenosu a formu ukladania dát. Existujú však aj \emph{open-source} protokoly, ktoré umoòujú interoperabilitu medzi zariadeniami rôznych znaèiek, prípadne aj inteligentnımi telefónmi. Vo vıskume sme sa na rozbor problematiky a následné vyhodnotenie presnosti rozhodli pouíva zariadenie na meranie vıkonu PowerTap G3 (rok vıroby 2013) a cyklopoèítaè Garmin Edge 500 (rok vıroby 2014). Preto chceme v nasledujúcej èasti popísa štandardy, ktoré tieto zariadenia vyuívajú, a teda sa bezprostredne dotıkajú našej práce.
+V predchádzajúcich èastiach sme nieko¾kokrát spomenuli športové hodinky alebo cyklopoèítaè. Ich spoloènou funkciou je prijímanie dát z rôznych snímaèov, zobrazenie dát, a tie aj uloenie pre neskoršie vyhodnotenie. Na trhu je ve¾ké mnostvo vırobcov, ktorı uprednosòujú vlastné formy prenosu a formu ukladania dát. Existujú však aj \emph{open-source} protokoly, ktoré umoòujú interoperabilitu medzi zariadeniami rôznych znaèiek, prípadne aj inteligentnımi telefónmi. Vo vıskume sme sa na rozbor problematiky a následné vyhodnotenie presnosti rozhodli pouíva zariadenia na meranie vıkonu PowerTap G3 (rok vıroby 2013), Stages Rival (rok vıroby 2014) a cyklopoèítaè Garmin Edge 500 (rok vıroby 2014). Preto chceme v nasledujúcej èasti popísa štandardy, ktoré tieto zariadenia vyuívajú, a teda sa bezprostredne dotıkajú našej práce.
 \subsubsection{GPX}
 GPX je rozšírenie formátu XML vytvorené za úèelom štandardizácie prenosu GPS súradníc a trás pre navigaèné systémy. Prvá verzia bola vydaná v roku 2002 a~neskôr aktualizovaná v roku 2004. Neskoršie rozšírenie od firmy Garmin - schéma \emph{GpxExtensions} umoòuje medzi GPS súradníce pridáva body záujmu\footnote{z angl. Points of interest}, meni zobrazenie trasy, a podobne. Neskôr Garmin pridal aj schému \emph{TrackPointExtension}, ktorú u bolo moné vyui aj v zariadeniach, ktoré súvisia so športom. Okrem informácii o trase je moné do súboru uloi aj údaje o tepovej frekvencii, teplote, rıchlosti a ïalšie \cite{thisisant}. 
 \subsubsection{TCX}
@@ -148,7 +149,7 @@ FIT súbor obsahuje dátové reazce, prièom kadı reazec je zostavenı z hlavièky 
 \caption{Zjednodušená štruktúra FIT súboru}
 \label{fig:fit_protocol}
 \end{figure}
-Na konverziu bitového FIT súboru vyuijeme konverznı nástroj v jazyku JAVA. Vıstupom konverzie sú dva CSV súbory. Prvı súbor je textovou reprezentáciou dát z FIT súboru, èo znamená, e niektoré riadky sú definíciou nasledujúcich údajov a niektoré riadky nesú údaje. Zároveò je potrebné si všimnú, e údaje nie sú rozdelené fixne pod¾a ståpcov. Ståpec \emph{Field N} oznamuje, èo reprezentuje hodnota v ståpci \emph{Value N}, ståpec \emph{Units N} definuje jednotky pre túto hodnotu, prièom N > 0. Jeden ståpec \emph{Field N} nemusí nies vdy rovnakı údaj. Príklad uvádzame na obr. \ref{fig:fit_file1}.
+Na konverziu bitového FIT súboru vyuijeme konverznı nástroj v jazyku JAVA. Vıstupom konverzie sú dva CSV súbory. Prvı súbor je textovou reprezentáciou dát z FIT súboru, èo znamená, e niektoré riadky sú definíciou nasledujúcich údajov a niektoré riadky nesú údaje. Zároveò je potrebné si všimnú, e údaje nie sú rozdelené fixne pod¾a ståpcov. Ståpec \emph{Field N} oznamuje, èo reprezentuje hodnota v ståpci \emph{Value N}, ståpec \emph{Units N} definuje jednotky pre túto hodnotu, prièom N$>$0. Jeden ståpec \emph{Field N} nemusí nies vdy rovnakı údaj. Príklad uvádzame na obr. \ref{fig:fit_file1}.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{images/fit_file1.png}
@@ -164,36 +165,26 @@ Pre správne pochopenie problematiky sa musíme oboznámi so zauívanım spôsobom m
 \begin{equation} \label{eq:power_trivial1}
 P = F\ \cfrac{\partial d}{\partial t}
 \end{equation}
-Vıkon \emph{P} je rovnı sile, ktorú je potrebné vyvinú, aby sme teleso s danou hmotnosou premiestnili po dráhe \emph{d} za èas \emph{t}. Dráha prekonaná za èas predstavuje rıchlos, preto môeme vzah \emph{\ref{eq:power_trivial1}} upravi na nasledovnı tvar:
+Vıkon \emph{P} je rovnı sile, ktorú je potrebné vyvinú, aby sme teleso s urèitou hmotnosou premiestnili po dráhe \emph{d} za èas \emph{t}. Dáta obsiahnuté v súboroch, s ktorımi pracujeme (GPX, TCX, FIT), sú diskrétne hodnoty uloené poèas tréningu v nieko¾ko sekundovıch intervaloch. Vzah \emph{\ref{eq:power_trivial1}} teda môeme upravi, keïe dráha prekonaná za èas predstavuje rıchlos.
 \begin{equation} \label{eq:power_trivial2}
 P = F\ v 
 \end{equation}
-To je podstata fungovania meraèa vıkonu vo ve¾mi zjednodušenej forme. Sila zmeraná tenzometrom je odoslaná do cyklopoèítaèa/športovıch hodiniek, tam je násobená aktuálnou rıchlosou a zobrazí sa vıkon v jednotkách \emph{Watt}. Nako¾ko je ve¾mi nároèné pri jazde na bicykli udriava pribline konštatnı vıkon, èasto sa nezobrazuje momentová hodnota ale priemer za 3s, 5s alebo 10 a 30 sekúnd. Sily, ktoré pôsobia proti pohybu športovca pri jazde na bicykli blišie rozoberáme v kapitole \ref{Physics}.\\
+To je podstata fungovania meraèa vıkonu vo ve¾mi zjednodušenej forme. Sila zmeraná tenzometrom je odoslaná do cyklopoèítaèa/športovıch hodiniek, tam je násobená aktuálnou rıchlosou a zobrazí sa vıkon v jednotkách \emph{Watt}. Podrobnejšie skúmanie toho, ako konkrétne typy meraèov merajú vıkon a jeho ïalšie fyzikálne vyjadrenie nie je predmetom tejto práce, keïe sa budeme snai odhadova vıkon na základe pohybu vo vonkajšom prostredí. Sily, ktoré pôsobia proti pohybu športovca pri jazde na bicykli blišie rozoberáme v kapitole \ref{Physics}.\\
 \indent Prvı meraè vıkonu bol dostupnı verejnosti v roku 1989. Jednalo sa o znaèku SRM (Schoberer Rad Messtechnik), ktorá svoj produkt testovala s profesionálnymi športovcami od zaèiatku osemdesiatych rokov.\cite{cyclingweekly_power}\\
 \indent Väèšina vırobcov v súèasnosti uvádza pre svoje meraèe odchılku do 2\%. Moné odchılky môu by spôsobené stratou pri prenose sily z pedálu na pohon zadného kolesa, t.j. napnutím reaze, prunosou rámu, prunosou kolesa, kalibráciou meraèa atï. Je dôleité si uvedomi, e iaden meraè, ktorı je súèasou bicykla, z tıchto dôvodov nebude ukazova presnı vıkon podávanı športovcom. Ak však športovec dlhodobo pouíva rovnakú metódu merania, porovnávanie jeho vıkonov má ve¾kı vıznam.
 
 \subsection{Softvér pre vyhodnotenie tréningu}
 \subsubsection{Strava}
-Strava je portál, ktorı sa snaí zdruova komunity športovcov po celom svete. Nosnım pilierom Strava je webová aplikácia na adrese \emph{http://www.strava.com}, ktorá ponúka komplexnú analızu tréningovıch dát a mnostvo sociálnych funkcií. Ako uvádza priamo Strava, pouívate¾ovi umoòuje zai tzv. \emph{social fitness}, èo by malo predstavova spojenie, porovnanie a súaenie s ïalšími športovcami \cite{strava}. Okrem webovej aplikácie je moné vyui aj mobilnú aplikáciu pre platformu Android a iOS. Primárne je Strava urèená pre becov a cyklistov, grafy a analıza pre ich aktivity sú najpodrobnejšie. Trénigovı denník si však môu vies aj ïalší športovci.\\
-\indent Princíp fungovania Strava môeme popísa tromi krokmi. Prvım je absolvovanie tréningu a jeho zaznamenanie na zariadenie s GPS, resp. na ich mobilnú aplikáciu. Druhım krokom je uloenie tréningového záznamu na server Strava. Vïaka vyuitiu API vırobcov ako je Garmin, Suunto, TomTom, Timex a niektorıch dalších umoòuje Strava priame uloenie tréningovıch dát na server ihneï po pripojení zariadenia/športovıch hodiniek do poèítaèa. Priame ukladanie funguje na platformách Windows a OSX. Ak pouívate¾ pouíva inı operaènı systém alebo má záujem uloi tréning z iného zariadenia, môe tak urobi nahraním súboru, ktorı je vo formáte GPX, TCX alebo FIT. Tretím krokom je zobrazenie detailu tréningu a analıza.\\
-\indent Portál Strava sme sa rozhodli popísa z dôvodu, e ako jeden z prvıch prináša aproximáciu wattového vıkonu cyklistu z GPS dát. Skôr ako popíšeme kladné a záporné stránky samotnej aproximácie vıkonu, pozrime sa na pouívate¾ské rohranie webovej aplikácie, konkrétne na èas s detailom tréningu.
+Strava je portál, ktorı sa snaí zdruova komunity športovcov po celom svete. Nosnım pilierom Strava je webová aplikácia na adrese \emph{http://www.strava.com}, ktorá ponúka komplexnú analızu tréningovıch dát a mnostvo sociálnych funkcií. Ako uvádza priamo Strava\cite{strava}, pouívate¾ovi umoòuje zai tzv. \emph{social fitness}, èo by malo predstavova spojenie, porovnanie a súaenie s ïalšími športovcami. Okrem webovej aplikácie je moné vyui aj mobilnú aplikáciu pre platformu Android a iOS. Primárne je Strava urèená pre becov a cyklistov, grafy a analıza pre ich aktivity sú najpodrobnejšie. Trénigovı denník si však môu vies aj ïalší športovci.\\
+\indent Princíp fungovania Strava môeme popísa tromi krokmi. Prvım je absolvovanie tréningu a jeho zaznamenanie na zariadenie s GPS, resp. na ich mobilnú aplikáciu. Druhım krokom je uloenie tréningového záznamu na server Strava. Vïaka vyuitiu API vırobcov ako je Garmin, Suunto, TomTom, Timex a niektorıch dalších umoòuje Strava priame uloenie tréningovıch dát na server ihneï po pripojení zariadenia/športovıch hodiniek do poèítaèa. Priame ukladanie funguje na platformách Windows a OSX. Ak pouívate¾ pouíva inı operaènı systém alebo má záujem uloi tréning z iného zariadenia, môe tak urobi nahraním súboru, ktorı je vo formáte GPX, TCX alebo FIT. Tretím krokom je zobrazenie detailu tréningu a analıza. Údaje môeme prehliada vo forme mapy alebo grafov, ktoré zobrazujú priebeh celého tréningu, hodnoty aktuálnej nadmorskej vıšky, rıchlosti, tepovej frekvencie, frekvencie šliapania a~teploty v jednotlivıch pozíciách, viï obr. \ref{fig:strava_analysis}.
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.4]{images/strava_overview.png}
-\caption{Strava - detail tréningu}
-\label{fig:strava_overview}
-\end{figure}
-
-V pravej èasti obrazovky môeme vidie celkové a priemerné údaje z tréningu. Jedná sa o dáta, ktoré boli uloené cyklopoèítaèom Garmin Edge 500 - vzdialenos, èas, nastúpané metre, rıchlos, tepová frekvencia, frekvencia šliapania, teplota. Èervenú hodnotu \emph{Suffer Score} poèíta Strava na základe èasu, ktorı športovec strávil v jednotlivıch tréningovıch zónach pod¾a tepovej frekvencie. Nako¾ko sme pri tréningu mali k dispozícii aj meraè vıkonu Power Tap G3, Strava nám na základe váeného priemerného vıkonu vypoèíta tréningové zaaenie (\emph{Training Load}) a intenzitu tréningu (\emph{Intensity}). Intenzita tréningu je percentuálny pomer váeného priemerného vıkonu a FTP hodnoty vıkonu\footnote{FTP - Functional treshold power - Hodnota, na ktorej športovec dokáe pracova 30 minút \cite{physiology_of_sport}}. Presnı vıpoèet hodnoty tréningového zaaenia Strava verejne neuvádza, ale zo skúsenosti môeme konštatova, e sa jedná o násobok váeného priemerného vıkonu, dåky tréningu a ïalšieho koeficientu.\\
-\indent V prostrednej èasti obr. \ref{fig:strava_overview} môeme vidie názov tréningu, pod ktorım ho športovec uloil a dátum absolvovania. Po kliknutí na \emph{Analysis} v menu v ¾avej èasti obrazovky, sa nám naèíta sekcia s mapou a grafmi, ktoré zobrazujú priebeh celého tréningu, hodnoty aktuálnej nadmorskej vıšky, rıchlosti, tepovej frekvencie, frekvencie šliapania a~teploty v jednotlivıch pozíciách, viï obr. \ref{fig:strava_analysis}.
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.45]{images/strava_analysis.png}
+\includegraphics[scale=0.40]{images/strava_analysis.png}
 \caption{Strava - Analıza tréningu}
 \label{fig:strava_analysis}
 \end{figure}
 
-Prejdime k analıze vıkonu na portále Strava, aby sme ju mohli porovna vzh¾adom na naše ciele. Ako vzorku dát budeme zobrazova úsek na trase Tatranská Štrba - Štrbské pleso v dåke 1500m. Absolvovali sme tri rôzne tréningy, pri prvom sme zmerali aj vıkon zariadením Power Tap G3 a dáta zaznamenávali do cyklopoèítaèa Garmin Edge 500. Na obr. \ref{fig:strava_watts} môeme vidie reálnu hodnotu vıkonu, športovec sa snail o plynulı rovnomernı vıkon bez vıkyvov. 
+\indent Portál Strava sme sa rozhodli popísa z dôvodu, e ako jeden z prvıch prináša aproximáciu wattového vıkonu cyklistu z GPS dát. Aby sme aproximáciu mohli analyzova vzh¾adom na naše ciele, absolvovali sme 3 rôzne merania na úseku Tatranská Štrba - Štrbské pleso v dåke 1500m, so snahou udriava rovnomernı vıkon bez vıkyvov. Pri prvom sme zmerali vıkon zariadením Power Tap G3 a dáta zaznamenávali do cyklopoèítaèa Garmin Edge 500. Na obr. \ref{fig:strava_watts} môeme vidie reálnu hodnotu vıkonu. 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.60]{images/strava_uphill_chart_watts.png}
@@ -217,21 +208,20 @@ Poslednı záznam je meranı mobilnou aplikáciou Strava, viï obr. \ref{fig:strava_e
 \label{fig:strava_estwatts_agps}
 \end{figure}
 
-\indent Z prezentovanıch testov môeme vyvodi záver, e odhad vıkonu portálom Strava nie je presnı. Chybné sú najmä hodnoty, ktoré skáèu z nuly do maximálnych hodnôt, a to aj napriek tomu, e športovec sa pohyboval takmer konštantnou rıchlosou a snail sa dodra rovnakú frekvenciu šliapania. Hoci nepoznáme presnı algoritmus vıpoètu v Strava, myslíme si, e príèinou nepresnosti je zvolenie prive¾mi malıch úsekov, na ktorıch sú vypoèítavané èiastkové vıkony, resp. sú vypoèítavané medzi jednotlivımi bodmi uloenımi do zariadenia. Na malom úseku môe by odchılka v nadmorskej vıške, nako¾ko barometrickı vıškomer ju urèuje pod¾a tlaku. Môe to by samozrejme aj nepresnosou GPS alebo malou frekvenciou ukladania jednotlivıch bodov tréningu, prièom nie sú zachytené všetky zmeny terénu.
+\indent Z prezentovanıch testov môeme na prvı poh¾ad vyvodi záver, e odhad vıkonu portálom Strava nie je presnı. Chybné sú najmä hodnoty, ktoré skáèu z nuly do maximálnych hodnôt, a to aj napriek tomu, e športovec sa pohyboval takmer konštantnou rıchlosou a snail sa dodra rovnakú frekvenciu šliapania. Hoci nepoznáme presnı algoritmus vıpoètu v Strava, myslíme si, e príèinou nepresnosti je zvolenie prive¾mi malıch úsekov, na ktorıch sú vypoèítavané èiastkové vıkony, resp. sú vypoèítavané medzi jednotlivımi bodmi uloenımi do zariadenia. Na malom úseku môe by odchılka v nadmorskej vıške, nako¾ko barometrickı vıškomer ju urèuje pod¾a tlaku. Môe to by samozrejme aj nepresnosou GPS alebo malou frekvenciou ukladania jednotlivıch bodov tréningu, prièom nie sú zachytené všetky zmeny terénu.
 
 \subsubsection{Bike Calculator}
 Druhı systém relevantnı nášmu vıskumu nájdeme na webovej stránke\\ \emph{http://www.bikecalculator.com}. Bike Calculator je údajne najpopulárnejšia kalkulaèka vıkonu cyklistu fungujúca od roku 1997 \cite{bikecalculator}. U na prvı poh¾ad je jasné, e sa jedná iba o kalkulaèku a iaden vstup zo športovıch hodiniek alebo meraèa nie je monı. Stránka disponuje krátkym vysvetlením fyzikálneho problému vıpoètu vıkonu a formulárom, do ktorého je moné zada hodnoty pre vıpoèet a vısledok je vyhodnotenı okamite.
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.60]{images/bikecalculator_calc.png}
+\includegraphics[scale=0.50]{images/bikecalculator_calc.png}
 \caption{Bike Calculator - Kalkulaèka vıkonu cyklistu}
 \label{fig:bikecalculator_form}
 \end{figure}
 
-Otestovali sme ho pre viacero úsekov, ktoré sme zmerali na tréningu meraèom vıkonu. V tabu¾ke \ref{table:bikecalculator_table} uvádzame porovnanie nameranıch a vypoèítanıch hodnôt.
+Otestovali sme ho pre 12 úsekov, z ktorıch kadı sme absolvovali 2-5 krát a vıkon merali zariadením PowerTap G3. Pri kadom meraní sa športovec snail dodriava rovnomernı vıkon. Nako¾ko Bike Calculator ani neumoòuje vkladanie èiastkovıch údajov, pouili sme priemer nameranıch hodnôt pre kadı úsek. V tabu¾ke \ref{table:bikecalculator_table} uvádzame porovnanie hodnôt z meraní a vypoèítanıch hodnôt.\\
 \begin{table}[h]
 \begin{tabular}{cccccccc}
-\hline
 \textbf{Úsek} & \textbf{\begin{tabular}[c]{@{}c@{}}dåka\\ {[}m{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}priemer.\\ stúpanie\\ {[}\%{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}priemer.\\ rıchlos\\ {[}km/h{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}reálny\\ vıkon\\ {[}W{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Bike\\ Calculator\\ {[}W{]}\end{tabular}} & \textbf{Rozdiel} & \textbf{\begin{tabular}[c]{@{}c@{}}Rozdiel\\ {[}\%{]}\end{tabular}} \\ \hline
 1. & 1000 & 7.4 & 13.5 & 269 & 247 & -22 & -8.18\% \\ \hline
 2. & 1000 & 8.5 & 13.0 & 285 & 269 & -16 & -5.61\% \\ \hline
@@ -240,14 +230,6 @@ Otestovali sme ho pre viacero úsekov, ktoré sme zmerali na tréningu meraèom vıko
 5. & 1500 & 6.6 & 15.6 & 272 & 263 & -9 & -3.31\% \\ \hline
 6. & 1500 & 9.2 & 11.7 & 273 & 258 & -15 & -5.49\% \\ \hline
 7. & 2700 & 3.0 & 20.4 & 201 & 197 & -4 & -1.99\% \\ \hline
-\end{tabular}
-\end{table}
-
-%pokraèovanie tabu¾ky
-\begin{table}[h]
-\begin{tabular}{cccccccc}
-\hline
-\textbf{Úsek} & \textbf{\begin{tabular}[c]{@{}c@{}}dåka\\ {[}m{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}priemer.\\ stúpanie\\ {[}\%{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}priemer.\\ rıchlos\\ {[}km/h{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}reálny\\ vıkon\\ {[}W{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Bike\\ Calculator\\ {[}W{]}\end{tabular}} & \textbf{Rozdiel} & \textbf{\begin{tabular}[c]{@{}c@{}}Rozdiel\\ {[}\%{]}\end{tabular}} \\ \hline
 8. & 2700 & 4.8 & 24.1 & 357 & 346 & -11 & -3.08\% \\ \hline
 9. & 2700 & 5.2 & 17.5 & 257 & 245 & -12 & -4.67\% \\ \hline
 10. & 1500 & 0.7 & 30.5 & 180 & 214 & 34 & 18.89\% \\ \hline
@@ -257,22 +239,23 @@ Otestovali sme ho pre viacero úsekov, ktoré sme zmerali na tréningu meraèom vıko
 \caption{Bike Calculator - porovnanie vıpoètu}
 \label{table:bikecalculator_table}
 \end{table}
+\\
 \indent Z tabu¾ky si môeme všimnú, e celková dåka segmentu neovplyvòuje rozdiel medzi reálnou a vypoèítavanou hodnotou. Zámerne však neuvádzame úseky dlhé iba nieko¾ko desiatok metrov, aby sme mohli poukáza na fakt, e práve stúpajúci sklon (priem. stúpanie) robí vıpoèet presnejším. Minimalizuje sa toti aerodynamickı odpor spôsobenı vetrom, ktorého smer aj intenzitu je ve¾mi aké odhadnú a stúpa podiel sily potrebnej na prekonanie zemskej tiae.\\
 \indent Ako môeme vidie vo formulári na obr. \ref{fig:bikecalculator_form}, typ pneumatík a pozíciu športovca na bicykli vyberáme z predvolenıch hodnôt. Pre typ pneumatík sú to tri hodnoty, a to pláše, galusky alebo MTB. Pozíciu môeme zvoli pod¾a bicykla - vzpriamená, mierne vzpriamená, zohnutá, aerodynamická. Pod¾a vybraného vstupu Bike Calculator pouije predvolenı koeficient valivého odporu, resp. aerodynamického odporu.\\
 \indent Koeficient aerodynamického odporu je však závislı aj od obleèenia cyklistu, od bicykla, od kolies. Koeficient valivého odporu je rozdielny pre jednotlivé modely plášov, hodnotu ich nahustenia. Môeme poveda, e je rozdielny pre kadú jednu dvojicu športovec-bicykel. Dôkladnejšie vysvetlenie tejto problematiky uvádzame v kapitole \ref{Physics}.
 
 \newpage
 \section{Pôsobenie síl} \label{Physics}
-Jednotlivé zloky, ktoré pôsobia na cyklistu poèas jazdy sa menia v závislosti od zmeny terénu a poveternostnıch podmienok. 
+Vıkon, ktorı musí cyklista vyvíja aby sa dokázal pohybova urèitou rıchlosou je úmernı odporovım silám, ktoré na neho a bicykel poèas jazdy pôsobia. V tejto kapitole sa budeme tımto odporovım silám venova podrobnejšie, aby sme v dostatoènej miere poznali na akıch velièinách sú závislé. Tieto znalosti následne vyuijeme pri návrhu algoritmu strojového uèenia. Jednotlivé zloky síl, ktoré pôsobia na cyklistu poèas jazdy sa menia v závislosti od zmeny terénu a poveternostnıch podmienok.
 \begin{itemize}
  \item Gravitaèná sila
  \item Aerodynamickı odpor
  \item Valivı odpor
 \end{itemize}
-Kım aerodynamickı odpor je najviac pociovanı pri jazde po rovine, jeho podiel klesá spolu s narastajúcim sklonom vozovky a zaèína prevláda zloka gravitaènej sily. Valivı odpor je spôsobenı kontaktom pneumatiky s povrchom vozovky, konkrétne ich deformáciou a mikrotrením.\\
-\indent Princíp superkompenzácie hovorí, e vısledná sila pôsobiaca na teleso je rovná vektorovému súètu všetkıch síl pôsobiacich na dané teleso \cite{encyklopedie_fyziky}.
-\begin{equation} \label{eq:supercompensation}
-P\ =\ v\ \sum{F}
+\indent Kım aerodynamickı odpor je najviac pociovanı pri jazde po rovine, jeho podiel klesá spolu s narastajúcim sklonom vozovky a zaèína prevláda zloka gravitaènej sily. Valivı odpor je spôsobenı kontaktom pneumatiky s povrchom vozovky, konkrétne ich deformáciou a mikrotrením.\\
+\indent Princíp superpozície hovorí, e vısledná sila pôsobiaca na teleso je rovná vektorovému súètu všetkıch síl pôsobiacich na dané teleso \cite{encyklopedie_fyziky}.
+\begin{equation} \label{eq:superposition}
+\vec{F} = \sum_{\substack{i}}\vec{F}_i
 \end{equation}
 
 \subsection{Gravitaèná sila}
@@ -289,11 +272,9 @@ Silu pôsobiacu proti pohybu cyklistu v smere z kopca vyjadríme vzahom $F_g = m\
 F_g = m\ g\ \cfrac{\Delta altitude}{d}
 \end{equation}
 
-\noindent Ve¾kos normálovej sily, je vyjadrená vzahom \ref{eq:force_normal}
+\noindent Ve¾kos normálovej sily, $F_g = m\ g \cos \alpha$, vyjadríme vzahom \ref{eq:force_normal}
 \begin{equation} \label{eq:force_normal}
-F_n = m\ g\ \cos\left(
-  \arcsin \left(\cfrac{\Delta altitude}{d}\right)
-\right)
+F_n = m\ g\ \sqrt{1 - \left(\cfrac{\Delta altitude}{d}\right)^{2}}
 \end{equation}
 
 \subsection{Aerodynamickı odpor}
@@ -302,7 +283,7 @@ Aerodynamickı odpor je v poslednom období v cyklistike èasto preberanou tématiko
 F_d = \cfrac{1}{2}\ \rho\ v^2\ C_d\ A
 \end{equation}
 môeme vidie, e sila potrebná na prekonanie aerodynamického odporu rastie s druhou mocninou rıchlosti. $\rho$ je hustota prostredia. Referenèná plocha $A$ je v tomto prípade premietnutá èelná plocha športovca a bicykla. Jedinou monosou ako zníi odporovú silu je teda zníi koeficient odporu $C_d$.\\
-\indent Koeficient odporu pre pohybujúce sa teleso $C_d$ je závislı od povrchu a aerodynamického tvaru telesa, ïalej od hustoty a viskozity látky  prostredia, v ktorom sa teleso pohybuje. Tie závisí od rıchlosti a smeru pohybu telesa vzh¾adom na smer pohybu látky prostredia (napr. smer vetra). Pre vysoké rıchlosti môeme $C_d$ vyjadri ako funkciu Reynoldsového èísla \emph{Re} a èísla \emph{Mach}. Pre rıchlosti, ktoré dosahujú automobily alebo bicykle môeme povaova $C_d$ za konštatnı.\\
+\indent Koeficient odporu pre pohybujúce sa teleso $C_d$ je závislı od povrchu a aerodynamického tvaru telesa, ïalej od hustoty a viskozity látky  prostredia, v ktorom sa teleso pohybuje. Tie závisí od rıchlosti a smeru pohybu telesa vzh¾adom na smer pohybu látky prostredia (napr. smer vetra). Pre vysoké rıchlosti môeme $C_d$ vyjadri ako funkciu Reynoldsového èísla \emph{Re} a èísla \emph{Mach}. Pre rıchlosti, ktoré dosahujú automobily alebo bicykle môeme povaova $C_d$ za konštantnı. Ak uvaujeme nad aproximáciou vıkonu, zisujeme, e koeficient odporu ani referenènú plochu nevieme jednoducho mera a teda ich hodnoty poadova ako pouívate¾skı vstup do systému. Do úvahy pripadá ich odhad na základe známych proporcií športovca a reálne zmeraného vıkonu.\\
 \indent Vo vzahu \ref{eq:force_drag} vystupuje hustota $\rho$, ktorá v našom prípade prestavuje hustotu vzduchu. Tá je pri 15°C na hladine mora rovná hodnote $1,2754\ kg\ m^{-3}$ \cite{standard_atmosphere}. Hustota vzduchu sa však mení so stúpajúcou teplotou a tie stúpajúcou nadmorskou vıškou, keïe sa mení tlak vzduchu. \\
 \indent Atmosferickı tlak $p$ v nadmorskej vıške $h$ urèíme pod¾a vzahu \ref{eq:atmospheric_pressure},
 \begin{equation} \label{eq:atmospheric_pressure}
@@ -321,7 +302,14 @@ Pri známom tlaku vzduchu pre danú nadmorskú vıšku, môeme urèi hustotu vzduchu 
 \begin{equation} \label{eq:air_density}
 \rho = \cfrac{p\ M}{R\ T}
 \end{equation}
-Zmena teploty a tlaku vzduchu ovplyvní aj vıkon potrebnı pre udranie rovnakej rıchlosti, a to nezanedbate¾nım rozdielom. Ako príklad vezmime do úvahy cyklistu pohybujúceho sa rıchlosou 30 $km\ h^{-1}$ v horizontálnej rovine v nadmorskej vıške od 0 m n.m. a do 1500 m n.m. Pri konštantnej teplote, referenènej ploche $A$, konštantnom valivom odpore $C_{rr}$ a koeficiente aerodynamického odporu $C_d$, sa môe rozdiel v nadmorskej vıške prejavi rozdielom 12 W vo vıkone, viï obr. \ref{fig:altitude_watt_comparsion}
+Zmena teploty a tlaku vzduchu ovplyvní aj vıkon potrebnı pre udranie rovnakej rıchlosti, a to nezanedbate¾nım rozdielom. Pre priblíenie uvádzame dve simulácie pohybu cyklistu rıchlosou 30 $km\ h^{-1}$ v horizontálnej rovine. V prvom prípade simulujeme pri konštantnej teplote zmenu nadmorskej vıšky z 0 m n.m.  do 1500 m n.m.\\
+Simuláciu vykonávame s nasledovnımi konštantami:
+\begin{itemize}
+  \item $C_{rr}$ = 0.003, na základe \cite{handbook_rolling_resistance}
+  \item $C_d$ = 1.0, na základe \cite{cycling_power_lab}
+  \item $A$ = 0.4, na základe \cite{cycling_power_lab}
+\end{itemize}
+Z obr. \ref{fig:altitude_watt_comparsion} môeme vidie, e rozdiel v nadmorskej vıške sa prejavil rozdielom 12 W vo vıkone. 
 
 \begin{figure}[H]
 \centering
@@ -330,16 +318,13 @@ Zmena teploty a tlaku vzduchu ovplyvní aj vıkon potrebnı pre udranie rovnakej r
 \label{fig:altitude_watt_comparsion}
 \end{figure}
 
-Stúpajúca teplota vzduchu sa prejaví zníením hustoty vzduchu, a teda aj vıkon potrebnı na udranie rovnakej rıchlosti klesá. Pri rovnakıch podmienkach ako v predchádzajúcom príklade a pri zmene teploty z 15°C na 30°C, staèí cyklistovi na udranie 30 $km\ h^{-1}$ pribline o 9 W niší vıkon, viï obr. \ref{fig:temperature_watt_comparsion}.
+V druhom prípade pri konštantnej nadmorskej vıške 0 m n.m. simulujeme zmenu teploty. Stúpajúca teplota vzduchu sa prejaví zníením hustoty vzduchu, a teda aj vıkon potrebnı na udranie rovnakej rıchlosti klesá. Pri rovnakıch podmienkach ako v predchádzajúcom príklade a teplote 30°C, by postaèovalo cyklistovi na udranie rıchlosti 30 $km\ h^{-1}$ pribline o 9 W niší vıkon ne pri teplote 15°C, viï obr. \ref{fig:temperature_watt_comparsion}.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.8]{images/temperature_watt_comparsion.png}
 \caption{Závislos potrebného vıkonu od teploty vzduchu}
 \label{fig:temperature_watt_comparsion}
 \end{figure}
-
-Ïalší faktor, ktorı súvisí s aerodynamickım odporom je vietor. Smer a intenzitu vetra poèas tréningu by bolo ve¾mi nároèné urèi. Hoci by sme mohli vyui API predpovede poèasia, získané údaje nevieme garantova pre rôzne segmenty trasy, keïe vietor sa môe láma medzi budovami alebo stromami. Ïalším faktorom je aj ve¾kos skupiny, v ktorej cyklista tréning absolvuje. Je samozrejmé, e v závetrí väèšej skupiny športovec šetrí silu. To, ako presne sa tieto dva faktory odzrkad¾ujú na vıkone, u poveda nevieme a jediná cesta dosiahnutia presnıch vısledkov by bola testovanie vo veternom tuneli. Takéto testovanie by však bolo nielen èasovo ale aj finanène nároèné, a preto sme v rámci rozsahu našej práce uprednostnili èo mono najpresnejšiu aproximáciu v známych podmienkach.\\
-\indent V našej aproximácii budeme predpoklada, e smer a intenzita vetra, má zanedbate¾nı vplyv na vıkon, resp. pri dlhších a k¾ukatıch úsekoch je v niektorıch èastiach jeho intenzita prièítaná a v inıch zase odèítaná z celkového aerodynamického odporu. Vıkon sa budeme snai aproximova v úsekoch kedy podiel aerodynamického odporu na celkovej pôsobiacej sile je èo najniší. Dobré vısledky by mohli by dosahované pri aproximácii v stúpaniach nad 3\% priemerného sklonu.
 
 \subsection{Valivı odpor} \label{Rolling_resistance}
 Valivım odporom môeme nazva silu, ktorá vzniká, keï sa teleso kruhového prierezu (v našom prípade koleso bicykla) valí po pevnej podloke. Fyzikálnou podstatou tohoto javu je hysterézia, ktorá nastáva pri deformácia podloky resp. kolesa pôsobením normálovej tlakovej sily. V reálnych podmienkach samozrejme podloka ani galuska kolesa nie sú dokonale pruné. Preto reakcia na normálovú tlakovú silu je posunutá o vzdialenos $\xi$ \cite{encyklopedie_fyziky}.
@@ -356,11 +341,11 @@ F = F_n\ \tan \alpha
 
 \noindent Pre malé uhly je $tg\alpha = sin\alpha$ a pre koleso s polomerom \emph{R} je $sin\alpha = \cfrac{\xi}{R}$. Dosadením do vzahu \ref{eq:rolling_trivial1} dostávame:
 \begin{equation} \label{eq:rolling_trivial2}
-F_r = C_{rr}\ F_n
+F = \cfrac{\xi}{R}\ F_n
 \end{equation}
 
 \noindent Normálovú silu na naklonenej rovine vypoèítame pod¾a vzahu \ref{eq:force_normal}.\\
-\indent V praxi by ale bolo ve¾mi nároèné zmera vzdialenos $\xi$, preto sa podiel vo vzahu \ref{eq:rolling_trivial2} èasto nahrádza koeficientom valivého odporu $C_{rr}$. Koeficient môeme nájs pre rôzne typy pneumatík v tabu¾kách. Definovaním štandardov pri testovaní pneumatík ako je napríklad štandard SAE J2452 \cite{sae_test} sa vymedzujú podmienky testu. Pre potreby tejto práce je dôleité povaova podloku, povrch vozovky, ako dokonale pevnú a koeficienty valivého odporu galusiek alebo plášov cestného bicykla v rozsahu od 0.002 do 0.006 \cite{roller_data}. Na tıchto dátach môeme prezentova, akı vplyv má koeficient odporu $C_{rr}$ na vıkon potrebnı pre udranie konštantnej rıchlosti 30 $km\ h^{-1}$, viï obr. \ref{fig:crr_watt_comparsion}. V príklade sa športovec pohybuje v horizontálnej rovine a všetky ïalšie premenné sú konštantné.
+\indent V praxi by ale bolo ve¾mi nároèné zmera vzdialenos $\xi$, preto sa podiel vo vzahu \ref{eq:rolling_trivial2} èasto nahrádza koeficientom valivého odporu $C_{rr}$. Koeficient môeme nájs pre rôzne typy pneumatík v tabu¾kách. Definovaním štandardov pri testovaní pneumatík ako je napríklad štandard SAE J2452 \cite{sae_test} sa vymedzujú podmienky testu. Pre potreby tejto práce je dôleité povaova podloku, povrch vozovky, ako dokonale pevnú a koeficienty valivého odporu galusiek alebo plášov cestného bicykla v rozsahu od 0.002 do 0.006 \cite{roller_data}. Na tıchto dátach môeme vykona ïalšiu simuláciu a prezentova, akı vplyv má koeficient odporu $C_{rr}$ na vıkon potrebnı pre udranie konštantnej rıchlosti 30 $km\ h^{-1}$, viï obr. \ref{fig:crr_watt_comparsion}. Dáta sú simulované s konštantami: $A$ = 0.4, $C_d$ = 1.0, $T$ = 15°C, $h$ = 100m n.m.
 
 \begin{figure}[H]
 \centering
@@ -369,12 +354,12 @@ F_r = C_{rr}\ F_n
 \label{fig:crr_watt_comparsion}
 \end{figure}
 
-Kım koeficient je pod¾a tabu¾ky nezávislı od tlaku, pretoe test predpokladá konštatné, ideálne nahustenie pneumatiky, v praxi tomu tak by nemusí. Venujme teda nieko¾ko ïalších riadkov faktorom, ktoré ovplyvòujú valivı odpor.\\
-\indent \textbf{Tlak v pneumatike}. Èím vyššie je nahustenie pneumatiky, tım je nišia jej deformácia a teda aj valivı odpor. \\
-\indent \textbf{Šírka pneumatiky}. Pôsobením normálovej tlakovej sily je kadá pneumatika mierne deformovaná, avšak širšia sa deformuje viac do svojej šírky (menšie $\xi$), kım ušia je deformovaná pozdåne, pneumatika strací viac zo svojho kruhového tvaru a rastie $\xi$. Širšia pneumatika má pri rovnakom tlaku oproti ušej pneumatike niší valivı odpor ale ušiu je moné husti na vyšší tlak pri dosiahnutí rovnakého komfortu jazdy. Ušie pneumatiky majú navyše niší aerodynamickı odpor, ktorému sa budeme venova neskôr. Ïalšími faktormi, ktoré ovplyvòujú valivı odpor sú aj štruktúra a materiál pneumatiky, priemer kolesa, hmotnos záae, mikrotrenie medzi povrchom a pneumatikou.\\
-\indent Nako¾ko je na trhu nespoèetné mnostvo modelov galusiek a plášov pre bicykle, nie je moné k ním uchováva a neustále aktualizova koeficient valivého odporu $C_{rr}$. Urèitú úlohu hrá aj tlak v pneumatike, ktorı kadı cyklista volí pod¾a svojich osobnıch preferencií, poadovanıch jazdnıch vlastností a komfortu. iada tlak v pneumatike ako vstup do systému od pouívate¾a povaujeme za ve¾mi nekomfortné a preto vyvodzujeme záver, e práve hodnota $C_{rr}$ bude predmetom odhadu v našom algoritme.\\\\
+Kım koeficient je pod¾a tabu¾ky nezávislı od tlaku, pretoe test predpokladá konštatné, ideálne nahustenie pneumatiky, v praxi tomu tak by nemusí. Nako¾ko je na trhu nespoèetné mnostvo modelov galusiek a plášov pre bicykle, nie je moné k nim uchováva a neustále aktualizova koeficient valivého odporu $C_{rr}$. Urèitú úlohu hrá aj tlak v pneumatike, ktorı kadı cyklista volí pod¾a svojich osobnıch preferencií, poadovanıch jazdnıch vlastností a komfortu. iada tlak v pneumatike ako vstup do systému od pouívate¾a povaujeme za ve¾mi nekomfortné. Oh¾adom dosadenia hodnoty za $C_{rr}$ sa dostávame do rovnakej situácie ako pri koeficiente $C_d$.  
 
-\indent Na záver tejto kapitoly chceme prezentova podiel jednotlivıch silovıch zloiek na celkovej sile pôsobiacej na cyklistu v závislosti od stúpajúceho sklonu vozovky. Na~obr. \ref{fig:force_comparsion} sú dáta pri konštantnıch podmienkach, koeficientoch a konštantnom vıkone 350 W. S postupnou zmenou stúpania z 0 a do 15\%  môeme vidie, e podiel gravitaènej sily a aerodynamického odporu sa vyrovnáva pribline pri 2.5\% stúpania. Valivı odpor má po celú dobu minimálny podiel na celkovej sile, avšak nemôeme ho zanedba.
+\indent Na záver tejto kapitoly chceme prezentova podiel jednotlivıch silovıch zloiek na celkovej sile pôsobiacej na cyklistu v závislosti od stúpajúceho sklonu vozovky. Nako¾ko dosiahnutie konštantnıch podmienok v teréne je takmer nemoné, opä nám vhodne poslúi simulácia. S hodnotami $A$ = 0.4, $C_d$ = 1.0, $T$ = 15°C, $h$ = 0m n.m., $C_{rr}$ = 0.0045, 
+
+
+Na~obr. \ref{fig:force_comparsion} sú dáta pri konštantnıch podmienkach, koeficientoch a konštantnom vıkone 350 W. S postupnou zmenou stúpania z 0 a do 15\%  môeme vidie, e podiel gravitaènej sily a aerodynamického odporu sa vyrovnáva pribline pri 2.5\% stúpania. Valivı odpor má po celú dobu minimálny podiel na celkovej sile, avšak nemôeme ho zanedba.
 
 \begin{figure}[H]
 \centering
@@ -382,6 +367,9 @@ Kım koeficient je pod¾a tabu¾ky nezávislı od tlaku, pretoe test predpokladá kon
 \caption{Podiel silovıch zloiek v závislosti od stúpajúceho sklonu vozovky}
 \label{fig:force_comparsion}
 \end{figure}
+
+\indent Ïalší faktor, ktorı súvisí s aerodynamickım odporom je vietor. Smer a intenzitu vetra poèas tréningu by bolo ve¾mi nároèné urèi. Hoci by sme mohli vyui API predpovede poèasia, získané údaje nevieme garantova pre rôzne segmenty trasy, keïe vietor sa môe láma medzi budovami alebo stromami. Ïalším faktorom je aj ve¾kos skupiny, v ktorej cyklista tréning absolvuje. Je samozrejmé, e v závetrí väèšej skupiny športovec šetrí silu. To, ako presne sa tieto dva faktory odzrkad¾ujú na vıkone, u poveda nevieme a jediná cesta dosiahnutia presnıch vısledkov by bola testovanie vo veternom tuneli. Takéto testovanie by však bolo nielen èasovo ale aj finanène nároèné, a preto sme v rámci rozsahu našej práce uprednostnili èo mono najpresnejšiu aproximáciu v známych podmienkach.\\
+\indent V našej aproximácii budeme predpoklada, e smer a intenzita vetra, má zanedbate¾nı vplyv na vıkon, resp. pri dlhších a k¾ukatıch úsekoch je v niektorıch èastiach jeho intenzita prièítaná a v inıch zase odèítaná z celkového aerodynamického odporu. Vıkon sa budeme snai aproximova v úsekoch kedy podiel aerodynamického odporu na celkovej pôsobiacej sile je èo najniší. Dobré vısledky by mohli by dosahované pri aproximácii v stúpaniach nad 3\% priemerného sklonu, kedy sa podiel gravitaènej sily a aerodynamického odporu vyrovnáva.
 
 \newpage
 \section{Opis riešenia}
@@ -540,7 +528,7 @@ if( $w_model->save(TRUE) ){
 
     $this->renderPartial(
 	  'update.form', 
-	  array('model' => $w_model, 'activities' => $activities), 
+	  array('model' =>$w_model, 'activities' =>$activities), 
 	  'workout'
     );
 }
@@ -609,11 +597,11 @@ public function detect_climbs( WorkoutModel $workout ){
     }
     
     //** Odstrani nevyhovujuce stúpania
-    foreach ( $climbs as $k => $climb ){
+    foreach ( $climbs as $k =>$climb ){
 	
-	if( !($climb->get_length() >= 500 
-	    && $climb->grade() >= 0.03 
-	    && $climb->get_length() * $climb->grade() > 40) )
+	if( !($climb->get_length()>= 500 
+	    && $climb->grade()>= 0.03 
+	    && $climb->get_length() * $climb->grade()>40) )
 	{
 	    unset($climbs[$k]);
 	}
@@ -645,7 +633,7 @@ for( $i = $i+1; $i <= $climb->get_index_end() - $step; $i++ ){
     $elevat = abs($this->data[$i+$step]['altitude'] 
 	    - $this->data[$i]['altitude']); 
     $grade  = $elevat / $length;
-    if( abs($grade - $grade_prev) > 0.005 && $i-$seg_start > $step){
+    if( abs($grade - $grade_prev)>0.005 && $i-$seg_start>$step){
 	/* Rozdelenie segmentu */
 	/* Pokraèuje v detekcii presného zaèiatku a konca */
     }
@@ -726,7 +714,7 @@ function map_initialize() {
   });
   
   map_bns = new google.maps.LatLngBounds();
-  <?php echo $bounds; ?> //Body tréningu cez ktoré sa mapa centruje
+  <?php echo $bounds; ?>//Body tréningu cez ktoré sa mapa centruje
       
   map.mapTypes.set('map_style', style);
   map.setMapTypeId('map_style');        
@@ -788,7 +776,7 @@ var root = d3.select("#chart-canvas").append("svg")
 
 chart_draw(chart_data);
 \end{Verbatim}
-Premennú \emph{\$chart\_def} inicializujeme ešte v PHP, obsahuje definície velièín, ktorá sa majú zobrazi, tj. ku ktorım existujú dáta. Táto premenná obsahuje aj jednotky pre jednotlivé velièiny a poèet desatinnıch miest pri zobrazení. Riadok 6 zabezpeèí vloenie elementu \emph{<svg>} do HTML s fixnou vıškou a šírkou. O vykreslenie sa bude stara funkcia \emph{chart\_draw()}.
+Premennú \emph{\$chart\_def} inicializujeme ešte v PHP, obsahuje definície velièín, ktorá sa majú zobrazi, tj. ku ktorım existujú dáta. Táto premenná obsahuje aj jednotky pre jednotlivé velièiny a poèet desatinnıch miest pri zobrazení. Riadok 6 zabezpeèí vloenie elementu \emph{$<$svg$>$} do HTML s fixnou vıškou a šírkou. O vykreslenie sa bude stara funkcia \emph{chart\_draw()}.
 
 \begin{Verbatim}[baselinestretch=0.75]
 function chart_draw(chart_data){
@@ -844,104 +832,10 @@ Vykres¾ovanie osí grafu nebudeme rozvádza dopodrobna. Graf disponuje interaktiv
 \end{figure}
 
 \subsection{Porovnanie vısledkov}
-Záver tejto kapitoly venujeme porovnaniu odhadnutıch hodnôt s hodnotami, ktoré boli reálne zmerané meraèom vıkonu. Nako¾ko zriadenie PowerTap G3, ktoré sme pri práci pouívali nám vypovedalo slubu, neboli sme schopnı aproximáciu otestova v plnej miere tak ako sme plánovali. Vısledky, ktoré prezentujeme, sú na základe dát, získanıch v období september 2014 a máj 2015 tromi rôznymi športovcami a tromi rozdielnımi meraèmi vıkonu. Jedná sa o stúpania v rôznych nadmorskıch vıškach, od 0 do 1200 m n.m. v rôznych teplotnıch podmienkach, od 0 do 35°C a s rôznym priemernım sklonom, od 4 do 12\%. Porovnávame priemernı reálny a odhadnutı vıkon pre celé stúpanie. Taktie hodnoty vıkonu zaznamenané v danıch bodoch oproti aproximovanım hodnotám pre tieto body. V druhom prípade neporovnávame priamo momentovı vıkon ale trojsekundovı priemer v danom bode, ktorı je relevantnejšou referenènou vzorkou. U kadého športovca uvádzame aj ukáku grafu s porovnaním aproximovanej a reálnej hodnoty vo vybranom stúpaní.\\\\
-\textbf{Športovec è.1}\\
-Hmotnos: 72 kg\\
-Hmotnos bicykla: 8 kg\\
-Koeficient $C_dA$: 0.501\\
-Koeficient $C_{rr}$: 0.0042\\
-Meraè vıkonu: PowerTap G3, náboj zadného kolesa.\\
-
-\begin{table}[h]
-\begin{tabular}{cccccccc}
-\hline
-\textbf{Úsek} & \textbf{\begin{tabular}[c]{@{}c@{}}dåka\\ {[}m{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Reálny.\\priemernı\\vıkon\\ {[}W{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Predpoklad.\\priemernı\\vıkon\\ {[}W{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Odchılka\\ priemeru\end{tabular}} & 
-\textbf{\begin{tabular}[c]{@{}c@{}}Odchılka\\ hodnôt\end{tabular}} & \\ 
-\hline
-1. & 3019.43 & 243 & 241 & 1.91 (0.8\%) & 35.96 (14.8\%)\\ \hline
-2. & 10063.44 & 273 & 280 & 7.43 (2.7\%) & 37.83 (13.9\%)\\ \hline
-3. & 10167.5 & 275 & 280 & 4.87 (1.8\%) & 34.48 (12.5\%)\\ \hline
-4. & 5094.56 & 253 & 246 & 6.91 (2.7\%) & 35.08 (13.9\%)\\ \hline
-5. & 4074.6 & 247 & 242 & 4.28 (1.7\%) & 35.40 (14.4\%)\\ \hline
-\end{tabular}
-\caption{Športovec 1 - porovnanie aproximovanıch a reálnych hodnôt}
-\label{table:bikecalculator_table}
-\end{table}
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.5]{images/inhillz_cyclist1.png}
-\caption{Športovec 1 - porovnanie aproximovanıch a reálnych hodnôt}
-\end{figure}
-
-\noindent\textbf{Športovec è.2}\\
-Hmotnos: 66 kg\\
-Hmotnos bicykla: 8 kg\\
-Koeficient $C_dA$: 0.38\\
-Koeficient $C_{rr}$: 0.00343\\
-Meraè vıkonu: SRM PowerMeter, k¾uky stredového zloenia.\\
-
-\begin{table}[h]
-\begin{tabular}{cccccccc}
-\hline
-\textbf{Úsek} & \textbf{\begin{tabular}[c]{@{}c@{}}dåka\\ {[}m{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Reálny.\\priemernı\\vıkon\\ {[}W{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Predpoklad.\\priemernı\\vıkon\\ {[}W{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Odchılka\\ priemeru\end{tabular}} & 
-\textbf{\begin{tabular}[c]{@{}c@{}}Odchılka\\ hodnôt\end{tabular}} & \\ 
-\hline
-6. & 8059.88 & 245 & 241 & 3.97 (1.6\%) & 33.59 (13.7\%)\\ \hline
-7. & 3294.16 & 247 & 247 & 0.94 (0.4\%) & 35.06 (14.2\%)\\ \hline
-8. & 15980.4 & 263 & 275 & 11.64 (4.4\%) & 45.00 (17.1\%)\\ \hline
-9. & 6858.65 & 268 & 273 & 4.85 (1.8\%) & 35.88 (13.4\%)\\ \hline
-10. & 6535.84 & 206 & 216 & 9.10 (4.4\%) & 53.00 (25.7\%)\\ \hline
-\end{tabular}
-\caption{Športovec 2 - porovnanie aproximovanıch a reálnych hodnôt}
-\label{table:bikecalculator_table}
-\end{table}
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.5]{images/inhillz_cyclist2.png}
-\caption{Športovec 2 - porovnanie aproximovanıch a reálnych hodnôt}
-\end{figure}
-
-\noindent\textbf{Športovec è.3}\\
-Hmotnos: 69 kg\\
-Hmotnos bicykla: 7 kg\\
-Koeficient $C_dA$: 0.526\\
-Koeficient $C_{rr}$: 0.00303\\
-Meraè vıkonu: Stages for Shimano Dura-ace, ¾avá k¾uka.\\
-
-\begin{table}[h]
-\begin{tabular}{cccccccc}
-\hline
-\textbf{Úsek} & \textbf{\begin{tabular}[c]{@{}c@{}}dåka\\ {[}m{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Reálny.\\priemernı\\vıkon\\ {[}W{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Predpoklad.\\priemernı\\vıkon\\ {[}W{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Odchılka\\ priemeru\end{tabular}} & 
-\textbf{\begin{tabular}[c]{@{}c@{}}Odchılka\\ hodnôt\end{tabular}} & \\ 
-\hline
-11. & 4200.7 & 364 & 353 & 11.00 (3.0\%) & 35.11 (13.9\%)\\ \hline
-12. & 2103.0 & 364 & 356 & 8.0 (2.2\%) & 35.33 (14.3\%)\\ \hline
-13. & 1755.44 & 473 & 483 & 10.38 (2.2\%) & 33.57 (7.1\%)\\ \hline
-14. & 1265.32 & 433 & 420 & 13.08 (3.0\%) & 58.81 (13.6\%)\\ \hline
-15. & 1640.74 & 425 & 422 & 2.66 (0.6\%) & 99.41 (23.4\%)\\ \hline
-\end{tabular}
-\caption{Športovec 3 - porovnanie aproximovanıch a reálnych hodnôt}
-\label{table:bikecalculator_table}
-\end{table}
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.5]{images/inhillz_cyclist3.png}
-\caption{Športovec 3 - porovnanie aproximovanıch a reálnych hodnôt}
-\end{figure}
-
-Z uvedenıch porovnaní môeme konštatova, e implementovanı algoritmus dosahuje maximálnu odchılku 4.4\% no štandardne sa pohybuje od 0.5\% do 3.0\%. Takúto presnos povaujeme dostaèujúcu na to aby, pod¾a nej športovec mohol urèi intenzitu zaaenia. Ak sa pozrieme na porovnanie hodnôt v jednotlivıch bodoch, presnos u nie je tak vysoká. Priemerná odchılka sa pohybuje od 7\% do 25\%. Skôr, ne zhodnotíme tieto vısledky, pozrime sa na priebeh vıkonu v grafoch. U športovca 1 a 2 jasne vidie, ako priebeh aproximovaného vıkonu kopíruje priebeh reálneho vıkonu. Ak vieme vïaka vıpoètu zobrazi pribline rovnakı priebeh vıkonu a v priemere dosiahnú odchılku 0.5 a 3\%, môeme to povaova za dobré vısledky. Rozdiel v momentovıch hodnotách je spôsobenı nerovnomernım šliapaním do pedálov, môu ho spôsobova aj nerovnosti na vozovke, ktoré zanedbávame a mnostvo ïalších faktorov. 
-U športovca 3 sú hodnoty zmerané na pretekoch, kde dochádza k väèším vıkyvom v šliapaní a vidíme aj väèšie odchılky, ktoré môu by spôsobené jazdou v skupine.  
+Záver tejto kapitoly venujeme porovnaniu odhadnutıch hodnôt s hodnotami, ktoré boli reálne zmerané meraèom vıkonu. Vısledky, ktoré prezentujeme, sú na základe dát, získanıch v období september 2014 a máj 2016 tromi rôznymi športovcami a tromi rozdielnımi meraèmi vıkonu. Jedná sa o stúpania v rôznych nadmorskıch vıškach, od 0 do 1200 m n.m. v rôznych teplotnıch podmienkach, od 0 do 35°C a s rôznym priemernım sklonom, od 4 do 12\%. \\\\
 
 \newpage
 \section{Záver}
-Vısledkom našej práce je algoritmus, ktorı aproximuje vıkon cyklistu v k¾úèovıch stúpaniach z jeho pohybu na trase tréningu. Algoritmus pozostáva zo štyroch krokov: detekcia stúpaní, rozdelenie stúpaní na èiastkové segmenty, odhad koeficientov potrebnıch k vıpoètu, a samotného vıpoètu vıkonu.
-Algoritmus sme implementovali do webovej aplikácie, ktorá umoòuje nahranie súboru s údajmi o športovej aktivite a jej vyhodnotenie. Aplikácia podporuje formát súboru FIT, ktorı bene pouívajú zriadenia pracujúce s protokolom ANT+. \\
-\indent Je zrejmé, e presnı momentovı vıkon športovca z pozície, rıchlosti a zmeny nadmorskej vıšky nikdy presne urèi nebudeme vedie. Podstatou nášho algoritmu, je rozdelenie celého stúpania na menšie èasti s nemennım sklonom, tzv. segmenty. Pre tieto èasti následne vypoèítame vıkon, akoby ho športovec podával celı èas konštantnı. Vytıèenie segmentov v rámci stúpania sme sa snaili navhrnú tak, aby segmenty boli dostatoène dlhé. Body s miernou odchılkou v pozícii alebo nadmorskej vıške by  nemali vytvára takú odchılku vo vıpoète, ako sa domnievame, e tomu je na portále Strava. Na druhej strane sa však segmenty snaíme udra relatívne krátke, aby sme v nich mohli aspoò èiastoène zachyti náhle, nieko¾ko sekundové zmeny tempa. V skutoènosti teda nepredpovedáme momentovı vıkon ale nieko¾ko sekundovı priemernı vıkon. Myslíme si, e je to jediná monos ako z dostupnıch dát vıkon aproximova a po porovnaní reálnych a vypoèítanıch hodnôt na nieko¾kıch rôznych vzorkách a dosiahnutıch odchılkach sme sa v tomto názore utvrdili.\\
-\indent Cie¾om tejto práce nebolo konkurova existújúcim systémom v mnostve funkcionality. Cie¾om práce bolo umoni finanène dostupnı tréning, ktorı je riadenı pod¾a hodnôt vıkonu športovca. Takıto systém môe by vıhodnı pre menšie športové tímy, ktoré si nemôu dovoli zakúpenie zariadenia na meranie vıkonu pre kadého èlena, ale disponujú aspoò jednım takımto zariadením. Pri pouití našej aproximácie vıkonu by postaèilo poèiatoèné "nakalibrovanie" nieko¾kımi tréningami s meraèom vıkonu a v kadom ïalšom tréningu by bol vıkon odhadnutı. \\
-\indent Na záver práce nám u len ostáva skonštatova, e v tomto vıskume je stále priestor na doplnenie. Pri dostatoènom testovaní v rôznych podmienkach, ideálne však vo veternom tuneli by mohol by vytvorenı algoritmus pre aproximáciu vıkonu aj v rovinatıch èastiach tréningu, ktorı nám momentálne chıba. I keï práve stúpania sú k¾úèovım miestom, kde sa rozhodujú preteky, nemálo nároènıch tréningov a pretekov je situovanıch v rovinatom prostredí.
 
 \newpage
 \lhead{}%clear left side header, from this point to the end of the document
@@ -955,38 +849,38 @@ Algoritmus sme implementovali do webovej aplikácie, ktorá umoòuje nahranie súbo
   WILSON, D. G.: \emph{Bicycling Science}, 3. vydanie. Cambridge: The MIT Press, 2004. 485s. ISBN: 978-0262731546
   
   \bibitem{d3js}
-  MBOSTOCK: \emph{D3}. [cit. 20. 12. 2014]. Dostupné na World Wide Web: <https://github.com/mbostock/d3>
+  MBOSTOCK: \emph{D3}. [cit. 20. 12. 2014]. Dostupné na World Wide Web: $<$https://github.com/mbostock/d3$>$
   
   \bibitem{thisisant}
-  THIS IS ANT: \emph{Developer}. [cit. 20. 12. 2014]. Dostupné na World Wide Web: <http://www.thisisant.com/developer>
+  THIS IS ANT: \emph{Developer}. [cit. 20. 12. 2014]. Dostupné na World Wide Web: $<$http://www.thisisant.com/developer$>$
   
   \bibitem{encyklopedie_fyziky}
-  REICHL, J. - VŠETIÈKA, M.: \emph{Encyklopedie fyziky - Valivı odpor}. [cit. 25. 4. 2015]. Dostupné na World Wide Web: <http://fyzika.jreichl.com/main.article/view/37-valivy-odpor>
+  REICHL, J. - VŠETIÈKA, M.: \emph{Encyklopedie fyziky - Valivı odpor}. [cit. 25. 4. 2015]. Dostupné na World Wide Web: $<$http://fyzika.jreichl.com/main.article/view/37-valivy-odpor$>$
   
   \bibitem{obecna_fyzika}
   HALLIDAY, D. - RESNICK, R. - WALKER, J.: \emph{Fyzika: vysokoškolská uèebnice obecné fyziky}. Brno: Vysoké uèení technické, 2000. 1278s. ISBN 80-214-1868-0
   
   \bibitem{bootstrap}
-  BOOTSTRAP: \emph{Getting started}. [cit. 20. 12. 2014]. Dostupné na World Wide Web: <http://getbootstrap.com/getting-started/>
+  BOOTSTRAP: \emph{Getting started}. [cit. 20. 12. 2014]. Dostupné na World Wide Web: $<$http://getbootstrap.com/getting-started/$>$
   
   \bibitem{kontrolovany_trening}
   DÍVALD, L.: \emph{Kontrolovanı tréning}. Bratislava: Laurenc Dívald, 2009. 116s. ISBN 978-80-970358-1-5
   
   \bibitem{bikecalculator}
-  BIKECALCULATOR: \emph{How to use}. [cit. 10. 3. 2015]. Dostupné na World Wide Web: <http://bikecalculator.com/how.html>
+  BIKECALCULATOR: \emph{How to use}. [cit. 10. 3. 2015]. Dostupné na World Wide Web: $<$http://bikecalculator.com/how.html$>$
   
   \bibitem{physiology_of_sport}
   KENNEY, W. L. - WILMORE, J. H. - COSTILL, D. L.: \emph{Physiology of Sport and Exercise}, 5. vydanie. Champaign: Human Kinetics, 2011. 640s. ISBN: 860-1401254188 
     
   \bibitem{cyclingweekly_power}
-  CYCLING-WEEKLY: \emph{Power meters: Everything you need to know}. [cit. 15. 4. 2015]. Dostupné na World Wide Web: <http://www.cyclingweekly.co.uk/news/power-meters-everything-you-need-to-know-35563>
+  CYCLING-WEEKLY: \emph{Power meters: Everything you need to know}. [cit. 15. 4. 2015]. Dostupné na World Wide Web: $<$http://www.cyclingweekly.co.uk/news/power-meters-everything-you-need-to-know-35563$>$
   
   \bibitem{roller_data}
-  BIKETECH-REVIEW: \emph{Roller Data}. [cit. 25. 4. 2015]. Dostupné na World Wide Web: <http://www.biketechreview.com/tires/rolling-resistance/475-roller-data>
+  BIKETECH-REVIEW: \emph{Roller Data}. [cit. 25. 4. 2015]. Dostupné na World Wide Web: $<$http://www.biketechreview.com/tires/rolling-resistance/475-roller-data$>$
   
   \bibitem{schwalbe}
   SCHWALBE: \emph{Rolling Resistance}. [cit. 14. 4. 2015]. Dostupné na World Wide Web:
-  <http://www.schwalbetires.com/tech\_info/rolling\_resistance>
+  $<$http://www.schwalbetires.com/tech\_info/rolling\_resistance$>$
   
   \bibitem{standard_atmosphere}
   ISO 2533:1975 : \emph{Standard Atmosphere} - International Organization for Standardization
@@ -995,10 +889,13 @@ Algoritmus sme implementovali do webovej aplikácie, ktorá umoòuje nahranie súbo
   SAE J2452:1999 : \emph{Stepwise Coastdown Methodology for Measuring Tire Rolling Resistance} - Society of Automotive Engineers
   
   \bibitem{strava}
-  STRAVA: \emph{About}. [cit. 10. 3. 2015]. Dostupné na World Wide Web: <https://www.strava.com/about>
+  STRAVA: \emph{About}. [cit. 10. 3. 2015]. Dostupné na World Wide Web: $<$https://www.strava.com/about$>$
   
   \bibitem{drag_equation}
-  NASA: \emph{The Drag Equation}. [cit. 16. 4. 2015]. Dostupné na World Wide Web: <https://www.grc.nasa.gov/www/k-12/airplane/drageq.html>
+  NASA: \emph{The Drag Equation}. [cit. 16. 4. 2015]. Dostupné na World Wide Web: $<$https://www.grc.nasa.gov/www/k-12/airplane/drageq.html$>$
+  
+  \bibitem{cycling_power_lab}
+  CYCLING POWER LAB: \emph{Cycling Aerodynamics \& CdA - A Primer}. [cit. 20. 10. 2015]. Dostupné na World Wide Web: $<$http://www.cyclingpowerlab.com/CyclingAerodynamics.aspx$>$
   
 \end{thebibliography}
 

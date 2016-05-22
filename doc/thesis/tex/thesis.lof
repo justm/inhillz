@@ -2,24 +2,20 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces Porovnanie v\'ykonu a tepovej frekvencie pri z\'a\v ta\v zi}}{9}
 \contentsline {figure}{\numberline {2}{\ignorespaces Zjednodu\v sen\'a \v strukt\'ura FIT s\'uboru}}{12}
 \contentsline {figure}{\numberline {3}{\ignorespaces CSV s\'ubor po konverzii z FIT}}{12}
-\contentsline {figure}{\numberline {4}{\ignorespaces Strava - detail tr\'eningu}}{15}
-\contentsline {figure}{\numberline {5}{\ignorespaces Strava - Anal\'yza tr\'eningu}}{16}
-\contentsline {figure}{\numberline {6}{\ignorespaces Strava - Graf v\'ykonu}}{16}
-\contentsline {figure}{\numberline {7}{\ignorespaces Strava - Graf odhadnut\'eho v\'ykonu pod\v la GPS}}{17}
-\contentsline {figure}{\numberline {8}{\ignorespaces Strava - Graf odhadnut\'eho v\'ykonu pod\v la Assisted GPS}}{17}
-\contentsline {figure}{\numberline {9}{\ignorespaces Bike Calculator - Kalkula\v cka v\'ykonu cyklistu}}{18}
-\contentsline {figure}{\numberline {10}{\ignorespaces Teleso na naklonenej rovine}}{20}
-\contentsline {figure}{\numberline {11}{\ignorespaces Z\'avislos\v t potrebn\'eho v\'ykonu od nadmorskej v\'y\v sky}}{22}
-\contentsline {figure}{\numberline {12}{\ignorespaces Z\'avislos\v t potrebn\'eho v\'ykonu od teploty vzduchu}}{23}
-\contentsline {figure}{\numberline {13}{\ignorespaces Valiv\'y odpor \cite {encyklopedie_fyziky}}}{24}
-\contentsline {figure}{\numberline {14}{\ignorespaces Z\'avislos\v t potrebn\'eho v\'ykonu od koeficientu odporu pneumatiky}}{25}
-\contentsline {figure}{\numberline {15}{\ignorespaces Podiel silov\'ych zlo\v ziek v z\'avislosti od st\'upaj\'uceho sklonu vozovky}}{26}
-\contentsline {figure}{\numberline {16}{\ignorespaces Architekt\'ura webovej aplik\'acie}}{28}
-\contentsline {figure}{\numberline {17}{\ignorespaces Diagram pr\IeC {\'\i }padov pou\v zitia}}{30}
-\contentsline {figure}{\numberline {18}{\ignorespaces Diagram aktiv\IeC {\'\i }t}}{31}
-\contentsline {figure}{\numberline {19}{\ignorespaces Detekcia segmentu}}{36}
-\contentsline {figure}{\numberline {20}{\ignorespaces Zobrazenie mapy v detailnom n\'ah\v lade tr\'eningu}}{39}
-\contentsline {figure}{\numberline {21}{\ignorespaces Zv\'yraznenie v\'yberu pred pribl\IeC {\'\i }\v zen\IeC {\'\i }m konkr\'etnej \v casti tr\'eningu}}{41}
-\contentsline {figure}{\numberline {22}{\ignorespaces \v Sportovec 1 - porovnanie aproximovan\'ych a re\'alnych hodn\^ot}}{43}
-\contentsline {figure}{\numberline {23}{\ignorespaces \v Sportovec 2 - porovnanie aproximovan\'ych a re\'alnych hodn\^ot}}{44}
-\contentsline {figure}{\numberline {24}{\ignorespaces \v Sportovec 3 - porovnanie aproximovan\'ych a re\'alnych hodn\^ot}}{45}
+\contentsline {figure}{\numberline {4}{\ignorespaces Strava - Anal\'yza tr\'eningu}}{15}
+\contentsline {figure}{\numberline {5}{\ignorespaces Strava - Graf v\'ykonu}}{16}
+\contentsline {figure}{\numberline {6}{\ignorespaces Strava - Graf odhadnut\'eho v\'ykonu pod\v la GPS}}{16}
+\contentsline {figure}{\numberline {7}{\ignorespaces Strava - Graf odhadnut\'eho v\'ykonu pod\v la Assisted GPS}}{16}
+\contentsline {figure}{\numberline {8}{\ignorespaces Bike Calculator - Kalkula\v cka v\'ykonu cyklistu}}{17}
+\contentsline {figure}{\numberline {9}{\ignorespaces Teleso na naklonenej rovine}}{19}
+\contentsline {figure}{\numberline {10}{\ignorespaces Z\'avislos\v t potrebn\'eho v\'ykonu od nadmorskej v\'y\v sky}}{22}
+\contentsline {figure}{\numberline {11}{\ignorespaces Z\'avislos\v t potrebn\'eho v\'ykonu od teploty vzduchu}}{22}
+\contentsline {figure}{\numberline {12}{\ignorespaces Valiv\'y odpor \cite {encyklopedie_fyziky}}}{23}
+\contentsline {figure}{\numberline {13}{\ignorespaces Z\'avislos\v t potrebn\'eho v\'ykonu od koeficientu odporu pneumatiky}}{24}
+\contentsline {figure}{\numberline {14}{\ignorespaces Podiel silov\'ych zlo\v ziek v z\'avislosti od st\'upaj\'uceho sklonu vozovky}}{25}
+\contentsline {figure}{\numberline {15}{\ignorespaces Architekt\'ura webovej aplik\'acie}}{27}
+\contentsline {figure}{\numberline {16}{\ignorespaces Diagram pr\IeC {\'\i }padov pou\v zitia}}{29}
+\contentsline {figure}{\numberline {17}{\ignorespaces Diagram aktiv\IeC {\'\i }t}}{30}
+\contentsline {figure}{\numberline {18}{\ignorespaces Detekcia segmentu}}{35}
+\contentsline {figure}{\numberline {19}{\ignorespaces Zobrazenie mapy v detailnom n\'ah\v lade tr\'eningu}}{38}
+\contentsline {figure}{\numberline {20}{\ignorespaces Zv\'yraznenie v\'yberu pred pribl\IeC {\'\i }\v zen\IeC {\'\i }m konkr\'etnej \v casti tr\'eningu}}{40}
