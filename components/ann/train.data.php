@@ -9,8 +9,7 @@ array (
       'altitude' => 58.399999999999977,
       'temperature' => 13,
       'speed' => 6.8699999999999344,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -25,8 +24,7 @@ array (
       'altitude' => 68.600000000000023,
       'temperature' => 13,
       'speed' => 6.9300000000000539,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -41,8 +39,7 @@ array (
       'altitude' => 78.799999999999955,
       'temperature' => 13,
       'speed' => 6.8461904761904968,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -57,8 +54,7 @@ array (
       'altitude' => 88.399999999999977,
       'temperature' => 14,
       'speed' => 6.8374999999999613,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -73,8 +69,7 @@ array (
       'altitude' => 101.39999999999998,
       'temperature' => 14,
       'speed' => 7.0433333333333268,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -89,8 +84,7 @@ array (
       'altitude' => 111.20000000000005,
       'temperature' => 14,
       'speed' => 6.995909090909084,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -105,8 +99,7 @@ array (
       'altitude' => 122.20000000000005,
       'temperature' => 14,
       'speed' => 6.7790909090909652,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -121,8 +114,7 @@ array (
       'altitude' => 131.79999999999995,
       'temperature' => 14,
       'speed' => 6.5371428571428014,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -137,8 +129,7 @@ array (
       'altitude' => 140.20000000000005,
       'temperature' => 14,
       'speed' => 6.4404347826087402,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -153,8 +144,7 @@ array (
       'altitude' => 150,
       'temperature' => 14,
       'speed' => 7.0999999999999304,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -169,8 +159,7 @@ array (
       'altitude' => 157.60000000000002,
       'temperature' => 14,
       'speed' => 7.1445161290323025,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -185,8 +174,7 @@ array (
       'altitude' => 43.600000000000023,
       'temperature' => 14,
       'speed' => 5.3713043478258085,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -201,8 +189,7 @@ array (
       'altitude' => 52.200000000000045,
       'temperature' => 14,
       'speed' => 5.5264000000001401,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -217,8 +204,7 @@ array (
       'altitude' => 62,
       'temperature' => 14,
       'speed' => 6.1599999999995747,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -233,8 +219,7 @@ array (
       'altitude' => 70.600000000000023,
       'temperature' => 14,
       'speed' => 6.4586206896552731,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -249,8 +234,7 @@ array (
       'altitude' => 82,
       'temperature' => 14,
       'speed' => 6.2436363636363899,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -265,8 +249,7 @@ array (
       'altitude' => 92.399999999999977,
       'temperature' => 14,
       'speed' => 5.986086956522068,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -281,8 +264,7 @@ array (
       'altitude' => 101.20000000000005,
       'temperature' => 14,
       'speed' => 6.637500000000121,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -297,8 +279,7 @@ array (
       'altitude' => 61.399999999999977,
       'temperature' => 14,
       'speed' => 8.9490909090911206,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -313,8 +294,7 @@ array (
       'altitude' => 73.799999999999955,
       'temperature' => 14,
       'speed' => 7.474193548387003,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -329,8 +309,7 @@ array (
       'altitude' => 86,
       'temperature' => 14,
       'speed' => 7.2840000000002325,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -345,8 +324,7 @@ array (
       'altitude' => 165.39999999999998,
       'temperature' => 14,
       'speed' => 7.9361904761906423,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -361,8 +339,7 @@ array (
       'altitude' => 176.20000000000005,
       'temperature' => 14,
       'speed' => 6.2223999999999071,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -377,8 +354,7 @@ array (
       'altitude' => 188.60000000000002,
       'temperature' => 14,
       'speed' => 6.0234782608692869,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -393,8 +369,7 @@ array (
       'altitude' => 200.60000000000002,
       'temperature' => 14,
       'speed' => 6.4041666666671517,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -409,8 +384,7 @@ array (
       'altitude' => 211.60000000000002,
       'temperature' => 14,
       'speed' => 6.6191304347822042,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -425,8 +399,7 @@ array (
       'altitude' => 222,
       'temperature' => 14,
       'speed' => 6.4809090909091704,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -441,8 +414,7 @@ array (
       'altitude' => 232.20000000000005,
       'temperature' => 14,
       'speed' => 6.7925000000001701,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -457,8 +429,7 @@ array (
       'altitude' => 242.39999999999998,
       'temperature' => 14,
       'speed' => 7.6678260869565467,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -473,8 +444,7 @@ array (
       'altitude' => 115.60000000000002,
       'temperature' => 13,
       'speed' => 6.1285714285719832,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -489,8 +459,7 @@ array (
       'altitude' => 125.39999999999998,
       'temperature' => 13,
       'speed' => 5.9247619047625149,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -505,8 +474,7 @@ array (
       'altitude' => 135.20000000000005,
       'temperature' => 13,
       'speed' => 5.6654545454538576,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -521,8 +489,7 @@ array (
       'altitude' => 146,
       'temperature' => 13,
       'speed' => 6.1095652173908492,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -537,8 +504,7 @@ array (
       'altitude' => 156.20000000000005,
       'temperature' => 13,
       'speed' => 6.0773913043477759,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -553,8 +519,7 @@ array (
       'altitude' => 178.39999999999998,
       'temperature' => 13,
       'speed' => 6.3127272727274848,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -569,8 +534,7 @@ array (
       'altitude' => 190.20000000000005,
       'temperature' => 13,
       'speed' => 7.3466666666664731,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -585,8 +549,7 @@ array (
       'altitude' => 204.20000000000005,
       'temperature' => 13,
       'speed' => 7.4275000000003883,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 70,
+      'weight' => 77.700000000000003,
     ),
     'outputs' => 
     array (
@@ -601,8 +564,7 @@ array (
       'altitude' => 209,
       'temperature' => 24,
       'speed' => 6.4586206896552731,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -617,8 +579,7 @@ array (
       'altitude' => 210.20000000000005,
       'temperature' => 24,
       'speed' => 6.2436363636363899,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -633,8 +594,7 @@ array (
       'altitude' => 213.20000000000005,
       'temperature' => 24,
       'speed' => 5.986086956522068,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -649,8 +609,7 @@ array (
       'altitude' => 217.39999999999998,
       'temperature' => 24,
       'speed' => 6.637500000000121,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -665,8 +624,7 @@ array (
       'altitude' => 185.79999999999995,
       'temperature' => 21,
       'speed' => 7.2840000000002325,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -681,8 +639,7 @@ array (
       'altitude' => 211.39999999999998,
       'temperature' => 23,
       'speed' => 10.444444444444445,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -697,8 +654,7 @@ array (
       'altitude' => 210.20000000000005,
       'temperature' => 23,
       'speed' => 7.9361904761906423,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -713,8 +669,7 @@ array (
       'altitude' => 207.39999999999998,
       'temperature' => 23,
       'speed' => 6.2223999999999071,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -729,8 +684,7 @@ array (
       'altitude' => 211.60000000000002,
       'temperature' => 23,
       'speed' => 6.0234782608692869,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -745,8 +699,7 @@ array (
       'altitude' => 211.60000000000002,
       'temperature' => 23,
       'speed' => 6.4041666666671517,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -761,8 +714,7 @@ array (
       'altitude' => 198.20000000000005,
       'temperature' => 23,
       'speed' => 7.6678260869565467,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -777,8 +729,7 @@ array (
       'altitude' => 495.39999999999998,
       'temperature' => 20,
       'speed' => 6.1285714285719832,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -793,8 +744,7 @@ array (
       'altitude' => 499,
       'temperature' => 20,
       'speed' => 5.9247619047625149,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -809,8 +759,7 @@ array (
       'altitude' => 505.60000000000002,
       'temperature' => 20,
       'speed' => 5.6654545454538576,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -825,8 +774,7 @@ array (
       'altitude' => 510,
       'temperature' => 20,
       'speed' => 6.1095652173908492,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -841,8 +789,7 @@ array (
       'altitude' => 514.60000000000002,
       'temperature' => 20,
       'speed' => 6.0773913043477759,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -857,8 +804,7 @@ array (
       'altitude' => 258.20000000000005,
       'temperature' => 24,
       'speed' => 8.2980952380949891,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -873,8 +819,7 @@ array (
       'altitude' => 260.39999999999998,
       'temperature' => 24,
       'speed' => 9.1536585365854375,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -889,8 +834,7 @@ array (
       'altitude' => 264.79999999999995,
       'temperature' => 24,
       'speed' => 9.8000000000002654,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -905,8 +849,7 @@ array (
       'altitude' => 267.39999999999998,
       'temperature' => 24,
       'speed' => 9.7176923076918822,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -921,8 +864,7 @@ array (
       'altitude' => 274,
       'temperature' => 24,
       'speed' => 9.188235294117904,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -937,8 +879,7 @@ array (
       'altitude' => 282.79999999999995,
       'temperature' => 25,
       'speed' => 8.5449999999998134,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -953,8 +894,7 @@ array (
       'altitude' => 291.39999999999998,
       'temperature' => 25,
       'speed' => 7.194400000000023,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -969,8 +909,7 @@ array (
       'altitude' => 300.39999999999998,
       'temperature' => 25,
       'speed' => 6.6790909090910153,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -985,8 +924,7 @@ array (
       'altitude' => 308.39999999999998,
       'temperature' => 25,
       'speed' => 6.2047619047620435,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1001,8 +939,7 @@ array (
       'altitude' => 314.79999999999995,
       'temperature' => 25,
       'speed' => 3.9895652173910765,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1017,8 +954,7 @@ array (
       'altitude' => 320.39999999999998,
       'temperature' => 25,
       'speed' => 4.4539393939392706,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1033,8 +969,7 @@ array (
       'altitude' => 327,
       'temperature' => 24,
       'speed' => 4.7504761904766344,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1049,8 +984,7 @@ array (
       'altitude' => 331.60000000000002,
       'temperature' => 24,
       'speed' => 5.0780952380952105,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1065,8 +999,7 @@ array (
       'altitude' => 337.60000000000002,
       'temperature' => 24,
       'speed' => 4.5690909090904333,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1081,8 +1014,7 @@ array (
       'altitude' => 344.39999999999998,
       'temperature' => 24,
       'speed' => 4.4400000000002491,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1097,8 +1029,7 @@ array (
       'altitude' => 349.20000000000005,
       'temperature' => 24,
       'speed' => 4.9483333333331148,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1113,8 +1044,7 @@ array (
       'altitude' => 356,
       'temperature' => 24,
       'speed' => 4.2933333333335,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1129,8 +1059,7 @@ array (
       'altitude' => 360,
       'temperature' => 24,
       'speed' => 5.502666666666725,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1145,8 +1074,7 @@ array (
       'altitude' => 364.39999999999998,
       'temperature' => 24,
       'speed' => 5.9373913043477247,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1161,8 +1089,7 @@ array (
       'altitude' => 370.79999999999995,
       'temperature' => 23,
       'speed' => 5.0328000000002797,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1177,8 +1104,7 @@ array (
       'altitude' => 375.20000000000005,
       'temperature' => 23,
       'speed' => 5.5483333333334786,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1193,8 +1119,7 @@ array (
       'altitude' => 379.39999999999998,
       'temperature' => 23,
       'speed' => 5.8031249999999091,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1209,8 +1134,7 @@ array (
       'altitude' => 385,
       'temperature' => 23,
       'speed' => 5.0222222222218988,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1225,8 +1149,7 @@ array (
       'altitude' => 392.20000000000005,
       'temperature' => 23,
       'speed' => 4.9485714285713458,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1241,8 +1164,7 @@ array (
       'altitude' => 397.39999999999998,
       'temperature' => 23,
       'speed' => 4.1990909090911206,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1257,8 +1179,7 @@ array (
       'altitude' => 400,
       'temperature' => 22,
       'speed' => 4.1072727272727541,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1273,8 +1194,7 @@ array (
       'altitude' => 406.60000000000002,
       'temperature' => 22,
       'speed' => 4.9628571428571986,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1289,8 +1209,7 @@ array (
       'altitude' => 415,
       'temperature' => 22,
       'speed' => 4.6104347826084169,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1305,8 +1224,7 @@ array (
       'altitude' => 420.60000000000002,
       'temperature' => 22,
       'speed' => 5.4834782608699957,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1321,8 +1239,7 @@ array (
       'altitude' => 425.79999999999995,
       'temperature' => 22,
       'speed' => 4.2790476190476472,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1337,8 +1254,7 @@ array (
       'altitude' => 430.79999999999995,
       'temperature' => 22,
       'speed' => 4.8323809523807579,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1353,8 +1269,7 @@ array (
       'altitude' => 434.39999999999998,
       'temperature' => 22,
       'speed' => 4.259230769230971,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1369,8 +1284,7 @@ array (
       'altitude' => 439.79999999999995,
       'temperature' => 22,
       'speed' => 4.7527272727271672,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1385,8 +1299,7 @@ array (
       'altitude' => 446,
       'temperature' => 22,
       'speed' => 4.883809523809413,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1401,8 +1314,7 @@ array (
       'altitude' => 452.39999999999998,
       'temperature' => 22,
       'speed' => 4.0608000000001629,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1417,8 +1329,7 @@ array (
       'altitude' => 457.39999999999998,
       'temperature' => 22,
       'speed' => 5.1018181818177588,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1433,8 +1344,7 @@ array (
       'altitude' => 461.60000000000002,
       'temperature' => 21,
       'speed' => 4.7257142857145356,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1449,8 +1359,7 @@ array (
       'altitude' => 466,
       'temperature' => 21,
       'speed' => 5.6390476190475356,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1465,8 +1374,7 @@ array (
       'altitude' => 471.60000000000002,
       'temperature' => 21,
       'speed' => 5.2127272727276166,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1481,8 +1389,7 @@ array (
       'altitude' => 476.60000000000002,
       'temperature' => 21,
       'speed' => 4.3166666666663032,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1497,8 +1404,7 @@ array (
       'altitude' => 483.39999999999998,
       'temperature' => 21,
       'speed' => 2.1104761904765232,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1513,8 +1419,7 @@ array (
       'altitude' => 486,
       'temperature' => 21,
       'speed' => 3.6666666666666665,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1529,8 +1434,7 @@ array (
       'altitude' => 490,
       'temperature' => 21,
       'speed' => 5.4144000000000236,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1545,8 +1449,7 @@ array (
       'altitude' => 498,
       'temperature' => 20,
       'speed' => 5.9276190476188537,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1561,8 +1464,7 @@ array (
       'altitude' => 500.79999999999995,
       'temperature' => 20,
       'speed' => 4.0752000000001862,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1577,8 +1479,7 @@ array (
       'altitude' => 507.79999999999995,
       'temperature' => 20,
       'speed' => 5.0942857142855207,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1593,8 +1494,7 @@ array (
       'altitude' => 511.79999999999995,
       'temperature' => 20,
       'speed' => 5.5463636363638216,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1609,8 +1509,7 @@ array (
       'altitude' => 516.60000000000002,
       'temperature' => 20,
       'speed' => 5.8016666666662786,
-      'bike_weight' => 8,
-      'athlete_weight' => 60,
+      'weight' => 68,
     ),
     'outputs' => 
     array (
@@ -1625,8 +1524,7 @@ array (
       'altitude' => 702.20000000000005,
       'temperature' => 22,
       'speed' => 6.8699999999999344,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -1641,8 +1539,7 @@ array (
       'altitude' => 704.40000000000009,
       'temperature' => 22,
       'speed' => 6.9300000000000539,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -1657,8 +1554,7 @@ array (
       'altitude' => 704.40000000000009,
       'temperature' => 22,
       'speed' => 6.8461904761904968,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -1673,8 +1569,7 @@ array (
       'altitude' => 706.79999999999995,
       'temperature' => 22,
       'speed' => 6.8374999999999613,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -1689,8 +1584,7 @@ array (
       'altitude' => 708.79999999999995,
       'temperature' => 22,
       'speed' => 7.0433333333333268,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -1705,8 +1599,7 @@ array (
       'altitude' => 711,
       'temperature' => 22,
       'speed' => 6.995909090909084,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -1721,8 +1614,7 @@ array (
       'altitude' => 711,
       'temperature' => 22,
       'speed' => 6.7790909090909652,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -1737,8 +1629,7 @@ array (
       'altitude' => 713.20000000000005,
       'temperature' => 22,
       'speed' => 6.5371428571428014,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -1753,8 +1644,7 @@ array (
       'altitude' => 713.20000000000005,
       'temperature' => 22,
       'speed' => 6.4404347826087402,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -1769,8 +1659,7 @@ array (
       'altitude' => 717,
       'temperature' => 22,
       'speed' => 7.0999999999999304,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -1785,8 +1674,7 @@ array (
       'altitude' => 937.40000000000009,
       'temperature' => 20,
       'speed' => 7.474193548387003,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -1801,8 +1689,7 @@ array (
       'altitude' => 922.20000000000005,
       'temperature' => 20,
       'speed' => 7.2840000000002325,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -1817,8 +1704,7 @@ array (
       'altitude' => 657.59999999999991,
       'temperature' => 26,
       'speed' => 6.1285714285719832,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -1833,8 +1719,7 @@ array (
       'altitude' => 657.59999999999991,
       'temperature' => 26,
       'speed' => 5.9247619047625149,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -1849,8 +1734,7 @@ array (
       'altitude' => 656,
       'temperature' => 26,
       'speed' => 5.6654545454538576,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -1865,8 +1749,7 @@ array (
       'altitude' => 655.59999999999991,
       'temperature' => 26,
       'speed' => 6.1095652173908492,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -1881,8 +1764,7 @@ array (
       'altitude' => 653.59999999999991,
       'temperature' => 26,
       'speed' => 6.0773913043477759,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -1897,8 +1779,7 @@ array (
       'altitude' => 651.59999999999991,
       'temperature' => 25,
       'speed' => 6.3127272727274848,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -1913,8 +1794,7 @@ array (
       'altitude' => 651.59999999999991,
       'temperature' => 25,
       'speed' => 7.3466666666664731,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -1929,8 +1809,7 @@ array (
       'altitude' => 655.79999999999995,
       'temperature' => 26,
       'speed' => 7.4275000000003883,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -1945,8 +1824,7 @@ array (
       'altitude' => 880.59999999999991,
       'temperature' => 24,
       'speed' => 8.2980952380949891,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -1961,8 +1839,7 @@ array (
       'altitude' => 861.59999999999991,
       'temperature' => 24,
       'speed' => 9.1536585365854375,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -1977,8 +1854,7 @@ array (
       'altitude' => 825.20000000000005,
       'temperature' => 24,
       'speed' => 9.8000000000002654,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -1993,8 +1869,7 @@ array (
       'altitude' => 814,
       'temperature' => 24,
       'speed' => 10.106399999999558,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2009,8 +1884,7 @@ array (
       'altitude' => 804.20000000000005,
       'temperature' => 24,
       'speed' => 9.188235294117904,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2025,8 +1899,7 @@ array (
       'altitude' => 805.40000000000009,
       'temperature' => 24,
       'speed' => 8.5449999999998134,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2041,8 +1914,7 @@ array (
       'altitude' => 794.20000000000005,
       'temperature' => 25,
       'speed' => 6.6790909090910153,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2057,8 +1929,7 @@ array (
       'altitude' => 779.40000000000009,
       'temperature' => 25,
       'speed' => 6.2047619047620435,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2073,8 +1944,7 @@ array (
       'altitude' => 766.40000000000009,
       'temperature' => 25,
       'speed' => 3.9895652173910765,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2089,8 +1959,7 @@ array (
       'altitude' => 749.40000000000009,
       'temperature' => 25,
       'speed' => 4.4539393939392706,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2105,8 +1974,7 @@ array (
       'altitude' => 719,
       'temperature' => 25,
       'speed' => 4.5345454545458779,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2121,8 +1989,7 @@ array (
       'altitude' => 699.59999999999991,
       'temperature' => 25,
       'speed' => 5.0780952380952105,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2137,8 +2004,7 @@ array (
       'altitude' => 690,
       'temperature' => 25,
       'speed' => 4.5690909090904333,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2153,8 +2019,7 @@ array (
       'altitude' => 685.20000000000005,
       'temperature' => 25,
       'speed' => 4.4400000000002491,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2169,8 +2034,7 @@ array (
       'altitude' => 685.20000000000005,
       'temperature' => 25,
       'speed' => 4.3985185185183244,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2185,8 +2049,7 @@ array (
       'altitude' => 683,
       'temperature' => 26,
       'speed' => 4.2933333333335,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2201,8 +2064,7 @@ array (
       'altitude' => 683,
       'temperature' => 26,
       'speed' => 5.502666666666725,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2217,8 +2079,7 @@ array (
       'altitude' => 681,
       'temperature' => 26,
       'speed' => 5.9373913043477247,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2233,8 +2094,7 @@ array (
       'altitude' => 681,
       'temperature' => 26,
       'speed' => 5.0328000000002797,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2249,8 +2109,7 @@ array (
       'altitude' => 678.59999999999991,
       'temperature' => 26,
       'speed' => 5.5483333333334786,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2265,8 +2124,7 @@ array (
       'altitude' => 676.40000000000009,
       'temperature' => 26,
       'speed' => 6.4034482758619689,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2281,8 +2139,7 @@ array (
       'altitude' => 672.40000000000009,
       'temperature' => 26,
       'speed' => 5.0222222222218988,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2297,8 +2154,7 @@ array (
       'altitude' => 670.20000000000005,
       'temperature' => 26,
       'speed' => 4.9485714285713458,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2313,8 +2169,7 @@ array (
       'altitude' => 668.20000000000005,
       'temperature' => 26,
       'speed' => 4.1990909090911206,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2329,8 +2184,7 @@ array (
       'altitude' => 668.20000000000005,
       'temperature' => 26,
       'speed' => 4.1072727272727541,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2345,8 +2199,7 @@ array (
       'altitude' => 668.20000000000005,
       'temperature' => 26,
       'speed' => 4.9628571428571986,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2361,8 +2214,7 @@ array (
       'altitude' => 665.79999999999995,
       'temperature' => 26,
       'speed' => 4.6104347826084169,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2377,8 +2229,7 @@ array (
       'altitude' => 665.40000000000009,
       'temperature' => 26,
       'speed' => 5.4834782608699957,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2393,8 +2244,7 @@ array (
       'altitude' => 659.59999999999991,
       'temperature' => 26,
       'speed' => 4.2790476190476472,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2409,8 +2259,7 @@ array (
       'altitude' => 659.59999999999991,
       'temperature' => 26,
       'speed' => 4.8323809523807579,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2425,8 +2274,7 @@ array (
       'altitude' => 657.40000000000009,
       'temperature' => 26,
       'speed' => 4.259230769230971,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2441,8 +2289,7 @@ array (
       'altitude' => 657.40000000000009,
       'temperature' => 26,
       'speed' => 4.7527272727271672,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2457,8 +2304,7 @@ array (
       'altitude' => 661.40000000000009,
       'temperature' => 26,
       'speed' => 4.883809523809413,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2473,8 +2319,7 @@ array (
       'altitude' => 664.59999999999991,
       'temperature' => 26,
       'speed' => 4.0608000000001629,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2489,8 +2334,7 @@ array (
       'altitude' => 668.40000000000009,
       'temperature' => 26,
       'speed' => 5.1018181818177588,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2505,8 +2349,7 @@ array (
       'altitude' => 668.40000000000009,
       'temperature' => 26,
       'speed' => 4.7257142857145356,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2521,8 +2364,7 @@ array (
       'altitude' => 659.59999999999991,
       'temperature' => 26,
       'speed' => 2.2936000000001515,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2537,8 +2379,7 @@ array (
       'altitude' => 657.40000000000009,
       'temperature' => 26,
       'speed' => 4.3166666666663032,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2553,8 +2394,7 @@ array (
       'altitude' => 655.40000000000009,
       'temperature' => 26,
       'speed' => 2.1104761904765232,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2569,8 +2409,7 @@ array (
       'altitude' => 655.40000000000009,
       'temperature' => 26,
       'speed' => 3.6666666666666665,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2585,8 +2424,7 @@ array (
       'altitude' => 655.40000000000009,
       'temperature' => 26,
       'speed' => 5.4144000000000236,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2601,8 +2439,7 @@ array (
       'altitude' => 657.59999999999991,
       'temperature' => 26,
       'speed' => 5.9276190476188537,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2617,8 +2454,7 @@ array (
       'altitude' => 657.59999999999991,
       'temperature' => 26,
       'speed' => 4.0752000000001862,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2633,8 +2469,7 @@ array (
       'altitude' => 655.59999999999991,
       'temperature' => 26,
       'speed' => 5.0942857142855207,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2649,8 +2484,7 @@ array (
       'altitude' => 653.59999999999991,
       'temperature' => 26,
       'speed' => 5.5463636363638216,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2665,8 +2499,7 @@ array (
       'altitude' => 653.59999999999991,
       'temperature' => 25,
       'speed' => 5.8016666666662786,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2681,8 +2514,7 @@ array (
       'altitude' => 732.79999999999995,
       'temperature' => 23,
       'speed' => 6.5231818181815804,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2697,8 +2529,7 @@ array (
       'altitude' => 735.20000000000005,
       'temperature' => 23,
       'speed' => 7.4270000000001648,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2713,8 +2544,7 @@ array (
       'altitude' => 735.59999999999991,
       'temperature' => 23,
       'speed' => 5.9565217391304346,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2729,8 +2559,7 @@ array (
       'altitude' => 742,
       'temperature' => 23,
       'speed' => 5.9627272727272862,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2745,8 +2574,7 @@ array (
       'altitude' => 745.40000000000009,
       'temperature' => 23,
       'speed' => 7.9279687499999909,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2761,8 +2589,7 @@ array (
       'altitude' => 748.40000000000009,
       'temperature' => 23,
       'speed' => 7.3919999999998254,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2777,8 +2604,7 @@ array (
       'altitude' => 752.40000000000009,
       'temperature' => 23,
       'speed' => 7.094800000000105,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2793,8 +2619,7 @@ array (
       'altitude' => 757,
       'temperature' => 23,
       'speed' => 6.863809523809496,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2809,8 +2634,7 @@ array (
       'altitude' => 761.40000000000009,
       'temperature' => 23,
       'speed' => 8.0741999999999834,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2825,8 +2649,7 @@ array (
       'altitude' => 764,
       'temperature' => 23,
       'speed' => 7.6886363636364301,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2841,8 +2664,7 @@ array (
       'altitude' => 768,
       'temperature' => 23,
       'speed' => 7.03961538461534,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2857,8 +2679,7 @@ array (
       'altitude' => 772.20000000000005,
       'temperature' => 23,
       'speed' => 6.9600000000001661,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2873,8 +2694,7 @@ array (
       'altitude' => 776.40000000000009,
       'temperature' => 23,
       'speed' => 7.2180952380949748,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2889,8 +2709,7 @@ array (
       'altitude' => 778.59999999999991,
       'temperature' => 23,
       'speed' => 6.9244000000000234,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2905,8 +2724,7 @@ array (
       'altitude' => 782.79999999999995,
       'temperature' => 23,
       'speed' => 6.7561538461539801,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2921,8 +2739,7 @@ array (
       'altitude' => 786.79999999999995,
       'temperature' => 23,
       'speed' => 6.9957692307692083,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2937,8 +2754,7 @@ array (
       'altitude' => 791.20000000000005,
       'temperature' => 23,
       'speed' => 7.1143478260868429,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2953,8 +2769,7 @@ array (
       'altitude' => 795.20000000000005,
       'temperature' => 23,
       'speed' => 7.1709523809525608,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2969,8 +2784,7 @@ array (
       'altitude' => 799.20000000000005,
       'temperature' => 23,
       'speed' => 7.1419047619045681,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -2985,8 +2799,7 @@ array (
       'altitude' => 801.59999999999991,
       'temperature' => 23,
       'speed' => 7.3576923076924192,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3001,8 +2814,7 @@ array (
       'altitude' => 804,
       'temperature' => 23,
       'speed' => 7.0305882352941431,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3017,8 +2829,7 @@ array (
       'altitude' => 810,
       'temperature' => 23,
       'speed' => 6.4060869565215874,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3033,8 +2844,7 @@ array (
       'altitude' => 814.40000000000009,
       'temperature' => 23,
       'speed' => 6.1229166666668489,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3049,8 +2859,7 @@ array (
       'altitude' => 818.79999999999995,
       'temperature' => 23,
       'speed' => 6.1423809523808552,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3065,8 +2874,7 @@ array (
       'altitude' => 823.59999999999991,
       'temperature' => 23,
       'speed' => 6.2090476190475909,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3081,8 +2889,7 @@ array (
       'altitude' => 825.79999999999995,
       'temperature' => 23,
       'speed' => 6.6164000000001399,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3097,8 +2904,7 @@ array (
       'altitude' => 830.40000000000009,
       'temperature' => 23,
       'speed' => 6.6009523809521591,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3113,8 +2919,7 @@ array (
       'altitude' => 834.59999999999991,
       'temperature' => 23,
       'speed' => 6.4566666666668464,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3129,8 +2934,7 @@ array (
       'altitude' => 837,
       'temperature' => 23,
       'speed' => 5.9818181818181158,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3145,8 +2949,7 @@ array (
       'altitude' => 839.59999999999991,
       'temperature' => 23,
       'speed' => 6.4342857142858394,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3161,8 +2964,7 @@ array (
       'altitude' => 843.40000000000009,
       'temperature' => 23,
       'speed' => 8.9665048543689245,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3177,8 +2979,7 @@ array (
       'altitude' => 844,
       'temperature' => 23,
       'speed' => 6.5243478260868555,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3193,8 +2994,7 @@ array (
       'altitude' => 852,
       'temperature' => 23,
       'speed' => 1.7752564102564252,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3209,8 +3009,7 @@ array (
       'altitude' => 878,
       'temperature' => 23,
       'speed' => 7.3986956521738367,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3225,8 +3024,7 @@ array (
       'altitude' => 887.20000000000005,
       'temperature' => 23,
       'speed' => 7.4661904761905173,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3241,8 +3039,7 @@ array (
       'altitude' => 895,
       'temperature' => 23,
       'speed' => 7.3920000000001167,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3257,8 +3054,7 @@ array (
       'altitude' => 903.59999999999991,
       'temperature' => 23,
       'speed' => 7.3949999999997749,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3273,8 +3069,7 @@ array (
       'altitude' => 911.20000000000005,
       'temperature' => 23,
       'speed' => 9.2084848484849893,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3289,8 +3084,7 @@ array (
       'altitude' => 915.79999999999995,
       'temperature' => 23,
       'speed' => 9.3146874999999909,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3305,8 +3099,7 @@ array (
       'altitude' => 923.59999999999991,
       'temperature' => 23,
       'speed' => 8.1500000000000696,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3321,8 +3114,7 @@ array (
       'altitude' => 930.79999999999995,
       'temperature' => 23,
       'speed' => 7.0419047619046369,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3337,8 +3129,7 @@ array (
       'altitude' => 939,
       'temperature' => 23,
       'speed' => 6.6528571428571013,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3353,8 +3144,7 @@ array (
       'altitude' => 945.40000000000009,
       'temperature' => 23,
       'speed' => 6.4635999999998601,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3369,8 +3159,7 @@ array (
       'altitude' => 953,
       'temperature' => 23,
       'speed' => 7.0286956521740649,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3385,8 +3174,7 @@ array (
       'altitude' => 962,
       'temperature' => 23,
       'speed' => 7.2212499999999027,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3401,8 +3189,7 @@ array (
       'altitude' => 969.79999999999995,
       'temperature' => 23,
       'speed' => 6.7927272727273786,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3417,8 +3204,7 @@ array (
       'altitude' => 976.79999999999995,
       'temperature' => 23,
       'speed' => 7.0719047619048592,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3433,8 +3219,7 @@ array (
       'altitude' => 984.40000000000009,
       'temperature' => 22,
       'speed' => 7.2433333333333607,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3449,8 +3234,7 @@ array (
       'altitude' => 990.59999999999991,
       'temperature' => 22,
       'speed' => 7.0721739130433141,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3465,8 +3249,7 @@ array (
       'altitude' => 998.20000000000005,
       'temperature' => 22,
       'speed' => 6.8028571428571709,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3481,8 +3264,7 @@ array (
       'altitude' => 1005.5999999999999,
       'temperature' => 22,
       'speed' => 6.6078260869566607,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3497,8 +3279,7 @@ array (
       'altitude' => 1012.2,
       'temperature' => 22,
       'speed' => 6.571363636363623,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3513,8 +3294,7 @@ array (
       'altitude' => 1018.5999999999999,
       'temperature' => 22,
       'speed' => 6.4642857142857144,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3529,8 +3309,7 @@ array (
       'altitude' => 1024.8,
       'temperature' => 22,
       'speed' => 6.2177272727273127,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3545,8 +3324,7 @@ array (
       'altitude' => 1031,
       'temperature' => 22,
       'speed' => 6.4066666666663616,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3561,8 +3339,7 @@ array (
       'altitude' => 1037.4000000000001,
       'temperature' => 22,
       'speed' => 6.4272727272727934,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3577,8 +3354,7 @@ array (
       'altitude' => 1044.5999999999999,
       'temperature' => 22,
       'speed' => 6.2166666666668053,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3593,8 +3369,7 @@ array (
       'altitude' => 1049.4000000000001,
       'temperature' => 22,
       'speed' => 5.6340909090907765,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3609,8 +3384,7 @@ array (
       'altitude' => 1057.4000000000001,
       'temperature' => 22,
       'speed' => 5.3665217391304472,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3625,8 +3399,7 @@ array (
       'altitude' => 1064.4000000000001,
       'temperature' => 22,
       'speed' => 5.6372727272729124,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3641,8 +3414,7 @@ array (
       'altitude' => 1071,
       'temperature' => 22,
       'speed' => 5.7827272727269952,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3657,8 +3429,7 @@ array (
       'altitude' => 1077.4000000000001,
       'temperature' => 22,
       'speed' => 5.7204761904764121,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3673,8 +3444,7 @@ array (
       'altitude' => 1084,
       'temperature' => 22,
       'speed' => 6.0261904761902683,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3689,8 +3459,7 @@ array (
       'altitude' => 1087.8,
       'temperature' => 22,
       'speed' => 5.6942857142857974,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3705,8 +3474,7 @@ array (
       'altitude' => 1094.8,
       'temperature' => 21,
       'speed' => 5.6318518518520353,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3721,8 +3489,7 @@ array (
       'altitude' => 1102,
       'temperature' => 21,
       'speed' => 5.7945833333333212,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3737,8 +3504,7 @@ array (
       'altitude' => 1108.2,
       'temperature' => 21,
       'speed' => 5.8587499999997208,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3753,8 +3519,7 @@ array (
       'altitude' => 1113,
       'temperature' => 21,
       'speed' => 5.7166666666668053,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3769,8 +3534,7 @@ array (
       'altitude' => 1118.8,
       'temperature' => 21,
       'speed' => 5.7952380952379565,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3785,8 +3549,7 @@ array (
       'altitude' => 1125.8,
       'temperature' => 21,
       'speed' => 5.8513043478261633,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3801,8 +3564,7 @@ array (
       'altitude' => 1131.4000000000001,
       'temperature' => 21,
       'speed' => 6.2421739130434659,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3817,8 +3579,7 @@ array (
       'altitude' => 1138.8,
       'temperature' => 21,
       'speed' => 5.659047619047799,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3833,8 +3594,7 @@ array (
       'altitude' => 1144.5999999999999,
       'temperature' => 21,
       'speed' => 5.3986956521738367,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3849,8 +3609,7 @@ array (
       'altitude' => 1150.5999999999999,
       'temperature' => 21,
       'speed' => 5.9104347826087968,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3865,8 +3624,7 @@ array (
       'altitude' => 1155.2,
       'temperature' => 21,
       'speed' => 6.1559090909091045,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3881,8 +3639,7 @@ array (
       'altitude' => 1163,
       'temperature' => 21,
       'speed' => 6.1159999999998638,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3897,8 +3654,7 @@ array (
       'altitude' => 1170.5999999999999,
       'temperature' => 21,
       'speed' => 6.4839130434784638,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3913,8 +3669,7 @@ array (
       'altitude' => 1177,
       'temperature' => 21,
       'speed' => 6.3704761904761353,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3929,8 +3684,7 @@ array (
       'altitude' => 1183.5999999999999,
       'temperature' => 21,
       'speed' => 6.3877272727272194,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3945,8 +3699,7 @@ array (
       'altitude' => 1190.2,
       'temperature' => 21,
       'speed' => 6.0714285714285712,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3961,8 +3714,7 @@ array (
       'altitude' => 1195.2,
       'temperature' => 21,
       'speed' => 4.7085714285713038,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3977,8 +3729,7 @@ array (
       'altitude' => 1201.2,
       'temperature' => 21,
       'speed' => 4.6209523809524224,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -3993,8 +3744,7 @@ array (
       'altitude' => 1205.4000000000001,
       'temperature' => 21,
       'speed' => 5.5890476190477436,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4009,8 +3759,7 @@ array (
       'altitude' => 1212.2,
       'temperature' => 21,
       'speed' => 5.4236363636363505,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4025,8 +3774,7 @@ array (
       'altitude' => 1219.4000000000001,
       'temperature' => 21,
       'speed' => 5.8342857142855618,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4041,8 +3789,7 @@ array (
       'altitude' => 1226.2,
       'temperature' => 21,
       'speed' => 6.5090909090911078,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4057,8 +3804,7 @@ array (
       'altitude' => 1233.4000000000001,
       'temperature' => 21,
       'speed' => 6.0199999999999623,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4073,8 +3819,7 @@ array (
       'altitude' => 1239.4000000000001,
       'temperature' => 20,
       'speed' => 5.8272727272725948,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4089,8 +3834,7 @@ array (
       'altitude' => 1246.2,
       'temperature' => 20,
       'speed' => 6.1938095238098567,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4105,8 +3849,7 @@ array (
       'altitude' => 1252.5999999999999,
       'temperature' => 20,
       'speed' => 6.2790476190476472,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4121,8 +3864,7 @@ array (
       'altitude' => 914.79999999999995,
       'temperature' => 20,
       'speed' => 5.7300000000001701,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4137,8 +3879,7 @@ array (
       'altitude' => 917,
       'temperature' => 20,
       'speed' => 6.0513636363638481,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4153,8 +3894,7 @@ array (
       'altitude' => 920.79999999999995,
       'temperature' => 20,
       'speed' => 6.0567999999999298,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4169,8 +3909,7 @@ array (
       'altitude' => 925,
       'temperature' => 20,
       'speed' => 5.3019047619045958,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4185,8 +3924,7 @@ array (
       'altitude' => 931,
       'temperature' => 20,
       'speed' => 4.8438461538462434,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4201,8 +3939,7 @@ array (
       'altitude' => 936.59999999999991,
       'temperature' => 20,
       'speed' => 4.569545454545402,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4217,8 +3954,7 @@ array (
       'altitude' => 942.59999999999991,
       'temperature' => 20,
       'speed' => 4.6261904761901986,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4233,8 +3969,7 @@ array (
       'altitude' => 946.79999999999995,
       'temperature' => 20,
       'speed' => 4.583870967742123,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4249,8 +3984,7 @@ array (
       'altitude' => 954,
       'temperature' => 20,
       'speed' => 4.9095652173912283,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4265,8 +3999,7 @@ array (
       'altitude' => 960,
       'temperature' => 20,
       'speed' => 4.998214285714182,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4281,8 +4014,7 @@ array (
       'altitude' => 966.79999999999995,
       'temperature' => 20,
       'speed' => 4.9969565217394596,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4297,8 +4029,7 @@ array (
       'altitude' => 973,
       'temperature' => 20,
       'speed' => 5.1368181818179437,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4313,8 +4044,7 @@ array (
       'altitude' => 977.20000000000005,
       'temperature' => 20,
       'speed' => 5.3020000000001168,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4329,8 +4059,7 @@ array (
       'altitude' => 983.79999999999995,
       'temperature' => 20,
       'speed' => 5.2585714285710958,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4345,8 +4074,7 @@ array (
       'altitude' => 988,
       'temperature' => 21,
       'speed' => 5.2650000000000796,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4361,8 +4089,7 @@ array (
       'altitude' => 993,
       'temperature' => 21,
       'speed' => 4.8900000000001107,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4377,8 +4104,7 @@ array (
       'altitude' => 998.79999999999995,
       'temperature' => 21,
       'speed' => 4.7590625000002547,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4393,8 +4119,7 @@ array (
       'altitude' => 1005.5999999999999,
       'temperature' => 21,
       'speed' => 5.0038095238096068,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4409,8 +4134,7 @@ array (
       'altitude' => 1010.2,
       'temperature' => 21,
       'speed' => 5.1199999999997718,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4425,8 +4149,7 @@ array (
       'altitude' => 1016,
       'temperature' => 21,
       'speed' => 5.1495238095237816,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4441,8 +4164,7 @@ array (
       'altitude' => 1021,
       'temperature' => 21,
       'speed' => 6.0852380952377905,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4457,8 +4179,7 @@ array (
       'altitude' => 1027.2,
       'temperature' => 20,
       'speed' => 6.8871428571430791,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4473,8 +4194,7 @@ array (
       'altitude' => 1032.8,
       'temperature' => 20,
       'speed' => 7.0072727272728859,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4489,8 +4209,7 @@ array (
       'altitude' => 1040.5999999999999,
       'temperature' => 20,
       'speed' => 7.116190476190587,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4505,8 +4224,7 @@ array (
       'altitude' => 1047,
       'temperature' => 21,
       'speed' => 6.9755555555554265,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4521,8 +4239,7 @@ array (
       'altitude' => 1058,
       'temperature' => 21,
       'speed' => 6.611818181817811,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4537,8 +4254,7 @@ array (
       'altitude' => 1066.2,
       'temperature' => 20,
       'speed' => 6.6620833333333094,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4553,8 +4269,7 @@ array (
       'altitude' => 1074.4000000000001,
       'temperature' => 20,
       'speed' => 6.7736363636365491,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4569,8 +4284,7 @@ array (
       'altitude' => 1082.4000000000001,
       'temperature' => 20,
       'speed' => 6.8893333333335853,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4585,8 +4299,7 @@ array (
       'altitude' => 1090.5999999999999,
       'temperature' => 21,
       'speed' => 6.6149999999997817,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4601,8 +4314,7 @@ array (
       'altitude' => 1099.2,
       'temperature' => 21,
       'speed' => 6.4485714285713458,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4617,8 +4329,7 @@ array (
       'altitude' => 1106,
       'temperature' => 21,
       'speed' => 7.2057142857146186,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4633,8 +4344,7 @@ array (
       'altitude' => 1110.2,
       'temperature' => 21,
       'speed' => 6.4861904761900879,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4649,8 +4359,7 @@ array (
       'altitude' => 1117,
       'temperature' => 21,
       'speed' => 6.5333333333334549,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4665,8 +4374,7 @@ array (
       'altitude' => 1125.2,
       'temperature' => 21,
       'speed' => 6.4190909090909622,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4681,8 +4389,7 @@ array (
       'altitude' => 1131.8,
       'temperature' => 21,
       'speed' => 6.8862500000001701,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4697,8 +4404,7 @@ array (
       'altitude' => 1138.2,
       'temperature' => 21,
       'speed' => 6.3856521739128409,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4713,8 +4419,7 @@ array (
       'altitude' => 1146.5999999999999,
       'temperature' => 21,
       'speed' => 6.1981818181818449,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4729,8 +4434,7 @@ array (
       'altitude' => 1158.5999999999999,
       'temperature' => 21,
       'speed' => 6.0080952380958479,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4745,8 +4449,7 @@ array (
       'altitude' => 1165,
       'temperature' => 21,
       'speed' => 7.5023809523803981,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4761,8 +4464,7 @@ array (
       'altitude' => 1171.4000000000001,
       'temperature' => 21,
       'speed' => 7.290434782609025,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4777,8 +4479,7 @@ array (
       'altitude' => 1179.4000000000001,
       'temperature' => 21,
       'speed' => 6.5939999999996504,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4793,8 +4494,7 @@ array (
       'altitude' => 1186.8,
       'temperature' => 21,
       'speed' => 6.6591176470589266,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4809,8 +4509,7 @@ array (
       'altitude' => 1196.5999999999999,
       'temperature' => 21,
       'speed' => 7.0060869565217141,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4825,8 +4524,7 @@ array (
       'altitude' => 1203.2,
       'temperature' => 21,
       'speed' => 7.1823809523810356,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4841,8 +4539,7 @@ array (
       'altitude' => 735.59999999999991,
       'temperature' => 19,
       'speed' => 6.8699999999999344,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4857,8 +4554,7 @@ array (
       'altitude' => 736.79999999999995,
       'temperature' => 19,
       'speed' => 6.9300000000000539,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4873,8 +4569,7 @@ array (
       'altitude' => 739,
       'temperature' => 19,
       'speed' => 6.8461904761904968,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4889,8 +4584,7 @@ array (
       'altitude' => 739,
       'temperature' => 19,
       'speed' => 6.8374999999999613,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4905,8 +4599,7 @@ array (
       'altitude' => 743.40000000000009,
       'temperature' => 19,
       'speed' => 7.0433333333333268,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4921,8 +4614,7 @@ array (
       'altitude' => 743.40000000000009,
       'temperature' => 19,
       'speed' => 6.995909090909084,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4937,8 +4629,7 @@ array (
       'altitude' => 745.40000000000009,
       'temperature' => 19,
       'speed' => 6.7790909090909652,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4953,8 +4644,7 @@ array (
       'altitude' => 745.40000000000009,
       'temperature' => 19,
       'speed' => 6.5371428571428014,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4969,8 +4659,7 @@ array (
       'altitude' => 747.40000000000009,
       'temperature' => 18,
       'speed' => 6.4404347826087402,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -4985,8 +4674,7 @@ array (
       'altitude' => 749.79999999999995,
       'temperature' => 18,
       'speed' => 7.0999999999999304,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5001,8 +4689,7 @@ array (
       'altitude' => 752,
       'temperature' => 18,
       'speed' => 7.1445161290323025,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5017,8 +4704,7 @@ array (
       'altitude' => 742.20000000000005,
       'temperature' => 13,
       'speed' => 7.1360000000000579,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5033,8 +4719,7 @@ array (
       'altitude' => 747.40000000000009,
       'temperature' => 12,
       'speed' => 5.1474999999997335,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5049,8 +4734,7 @@ array (
       'altitude' => 751.20000000000005,
       'temperature' => 12,
       'speed' => 5.5264000000001401,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5065,8 +4749,7 @@ array (
       'altitude' => 755.20000000000005,
       'temperature' => 12,
       'speed' => 6.1599999999995747,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5081,8 +4764,7 @@ array (
       'altitude' => 758,
       'temperature' => 12,
       'speed' => 6.4586206896552731,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5097,8 +4779,7 @@ array (
       'altitude' => 763,
       'temperature' => 12,
       'speed' => 6.2436363636363899,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5113,8 +4794,7 @@ array (
       'altitude' => 766.79999999999995,
       'temperature' => 12,
       'speed' => 5.986086956522068,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5129,8 +4809,7 @@ array (
       'altitude' => 771.79999999999995,
       'temperature' => 12,
       'speed' => 6.637500000000121,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5145,8 +4824,7 @@ array (
       'altitude' => 773.79999999999995,
       'temperature' => 18,
       'speed' => 8.9490909090911206,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5161,8 +4839,7 @@ array (
       'altitude' => 778.20000000000005,
       'temperature' => 18,
       'speed' => 7.474193548387003,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5177,8 +4854,7 @@ array (
       'altitude' => 772.79999999999995,
       'temperature' => 18,
       'speed' => 7.2840000000002325,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5193,8 +4869,7 @@ array (
       'altitude' => 781.20000000000005,
       'temperature' => 19,
       'speed' => 10.444444444444445,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5209,8 +4884,7 @@ array (
       'altitude' => 781.20000000000005,
       'temperature' => 19,
       'speed' => 7.9361904761906423,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5225,8 +4899,7 @@ array (
       'altitude' => 783.40000000000009,
       'temperature' => 19,
       'speed' => 6.2223999999999071,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5241,8 +4914,7 @@ array (
       'altitude' => 784.59999999999991,
       'temperature' => 19,
       'speed' => 6.0234782608692869,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5257,8 +4929,7 @@ array (
       'altitude' => 786.79999999999995,
       'temperature' => 19,
       'speed' => 6.4041666666671517,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5273,8 +4944,7 @@ array (
       'altitude' => 787.59999999999991,
       'temperature' => 19,
       'speed' => 6.6191304347822042,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5289,8 +4959,7 @@ array (
       'altitude' => 650,
       'temperature' => 12,
       'speed' => 7.4270000000001648,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5305,8 +4974,7 @@ array (
       'altitude' => 646.79999999999995,
       'temperature' => 12,
       'speed' => 5.9565217391304346,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5321,8 +4989,7 @@ array (
       'altitude' => 644.79999999999995,
       'temperature' => 12,
       'speed' => 5.9627272727272862,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5337,8 +5004,7 @@ array (
       'altitude' => 644.79999999999995,
       'temperature' => 12,
       'speed' => 7.9279687499999909,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5353,8 +5019,7 @@ array (
       'altitude' => 645.59999999999991,
       'temperature' => 12,
       'speed' => 7.3919999999998254,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5369,8 +5034,7 @@ array (
       'altitude' => 641.40000000000009,
       'temperature' => 13,
       'speed' => 7.094800000000105,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5385,8 +5049,7 @@ array (
       'altitude' => 637.20000000000005,
       'temperature' => 13,
       'speed' => 6.863809523809496,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5401,8 +5064,7 @@ array (
       'altitude' => 631.79999999999995,
       'temperature' => 13,
       'speed' => 8.0741999999999834,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5417,8 +5079,7 @@ array (
       'altitude' => 629.79999999999995,
       'temperature' => 13,
       'speed' => 7.6886363636364301,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5433,8 +5094,7 @@ array (
       'altitude' => 623.40000000000009,
       'temperature' => 13,
       'speed' => 7.03961538461534,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5449,8 +5109,7 @@ array (
       'altitude' => 613.59999999999991,
       'temperature' => 13,
       'speed' => 6.9600000000001661,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5465,8 +5124,7 @@ array (
       'altitude' => 605.20000000000005,
       'temperature' => 14,
       'speed' => 7.2180952380949748,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5481,8 +5139,7 @@ array (
       'altitude' => 598.59999999999991,
       'temperature' => 14,
       'speed' => 6.9244000000000234,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5497,8 +5154,7 @@ array (
       'altitude' => 590,
       'temperature' => 14,
       'speed' => 6.7561538461539801,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5513,8 +5169,7 @@ array (
       'altitude' => 589.40000000000009,
       'temperature' => 15,
       'speed' => 6.9957692307692083,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5529,8 +5184,7 @@ array (
       'altitude' => 587.59999999999991,
       'temperature' => 15,
       'speed' => 7.1143478260868429,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5545,8 +5199,7 @@ array (
       'altitude' => 589.79999999999995,
       'temperature' => 15,
       'speed' => 7.1709523809525608,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5561,8 +5214,7 @@ array (
       'altitude' => 589.79999999999995,
       'temperature' => 15,
       'speed' => 7.1419047619045681,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5577,8 +5229,7 @@ array (
       'altitude' => 589.79999999999995,
       'temperature' => 15,
       'speed' => 7.3576923076924192,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5593,8 +5244,7 @@ array (
       'altitude' => 590.59999999999991,
       'temperature' => 15,
       'speed' => 7.0305882352941431,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5609,8 +5259,7 @@ array (
       'altitude' => 594,
       'temperature' => 15,
       'speed' => 6.4060869565215874,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5625,8 +5274,7 @@ array (
       'altitude' => 591.20000000000005,
       'temperature' => 15,
       'speed' => 6.1229166666668489,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5641,8 +5289,7 @@ array (
       'altitude' => 593.79999999999995,
       'temperature' => 16,
       'speed' => 6.1423809523808552,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5657,8 +5304,7 @@ array (
       'altitude' => 593.79999999999995,
       'temperature' => 16,
       'speed' => 6.2090476190475909,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5673,8 +5319,7 @@ array (
       'altitude' => 592,
       'temperature' => 16,
       'speed' => 5.7037931034483966,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5689,8 +5334,7 @@ array (
       'altitude' => 589.59999999999991,
       'temperature' => 16,
       'speed' => 6.6009523809521591,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5705,8 +5349,7 @@ array (
       'altitude' => 589.59999999999991,
       'temperature' => 16,
       'speed' => 6.4566666666668464,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5721,8 +5364,7 @@ array (
       'altitude' => 593.20000000000005,
       'temperature' => 16,
       'speed' => 5.9818181818181158,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5737,8 +5379,7 @@ array (
       'altitude' => 595.79999999999995,
       'temperature' => 16,
       'speed' => 6.4342857142858394,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5753,8 +5394,7 @@ array (
       'altitude' => 595.79999999999995,
       'temperature' => 16,
       'speed' => 8.9665048543689245,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5769,8 +5409,7 @@ array (
       'altitude' => 622.20000000000005,
       'temperature' => 16,
       'speed' => 6.5243478260868555,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5785,8 +5424,7 @@ array (
       'altitude' => 628.59999999999991,
       'temperature' => 16,
       'speed' => 6.5938095238095791,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5801,8 +5439,7 @@ array (
       'altitude' => 632.79999999999995,
       'temperature' => 16,
       'speed' => 7.3986956521738367,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5817,8 +5454,7 @@ array (
       'altitude' => 641,
       'temperature' => 16,
       'speed' => 7.4661904761905173,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5833,8 +5469,7 @@ array (
       'altitude' => 650.79999999999995,
       'temperature' => 16,
       'speed' => 7.3920000000001167,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5849,8 +5484,7 @@ array (
       'altitude' => 659.40000000000009,
       'temperature' => 16,
       'speed' => 7.3949999999997749,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5865,8 +5499,7 @@ array (
       'altitude' => 666.20000000000005,
       'temperature' => 15,
       'speed' => 9.2084848484849893,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5881,8 +5514,7 @@ array (
       'altitude' => 677.59999999999991,
       'temperature' => 15,
       'speed' => 9.6151612903225718,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5897,8 +5529,7 @@ array (
       'altitude' => 686.79999999999995,
       'temperature' => 15,
       'speed' => 8.1500000000000696,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5913,8 +5544,7 @@ array (
       'altitude' => 691.59999999999991,
       'temperature' => 14,
       'speed' => 7.0419047619046369,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5929,8 +5559,7 @@ array (
       'altitude' => 699,
       'temperature' => 14,
       'speed' => 6.6528571428571013,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5945,8 +5574,7 @@ array (
       'altitude' => 705,
       'temperature' => 14,
       'speed' => 7.0256521739128912,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5961,8 +5589,7 @@ array (
       'altitude' => 709.79999999999995,
       'temperature' => 14,
       'speed' => 7.0286956521740649,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5977,8 +5604,7 @@ array (
       'altitude' => 716.79999999999995,
       'temperature' => 14,
       'speed' => 7.2212499999999027,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -5993,8 +5619,7 @@ array (
       'altitude' => 723.79999999999995,
       'temperature' => 13,
       'speed' => 6.7927272727273786,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6009,8 +5634,7 @@ array (
       'altitude' => 734.59999999999991,
       'temperature' => 13,
       'speed' => 7.0721739130433141,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6025,8 +5649,7 @@ array (
       'altitude' => 735.79999999999995,
       'temperature' => 13,
       'speed' => 6.8028571428571709,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6041,8 +5664,7 @@ array (
       'altitude' => 737.40000000000009,
       'temperature' => 13,
       'speed' => 6.6078260869566607,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6057,8 +5679,7 @@ array (
       'altitude' => 739.20000000000005,
       'temperature' => 13,
       'speed' => 6.571363636363623,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6073,8 +5694,7 @@ array (
       'altitude' => 741.79999999999995,
       'temperature' => 13,
       'speed' => 6.4642857142857144,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6089,8 +5709,7 @@ array (
       'altitude' => 744.40000000000009,
       'temperature' => 13,
       'speed' => 6.2177272727273127,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6105,8 +5724,7 @@ array (
       'altitude' => 747.79999999999995,
       'temperature' => 12,
       'speed' => 5.8495652173910262,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6121,8 +5739,7 @@ array (
       'altitude' => 751.20000000000005,
       'temperature' => 12,
       'speed' => 6.4272727272727934,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6137,8 +5754,7 @@ array (
       'altitude' => 755.20000000000005,
       'temperature' => 12,
       'speed' => 6.2166666666668053,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6153,8 +5769,7 @@ array (
       'altitude' => 757.20000000000005,
       'temperature' => 12,
       'speed' => 5.6340909090907765,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6169,8 +5784,7 @@ array (
       'altitude' => 760.20000000000005,
       'temperature' => 12,
       'speed' => 5.3665217391304472,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6185,8 +5799,7 @@ array (
       'altitude' => 764.79999999999995,
       'temperature' => 12,
       'speed' => 5.6372727272729124,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6201,8 +5814,7 @@ array (
       'altitude' => 767.79999999999995,
       'temperature' => 12,
       'speed' => 5.7827272727269952,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6217,8 +5829,7 @@ array (
       'altitude' => 773,
       'temperature' => 12,
       'speed' => 5.7204761904764121,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6233,8 +5844,7 @@ array (
       'altitude' => 776.40000000000009,
       'temperature' => 12,
       'speed' => 6.0261904761902683,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6249,8 +5859,7 @@ array (
       'altitude' => 780.20000000000005,
       'temperature' => 12,
       'speed' => 5.6942857142857974,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6265,8 +5874,7 @@ array (
       'altitude' => 783.40000000000009,
       'temperature' => 12,
       'speed' => 5.6318518518520353,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6281,8 +5889,7 @@ array (
       'altitude' => 789.20000000000005,
       'temperature' => 12,
       'speed' => 5.7945833333333212,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6297,8 +5904,7 @@ array (
       'altitude' => 794,
       'temperature' => 12,
       'speed' => 5.8587499999997208,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6313,8 +5919,7 @@ array (
       'altitude' => 800.79999999999995,
       'temperature' => 12,
       'speed' => 5.7166666666668053,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6329,8 +5934,7 @@ array (
       'altitude' => 805.40000000000009,
       'temperature' => 12,
       'speed' => 5.7952380952379565,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6345,8 +5949,7 @@ array (
       'altitude' => 811.79999999999995,
       'temperature' => 11,
       'speed' => 5.8513043478261633,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6361,8 +5964,7 @@ array (
       'altitude' => 818.79999999999995,
       'temperature' => 11,
       'speed' => 5.9820833333333212,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6377,8 +5979,7 @@ array (
       'altitude' => 823.40000000000009,
       'temperature' => 11,
       'speed' => 5.659047619047799,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6393,8 +5994,7 @@ array (
       'altitude' => 825.59999999999991,
       'temperature' => 11,
       'speed' => 5.3986956521738367,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6409,8 +6009,7 @@ array (
       'altitude' => 832.40000000000009,
       'temperature' => 11,
       'speed' => 5.9104347826087968,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6425,8 +6024,7 @@ array (
       'altitude' => 834.40000000000009,
       'temperature' => 11,
       'speed' => 6.1559090909091045,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6441,8 +6039,7 @@ array (
       'altitude' => 838.59999999999991,
       'temperature' => 11,
       'speed' => 6.1159999999998638,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6457,8 +6054,7 @@ array (
       'altitude' => 843.40000000000009,
       'temperature' => 11,
       'speed' => 6.4839130434784638,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6473,8 +6069,7 @@ array (
       'altitude' => 849.20000000000005,
       'temperature' => 10,
       'speed' => 6.3704761904761353,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6489,8 +6084,7 @@ array (
       'altitude' => 853.59999999999991,
       'temperature' => 10,
       'speed' => 6.3877272727272194,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6505,8 +6099,7 @@ array (
       'altitude' => 860.79999999999995,
       'temperature' => 10,
       'speed' => 5.8272727272725948,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6521,8 +6114,7 @@ array (
       'altitude' => 855.59999999999991,
       'temperature' => 10,
       'speed' => 6.1938095238098567,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6537,8 +6129,7 @@ array (
       'altitude' => 851.79999999999995,
       'temperature' => 10,
       'speed' => 6.2790476190476472,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6553,8 +6144,7 @@ array (
       'altitude' => 771.20000000000005,
       'temperature' => 18,
       'speed' => 3.553111111111098,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6569,8 +6159,7 @@ array (
       'altitude' => 773.40000000000009,
       'temperature' => 18,
       'speed' => 5.7300000000001701,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6585,8 +6174,7 @@ array (
       'altitude' => 773.20000000000005,
       'temperature' => 18,
       'speed' => 6.0513636363638481,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6601,8 +6189,7 @@ array (
       'altitude' => 773.20000000000005,
       'temperature' => 18,
       'speed' => 6.0567999999999298,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6617,8 +6204,7 @@ array (
       'altitude' => 773.20000000000005,
       'temperature' => 18,
       'speed' => 5.3019047619045958,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6633,8 +6219,7 @@ array (
       'altitude' => 773.20000000000005,
       'temperature' => 18,
       'speed' => 4.8438461538462434,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6649,8 +6234,7 @@ array (
       'altitude' => 773.20000000000005,
       'temperature' => 18,
       'speed' => 4.569545454545402,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6665,8 +6249,7 @@ array (
       'altitude' => 775.20000000000005,
       'temperature' => 18,
       'speed' => 4.6261904761901986,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6681,8 +6264,7 @@ array (
       'altitude' => 780.20000000000005,
       'temperature' => 19,
       'speed' => 4.583870967742123,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6697,8 +6279,7 @@ array (
       'altitude' => 787.20000000000005,
       'temperature' => 19,
       'speed' => 4.9095652173912283,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6713,8 +6294,7 @@ array (
       'altitude' => 786.79999999999995,
       'temperature' => 20,
       'speed' => 4.998214285714182,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6729,8 +6309,7 @@ array (
       'altitude' => 776.59999999999991,
       'temperature' => 20,
       'speed' => 4.420384615384906,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6745,8 +6324,7 @@ array (
       'altitude' => 774.40000000000009,
       'temperature' => 20,
       'speed' => 5.1368181818179437,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6761,8 +6339,7 @@ array (
       'altitude' => 774.40000000000009,
       'temperature' => 20,
       'speed' => 5.3020000000001168,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6777,8 +6354,7 @@ array (
       'altitude' => 776.79999999999995,
       'temperature' => 20,
       'speed' => 5.2585714285710958,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6793,8 +6369,7 @@ array (
       'altitude' => 776.79999999999995,
       'temperature' => 20,
       'speed' => 5.2650000000000796,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6809,8 +6384,7 @@ array (
       'altitude' => 779.20000000000005,
       'temperature' => 20,
       'speed' => 4.8900000000001107,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6825,8 +6399,7 @@ array (
       'altitude' => 779.20000000000005,
       'temperature' => 20,
       'speed' => 4.7590625000002547,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6841,8 +6414,7 @@ array (
       'altitude' => 779.20000000000005,
       'temperature' => 20,
       'speed' => 5.0038095238096068,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6857,8 +6429,7 @@ array (
       'altitude' => 779.20000000000005,
       'temperature' => 20,
       'speed' => 5.1199999999997718,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6873,8 +6444,7 @@ array (
       'altitude' => 779.20000000000005,
       'temperature' => 20,
       'speed' => 5.1495238095237816,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6889,8 +6459,7 @@ array (
       'altitude' => 781.20000000000005,
       'temperature' => 19,
       'speed' => 5.8086363636360723,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6905,8 +6474,7 @@ array (
       'altitude' => 781.20000000000005,
       'temperature' => 19,
       'speed' => 6.8871428571430791,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6921,8 +6489,7 @@ array (
       'altitude' => 781.20000000000005,
       'temperature' => 19,
       'speed' => 7.0072727272728859,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6937,8 +6504,7 @@ array (
       'altitude' => 781.20000000000005,
       'temperature' => 19,
       'speed' => 7.116190476190587,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6953,8 +6519,7 @@ array (
       'altitude' => 783.40000000000009,
       'temperature' => 19,
       'speed' => 7.2438461538460199,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6969,8 +6534,7 @@ array (
       'altitude' => 785.40000000000009,
       'temperature' => 19,
       'speed' => 6.611818181817811,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -6985,8 +6549,7 @@ array (
       'altitude' => 787.59999999999991,
       'temperature' => 19,
       'speed' => 6.6620833333333094,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7001,8 +6564,7 @@ array (
       'altitude' => 788.79999999999995,
       'temperature' => 19,
       'speed' => 6.7736363636365491,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7017,8 +6579,7 @@ array (
       'altitude' => 789.79999999999995,
       'temperature' => 19,
       'speed' => 7.3814285714288417,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7033,8 +6594,7 @@ array (
       'altitude' => 791.79999999999995,
       'temperature' => 19,
       'speed' => 6.4485714285713458,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7049,8 +6609,7 @@ array (
       'altitude' => 789.59999999999991,
       'temperature' => 19,
       'speed' => 7.2057142857146186,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7065,8 +6624,7 @@ array (
       'altitude' => 789.59999999999991,
       'temperature' => 19,
       'speed' => 6.4861904761900879,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7081,8 +6639,7 @@ array (
       'altitude' => 789.59999999999991,
       'temperature' => 19,
       'speed' => 6.5333333333334549,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7097,8 +6654,7 @@ array (
       'altitude' => 787.40000000000009,
       'temperature' => 19,
       'speed' => 6.4190909090909622,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7113,8 +6669,7 @@ array (
       'altitude' => 787.40000000000009,
       'temperature' => 19,
       'speed' => 6.8862500000001701,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7129,8 +6684,7 @@ array (
       'altitude' => 785.20000000000005,
       'temperature' => 19,
       'speed' => 6.3856521739128409,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7145,8 +6699,7 @@ array (
       'altitude' => 783.20000000000005,
       'temperature' => 19,
       'speed' => 6.4933333333333607,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7161,8 +6714,7 @@ array (
       'altitude' => 781,
       'temperature' => 19,
       'speed' => 6.5465217391301058,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7177,8 +6729,7 @@ array (
       'altitude' => 777,
       'temperature' => 18,
       'speed' => 6.0080952380958479,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7193,8 +6744,7 @@ array (
       'altitude' => 777,
       'temperature' => 18,
       'speed' => 7.5023809523803981,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7209,8 +6759,7 @@ array (
       'altitude' => 774.59999999999991,
       'temperature' => 18,
       'speed' => 7.290434782609025,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7225,8 +6774,7 @@ array (
       'altitude' => 772.59999999999991,
       'temperature' => 18,
       'speed' => 6.5939999999996504,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7241,8 +6789,7 @@ array (
       'altitude' => 770.20000000000005,
       'temperature' => 18,
       'speed' => 6.4688571428572423,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7257,8 +6804,7 @@ array (
       'altitude' => 767.79999999999995,
       'temperature' => 18,
       'speed' => 7.0060869565217141,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7273,8 +6819,7 @@ array (
       'altitude' => 765.79999999999995,
       'temperature' => 17,
       'speed' => 7.1823809523810356,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7289,8 +6834,7 @@ array (
       'altitude' => 693.20000000000005,
       'temperature' => 15,
       'speed' => 6.8699999999999344,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7305,8 +6849,7 @@ array (
       'altitude' => 691.20000000000005,
       'temperature' => 15,
       'speed' => 6.9300000000000539,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7321,8 +6864,7 @@ array (
       'altitude' => 689.20000000000005,
       'temperature' => 15,
       'speed' => 6.8461904761904968,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7337,8 +6879,7 @@ array (
       'altitude' => 687.20000000000005,
       'temperature' => 15,
       'speed' => 6.8374999999999613,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7353,8 +6894,7 @@ array (
       'altitude' => 687.20000000000005,
       'temperature' => 15,
       'speed' => 7.0433333333333268,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7369,8 +6909,7 @@ array (
       'altitude' => 684.79999999999995,
       'temperature' => 15,
       'speed' => 6.995909090909084,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7385,8 +6924,7 @@ array (
       'altitude' => 684.79999999999995,
       'temperature' => 15,
       'speed' => 6.7790909090909652,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7401,8 +6939,7 @@ array (
       'altitude' => 682.79999999999995,
       'temperature' => 15,
       'speed' => 6.5371428571428014,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7417,8 +6954,7 @@ array (
       'altitude' => 680.79999999999995,
       'temperature' => 15,
       'speed' => 6.4404347826087402,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7433,8 +6969,7 @@ array (
       'altitude' => 678.59999999999991,
       'temperature' => 15,
       'speed' => 7.0999999999999304,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7449,8 +6984,7 @@ array (
       'altitude' => 677,
       'temperature' => 15,
       'speed' => 7.1445161290323025,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7465,8 +6999,7 @@ array (
       'altitude' => 753.59999999999991,
       'temperature' => 19,
       'speed' => 7.1360000000000579,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7481,8 +7014,7 @@ array (
       'altitude' => 760.20000000000005,
       'temperature' => 20,
       'speed' => 5.3713043478258085,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7497,8 +7029,7 @@ array (
       'altitude' => 764.59999999999991,
       'temperature' => 20,
       'speed' => 5.5264000000001401,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7513,8 +7044,7 @@ array (
       'altitude' => 767.20000000000005,
       'temperature' => 20,
       'speed' => 6.1599999999995747,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7529,8 +7059,7 @@ array (
       'altitude' => 767.20000000000005,
       'temperature' => 20,
       'speed' => 6.4586206896552731,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7545,8 +7074,7 @@ array (
       'altitude' => 767.20000000000005,
       'temperature' => 20,
       'speed' => 6.2436363636363899,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7561,8 +7089,7 @@ array (
       'altitude' => 770.40000000000009,
       'temperature' => 20,
       'speed' => 5.986086956522068,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7577,8 +7104,7 @@ array (
       'altitude' => 774,
       'temperature' => 20,
       'speed' => 6.637500000000121,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7593,8 +7119,7 @@ array (
       'altitude' => 865.79999999999995,
       'temperature' => 21,
       'speed' => 8.9490909090911206,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7609,8 +7134,7 @@ array (
       'altitude' => 856.79999999999995,
       'temperature' => 22,
       'speed' => 7.474193548387003,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7625,8 +7149,7 @@ array (
       'altitude' => 856.79999999999995,
       'temperature' => 22,
       'speed' => 7.2840000000002325,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7641,8 +7164,7 @@ array (
       'altitude' => 774,
       'temperature' => 17,
       'speed' => 10.444444444444445,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7657,8 +7179,7 @@ array (
       'altitude' => 764,
       'temperature' => 17,
       'speed' => 7.9361904761906423,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7673,8 +7194,7 @@ array (
       'altitude' => 765,
       'temperature' => 17,
       'speed' => 6.2223999999999071,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7689,8 +7209,7 @@ array (
       'altitude' => 772.79999999999995,
       'temperature' => 17,
       'speed' => 5.3284615384612923,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7705,8 +7224,7 @@ array (
       'altitude' => 780,
       'temperature' => 17,
       'speed' => 6.4041666666671517,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7721,8 +7239,7 @@ array (
       'altitude' => 785.79999999999995,
       'temperature' => 17,
       'speed' => 6.6191304347822042,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7737,8 +7254,7 @@ array (
       'altitude' => 788,
       'temperature' => 17,
       'speed' => 6.4809090909091704,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7753,8 +7269,7 @@ array (
       'altitude' => 779.20000000000005,
       'temperature' => 17,
       'speed' => 6.7925000000001701,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7769,8 +7284,7 @@ array (
       'altitude' => 772.40000000000009,
       'temperature' => 17,
       'speed' => 7.6678260869565467,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7785,8 +7299,7 @@ array (
       'altitude' => 715.79999999999995,
       'temperature' => 21,
       'speed' => 6.1285714285719832,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7801,8 +7314,7 @@ array (
       'altitude' => 719.20000000000005,
       'temperature' => 21,
       'speed' => 5.6554545454551279,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7817,8 +7329,7 @@ array (
       'altitude' => 721.79999999999995,
       'temperature' => 21,
       'speed' => 5.6654545454538576,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7833,8 +7344,7 @@ array (
       'altitude' => 723.59999999999991,
       'temperature' => 20,
       'speed' => 6.1095652173908492,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7849,8 +7359,7 @@ array (
       'altitude' => 726.40000000000009,
       'temperature' => 20,
       'speed' => 6.0773913043477759,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7865,8 +7374,7 @@ array (
       'altitude' => 734.20000000000005,
       'temperature' => 20,
       'speed' => 6.3127272727274848,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7881,8 +7389,7 @@ array (
       'altitude' => 737.20000000000005,
       'temperature' => 20,
       'speed' => 7.3466666666664731,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7897,8 +7404,7 @@ array (
       'altitude' => 741,
       'temperature' => 20,
       'speed' => 7.4275000000003883,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7913,8 +7419,7 @@ array (
       'altitude' => 630.79999999999995,
       'temperature' => 20,
       'speed' => 8.2980952380949891,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7929,8 +7434,7 @@ array (
       'altitude' => 635.79999999999995,
       'temperature' => 20,
       'speed' => 9.1536585365854375,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7945,8 +7449,7 @@ array (
       'altitude' => 638.20000000000005,
       'temperature' => 20,
       'speed' => 0.53234567901236007,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7961,8 +7464,7 @@ array (
       'altitude' => 635.59999999999991,
       'temperature' => 18,
       'speed' => 10.106399999999558,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7977,8 +7479,7 @@ array (
       'altitude' => 633.59999999999991,
       'temperature' => 18,
       'speed' => 9.188235294117904,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -7993,8 +7494,7 @@ array (
       'altitude' => 625.59999999999991,
       'temperature' => 18,
       'speed' => 8.5449999999998134,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8009,8 +7509,7 @@ array (
       'altitude' => 625.59999999999991,
       'temperature' => 18,
       'speed' => 7.194400000000023,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8025,8 +7524,7 @@ array (
       'altitude' => 631.20000000000005,
       'temperature' => 18,
       'speed' => 6.6790909090910153,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8041,8 +7539,7 @@ array (
       'altitude' => 635,
       'temperature' => 18,
       'speed' => 6.2047619047620435,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8057,8 +7554,7 @@ array (
       'altitude' => 635,
       'temperature' => 18,
       'speed' => 3.9895652173910765,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8073,8 +7569,7 @@ array (
       'altitude' => 638.79999999999995,
       'temperature' => 19,
       'speed' => 4.4539393939392706,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8089,8 +7584,7 @@ array (
       'altitude' => 648.59999999999991,
       'temperature' => 19,
       'speed' => 4.7504761904766344,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8105,8 +7599,7 @@ array (
       'altitude' => 648.59999999999991,
       'temperature' => 19,
       'speed' => 5.0780952380952105,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8121,8 +7614,7 @@ array (
       'altitude' => 651,
       'temperature' => 19,
       'speed' => 4.5690909090904333,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8137,8 +7629,7 @@ array (
       'altitude' => 653.20000000000005,
       'temperature' => 19,
       'speed' => 4.4400000000002491,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8153,8 +7644,7 @@ array (
       'altitude' => 656.79999999999995,
       'temperature' => 19,
       'speed' => 4.9483333333331148,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8169,8 +7659,7 @@ array (
       'altitude' => 657.79999999999995,
       'temperature' => 19,
       'speed' => 4.2933333333335,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8185,8 +7674,7 @@ array (
       'altitude' => 657.79999999999995,
       'temperature' => 18,
       'speed' => 5.502666666666725,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8201,8 +7689,7 @@ array (
       'altitude' => 651.59999999999991,
       'temperature' => 18,
       'speed' => 5.9373913043477247,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8217,8 +7704,7 @@ array (
       'altitude' => 654,
       'temperature' => 18,
       'speed' => 5.0328000000002797,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8233,8 +7719,7 @@ array (
       'altitude' => 654,
       'temperature' => 18,
       'speed' => 5.5483333333334786,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8249,8 +7734,7 @@ array (
       'altitude' => 657,
       'temperature' => 18,
       'speed' => 6.4034482758619689,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8265,8 +7749,7 @@ array (
       'altitude' => 660.59999999999991,
       'temperature' => 18,
       'speed' => 5.0222222222218988,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8281,8 +7764,7 @@ array (
       'altitude' => 663.59999999999991,
       'temperature' => 18,
       'speed' => 4.9485714285713458,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8297,8 +7779,7 @@ array (
       'altitude' => 665.40000000000009,
       'temperature' => 18,
       'speed' => 4.0165217391306376,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8313,8 +7794,7 @@ array (
       'altitude' => 669.20000000000005,
       'temperature' => 18,
       'speed' => 4.1072727272727541,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8329,8 +7809,7 @@ array (
       'altitude' => 671.40000000000009,
       'temperature' => 18,
       'speed' => 4.9628571428571986,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8345,8 +7824,7 @@ array (
       'altitude' => 673.59999999999991,
       'temperature' => 19,
       'speed' => 4.6104347826084169,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8361,8 +7839,7 @@ array (
       'altitude' => 676,
       'temperature' => 19,
       'speed' => 5.4834782608699957,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8377,8 +7854,7 @@ array (
       'altitude' => 678,
       'temperature' => 19,
       'speed' => 4.2790476190476472,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8393,8 +7869,7 @@ array (
       'altitude' => 682.40000000000009,
       'temperature' => 20,
       'speed' => 4.8323809523807579,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8409,8 +7884,7 @@ array (
       'altitude' => 684.59999999999991,
       'temperature' => 20,
       'speed' => 4.259230769230971,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8425,8 +7899,7 @@ array (
       'altitude' => 687,
       'temperature' => 20,
       'speed' => 4.7527272727271672,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8441,8 +7914,7 @@ array (
       'altitude' => 689,
       'temperature' => 20,
       'speed' => 4.883809523809413,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8457,8 +7929,7 @@ array (
       'altitude' => 691.59999999999991,
       'temperature' => 20,
       'speed' => 3.9046153846155414,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8473,8 +7944,7 @@ array (
       'altitude' => 695.20000000000005,
       'temperature' => 20,
       'speed' => 5.1018181818177588,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8489,8 +7959,7 @@ array (
       'altitude' => 697.40000000000009,
       'temperature' => 20,
       'speed' => 4.7257142857145356,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8505,8 +7974,7 @@ array (
       'altitude' => 699.40000000000009,
       'temperature' => 20,
       'speed' => 5.6390476190475356,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8521,8 +7989,7 @@ array (
       'altitude' => 701.79999999999995,
       'temperature' => 20,
       'speed' => 5.2127272727276166,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8537,8 +8004,7 @@ array (
       'altitude' => 705.40000000000009,
       'temperature' => 20,
       'speed' => 4.3166666666663032,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8553,8 +8019,7 @@ array (
       'altitude' => 708.59999999999991,
       'temperature' => 21,
       'speed' => 2.1104761904765232,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8569,8 +8034,7 @@ array (
       'altitude' => 710.79999999999995,
       'temperature' => 21,
       'speed' => 3.6666666666666665,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8585,8 +8049,7 @@ array (
       'altitude' => 712.79999999999995,
       'temperature' => 21,
       'speed' => 5.4144000000000236,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8601,8 +8064,7 @@ array (
       'altitude' => 717.20000000000005,
       'temperature' => 21,
       'speed' => 5.9276190476188537,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8617,8 +8079,7 @@ array (
       'altitude' => 719.20000000000005,
       'temperature' => 21,
       'speed' => 3.9184615384617176,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8633,8 +8094,7 @@ array (
       'altitude' => 723.59999999999991,
       'temperature' => 21,
       'speed' => 5.0942857142855207,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8649,8 +8109,7 @@ array (
       'altitude' => 725.59999999999991,
       'temperature' => 20,
       'speed' => 5.5463636363638216,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8665,8 +8124,7 @@ array (
       'altitude' => 727.79999999999995,
       'temperature' => 20,
       'speed' => 5.8016666666662786,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8681,8 +8139,7 @@ array (
       'altitude' => 1065,
       'temperature' => 17,
       'speed' => 6.5231818181815804,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8697,8 +8154,7 @@ array (
       'altitude' => 1059.4000000000001,
       'temperature' => 17,
       'speed' => 7.4270000000001648,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8713,8 +8169,7 @@ array (
       'altitude' => 1049.4000000000001,
       'temperature' => 16,
       'speed' => 5.9565217391304346,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8729,8 +8184,7 @@ array (
       'altitude' => 1043,
       'temperature' => 16,
       'speed' => 5.9627272727272862,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8745,8 +8199,7 @@ array (
       'altitude' => 1033.5999999999999,
       'temperature' => 16,
       'speed' => 7.9279687499999909,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8761,8 +8214,7 @@ array (
       'altitude' => 1030,
       'temperature' => 16,
       'speed' => 7.3919999999998254,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8777,8 +8229,7 @@ array (
       'altitude' => 1023.5999999999999,
       'temperature' => 15,
       'speed' => 7.094800000000105,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8793,8 +8244,7 @@ array (
       'altitude' => 1017,
       'temperature' => 15,
       'speed' => 6.5518181818181551,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8809,8 +8259,7 @@ array (
       'altitude' => 1007.5999999999999,
       'temperature' => 15,
       'speed' => 8.0741999999999834,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8825,8 +8274,7 @@ array (
       'altitude' => 988.79999999999995,
       'temperature' => 15,
       'speed' => 7.6886363636364301,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8841,8 +8289,7 @@ array (
       'altitude' => 983.59999999999991,
       'temperature' => 15,
       'speed' => 7.03961538461534,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8857,8 +8304,7 @@ array (
       'altitude' => 979.20000000000005,
       'temperature' => 14,
       'speed' => 6.9600000000001661,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8873,8 +8319,7 @@ array (
       'altitude' => 972.20000000000005,
       'temperature' => 14,
       'speed' => 7.2180952380949748,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8889,8 +8334,7 @@ array (
       'altitude' => 972.20000000000005,
       'temperature' => 14,
       'speed' => 6.9244000000000234,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8905,8 +8349,7 @@ array (
       'altitude' => 974.40000000000009,
       'temperature' => 14,
       'speed' => 6.7561538461539801,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8921,8 +8364,7 @@ array (
       'altitude' => 976.59999999999991,
       'temperature' => 14,
       'speed' => 6.9957692307692083,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8937,8 +8379,7 @@ array (
       'altitude' => 951,
       'temperature' => 13,
       'speed' => 7.1419047619045681,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8953,8 +8394,7 @@ array (
       'altitude' => 926.59999999999991,
       'temperature' => 13,
       'speed' => 7.3576923076924192,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8969,8 +8409,7 @@ array (
       'altitude' => 898.59999999999991,
       'temperature' => 13,
       'speed' => 7.0305882352941431,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -8985,8 +8424,7 @@ array (
       'altitude' => 871.20000000000005,
       'temperature' => 13,
       'speed' => 6.4060869565215874,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9001,8 +8439,7 @@ array (
       'altitude' => 854.79999999999995,
       'temperature' => 13,
       'speed' => 5.8780000000001742,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9017,8 +8454,7 @@ array (
       'altitude' => 839.59999999999991,
       'temperature' => 13,
       'speed' => 6.1423809523808552,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9033,8 +8469,7 @@ array (
       'altitude' => 824.59999999999991,
       'temperature' => 13,
       'speed' => 6.2090476190475909,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9049,8 +8484,7 @@ array (
       'altitude' => 783.20000000000005,
       'temperature' => 13,
       'speed' => 6.6009523809521591,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9065,8 +8499,7 @@ array (
       'altitude' => 781,
       'temperature' => 14,
       'speed' => 6.4566666666668464,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9081,8 +8514,7 @@ array (
       'altitude' => 777,
       'temperature' => 14,
       'speed' => 5.9818181818181158,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9097,8 +8529,7 @@ array (
       'altitude' => 772.79999999999995,
       'temperature' => 14,
       'speed' => 6.4342857142858394,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9113,8 +8544,7 @@ array (
       'altitude' => 763.59999999999991,
       'temperature' => 14,
       'speed' => 8.9231884057970952,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9129,8 +8559,7 @@ array (
       'altitude' => 746,
       'temperature' => 15,
       'speed' => 6.5243478260868555,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9145,8 +8574,7 @@ array (
       'altitude' => 734.79999999999995,
       'temperature' => 16,
       'speed' => 6.5938095238095791,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9161,8 +8589,7 @@ array (
       'altitude' => 734,
       'temperature' => 16,
       'speed' => 7.3986956521738367,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9177,8 +8604,7 @@ array (
       'altitude' => 732,
       'temperature' => 16,
       'speed' => 7.4661904761905173,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9193,8 +8619,7 @@ array (
       'altitude' => 729.79999999999995,
       'temperature' => 16,
       'speed' => 7.3920000000001167,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9209,8 +8634,7 @@ array (
       'altitude' => 727.59999999999991,
       'temperature' => 16,
       'speed' => 7.3949999999997749,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9225,8 +8649,7 @@ array (
       'altitude' => 732,
       'temperature' => 16,
       'speed' => 9.2084848484849893,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9241,8 +8664,7 @@ array (
       'altitude' => 723.40000000000009,
       'temperature' => 16,
       'speed' => 9.6151612903225718,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9257,8 +8679,7 @@ array (
       'altitude' => 723.40000000000009,
       'temperature' => 16,
       'speed' => 8.1500000000000696,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9273,8 +8694,7 @@ array (
       'altitude' => 723.40000000000009,
       'temperature' => 16,
       'speed' => 7.0419047619046369,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9289,8 +8709,7 @@ array (
       'altitude' => 723.40000000000009,
       'temperature' => 16,
       'speed' => 6.6528571428571013,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9305,8 +8724,7 @@ array (
       'altitude' => 725.59999999999991,
       'temperature' => 16,
       'speed' => 7.0256521739128912,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9321,8 +8739,7 @@ array (
       'altitude' => 727.59999999999991,
       'temperature' => 16,
       'speed' => 7.0286956521740649,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9337,8 +8754,7 @@ array (
       'altitude' => 729.79999999999995,
       'temperature' => 16,
       'speed' => 7.2212499999999027,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9353,8 +8769,7 @@ array (
       'altitude' => 731.79999999999995,
       'temperature' => 16,
       'speed' => 6.7927272727273786,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9369,8 +8784,7 @@ array (
       'altitude' => 731.79999999999995,
       'temperature' => 16,
       'speed' => 7.0719047619048592,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9385,8 +8799,7 @@ array (
       'altitude' => 734,
       'temperature' => 17,
       'speed' => 6.6134782608695906,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9401,8 +8814,7 @@ array (
       'altitude' => 740.40000000000009,
       'temperature' => 17,
       'speed' => 7.0721739130433141,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9417,8 +8829,7 @@ array (
       'altitude' => 740.40000000000009,
       'temperature' => 18,
       'speed' => 6.8028571428571709,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9433,8 +8844,7 @@ array (
       'altitude' => 740.40000000000009,
       'temperature' => 18,
       'speed' => 6.6078260869566607,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9449,8 +8859,7 @@ array (
       'altitude' => 744.59999999999991,
       'temperature' => 19,
       'speed' => 6.571363636363623,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9465,8 +8874,7 @@ array (
       'altitude' => 751.20000000000005,
       'temperature' => 19,
       'speed' => 6.4642857142857144,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9481,8 +8889,7 @@ array (
       'altitude' => 755.59999999999991,
       'temperature' => 20,
       'speed' => 6.2177272727273127,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9497,8 +8904,7 @@ array (
       'altitude' => 760.79999999999995,
       'temperature' => 20,
       'speed' => 6.1154545454542548,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9513,8 +8919,7 @@ array (
       'altitude' => 764.59999999999991,
       'temperature' => 20,
       'speed' => 6.4272727272727934,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9529,8 +8934,7 @@ array (
       'altitude' => 767.20000000000005,
       'temperature' => 20,
       'speed' => 6.2166666666668053,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9545,8 +8949,7 @@ array (
       'altitude' => 767.20000000000005,
       'temperature' => 20,
       'speed' => 5.6340909090907765,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9561,8 +8964,7 @@ array (
       'altitude' => 767.20000000000005,
       'temperature' => 20,
       'speed' => 5.3665217391304472,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9577,8 +8979,7 @@ array (
       'altitude' => 769.59999999999991,
       'temperature' => 20,
       'speed' => 5.6372727272729124,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9593,8 +8994,7 @@ array (
       'altitude' => 771.59999999999991,
       'temperature' => 20,
       'speed' => 5.7827272727269952,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9609,8 +9009,7 @@ array (
       'altitude' => 774,
       'temperature' => 20,
       'speed' => 5.7204761904764121,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9625,8 +9024,7 @@ array (
       'altitude' => 778.20000000000005,
       'temperature' => 20,
       'speed' => 6.0261904761902683,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9641,8 +9039,7 @@ array (
       'altitude' => 782.20000000000005,
       'temperature' => 19,
       'speed' => 5.6942857142857974,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9657,8 +9054,7 @@ array (
       'altitude' => 783,
       'temperature' => 19,
       'speed' => 5.6318518518520353,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9673,8 +9069,7 @@ array (
       'altitude' => 784.79999999999995,
       'temperature' => 19,
       'speed' => 5.7945833333333212,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9689,8 +9084,7 @@ array (
       'altitude' => 787.20000000000005,
       'temperature' => 19,
       'speed' => 5.8587499999997208,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9705,8 +9099,7 @@ array (
       'altitude' => 789.20000000000005,
       'temperature' => 19,
       'speed' => 5.7166666666668053,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9721,8 +9114,7 @@ array (
       'altitude' => 791.40000000000009,
       'temperature' => 19,
       'speed' => 5.7952380952379565,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9737,8 +9129,7 @@ array (
       'altitude' => 795.40000000000009,
       'temperature' => 19,
       'speed' => 5.8513043478261633,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9753,8 +9144,7 @@ array (
       'altitude' => 798,
       'temperature' => 18,
       'speed' => 6.2421739130434659,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9769,8 +9159,7 @@ array (
       'altitude' => 801.79999999999995,
       'temperature' => 18,
       'speed' => 5.659047619047799,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9785,8 +9174,7 @@ array (
       'altitude' => 804.20000000000005,
       'temperature' => 18,
       'speed' => 5.3986956521738367,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9801,8 +9189,7 @@ array (
       'altitude' => 806.59999999999991,
       'temperature' => 18,
       'speed' => 5.9104347826087968,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9817,8 +9204,7 @@ array (
       'altitude' => 811.20000000000005,
       'temperature' => 18,
       'speed' => 6.1559090909091045,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9833,8 +9219,7 @@ array (
       'altitude' => 813.20000000000005,
       'temperature' => 18,
       'speed' => 6.1159999999998638,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9849,8 +9234,7 @@ array (
       'altitude' => 817.79999999999995,
       'temperature' => 18,
       'speed' => 6.4839130434784638,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9865,8 +9249,7 @@ array (
       'altitude' => 820,
       'temperature' => 18,
       'speed' => 6.3704761904761353,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9881,8 +9264,7 @@ array (
       'altitude' => 822.79999999999995,
       'temperature' => 18,
       'speed' => 6.6919047619047065,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9897,8 +9279,7 @@ array (
       'altitude' => 826.20000000000005,
       'temperature' => 18,
       'speed' => 6.0714285714285712,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9913,8 +9294,7 @@ array (
       'altitude' => 826.59999999999991,
       'temperature' => 18,
       'speed' => 4.7085714285713038,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9929,8 +9309,7 @@ array (
       'altitude' => 830.79999999999995,
       'temperature' => 18,
       'speed' => 4.6209523809524224,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9945,8 +9324,7 @@ array (
       'altitude' => 833,
       'temperature' => 17,
       'speed' => 5.5890476190477436,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9961,8 +9339,7 @@ array (
       'altitude' => 837.20000000000005,
       'temperature' => 17,
       'speed' => 5.4236363636363505,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9977,8 +9354,7 @@ array (
       'altitude' => 839.20000000000005,
       'temperature' => 17,
       'speed' => 5.8342857142855618,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -9993,8 +9369,7 @@ array (
       'altitude' => 843.20000000000005,
       'temperature' => 17,
       'speed' => 6.5090909090911078,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10009,8 +9384,7 @@ array (
       'altitude' => 846.79999999999995,
       'temperature' => 17,
       'speed' => 6.2936363636363239,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10025,8 +9399,7 @@ array (
       'altitude' => 849.59999999999991,
       'temperature' => 17,
       'speed' => 5.8272727272725948,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10041,8 +9414,7 @@ array (
       'altitude' => 851.79999999999995,
       'temperature' => 17,
       'speed' => 6.1938095238098567,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10057,8 +9429,7 @@ array (
       'altitude' => 856,
       'temperature' => 17,
       'speed' => 6.2790476190476472,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10073,8 +9444,7 @@ array (
       'altitude' => 856.79999999999995,
       'temperature' => 21,
       'speed' => 3.553111111111098,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10089,8 +9459,7 @@ array (
       'altitude' => 854.59999999999991,
       'temperature' => 21,
       'speed' => 5.7300000000001701,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10105,8 +9474,7 @@ array (
       'altitude' => 838,
       'temperature' => 20,
       'speed' => 6.0513636363638481,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10121,8 +9489,7 @@ array (
       'altitude' => 827.20000000000005,
       'temperature' => 20,
       'speed' => 6.0567999999999298,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10137,8 +9504,7 @@ array (
       'altitude' => 828.79999999999995,
       'temperature' => 20,
       'speed' => 5.3019047619045958,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10153,8 +9519,7 @@ array (
       'altitude' => 831.79999999999995,
       'temperature' => 20,
       'speed' => 4.8438461538462434,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10169,8 +9534,7 @@ array (
       'altitude' => 831.79999999999995,
       'temperature' => 19,
       'speed' => 4.569545454545402,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10185,8 +9549,7 @@ array (
       'altitude' => 831.79999999999995,
       'temperature' => 19,
       'speed' => 4.6261904761901986,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10201,8 +9564,7 @@ array (
       'altitude' => 827.59999999999991,
       'temperature' => 19,
       'speed' => 4.583870967742123,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10217,8 +9579,7 @@ array (
       'altitude' => 818.79999999999995,
       'temperature' => 19,
       'speed' => 4.9095652173912283,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10233,8 +9594,7 @@ array (
       'altitude' => 811.40000000000009,
       'temperature' => 19,
       'speed' => 4.998214285714182,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10249,8 +9609,7 @@ array (
       'altitude' => 804.20000000000005,
       'temperature' => 18,
       'speed' => 4.9969565217394596,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10265,8 +9624,7 @@ array (
       'altitude' => 802.40000000000009,
       'temperature' => 18,
       'speed' => 5.1368181818179437,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10281,8 +9639,7 @@ array (
       'altitude' => 801.79999999999995,
       'temperature' => 18,
       'speed' => 5.3020000000001168,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10297,8 +9654,7 @@ array (
       'altitude' => 799.79999999999995,
       'temperature' => 18,
       'speed' => 5.2585714285710958,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10313,8 +9669,7 @@ array (
       'altitude' => 799,
       'temperature' => 18,
       'speed' => 5.2650000000000796,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10329,8 +9684,7 @@ array (
       'altitude' => 797.59999999999991,
       'temperature' => 18,
       'speed' => 4.8900000000001107,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10345,8 +9699,7 @@ array (
       'altitude' => 796.79999999999995,
       'temperature' => 18,
       'speed' => 4.7590625000002547,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10361,8 +9714,7 @@ array (
       'altitude' => 789,
       'temperature' => 18,
       'speed' => 5.0038095238096068,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10377,8 +9729,7 @@ array (
       'altitude' => 786.79999999999995,
       'temperature' => 18,
       'speed' => 5.1199999999997718,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10393,8 +9744,7 @@ array (
       'altitude' => 785.79999999999995,
       'temperature' => 18,
       'speed' => 5.1495238095237816,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10409,8 +9759,7 @@ array (
       'altitude' => 782.40000000000009,
       'temperature' => 18,
       'speed' => 6.0852380952377905,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10425,8 +9774,7 @@ array (
       'altitude' => 778,
       'temperature' => 18,
       'speed' => 6.8871428571430791,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10441,8 +9789,7 @@ array (
       'altitude' => 771.40000000000009,
       'temperature' => 17,
       'speed' => 7.0072727272728859,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10457,8 +9804,7 @@ array (
       'altitude' => 764,
       'temperature' => 17,
       'speed' => 7.116190476190587,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10473,8 +9819,7 @@ array (
       'altitude' => 766.20000000000005,
       'temperature' => 17,
       'speed' => 7.2438461538460199,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10489,8 +9834,7 @@ array (
       'altitude' => 773.59999999999991,
       'temperature' => 17,
       'speed' => 5.8183999999996736,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10505,8 +9849,7 @@ array (
       'altitude' => 781.20000000000005,
       'temperature' => 17,
       'speed' => 6.6620833333333094,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10521,8 +9864,7 @@ array (
       'altitude' => 785.79999999999995,
       'temperature' => 17,
       'speed' => 6.7736363636365491,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10537,8 +9879,7 @@ array (
       'altitude' => 788,
       'temperature' => 17,
       'speed' => 7.3814285714288417,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10553,8 +9894,7 @@ array (
       'altitude' => 777,
       'temperature' => 17,
       'speed' => 6.6149999999997817,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10569,8 +9909,7 @@ array (
       'altitude' => 769.20000000000005,
       'temperature' => 17,
       'speed' => 6.4485714285713458,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10585,8 +9924,7 @@ array (
       'altitude' => 757,
       'temperature' => 17,
       'speed' => 7.2057142857146186,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10601,8 +9939,7 @@ array (
       'altitude' => 758.20000000000005,
       'temperature' => 17,
       'speed' => 6.4861904761900879,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10617,8 +9954,7 @@ array (
       'altitude' => 762.59999999999991,
       'temperature' => 17,
       'speed' => 6.5333333333334549,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10633,8 +9969,7 @@ array (
       'altitude' => 768.79999999999995,
       'temperature' => 17,
       'speed' => 6.4190909090909622,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10649,8 +9984,7 @@ array (
       'altitude' => 773.59999999999991,
       'temperature' => 17,
       'speed' => 6.8862500000001701,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10665,8 +9999,7 @@ array (
       'altitude' => 780.20000000000005,
       'temperature' => 17,
       'speed' => 6.3856521739128409,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10681,8 +10014,7 @@ array (
       'altitude' => 786.79999999999995,
       'temperature' => 18,
       'speed' => 6.4933333333333607,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10697,8 +10029,7 @@ array (
       'altitude' => 793,
       'temperature' => 18,
       'speed' => 6.5465217391301058,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10713,8 +10044,7 @@ array (
       'altitude' => 800.59999999999991,
       'temperature' => 18,
       'speed' => 6.0080952380958479,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10729,8 +10059,7 @@ array (
       'altitude' => 806.79999999999995,
       'temperature' => 18,
       'speed' => 7.5023809523803981,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10745,8 +10074,7 @@ array (
       'altitude' => 810.20000000000005,
       'temperature' => 18,
       'speed' => 7.290434782609025,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10761,8 +10089,7 @@ array (
       'altitude' => 804,
       'temperature' => 19,
       'speed' => 6.5939999999996504,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10777,8 +10104,7 @@ array (
       'altitude' => 798.79999999999995,
       'temperature' => 19,
       'speed' => 6.6591176470589266,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10793,8 +10119,7 @@ array (
       'altitude' => 801,
       'temperature' => 19,
       'speed' => 7.0060869565217141,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10809,8 +10134,7 @@ array (
       'altitude' => 807.59999999999991,
       'temperature' => 19,
       'speed' => 7.1823809523810356,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10825,8 +10149,7 @@ array (
       'altitude' => 790.20000000000005,
       'temperature' => 15,
       'speed' => 9.1832000000000704,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10841,8 +10164,7 @@ array (
       'altitude' => 791.20000000000005,
       'temperature' => 15,
       'speed' => 7.5772727272725948,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10857,8 +10179,7 @@ array (
       'altitude' => 793,
       'temperature' => 15,
       'speed' => 7.7899999999999636,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10873,8 +10194,7 @@ array (
       'altitude' => 797,
       'temperature' => 15,
       'speed' => 8.0740909090911206,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10889,8 +10209,7 @@ array (
       'altitude' => 799.20000000000005,
       'temperature' => 15,
       'speed' => 8.0766666666663482,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10905,8 +10224,7 @@ array (
       'altitude' => 799.59999999999991,
       'temperature' => 15,
       'speed' => 7.8652380952383583,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10921,8 +10239,7 @@ array (
       'altitude' => 802.79999999999995,
       'temperature' => 15,
       'speed' => 7.090952380952201,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10937,8 +10254,7 @@ array (
       'altitude' => 804.79999999999995,
       'temperature' => 15,
       'speed' => 6.6909090909092894,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10953,8 +10269,7 @@ array (
       'altitude' => 808.59999999999991,
       'temperature' => 15,
       'speed' => 5.8362499999999882,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10969,8 +10284,7 @@ array (
       'altitude' => 814.59999999999991,
       'temperature' => 15,
       'speed' => 5.2857142857142856,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -10985,8 +10299,7 @@ array (
       'altitude' => 818.40000000000009,
       'temperature' => 15,
       'speed' => 5.2216666666666542,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11001,8 +10314,7 @@ array (
       'altitude' => 823.59999999999991,
       'temperature' => 15,
       'speed' => 5.0395652173911403,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11017,8 +10329,7 @@ array (
       'altitude' => 828,
       'temperature' => 15,
       'speed' => 4.8695238095239066,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11033,8 +10344,7 @@ array (
       'altitude' => 833.20000000000005,
       'temperature' => 15,
       'speed' => 4.8345833333332848,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11049,8 +10359,7 @@ array (
       'altitude' => 838.79999999999995,
       'temperature' => 15,
       'speed' => 4.918750000000121,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11065,8 +10374,7 @@ array (
       'altitude' => 844.59999999999991,
       'temperature' => 15,
       'speed' => 4.8252173913041707,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11081,8 +10389,7 @@ array (
       'altitude' => 850.20000000000005,
       'temperature' => 15,
       'speed' => 4.7942857142857278,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11097,8 +10404,7 @@ array (
       'altitude' => 855,
       'temperature' => 15,
       'speed' => 4.823478260869666,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11113,8 +10419,7 @@ array (
       'altitude' => 861.40000000000009,
       'temperature' => 15,
       'speed' => 4.9316129032257221,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11129,8 +10434,7 @@ array (
       'altitude' => 868.59999999999991,
       'temperature' => 15,
       'speed' => 5.0377272727273521,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11145,8 +10449,7 @@ array (
       'altitude' => 874.79999999999995,
       'temperature' => 15,
       'speed' => 4.9719047619049279,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11161,8 +10464,7 @@ array (
       'altitude' => 880,
       'temperature' => 15,
       'speed' => 4.9647826086954367,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11177,8 +10479,7 @@ array (
       'altitude' => 886,
       'temperature' => 15,
       'speed' => 4.9061904761904209,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11193,8 +10494,7 @@ array (
       'altitude' => 891.40000000000009,
       'temperature' => 15,
       'speed' => 4.5342857142857698,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11209,8 +10509,7 @@ array (
       'altitude' => 898,
       'temperature' => 15,
       'speed' => 4.3680952380953908,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11225,8 +10524,7 @@ array (
       'altitude' => 903.40000000000009,
       'temperature' => 16,
       'speed' => 4.1933333333332223,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11241,8 +10539,7 @@ array (
       'altitude' => 910,
       'temperature' => 16,
       'speed' => 4.041818181818102,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11257,8 +10554,7 @@ array (
       'altitude' => 916.59999999999991,
       'temperature' => 16,
       'speed' => 3.9540909090911471,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11273,8 +10569,7 @@ array (
       'altitude' => 923,
       'temperature' => 17,
       'speed' => 3.9614285714283359,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11289,8 +10584,7 @@ array (
       'altitude' => 928.20000000000005,
       'temperature' => 17,
       'speed' => 3.8600000000002357,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11305,8 +10599,7 @@ array (
       'altitude' => 934.59999999999991,
       'temperature' => 17,
       'speed' => 3.7645454545454413,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11321,8 +10614,7 @@ array (
       'altitude' => 940,
       'temperature' => 17,
       'speed' => 3.8559259259259475,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11337,8 +10629,7 @@ array (
       'altitude' => 947.59999999999991,
       'temperature' => 17,
       'speed' => 3.9934782608695021,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11353,8 +10644,7 @@ array (
       'altitude' => 954,
       'temperature' => 17,
       'speed' => 4.1080952380950855,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11369,8 +10659,7 @@ array (
       'altitude' => 959.79999999999995,
       'temperature' => 17,
       'speed' => 4.1147619047620712,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11385,8 +10674,7 @@ array (
       'altitude' => 965.79999999999995,
       'temperature' => 17,
       'speed' => 4.1933333333332223,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11401,8 +10689,7 @@ array (
       'altitude' => 972.20000000000005,
       'temperature' => 17,
       'speed' => 4.2242857142856725,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11417,8 +10704,7 @@ array (
       'altitude' => 978.79999999999995,
       'temperature' => 17,
       'speed' => 4.2386363636363633,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11433,8 +10719,7 @@ array (
       'altitude' => 985.20000000000005,
       'temperature' => 17,
       'speed' => 4.2316000000000349,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11449,8 +10734,7 @@ array (
       'altitude' => 993.20000000000005,
       'temperature' => 17,
       'speed' => 4.189523809523962,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11465,8 +10749,7 @@ array (
       'altitude' => 998.59999999999991,
       'temperature' => 17,
       'speed' => 4.1066666666665697,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11481,8 +10764,7 @@ array (
       'altitude' => 1005.2,
       'temperature' => 17,
       'speed' => 3.9008695652174419,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11497,8 +10779,7 @@ array (
       'altitude' => 1011.2,
       'temperature' => 17,
       'speed' => 3.8718181818181949,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11513,8 +10794,7 @@ array (
       'altitude' => 1018.2,
       'temperature' => 17,
       'speed' => 3.8214285714285716,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11529,8 +10809,7 @@ array (
       'altitude' => 1023.8,
       'temperature' => 17,
       'speed' => 3.7677272727272464,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11545,8 +10824,7 @@ array (
       'altitude' => 1030.5999999999999,
       'temperature' => 17,
       'speed' => 3.8117391304347068,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11561,8 +10839,7 @@ array (
       'altitude' => 1037,
       'temperature' => 17,
       'speed' => 4.0380952380953765,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11577,8 +10854,7 @@ array (
       'altitude' => 1042.2,
       'temperature' => 17,
       'speed' => 4.1442857142856591,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11593,8 +10869,7 @@ array (
       'altitude' => 1049,
       'temperature' => 17,
       'speed' => 4.1122727272727806,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11609,8 +10884,7 @@ array (
       'altitude' => 1055,
       'temperature' => 17,
       'speed' => 4.2599999999997218,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11625,8 +10899,7 @@ array (
       'altitude' => 1061.4000000000001,
       'temperature' => 17,
       'speed' => 4.2290476190478543,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11641,8 +10914,7 @@ array (
       'altitude' => 756.20000000000005,
       'temperature' => 17,
       'speed' => 7.2309090909085088,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11657,8 +10929,7 @@ array (
       'altitude' => 758.59999999999991,
       'temperature' => 17,
       'speed' => 5.3714285714287104,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11673,8 +10944,7 @@ array (
       'altitude' => 763.40000000000009,
       'temperature' => 17,
       'speed' => 4.7200000000005025,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11689,8 +10959,7 @@ array (
       'altitude' => 769.20000000000005,
       'temperature' => 17,
       'speed' => 4.3503999999997909,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11705,8 +10974,7 @@ array (
       'altitude' => 774.20000000000005,
       'temperature' => 17,
       'speed' => 4.126666666666833,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11721,8 +10989,7 @@ array (
       'altitude' => 780.20000000000005,
       'temperature' => 17,
       'speed' => 3.7009523809524363,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11737,8 +11004,7 @@ array (
       'altitude' => 786.79999999999995,
       'temperature' => 18,
       'speed' => 3.6473913043478006,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11753,8 +11019,7 @@ array (
       'altitude' => 793,
       'temperature' => 18,
       'speed' => 3.7857142857142856,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11769,8 +11034,7 @@ array (
       'altitude' => 800.20000000000005,
       'temperature' => 18,
       'speed' => 4.0752380952374851,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11785,8 +11049,7 @@ array (
       'altitude' => 806.40000000000009,
       'temperature' => 18,
       'speed' => 5.3242857142862965,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11801,8 +11064,7 @@ array (
       'altitude' => 796.79999999999995,
       'temperature' => 19,
       'speed' => 7.7866666666668607,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11817,8 +11079,7 @@ array (
       'altitude' => 799.20000000000005,
       'temperature' => 19,
       'speed' => 4.8923809523805089,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11833,8 +11094,7 @@ array (
       'altitude' => 805.20000000000005,
       'temperature' => 19,
       'speed' => 5.0199999999999996,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11849,8 +11109,7 @@ array (
       'altitude' => 811.79999999999995,
       'temperature' => 19,
       'speed' => 4.9872727272727806,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11865,8 +11124,7 @@ array (
       'altitude' => 816.59999999999991,
       'temperature' => 19,
       'speed' => 4.4928000000002797,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11881,8 +11139,7 @@ array (
       'altitude' => 823.40000000000009,
       'temperature' => 20,
       'speed' => 4.4531999999994873,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11897,8 +11154,7 @@ array (
       'altitude' => 829.59999999999991,
       'temperature' => 20,
       'speed' => 4.7326086956524271,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11913,8 +11169,7 @@ array (
       'altitude' => 833.79999999999995,
       'temperature' => 20,
       'speed' => 5.5166666666669437,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11929,8 +11184,7 @@ array (
       'altitude' => 1186.2,
       'temperature' => 17,
       'speed' => 9.7558823529410912,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11945,8 +11199,7 @@ array (
       'altitude' => 1187.5999999999999,
       'temperature' => 17,
       'speed' => 8.2881081081082026,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11961,8 +11214,7 @@ array (
       'altitude' => 1191.4000000000001,
       'temperature' => 17,
       'speed' => 7.25714285714258,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11977,8 +11229,7 @@ array (
       'altitude' => 1196.8,
       'temperature' => 17,
       'speed' => 6.0828571428573923,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -11993,8 +11244,7 @@ array (
       'altitude' => 1202,
       'temperature' => 17,
       'speed' => 5.8895652173909498,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -12009,8 +11259,7 @@ array (
       'altitude' => 1208,
       'temperature' => 17,
       'speed' => 5.8628571428569209,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -12025,8 +11274,7 @@ array (
       'altitude' => 1213.2,
       'temperature' => 17,
       'speed' => 6.2635294117648943,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -12041,8 +11289,7 @@ array (
       'altitude' => 1218.8,
       'temperature' => 16,
       'speed' => 5.5745454545454285,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -12057,8 +11304,7 @@ array (
       'altitude' => 1225.2,
       'temperature' => 16,
       'speed' => 5.3681818181820828,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -12073,8 +11319,7 @@ array (
       'altitude' => 1231.8,
       'temperature' => 16,
       'speed' => 5.0971428571425523,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -12089,8 +11334,7 @@ array (
       'altitude' => 1237.5999999999999,
       'temperature' => 16,
       'speed' => 5.5980952380951274,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -12105,8 +11349,7 @@ array (
       'altitude' => 1243,
       'temperature' => 16,
       'speed' => 4.9542857142861028,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -12121,8 +11364,7 @@ array (
       'altitude' => 1249.2,
       'temperature' => 16,
       'speed' => 4.5819047619048172,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -12137,8 +11379,7 @@ array (
       'altitude' => 1253.5999999999999,
       'temperature' => 16,
       'speed' => 5.0678260869564209,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -12153,8 +11394,7 @@ array (
       'altitude' => 1259.2,
       'temperature' => 16,
       'speed' => 5.2752380952380395,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -12169,8 +11409,7 @@ array (
       'altitude' => 1266.4000000000001,
       'temperature' => 16,
       'speed' => 5.0980952380951274,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -12185,8 +11424,7 @@ array (
       'altitude' => 1271.2,
       'temperature' => 16,
       'speed' => 5.132000000000116,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -12201,8 +11439,7 @@ array (
       'altitude' => 1278.2,
       'temperature' => 17,
       'speed' => 5.0718181818182613,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
@@ -12217,12 +11454,12 @@ array (
       'altitude' => 1283,
       'temperature' => 17,
       'speed' => 4.6971428571428291,
-      'bike_weight' => 7.7000000000000002,
-      'athlete_weight' => 72,
+      'weight' => 79.700000000000003,
     ),
     'outputs' => 
     array (
       0 => 192.57142857142858,
     ),
   ),
-);
+)
+;

@@ -239,7 +239,7 @@ Otestovali sme ho pre 12 úsekov, z ktorıch kadı sme absolvovali 2-5 krát a vıko
 \caption{Bike Calculator - porovnanie vıpoètu}
 \label{table:bikecalculator_table}
 \end{table}
-\\
+
 Z tabu¾ky si môeme všimnú, e celková dåka segmentu neovplyvòuje rozdiel medzi reálnou a vypoèítavanou hodnotou. Zámerne však neuvádzame úseky dlhé iba nieko¾ko desiatok metrov, aby sme mohli poukáza na fakt, e práve stúpajúci sklon (priem. stúpanie) robí vıpoèet presnejším. Minimalizuje sa toti aerodynamickı odpor spôsobenı vetrom, ktorého smer aj intenzitu je ve¾mi aké odhadnú a stúpa podiel sily potrebnej na prekonanie zemskej tiae.\\
 \indent Ako môeme vidie vo formulári na obr. \ref{fig:bikecalculator_form}, typ pneumatík a pozíciu športovca na bicykli vyberáme z predvolenıch hodnôt. Pre typ pneumatík sú to tri hodnoty, a to pláše, galusky alebo MTB\footnote{MTB - mountain bike - horskı bicykel}. Pozíciu môeme zvoli pod¾a bicykla - vzpriamená, mierne vzpriamená, zohnutá, aerodynamická. Pod¾a vybraného vstupu Bike Calculator pouije predvolenı koeficient valivého odporu, resp. aerodynamického odporu.\\
 \indent Koeficient aerodynamického odporu je však závislı aj od obleèenia cyklistu, od bicykla, od kolies. Koeficient valivého odporu je rozdielny pre jednotlivé modely plášov, hodnotu ich nahustenia. Môeme poveda, e je rozdielny pre kadú jednu dvojicu športovec-bicykel. Dôkladnejšie vysvetlenie tejto problematiky uvádzame v kapitole \ref{Physics}.
@@ -525,7 +525,7 @@ V tejto èasti podrobne preberieme implementáciu algoritmu pre aproximáciu vıkonu
  \item dåka 500 m, priemernı sklon 0.08
  \item dåka 1 334 m, priemernı sklon 0.03
 \end{itemize}
-Empirickım overením sme dospeli k záveru, e u pri úsekoch tejto dåky a sklonu, rıchlos získaná zotrvaènosou prispieva k pohybu zanedbate¾ne v premietnutí na celı sledovanı úsek. Rıchlos, ktorou sa športovec v stúpaní pohybuje, je teda získaná vıhradne podávaním jeho vıkonu.\\
+Empirickım overením sme dospeli k záveru, e u pri úsekoch tejto dåky a sklonu, rıchlos získaná zotrvaènosou prispieva k pohybu zanedbate¾ne v premietnutí na celı sledovanı úsek. Rıchlos, ktorou sa športovec v stúpaní pohybuje, je teda získaná vıhradne podávaním jeho vıkonu.
 \subsubsection{Nahranie a konverzia súboru}
 Skôr, ne môeme samotné dáta analyzova, potrebujeme umoni pouívate¾ovi aby ich mohol na server nahra. V našom frameworku máme implementované mapovanie cesty v URL adrese na príslušnı ovládaè a jeho metódu. To znamená, e cesta \emph{/upload/files/} spúša metódu \emph{files()} v triede \emph{UploadController}. Pokia¾ pri tejto poiadavke nie sú metódou \emph{POST} odoslané iadne súbory, iba vyuijeme metódu frameworku \emph{render()} a zobrazíme náh¾ad \emph{(view)} s formulárom pre nahranie súboru.
 
@@ -538,8 +538,9 @@ else{
     $this->render('files', array() );
 }
 \end{Verbatim}
-Aplikácia umoòuje nahra viac súborov súèasne. Jediné obmedzenie je na strane servera, v konfigurácii PHP treba obmedzi parametre \emph{upload\_max\_filesize} a \emph{post\_max\_size} na poadovanú ve¾kos. Pred presunutím súboru na server sa skontroluje, èi sa jedná o jeden z podporovanıch súborov (FIT, GPX, TCX) a PHP funkciou \emph{move\_uploaded\_file} je následne presunutı do zloky \emph{/uploads/activities\_raw/}, pod názvom s nasledujúcim tvarom: \emph{IDpouívate¾a\_hashNázvu.priponaSuboru}.\\ Ak server prijal binárny súbor formátu FIT, ihneï po jeho presunutí vykonáme konverziu pouitím nástroja na konverziu z \emph{FIT SDK}.\\
-Ïalším krokom v metóde \emph{files()} je spracovanie CSV súboru (konvertovaného z FIT) alebo XML súborov (GPX, TCX). K tomu je urèená trieda \emph{ActivityParser}. Na konci metódy \emph{files()} je ešte potrebné uloi údaje do databázy. Sumarizáciu tréningu uloíme do tabu¾ky \emph{training\_entry} cez model \emph{WorkoutModel} a priebeh tréningu z dátového súboru do tabu¾ky \emph{training\_entry\_record} cez model \emph{ActivityModel}. Tımto je nahratie súborov ukonèené a pouívate¾ovi sa zobrazí stránka, na ktorej môe zmeni typ športu, prida tréningu názov a popis.
+Aplikácia umoòuje nahra viac súborov súèasne. Jediné obmedzenie je na strane servera, v konfigurácii PHP treba obmedzi parametre \emph{upload\_max\_filesize} a \emph{post\_max\_size} na poadovanú ve¾kos. Pred presunutím súboru na server sa skontroluje, èi sa jedná o jeden z podporovanıch súborov (FIT, GPX, TCX) a PHP funkciou \emph{move\_uploaded\_file} je následne presunutı do zloky \emph{/uploads/activities\_raw/}, pod názvom s nasledujúcim tvarom: \emph{IDpouívate¾a\_hashNázvu.priponaSuboru}.\\ 
+\indent Ak server prijal binárny súbor formátu FIT, ihneï po jeho presunutí vykonáme konverziu pouitím nástroja na konverziu z \emph{FIT SDK}.\\
+\indent Ïalším krokom v metóde \emph{files()} je spracovanie CSV súboru (konvertovaného z FIT) alebo XML súborov (GPX, TCX). K tomu je urèená trieda \emph{ActivityParser}. Na konci metódy \emph{files()} je ešte potrebné uloi údaje do databázy. Sumarizáciu tréningu uloíme do tabu¾ky \emph{training\_entry} cez model \emph{WorkoutModel} a priebeh tréningu z dátového súboru do tabu¾ky \emph{training\_entry\_record} cez model \emph{ActivityModel}. Tımto je nahratie súborov ukonèené a pouívate¾ovi sa zobrazí stránka, na ktorej môe zmeni typ športu, prida tréningu názov a popis.
 
 \begin{Verbatim}[baselinestretch=0.75]
 $w_model = new WorkoutModel(); 
@@ -563,79 +564,8 @@ if( $w_model->save(TRUE) ){
 \end{Verbatim}
 
 \subsubsection{Detekcia stúpaní}
-Aby mohla by vykonaná samotná aproximácia vıkonu, musí by z priebehu tréningu detekované, kde sa zaèínajú a konèia stúpania, ktoré vyhovujú stanovenım podmienkam (minimálne 3\% sklon a 500 m dåka). V skutoènosti je priebeh tréningu síce spojitı, no hodnoty, s ktorımi pracujeme sú diskrétne. Najjednoduchšou monosou detekcie je teda iterácia cez všetky body a overovanie nadmorskej vıšky. Aby sme zjednotili údaje, ktoré reprezentujú vybranı úsek v tréningu a udrali programovı kód konzistentnı, vytvorili sme jednoduchú triedu \emph{SegmentModel}\\
-
-\begin{Verbatim}[baselinestretch=0.75]
-class SegmentModel {
-    
-    /** @var int Zaèiatoènı index segmentu v dátach */
-    protected  $index_start;
-    
-    /** @var int Koncovy index segmentu v dátach */
-    protected  $index_end;
-    
-    /** @var float Dåka segmentu */
-    protected  $length;
-    
-    /** @var float Rozdiel v nadmorskej vıške */
-    protected  $elevation;
-    
-    /** Konštruktor segmentu */
-    public function __construct( 
-	$index_start, $index_end, $length, $elevation 
-    ) {
-        
-        $this->index_start = $index_start;
-        $this->index_end   = $index_end;
-        $this->length      = $length;
-        $this->elevation   = $elevation;
-    }
-    
-    /** Vypoèíta sklon stúpania pre segment */
-    public function grade(){        
-        return $this->elevation / $this->length;
-    }
-      
-    /* ... get metódy */
-}
-\end{Verbatim}
-
-Detekciu úsekov má na starosti trieda \emph{Analyzer}. V prvom kroku metódy \emph{detectClimbs()} sú detekované všetky neklesajúce úseky, následne sú nevyhovujúce odstránené.
-
-\begin{Verbatim}[baselinestretch=0.75]
-public function detect_climbs( WorkoutModel $workout ){
-    /* ... Naèítanie dát */
-    
-    for( $i = 0; $i < count($this->data); $i++ ){
-	if( empty($this->data[$i]['distance']) ){ continue; }
-	
-	$start = [ /* index, distance, altitude */ ];
-	while($this->data[$i]['altitude']<$this->data[$i+1]['altitude']){ 
-	    $i++; 
-	}
-	$end = [ /* index, distance, altitude */ ];
-	
-	$climbs[] = new SegmentModel(
-	    $start['index'], $end['index'],
-	    $end['distance'] - $start['distance'],
-	    $end['altitude'] - $start['altitude']
-	);
-    }
-    
-    //** Odstrani nevyhovujuce stúpania
-    foreach ( $climbs as $k =>$climb ){
-	
-	if( !($climb->get_length()>= 500 
-	    && $climb->grade()>= 0.03 
-	    && $climb->get_length() * $climb->grade()>40) )
-	{
-	    unset($climbs[$k]);
-	}
-    }
-}
-\end{Verbatim}
-
-V tomto momente máme detekované stúpania, v ktorıch chceme vıkon aproximova. Ideálna by bola aproximácia, ktorá by pre kadı uloenı bod v tıchto stúpaniach urèila konkrétnu hodnotu vıkonu. Vyrátavali by sa teda priemerné vıkony medzi jednotlivımi bodmi, ktoré boli uloené na tréningu v priebehu stúpaní. Tımto postupom sme však nedostahovali uspokojívé vısledky, nako¾ko nepresnos GPS a barometrického vıškomera pri vıpoète znásobovala odchılku od reálneho vıkonu. Tento problém sme videli aj pri aproximácii vıkonu portálom \emph{Strava}. Z tohto dôvodu v ïalšom kroku delíme stúpania na menšie èasti, tzv. segmenty, na ktorıch je konštantné stúpanie a pri snahe športovca o èo najplynulejšiu jazdu predpokladáme aj rovnomernú rıchlos.\\
+Aby mohla by vykonaná samotná aproximácia vıkonu, musí by z priebehu tréningu detekované, kde sa zaèínajú a konèia stúpania, ktoré vyhovujú stanovenım podmienkam (minimálne 3\% sklon a 500 m dåka). V skutoènosti je priebeh tréningu síce spojitı, no hodnoty, s ktorımi pracujeme sú diskrétne. Najjednoduchšou monosou detekcie je teda iterácia cez všetky body a overovanie nadmorskej vıšky. Detekciu úsekov má na starosti trieda \emph{Analyzer}. V prvom kroku metódy \emph{detectClimbs()} sú detekované všetky neklesajúce úseky, následne sú nevyhovujúce odstránené.\\
+\indent Ideálna by bola aproximácia, ktorá by pre kadı uloenı bod v tıchto stúpaniach urèila konkrétnu hodnotu vıkonu. Vyrátavali by sa teda priemerné vıkony medzi jednotlivımi bodmi, ktoré boli uloené na tréningu v priebehu stúpaní. Tımto postupom sme však nedostahovali uspokojivé vısledky, nako¾ko nepresnos GPS a barometrického vıškomera pri vıpoète znásobovala odchılku od reálneho vıkonu. Tento problém sme videli aj pri aproximácii vıkonu portálom \emph{Strava}. Z tohto dôvodu v ïalšom kroku delíme stúpania na menšie èasti, tzv. segmenty, na ktorıch je konštantné stúpanie a pri snahe športovca o èo najplynulejšiu jazdu predpokladáme aj rovnomernú rıchlos.\\
 \indent H¾adanie úsekov s konštantnım stúpaním nevykonávame jednoduchım prechádzaním cez všetky dáta a vzájomnım porovnávaním aktuálneho a nasledujúceho bodu. Lepšie rozdelenie stúpania dostávame h¾adaním, pri ktorom vytvárame úseèku z bodu \emph{N} a {N+x}, kde \emph{x} je vopred definovanı krok. Túto úseèku následne porovnáme s úseèkou vytvorenou medzi \emph{N+1} a {N+x+1}. Nároènos algoritmu je rovnaká ako v prípade, kedy by sme porovnávali body medzi sebou jednotlivo, cyklus prejde cez všetky body. Vytváraním dlhších úseèiek však minimalizujeme odchılky vıškomera. Kım prvou spomenutou metódou by sme dostávali úseky tvorené 2 a 3 bodmi, pouitou metódou je to v priemere 5 a 10 bodov, tj. v priemere 40 a 150 m, v závislosti od rıchlosti pohybu a frekvencie ukladania dát.\\
 \indent Princíp detekcie segmentov pre lepšiu predstavivos zobrazujeme na obr. \ref{fig:segment_determination}. Kadá úseèka je vytvorená medzi bodmi \emph{N} a {N+x}, kedy N je navyšované pri kadej iterácii. Sklon úseèky 1 je porovnanı so sklonom úseèky 2. Ak je rozdiel sklonu väèší ako 0.005 predpokladáme, e leia nad samostatnımi segmentami. Pri tomto porovnávaní však môeme natrafi na prípad, kedy by nasledujúci segment mal zaèína pod úseèkou, presne ako na obr. \ref{fig:segment_determination}, pod úseèkou 2. Preto po nájdení úseèiek s rozdielnımi sklonmi ešte rozdelíme aj samotnú úseèku a celı proces porovnania sklonov zopakujeme, kım nie je urèenı koniec jedného segmentu a zaèiatok nového. 
 
@@ -669,73 +599,7 @@ for( $i = $i+1; $i <= $climb->get_index_end() - $step; $i++ ){
 
 \subsubsection{Zobrazenie tréningu}
 Hlavnou poiadavkou pri zobrazení tréningu s GPS údajmi, je monos prehliada absolvovanı tréning na mape a monos zobrazi jednotlivé body ¾ahko èitate¾nou formou, teda ideálne formou grafu.\\
-\indent Prvú poiadavku splníme vïaka API od Google Maps. Aplikaèné rozhranie umoòuje zobrazi a vycentrova mapu pre konkrétnu polohu alebo mnoinu bodov, vykresli body alebo ich spojením priamo vytvori krivku. Prikreslením ïalšej krivky do mapy môeme zvırazni konkrétny úsek v tréningu pod¾a priblíenia/selekcie v grafe. Do mapy je taktie moné prida ukazovate¾ pozície. O vykreslenie mapy s tımito monosami sa postará nasledovnı kód, ktorı sa nachádza v náh¾adovom súbore \emph{/views/workout/view.chart.php}. Keïe sa jedná o Javascript, je len odoslanı do prehliadaèa a svoju funkciu vykoná sa a na strane klienta. Vısledok je následne zobrazenı na obr. \ref{fig:inhillz_map}
-
-\begin{Verbatim}[baselinestretch=0.75]
-<script type="text/javascript">
-    
-function map_initialize() {
-  /* ... definovanie štılu a nastavení mapy */
-	  
-  style = new google.maps.StyledMapType(map_styles);
-  
-  route_coordinates = [<?php echo $coordinates ?>];
-		  
-  route_path = new google.maps.Polyline({
-      path: route_coordinates,
-      geodesic: true,
-      strokeColor: '#33CC99',
-  });
-	    
-  map = new google.maps.Map(
-      document.getElementById('map-canvas'), map_options
-  );
-
-  map_marker_mov = new google.maps.Marker({
-      /* ... Nastavenie pre ukazovate¾ pozície */
-  });
-  
-  map_bns = new google.maps.LatLngBounds();
-  <?php echo $bounds; ?>//Body tréningu cez ktoré sa mapa centruje
-      
-  map.mapTypes.set('map_style', style);
-  map.setMapTypeId('map_style');        
-  map.fitBounds(map_bns); // Vycentrovanie mapy   
-  route_path.setMap(map); // Vykreslenie krivky
-}
-
-function map_selection(dt){
-  
-  for(var i = 0; i < dt.length; i++){
-      selection_coordinates.push(
-	  new google.maps.LatLng( dt[i].position_lat, dt[i].position_long )
-      );
-      selection_bounds.extend(
-	  new google.maps.LatLng( dt[i].position_lat, dt[i].position_long )
-      );
-  }
-  
-  /* Reset predchádzajúceho zobrazenia */
-  selection_path.setMap(null); 
-  
-  selection_path = new google.maps.Polyline({
-      path: selection_coordinates,
-      geodesic: true,
-      strokeColor: '#9933cc',
-  });
-	  
-  map.fitBounds(selection_bounds);
-  selection_path.setMap(map);
-}
-
-function map_reset(){
-  map.fitBounds(map_bns);
-  selection_path.setMap(null);
-}
-
-google.maps.event.addDomListener(window, 'load', map_initialize);
-</script>
-\end{Verbatim}
+\indent Prvú poiadavku splníme vïaka API od Google Maps. Aplikaèné rozhranie umoòuje zobrazi a vycentrova mapu pre konkrétnu polohu alebo mnoinu bodov, vykresli body alebo ich spojením priamo vytvori krivku. Prikreslením ïalšej krivky do mapy môeme zvırazni konkrétny úsek v tréningu pod¾a priblíenia/selekcie v grafe. Do mapy je taktie moné prida ukazovate¾ pozície. O vykreslenie mapy s tımito monosami sa postará kód v jazyku JavaScript, ktorı kvôli struènosti neuvádzame. Nachádza v náh¾adovom súbore \emph{/views/workout/view.chart.php}, a keïe sa jedná o JavaScript, je len odoslanı do prehliadaèa a svoju funkciu vykoná a na strane klienta. Vısledok je následne zobrazenı na obr. \ref{fig:inhillz_map}
 
 \begin{figure}[H]
 \centering
@@ -813,7 +677,7 @@ Vykres¾ovanie osí grafu nebudeme rozvádza dopodrobna. Graf disponuje interaktiv
 \caption{Zvıraznenie vıberu pred priblíením konkrétnej èasti tréningu}
 \end{figure}
 
-\subsubsection{Implemtácia neurónovej siete}
+\subsubsection{Implementácia neurónovej siete}
 Ako sme uviedli v predchádzajúcich èastiach práce, na aproximáciu vıkonu sme sa rozhodli implementova doprednú neurónovú sie. Základnım komponentom neurónovej siete je neurón, ktorı má urèitı poèet vstupov a váhy vstupujúcich hrán. Na základe toho máme jednoduchú triedu neurón, ktorej konštruktor sa postará o náhodnú inicializáciu váh v intervale $<$-1, 1$>$:
 \begin{Verbatim}[baselinestretch=0.75]
 class Neuron {
@@ -914,7 +778,7 @@ class NeuralNet {
 Metóda \emph{compute()} je implementácia vzorca \ref{eq:combination_function}, preto ju nebudeme detailnejšie rozvádza. Vıstupy kadej vrstvy siete sú uloené do po¾a \emph{partialOutputs}. Aktivaènú funkciu \textbf{f(a)} neurónu je moné zvoli v konfigurácii pre kadú vrstvu individuálne, keïe sme z dôvodu testovania implementovali hyperbolickı tangens aj sigmoidu. Nako¾ko sa vıstupné dáta nenachádzajú v obore hodnôt tıchto funkcií, vıstupná vrstvu pouíva lineárnu aktivaènú funkciu.
 
 \subsubsection{Trénovanie neurónovej siete}
-Na trénovanie neurónovej siete sme zvolili algoritmus spätného šírenia chyby\footnote{Error-backpropagation algorithm}. Trénovanie je moné inkrementálne a dávkové. Pri inkrementálnom sú váhy neurónov upravované po vypoèítaní chyby kadej vzorky dát. Naopak dávkové uèenie upravuje váhy a po prejdení celej mnoiny trénovacích dát. Po otestovaní oboch spôsobov sme sa priklonili ku inkrementálnemu uèeniu, pretoe vıstupy rıchlejšie konvergovali k oèakávanım hodnotám, ako to odporúèal aj zdroj \cite{efficient_backprop}. Inkrementálne trénovanie sa vykonáva v nasledujúcich krokoch:
+Na trénovanie neurónovej siete sme zvolili algoritmus spätného šírenia chyby\footnote{Error-backpropagation algorithm}. Trénovanie je moné vykonáva inkrementálne alebo dávkovo. Pri inkrementálnom sú váhy neurónov upravované po vypoèítaní chyby kadej vzorky dát. Naopak, dávkové uèenie upravuje váhy a po prejdení celej mnoiny trénovacích dát. Po otestovaní oboch spôsobov sme sa priklonili ku inkrementálnemu uèeniu, pretoe vıstupy rıchlejšie konvergovali k oèakávanım hodnotám, ako to odporúèal aj zdroj \cite{efficient_backprop}. Inkrementálne trénovanie sa vykonáva v nasledujúcich krokoch:
 \begin{enumerate}
   \item Pre kadú trénovaciu vzorku vykonaj:
   \begin{itemize}
@@ -930,7 +794,7 @@ E = \sum \cfrac{1}{2} (desired-output)^2
 \end{equation}
 Po ukonèení jednej epochy urobíme priemer chıb kadej vzorky a táto hodnota je jednou z ukonèovacích podmienok trénovania.\\
 
-\textbf{Spätné šírenie a úprava váh}. Cie¾om spätného šírenia je úprava váh siete tak, aby bol vypoèítanı vıstup blišie k vzorovému vıstupu. Vıstupnı signál šírime sieou spätne a poèítame podiel konkrétnej váhy na celkovej chybe. Úpravu váhy vykonávame pod¾a nasledujúceho vzahu \cite{efficient_backprop}:
+\noindent\textbf{Spätné šírenie a úprava váh}. Cie¾om spätného šírenia je úprava váh siete tak, aby bol vypoèítanı vıstup blišie k vzorovému vıstupu. Vıstupnı signál šírime sieou spätne a poèítame podiel konkrétnej váhy na celkovej chybe. Úpravu váhy vykonávame pod¾a nasledujúceho vzahu \cite{efficient_backprop}:
 \begin{equation} 
 w_i(t) = w_i(t-1) - \eta \cfrac{\partial E}{\partial w_i}
 \end{equation}
@@ -958,17 +822,55 @@ $\cfrac{\partial out_{kj}}{\partial net_{kj}}$ je derivácia aktivaènej funkcie p
 \end{equation}
 kde $m$ je poèet neurónov k+1 vrstvy, \\
 n je n-tı neurón k+1 vrsvty, \\
-$w_n$ je váha hrany, ktorá vystpuje z j-tého neurónu k-tej vrstvy a vstupuje do n-tého neurónu, k+1 vrstvy. Opä ukladáme súèin prvı dvoch èlenov rovnice \ref{eq:err_derive} ako $\delta_{kj}$, pre prípad viacerıch skrytıch vrstiev.\\
-\indent Po prejdení všetkıch hrán a úprave ich váh pokraèuje trénovanie siete ïalšou trénovacou vzorkou. Tento postup sa opakuje pokia¾ nie je splnená jedna z ukonèovacích podmienok:
+$w_n$ je váha hrany, ktorá vystpuje z j-tého neurónu k-tej vrstvy a vstupuje do n-tého neurónu, k+1 vrstvy.\\
+Opä ukladáme súèin prvı dvoch èlenov rovnice \ref{eq:err_derive} ako $\delta_{kj}$, pre prípad viacerıch skrytıch vrstiev.\\
+\indent Po prejdení všetkıch hrán a úprave ich váh pokraèuje trénovanie siete ïalšou trénovacou vzorkou. Tento postup sa opakuje, pokia¾ nie je splnená jedna z ukonèovacích podmienok:
 \begin{itemize}
  \item dosiahnutie predpísanej presnosti celkovej chyby,
  \item dosiahnutie definovaného poètu epoch,
  \item nárast celkovej chyby.
 \end{itemize}
 
+\subsubsection{Konfigurácia neurónovej siete}
+Vstupné hodnoty siete sme vyberali na základe znalostí o odporovıch silách a ich jednotlivıch velièinách. Pouili sme dostupné velièiny z nepriamych meraní, a~to:
+\begin{itemize}
+ \item súèet hmotnosti cyklistu a bicykla
+ \item gradient stúpania
+ \item nadmorská vıška
+ \item teplota
+ \item rıchlos
+\end{itemize}
+Keïe máme 5 vstupnıch hodnôt, naša vstupná vrstva obsahuje 5 neurónov. Vo vıstupnej vrstve je len jeden neurón, pretoe ako vıstup oèakávame jednu velièinu - vıkon. Ako vıstupnú hodnotu oèakávame èísla rádovo v desiatkách a stovkách, teda vıstupnej vrstve sme nastavili lineárnu aktivaènú funkciu. Pri poète skrytıch vrstviev a ich poète neurónov sme si neboli jednoznaène istı, na aké hodnoty by sme ich mali nastavi. 
+\\\indent Predpokladali sme zloitejšie vzahy medzi vstupnımi atribútmi, èo nám napovedalo fyzikálne vyjadrenie vıkonu. Z dôvodu èo najpresnejších vısledkov sme našu sie podrobili viacerım trénovaniam s rôznymi konfiguraènımi hodnotami, aby sme mohli vybra nastavenie siete, ktoré nám dávalo najpresnejšie vıstupné hodnoty. Pri trénovaní s jednou skrytou vrstvou s 8 neurónmi sa celková chyba nezlepšovala u po 200 epochách, no zaznamenávali sme odchılku medzi vıpoèítanım a poadovanım vıkonom aj viac ako 100W. Skúšali sme teda rôzne kombinácie poètu skrytıch vrstiev s rôznym poètom skrytıch neurónov. Pri niektorıch nastaveniach kvôli ve¾kému poètu váh bolo trénovanie príliš zdåhavé. Nakoniec sme dospeli k nastaveniu 2 skrytıch vrstiev s 10 neurónmi v kadej skrytej vrstve.
+\\\indent Pri vıbere aktivaènej funkcie pre neuróny skrytej vrstvy sme mali viac moností. Jedna z najbenejších aktivaènıch funkcií je sigmoida \cite{efficient_backprop}: 
+\begin{equation}
+ f(x) = \cfrac{1}{1 + e^{-x}},
+\end{equation}
+ktorej obor hodnôt sa pohybuje v intervale $(0,1)$.
+Druhov monosou vıberu aktivaènej funkcie bol hyperbolickı tangens \cite{efficient_backprop}: 
+\begin{equation}
+ f(x) = tanh(x),
+\end{equation}
+ktorı má obor hodnôt $(-1,1)$. Práve tento obor hodnôt môe by dôvodom, preèo sme pri trénovaní siete s hyperbolickım tangensom ako aktivaènou funkciou neurónov skrytıch vrstiev dostávali nišie hodnoty celkovej chyby a rıchlejší priebeh uèenia. Preto, v aktuálnej konfigurácii siete, máme práve hyperbolickı tangens zadefinovanı ako aktivaènú funkciu skrytıch vrstiev.\\
+\indent Ïalší parameter trénovania - stupeò uèenia $\eta$ sme postupne upravovali tak, aby bol tréning dostatoène rıchly a aby nedochádzalo ku divergencii (viï obr. \ref{fig:learnrate}). Nakoniec sme dospeli k hodnote $\eta = 0.00001$.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.60]{images/learnrate.png}
+\caption{Porovanie hodnôt stupòa uèenia}
+\label{fig:learnrate}
+\end{figure}
+
+\indent Vidite¾nı pokrok pri trénovaní siete sme dosiahli po normalizáci vstupnıch aj vıstupnıch dát a to aj z dôvodu, ktoré uvádza \cite{efficient_backprop}. V prípade, e poadujeme ve¾kú hodnotu na vıstupe (napr. 450W) z malej hodnoty na vstupe (napr. gradient stúpania 0.05), musia ma váhy hrán vysokú hodnotu. Èo na jednej strane spoma¾uje tréning, keïe stupeò uèenia je v desatinıch èíslach a zároveò dochádza k nasıteniu aktivaènej funkcie, èo znamená, e jej vıstupná hodnota je ve¾mi blízko asymptotickej hodnote. To spôsobuje, e jej derivácia je ve¾mi blízko 0 a pri spätnom šírení chyby sú propagované signály ve¾mi nízke. Podstata normalizácie je v dvoch úkonoch. V posune dát tak, aby ich priemer bol blízko 0 a úprava rozpätia, tak aby bol rozptyl okolo hodnoty 1. 
+\begin{itemize}
+ \item od kadej zloky vzorky odpoèítame priemernú hodnotu zloky všetkıch vzoriek
+ \item a vydelíme smerodajnou odchılkou zloky.
+\end{itemize}
+\indent\textbf{Vıber trénovacích dát} sme sa rovnako ako parametre siete snaili vyladi v priebehu práce. Finálne trénovacie vzorky sú zmerané dáta vıkonu získané od 4 rôznych športovcov. Športovci mali za úlohu opakovane (4 a 7 krát) prechádza vytıèenı úsek v konkrétnom stúpaní. Pri tıchto meraniach sme sa snaili vyhnú extrémnym podmienkam ako silnı vietor alebo vırazné poškodenie vozovky, ktoré by mohlo skreslova namerané vısledky. Kadé z opakovaní malo by absolvované pod¾a moností konštatnım vıkonom. Z opakovaní sme následne vytvorili segmenty a z nich vytvorili vzorky, v ktorıch je pre kadú pozíciu vypoèítanı priemer nameranıch hodnôt. Tım sme sa snaili docieli minimalizáciu rušivıch vplyvov a nedostatky ¾udského faktoru. Trénovacie vzorky sú uloené v súbore \emph{/components/ann/train.data.php}. Rozsah vıkonu sa pohybuje od 100 do 500 W v priemernıch stúpaniach od 3 do 16\%. Poèet trénovacích vzoriek je 764.
+
+\indent Pri tıchto nastaveniach sme pri tréningu boli schopní konvergova k celkovej chybe vyjadrenej vzorcom \ref{eq:error_function} na hodnote 0.06456479, èo predstavuje pri normalizovanıch dátach presnos odhadu pribline \textbf{88.65\%}. Trénovanie neurónovej siete prebieha v 2000 epochách, èo pri vykonávaní serverom Apache 2.4 predstavuje pribline 30 minút.
 
 \subsection{Porovnanie vısledkov}
-Záver tejto kapitoly venujeme porovnaniu odhadnutıch hodnôt s hodnotami, ktoré boli reálne zmerané meraèom vıkonu. Niektoré merania sme opakovali viackrát a niektoré sme vykonali s dvomi športovımi meraèmi. Na Garmin Edge 500 sme mali pripojenı meraè vıkonu Stages Rival alebo PowerTap G3, prièom sme dáta nahrali do nášho systému a dáta z druhého, PowerTap Joule GPS, sme nahrali na server Strava, aby sme mohli vısledky porovna. Z viacerıch meraní sme vybrali tie, pri ktorıch nedochádzalo k vıpadkom signálu, èi u GPS alebo meraèa vıkonu. Merania prebiehali v rôznych teplotnıch podmienkach, od 10 do 350°C a v úsekoch s rôznym priemernım sklonom, od 3 do 12\%. \\
+Záver tejto kapitoly venujeme porovnaniu odhadnutıch hodnôt s hodnotami, ktoré boli reálne zmerané meraèom vıkonu. Niektoré merania sme opakovali viackrát a niektoré sme vykonali s dvomi športovımi meraèmi. Na Garmin Edge 500 sme mali pripojenı meraè vıkonu Stages Rival alebo PowerTap G3, prièom sme dáta nahrali do nášho systému a dáta z druhého, PowerTap Joule GPS, sme nahrali na server Strava, aby sme mohli vısledky porovna. Z viacerıch meraní sme vybrali tie, pri ktorıch nedochádzalo k vıpadkom signálu, èi u GPS alebo meraèa vıkonu. Merania prebiehali v rôznych teplotnıch podmienkach, od 10 do 30°C a v úsekoch s rôznym priemernım sklonom, od 3 do 12\%. \\
 
 \newpage
 \indent \textbf{Meranie è.1, úsek è.1 - Kaèín} (48.1903622, 17.0818403) dåka 2.9km, prevıšenie 98m, priemerné stúpanie 3\%, èas 8:45, teplota 28°C, nadmorská vıška štartu 232~m~n.m. Graf zmeraného a odhadnutého vıkonu môeme vidie na obrázku è. \ref{fig:meranie1usek1} a následne aj hodnoty v tabu¾ke \ref{table:meranie1usek1}.\\
@@ -1059,7 +961,7 @@ smerodajná odchılka rozdielu &  & 36.05 \\ \hline
 \end{table}
 
 \newpage
-\indent \textbf{Meranie è.5, úsek è.3} - Bolo zopakované na úseku è.3 \textb Zámok Náchod} v rovnakı deò
+\indent \textbf{Meranie è.5, úsek è.3} - Bolo zopakované na úseku è.3 \textbf{Zámok Náchod} v rovnakı deò
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.65]{images/strava_comparsion_sample06.png}
@@ -1083,6 +985,13 @@ smerodajná odchılka rozdielu &  & 29.48 \\ \hline
 
 \newpage
 \section{Záver}
+Vısledkom našej práce je algoritmus, ktorı aproximuje vıkon cyklistu v k¾úèovıch stúpaniach na trase tréningu na základe hodnôt z nepriamych meraní. Algoritmus pozostáva z troch krokov: detekcia stúpaní, rozdelenie stúpaní na èiastkové segmenty, odhad vıkonu neurónovou sieou.
+Algoritmus sme implementovali do webovej aplikácie, ktorá umoòuje nahranie súboru s údajmi o športovej aktivite a jej vyhodnotenie. Aplikácia podporuje viacero formátov vstupnıch súborov (FIT, GPX, TCX), ktorı bene pouívajú zriadenia pracujúce s protokolom ANT+. \\
+\indent Je zrejmé, e presnı momentovı vıkon športovca z pozície, rıchlosti a zmeny nadmorskej vıšky nikdy presne urèi nebudeme vedie. Podstatou nášho algoritmu, je rozdelenie celého stúpania na menšie èasti s nemennım sklonom, tzv. segmenty. Pre tieto èasti následne vypoèítame vıkon, akoby ho športovec podával celı èas konštantnı. Vytıèenie segmentov v rámci stúpania sme sa snaili navhrnú tak, aby segmenty boli dlhé nato¾ko, aby odchılky v pozícii alebo nadmorskej vıške mali minimálny vplyv na vısledok vıpoètu. Na druhej strane sa však segmenty snaíme udra relatívne krátke, aby sme v nich mohli aspoò èiastoène zachyti náhle, nieko¾ko sekundové zmeny tempa. V skutoènosti teda nepredpovedáme momentovı vıkon ale nieko¾ko sekundovı priemernı vıkon. Myslíme si, e je to jediná monos ako z dostupnıch dát vıkon aproximova a po porovnaní reálnych a vypoèítanıch hodnôt na nieko¾kıch rôznych vzorkách a dosiahnutıch odchılkach sme sa v tomto názore utvrdili. \\
+\indent Aj napriek skutoènosti, e priemernı vıkon odhadnutı našim systémom bol horší ako vıkon odhadnutı portálom Strava, je dôleité poukáza na presnejšie hodnoty momentálnych vıkonov a menšie odchılky od nameranıch hodnôt.\\
+\indent Cie¾om tejto práce nebolo konkurova existújúcim systémom v mnostve funkcionality. Cie¾om práce bolo umoni finanène dostupnı tréning, ktorı je riadenı pod¾a hodnôt vıkonu športovca. \\
+\indent Na záver práce nám u len ostáva skonštatova, e v tomto vıskume je stále priestor na doplnenie. Pri dostatoènom testovaní v rôznych podmienkach, ideálne však vo veternom tuneli by mohol by vytvorenı algoritmus pre aproximáciu vıkonu aj v rovinatıch èastiach tréningu, ktorı nám momentálne chıba. I keï práve stúpania sú k¾úèovım miestom, kde sa rozhodujú preteky, nemálo nároènıch tréningov a pretekov je situovanıch v rovinatom prostredí.
+
 
 \newpage
 \lhead{}%clear left side header, from this point to the end of the document

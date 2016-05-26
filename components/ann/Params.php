@@ -23,7 +23,7 @@ class Params {
     public static $bias = -1;
     
     public static $numEpochs = 1000;
-    public static $learnRate = 0.000001;
+    public static $learnRate = 0.05;
     
     public static $mseTarget = 0.02;
 }

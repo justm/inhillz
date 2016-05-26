@@ -26,8 +26,9 @@
 \contentsline {subsection}{\numberline {3.5}Implement\'acia}{36}
 \contentsline {subsubsection}{\numberline {3.5.1}Nahranie a konverzia s\'uboru}{37}
 \contentsline {subsubsection}{\numberline {3.5.2}Detekcia st\'upan\IeC {\'\i }}{38}
-\contentsline {subsubsection}{\numberline {3.5.3}Zobrazenie tr\'eningu}{41}
-\contentsline {subsubsection}{\numberline {3.5.4}Implement\'acia neur\'onovej siete}{45}
-\contentsline {subsubsection}{\numberline {3.5.5}Tr\'enovanie neur\'onovej siete}{47}
+\contentsline {subsubsection}{\numberline {3.5.3}Zobrazenie tr\'eningu}{40}
+\contentsline {subsubsection}{\numberline {3.5.4}Implement\'acia neur\'onovej siete}{42}
+\contentsline {subsubsection}{\numberline {3.5.5}Tr\'enovanie neur\'onovej siete}{44}
+\contentsline {subsubsection}{\numberline {3.5.6}Konfigur\'acia neur\'onovej siete}{46}
 \contentsline {subsection}{\numberline {3.6}Porovnanie v\'ysledkov}{49}
 \contentsline {section}{\numberline {4}Z\'aver}{55}
