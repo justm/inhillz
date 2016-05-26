@@ -74,8 +74,8 @@ class NeuralNet {
 	
         $this->numInputs          = Params::$numInputs;
 	$this->numOutputs         = Params::$numOutputs;
-	$this->numHiddenLayers    = Params::$numHidden;
-	$this->numNeuronsPerLayer = Params::$numNeuronsPerLayer;
+	$this->numHiddenLayers    = count(Params::$hiddenLayers);
+	$this->numNeuronsPerLayer = Params::$hiddenLayers;
 
 	$this->createNet();
     }
@@ -88,14 +88,14 @@ class NeuralNet {
 	if ($this->numHiddenLayers > 0) {
             
             // Prva skryta vrstva
-            array_push($this->layers, new NeuronLayer($this->numNeuronsPerLayer, $this->numInputs));
+            array_push($this->layers, new NeuronLayer($this->numNeuronsPerLayer[0], $this->numInputs));
     
             for ($i = 0; $i < $this->numHiddenLayers - 1; $i++) { //dalsie skryte vrstvy
-                array_push($this->layers, new NeuronLayer($this->numNeuronsPerLayer, $this->numNeuronsPerLayer));
+                array_push($this->layers, new NeuronLayer($this->numNeuronsPerLayer[$i], $this->numNeuronsPerLayer[$i]));
             }
 
             // Vystupna vrstva
-            array_push($this->layers, new NeuronLayer($this->numOutputs, $this->numNeuronsPerLayer));
+            array_push($this->layers, new NeuronLayer($this->numOutputs, $this->numNeuronsPerLayer[$i]));
 	}
         else {
             // Vystupna vrstva

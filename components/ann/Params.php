@@ -14,8 +14,7 @@ class Params {
 
     public static $numInputs = 5;
     public static $numOutputs = 1;
-    public static $numHidden = 2;
-    public static $numNeuronsPerLayer = 10;
+    public static $hiddenLayers = [10, 10];
 
     public static $activationFunction = ['tanh', 'tanh', 'linear'];
     

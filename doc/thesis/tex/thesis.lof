@@ -1,7 +1,7 @@
 \select@language {slovak}
 \contentsline {figure}{\numberline {1}{\ignorespaces Porovnanie v\'ykonu a tepovej frekvencie pri z\'a\v ta\v zi}}{9}
-\contentsline {figure}{\numberline {2}{\ignorespaces Zjednodu\v sen\'a \v strukt\'ura FIT s\'uboru}}{12}
-\contentsline {figure}{\numberline {3}{\ignorespaces CSV s\'ubor po konverzii z FIT}}{12}
+\contentsline {figure}{\numberline {2}{\ignorespaces Zjednodu\v sen\'a \v strukt\'ura FIT s\'uboru \cite {thisisant}}}{12}
+\contentsline {figure}{\numberline {3}{\ignorespaces CSV s\'ubor po konverzii z FIT \cite {thisisant}}}{12}
 \contentsline {figure}{\numberline {4}{\ignorespaces Strava - Anal\'yza tr\'eningu}}{15}
 \contentsline {figure}{\numberline {5}{\ignorespaces Strava - Graf v\'ykonu}}{16}
 \contentsline {figure}{\numberline {6}{\ignorespaces Strava - Graf odhadnut\'eho v\'ykonu pod\v la GPS}}{16}
@@ -13,12 +13,14 @@
 \contentsline {figure}{\numberline {12}{\ignorespaces Valiv\'y odpor \cite {encyklopedie_fyziky}}}{23}
 \contentsline {figure}{\numberline {13}{\ignorespaces Z\'avislos\v t potrebn\'eho v\'ykonu od koeficientu odporu pneumatiky}}{24}
 \contentsline {figure}{\numberline {14}{\ignorespaces Podiel silov\'ych zlo\v ziek v z\'avislosti od st\'upaj\'uceho sklonu vozovky}}{25}
-\contentsline {figure}{\numberline {15}{\ignorespaces Neur\'onov\'a sie\v t}}{28}
-\contentsline {figure}{\numberline {16}{\ignorespaces Neur\'on}}{29}
-\contentsline {figure}{\numberline {17}{\ignorespaces Architekt\'ura webovej aplik\'acie}}{30}
-\contentsline {figure}{\numberline {18}{\ignorespaces Diagram pr\IeC {\'\i }padov pou\v zitia}}{33}
-\contentsline {figure}{\numberline {19}{\ignorespaces Diagram aktiv\IeC {\'\i }t}}{34}
-\contentsline {figure}{\numberline {20}{\ignorespaces Detekcia segmentu}}{39}
-\contentsline {figure}{\numberline {21}{\ignorespaces Zobrazenie mapy v detailnom n\'ah\v lade tr\'eningu}}{41}
-\contentsline {figure}{\numberline {22}{\ignorespaces Zv\'yraznenie v\'yberu pred pribl\IeC {\'\i }\v zen\IeC {\'\i }m konkr\'etnej \v casti tr\'eningu}}{43}
-\contentsline {figure}{\numberline {23}{\ignorespaces Porovanie aproxim\'acie v\'ykonu - \'usek \v c.1 - meranie \v c.2}}{44}
+\contentsline {figure}{\numberline {15}{\ignorespaces Rozhodovac\IeC {\'\i } strom}}{28}
+\contentsline {figure}{\numberline {16}{\ignorespaces Rozdelenie mno\v ziny hodn\^ot}}{28}
+\contentsline {figure}{\numberline {17}{\ignorespaces Neur\'onov\'a sie\v t}}{29}
+\contentsline {figure}{\numberline {18}{\ignorespaces Neur\'on}}{30}
+\contentsline {figure}{\numberline {19}{\ignorespaces Architekt\'ura webovej aplik\'acie}}{31}
+\contentsline {figure}{\numberline {20}{\ignorespaces Diagram pr\IeC {\'\i }padov pou\v zitia}}{34}
+\contentsline {figure}{\numberline {21}{\ignorespaces Diagram aktiv\IeC {\'\i }t}}{35}
+\contentsline {figure}{\numberline {22}{\ignorespaces Detekcia segmentu}}{39}
+\contentsline {figure}{\numberline {23}{\ignorespaces Zobrazenie mapy v detailnom n\'ah\v lade tr\'eningu}}{41}
+\contentsline {figure}{\numberline {24}{\ignorespaces Zv\'yraznenie v\'yberu pred pribl\IeC {\'\i }\v zen\IeC {\'\i }m konkr\'etnej \v casti tr\'eningu}}{43}
+\contentsline {figure}{\numberline {25}{\ignorespaces Porovanie aproxim\'acie v\'ykonu - \'usek \v c.1 - meranie \v c.2}}{46}

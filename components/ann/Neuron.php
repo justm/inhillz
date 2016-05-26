@@ -34,7 +34,7 @@ class Neuron {
         $this->numInputs = $numImputs; //Váha pre bias - preto +1
         
         for($i = 0; $i <= $this->numInputs; $i++){
-            array_push($this->weights, Helper::random(-1,1)); //Inicializácia na náhodné váhy
+            array_push($this->weights, Helper::random(-1,1)); //Inicializácia na náhodných váh
         }
     }
 }

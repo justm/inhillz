@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.24)  26 MAY 2016 10:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.24)  26 MAY 2016 15:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -767,15 +767,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [7]
-Overfull \hbox (19.35692pt too wide) in paragraph at lines 106--109
-\OT1/cmr/m/n/12 z^^Saujem o per-spekt^^S^^Pvne zlep^^Tsovanie, prv^^Sym kro-kom
- by malo byt[] ab-sol-vo-va-nie v^^Sykonnostn^^Seho
- []
-
-
-Overfull \hbox (46.97737pt too wide) in paragraph at lines 106--109
-\OT1/cmr/m/n/12 testu u ^^Tsportov^^Seho lek^^Sara, tzv. funk^^Tcn^^Seho testu.
- Lek^^Sar by na z^^Saklade anamn^^Sezy, predch^^Sadzaj^^Sucich
+Overfull \hbox (11.32652pt too wide) in paragraph at lines 106--109
+\OT1/cmr/m/n/12 v^^Sykonnosti a predch^^Sadzaj^^Sucich sk^^Susenost^^S^^P so ^^
+Tsportom mal od-poru^^Tcit[] pri-me-ran^^Se tr^^Seningov^^Se
  []
 
 <images/bpm_watt_comparsion.png, id=32, 654.94687pt x 101.62968pt>
@@ -786,11 +780,6 @@ Package pdftex.def Info: images/bpm_watt_comparsion.png used on input line 119.
 
 (pdftex.def)             Requested size: 425.71043pt x 66.0585pt.
 
-Overfull \hbox (10.06516pt too wide) in paragraph at lines 114--122
-\OT1/cmr/m/n/12 nost[], z^^S^^Pskame me-ran^^S^^Pm v^^Sykonu. M^o^^Tzeme ur^^Tc
-it[] in-ten-zitu pri kr^^Satkych zr^^Sychlen^^Sych ^^Susekoch,
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 15.71667pt.
@@ -798,11 +787,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [8]
-Overfull \hbox (0.86116pt too wide) in paragraph at lines 126--127
-[]\OT1/cmr/m/n/12 V predch^^Sadzaj^^Sucich ^^Tcastiach sme nie-kol[]kokr^^Sat s
-po-me-nuli ^^Tsportov^^Se ho-dinky alebo
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 15.71667pt.
@@ -810,6 +794,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [9 <./images/bpm_watt_comparsion.png>]
+Overfull \hbox (0.86116pt too wide) in paragraph at lines 126--127
+[]\OT1/cmr/m/n/12 V predch^^Sadzaj^^Sucich ^^Tcastiach sme nie-kol[]kokr^^Sat s
+po-me-nuli ^^Tsportov^^Se ho-dinky alebo
+ []
+
+
 Overfull \hbox (3.2034pt too wide) in paragraph at lines 132--137
 []\OT1/cmr/m/n/12 ANT pre-nos d^^Sat pre-bieha na frek-ven-cii me-dzi 2400 MHz 
 a^^Tz 2524 MHz s v^^Synimkou
@@ -873,7 +863,12 @@ File: images/strava_analysis.png Graphic file (type png)
 
 <use images/strava_analysis.png>
 Package pdftex.def Info: images/strava_analysis.png used on input line 182.
-(pdftex.def)             Requested size: 295.39839pt x 265.88867pt.
+(pdftex.def)             Requested size: 443.10886pt x 398.84314pt.
+
+Overfull \hbox (2.09113pt too wide) in paragraph at lines 182--183
+ [][] 
+ []
+
 
 Overfull \hbox (1.3688pt too wide) in paragraph at lines 178--185
 \OT1/cmr/m/n/12 pon^^Suka kom-plexn^^Su anal^^Syzu tr^^Seningov^^Sych d^^Sat a 
@@ -947,6 +942,14 @@ File: images/bikecalculator_calc.png Graphic file (type png)
 Package pdftex.def Info: images/bikecalculator_calc.png used on input line 217.
 
 (pdftex.def)             Requested size: 138.89355pt x 166.74756pt.
+
+Overfull \hbox (16.17813pt too wide) in paragraph at lines 222--246
+\OT1/cmr/m/n/12 dodr^^Tziavat[] rov-no-mern^^Sy v^^Sykon. Na-kol[]ko Bike Cal-c
+u-la-tor ne-umo^^Tz^^Tnuje vkla-da-nie ^^Tciastkov^^Sych
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1084,12 +1087,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26] <images/neural_net.png, id=117, 2007.5pt x 2509.375pt>
-File: images/neural_net.png Graphic file (type png)
+[26] <images/regression_tree.png, id=117, 528.90335pt x 281.40889pt>
+File: images/regression_tree.png Graphic file (type png)
 
-<use images/neural_net.png>
-Package pdftex.def Info: images/neural_net.png used on input line 402.
-(pdftex.def)             Requested size: 200.76175pt x 250.9522pt.
+<use images/regression_tree.png>
+Package pdftex.def Info: images/regression_tree.png used on input line 403.
+(pdftex.def)             Requested size: 185.11894pt x 98.49458pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1097,11 +1100,32 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[27] <images/neuron.png, id=121, 1162.3425pt x 410.53375pt>
-File: images/neuron.png Graphic file (type png)
+[27] <images/regression_alg_example.png, id=121, 874.26625pt x 479.7925pt>
+File: images/regression_alg_example.png Graphic file (type png)
 
-<use images/neuron.png>
-Package pdftex.def Info: images/neuron.png used on input line 409.
+<use images/regression_alg_example.png>
+Package pdftex.def Info: images/regression_alg_example.png used on input line 4
+10.
+(pdftex.def)             Requested size: 305.99777pt x 167.92987pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.92502pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[28 <./images/regression_tree.png> <./images/regression_alg_example.png>]
+<images/neural_net.png, id=126, 2007.5pt x 2509.375pt>
+File: images/neural_net.png Graphic file (type png)
+
+<use images/neural_net.png>
+Package pdftex.def Info: images/neural_net.png used on input line 420.
+(pdftex.def)             Requested size: 200.76175pt x 250.9522pt.
+
+<images/neuron.png, id=127, 1162.3425pt x 410.53375pt>
+File: images/neuron.png Graphic file (type png)
+ <use images/neuron.png>
+Package pdftex.def Info: images/neuron.png used on input line 427.
 (pdftex.def)             Requested size: 290.58492pt x 102.63318pt.
 
 
@@ -1110,35 +1134,30 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[28 <./images/neural_net.png>]
-<images/mcore.png, id=126, 1151.80313pt x 1035.87pt>
+[29 <./images/neural_net.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.92502pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[30 <./images/neuron.png>]
+<images/mcore.png, id=136, 1151.80313pt x 1035.87pt>
 File: images/mcore.png Graphic file (type png)
  <use images/mcore.png>
-Package pdftex.def Info: images/mcore.png used on input line 426.
-(pdftex.def)             Requested size: 380.0962pt x 341.83815pt.
+Package pdftex.def Info: images/mcore.png used on input line 445.
+(pdftex.def)             Requested size: 345.54361pt x 310.7634pt.
 
-Overfull \hbox (3.4512pt too wide) in paragraph at lines 422--429
+Overfull \hbox (3.4512pt too wide) in paragraph at lines 441--448
 []\OT1/cmr/m/n/12 Bakal^^Sarska pr^^Saca \OT1/cmr/m/it/12 We-bov^^Sy or-ga-niz^
 ^Ser\OT1/cmr/m/n/12 , pred-sta-vo-vala we-bov^^Su ap-lik^^Saciu s mo^^Tznost[]o
 u
  []
 
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.92502pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[29 <./images/neuron.png>]
-Overfull \hbox (5.15779pt too wide) in paragraph at lines 431--436
+Overfull \hbox (2.45538pt too wide) in paragraph at lines 450--456
 []\OT1/cmr/m/n/12 Nov^^Sa ^^Tcast[] ap-lik^^Sacie ^^Suplne pre-be-rie na sta-ro
-sti ukla-da-nie a zo-bra-zo-va-nie tr^^Seningov.
- []
-
-
-Overfull \hbox (14.98204pt too wide) in paragraph at lines 431--436
-\OT1/cmr/m/n/12 Oproti ba-kal^^Sarskej pr^^Saci bude po-zme-nen^^Sa mo^^Tznost[
-] ulo^^Tzenia manu^^Salneho z^^Saznamu tr^^Seningu
+st[] ukla-da-nie a zo-bra-zo-va-nie tr^^Seningov.
  []
 
 
@@ -1147,39 +1166,39 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30 <./images/mcore.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 438--439
+[31 <./images/mcore.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 458--459
 
  []
 
 
-Overfull \hbox (6.29306pt too wide) in paragraph at lines 453--454
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.92502pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[32]
+Overfull \hbox (6.29306pt too wide) in paragraph at lines 473--474
 []$[]$ \OT1/cmr/m/n/12 UC[]01, za-da-nie d^^Satumu v kto-rom bol tr^^Sening
  []
 
 
-Overfull \hbox (11.18884pt too wide) in paragraph at lines 462--463
+Overfull \hbox (11.18884pt too wide) in paragraph at lines 482--483
 []$[]$ \OT1/cmr/m/n/12 UC[]01, na-hra-nie mi-nim^^Salne jedn^^Seho d^^Satov^^Se
 ho
  []
 
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.92502pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[31]
-Overfull \hbox (17.0797pt too wide) in paragraph at lines 471--472
+Overfull \hbox (17.0797pt too wide) in paragraph at lines 491--492
 []$[]$ \OT1/cmr/m/n/12 po^^Tziadavka na de-tailn^^Se zo-bra-ze-nie konkr^^Setne
 ho
  []
 
-<images/diagram_usecase.png, id=139, 1196.97188pt x 1106.63437pt>
+<images/diagram_usecase.png, id=145, 1196.97188pt x 1106.63437pt>
 File: images/diagram_usecase.png Graphic file (type png)
 
 <use images/diagram_usecase.png>
-Package pdftex.def Info: images/diagram_usecase.png used on input line 487.
+Package pdftex.def Info: images/diagram_usecase.png used on input line 507.
 (pdftex.def)             Requested size: 359.09433pt x 331.99287pt.
 
 
@@ -1188,11 +1207,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[32] <images/diagram_activity.png, id=143, 1850.915pt x 2152.04pt>
+[33] <images/diagram_activity.png, id=149, 1850.915pt x 2152.04pt>
 File: images/diagram_activity.png Graphic file (type png)
 
 <use images/diagram_activity.png>
-Package pdftex.def Info: images/diagram_activity.png used on input line 496.
+Package pdftex.def Info: images/diagram_activity.png used on input line 516.
 (pdftex.def)             Requested size: 407.20256pt x 473.45027pt.
 
 
@@ -1201,29 +1220,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[33 <./images/diagram_usecase.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 500--501
-
- []
-
+[34 <./images/diagram_usecase.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.92502pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[34 <./images/diagram_activity.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 515--516
+[35 <./images/diagram_activity.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 527--528
 
  []
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.92502pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[35]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.92502pt.
@@ -1231,13 +1239,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [36]
-Overfull \hbox (1.93288pt too wide) in paragraph at lines 589--590
+Overfull \hbox (1.93288pt too wide) in paragraph at lines 565--566
 \OT1/cmr/m/n/12 s^^S^^Pce spo-jit^^Sy, no hod-noty, s ktor^^Symi pra-cu-jeme s^
 ^Su diskr^^Setne. Naj-jed-no-duch^^Tsou mo^^Tznost[]ou
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 589--590
+Underfull \hbox (badness 10000) in paragraph at lines 565--566
 
  []
 
@@ -1248,7 +1256,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [37]
-Overfull \hbox (26.32053pt too wide) in paragraph at lines 661--664
+Overfull \hbox (26.32053pt too wide) in paragraph at lines 637--640
 []\OT1/cmr/m/n/12 Hl[]adanie ^^Susekov s kon^^Tstantn^^Sym st^^Supan^^S^^Pm ne-
 vy-kon^^Savame jed-no-duch^^Sym prech^^Sadzan^^S^^Pm
  []
@@ -1259,12 +1267,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[38] <images/segment_determination.png, id=165, 454.8995pt x 199.5455pt>
+[38] <images/segment_determination.png, id=168, 454.8995pt x 199.5455pt>
 File: images/segment_determination.png Graphic file (type png)
 
 <use images/segment_determination.png>
-Package pdftex.def Info: images/segment_determination.png used on input line 66
-7.
+Package pdftex.def Info: images/segment_determination.png used on input line 64
+3.
 (pdftex.def)             Requested size: 341.17378pt x 149.65874pt.
 
 
@@ -1280,11 +1288,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[40] <images/inhillz_map.png, id=173, 497.60907pt x 307.1475pt>
+[40] <images/inhillz_map.png, id=176, 497.60907pt x 307.1475pt>
 File: images/inhillz_map.png Graphic file (type png)
 
 <use images/inhillz_map.png>
-Package pdftex.def Info: images/inhillz_map.png used on input line 765.
+Package pdftex.def Info: images/inhillz_map.png used on input line 741.
 (pdftex.def)             Requested size: 273.68582pt x 168.93164pt.
 
 
@@ -1300,25 +1308,39 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[42] <images/inhillz_selection.png, id=182, 554.82281pt x 624.08156pt>
+[42] <images/inhillz_selection.png, id=185, 554.82281pt x 624.08156pt>
 File: images/inhillz_selection.png Graphic file (type png)
 
 <use images/inhillz_selection.png>
-Package pdftex.def Info: images/inhillz_selection.png used on input line 835.
+Package pdftex.def Info: images/inhillz_selection.png used on input line 811.
 (pdftex.def)             Requested size: 360.63055pt x 405.64821pt.
 
-Overfull \hbox (1.69781pt too wide) in paragraph at lines 840--841
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.92502pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[43 <./images/inhillz_selection.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.92502pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[44]
+Overfull \hbox (1.69781pt too wide) in paragraph at lines 915--916
 \OT1/cmr/m/n/12 ktor^^Se boli re^^Salne zme-ran^^Se mera^^Tcom v^^Sykonu. V^^Sy
 sledky, ktor^^Se pre-zen-tu-jeme, s^^Su na z^^Saklade
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 840--841
+Underfull \hbox (badness 10000) in paragraph at lines 915--916
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 840--841
+Underfull \hbox (badness 10000) in paragraph at lines 915--916
 
  []
 
@@ -1328,16 +1350,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[43 <./images/inhillz_selection.png>]
-<images/strava_comparsion_sample02.png, id=187, 681.29532pt x 402.00188pt>
+[45]
+<images/strava_comparsion_sample02.png, id=196, 681.29532pt x 402.00188pt>
 File: images/strava_comparsion_sample02.png Graphic file (type png)
 
 <use images/strava_comparsion_sample02.png>
 Package pdftex.def Info: images/strava_comparsion_sample02.png used on input li
-ne 852.
+ne 927.
 (pdftex.def)             Requested size: 442.83672pt x 261.29811pt.
 
-Overfull \hbox (1.81898pt too wide) in paragraph at lines 852--853
+Overfull \hbox (1.81898pt too wide) in paragraph at lines 927--928
  [][] 
  []
 
@@ -1347,45 +1369,45 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[44 <./images/strava_comparsion_sample02.png (PNG copy)>]
+[46 <./images/strava_comparsion_sample02.png (PNG copy)>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 15.71667pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[45]
-Underfull \hbox (badness 10000) in paragraph at lines 870--871
+[47]
+Underfull \hbox (badness 10000) in paragraph at lines 948--949
 []\OT1/cmr/m/n/12 ORR, G. - SCH-RAU-DOLPH, N. - CUM-MINS, F.: \OT1/cmr/m/it/12 
 Pre-con-di-ti-oning
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 870--871
+Underfull \hbox (badness 10000) in paragraph at lines 948--949
 \OT1/cmr/m/it/12 the Ne-twork\OT1/cmr/m/n/12 . [cit. 27. 10. 2015]. Do-stupn^^S
 e na World Wide Web:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 888--889
+Underfull \hbox (badness 10000) in paragraph at lines 966--967
 []\OT1/cmr/m/n/12 CYCLING-WEEKLY: \OT1/cmr/m/it/12 Po-wer me-ters: Eve-ryt-hing
  you need to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 888--889
+Underfull \hbox (badness 10000) in paragraph at lines 966--967
 \OT1/cmr/m/it/12 know\OT1/cmr/m/n/12 . [cit. 15. 4. 2015]. Do-stupn^^Se na Worl
 d Wide Web:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 888--889
+Underfull \hbox (badness 10000) in paragraph at lines 966--967
 \OML/cmm/m/it/12 <$\OT1/cmr/m/n/12 http://www.cyclingweekly.co.uk/news/power-me
 ters-everything-you-need-
  []
 
 
-Underfull \hbox (badness 1264) in paragraph at lines 891--892
+Underfull \hbox (badness 1264) in paragraph at lines 969--970
 \OT1/cmr/m/it/12 of Pneuma-tic Ti-res\OT1/cmr/m/n/12 . Mi-chi-gan: Uni-ver-sity
  of Mi-chi-gan, 1979. 156s. ASIN:
  []
@@ -1396,26 +1418,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[46]
-Underfull \hbox (badness 10000) in paragraph at lines 906--907
+[48]
+Underfull \hbox (badness 10000) in paragraph at lines 984--985
 []\OT1/cmr/m/n/12 CYCLING PO-WER LAB: \OT1/cmr/m/it/12 Cyc-ling Aero-dy-na-mics
  & CdA - A
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 906--907
+Underfull \hbox (badness 10000) in paragraph at lines 984--985
 \OT1/cmr/m/it/12 Pri-mer\OT1/cmr/m/n/12 . [cit. 20. 10. 2015]. Do-stupn^^Se na 
 World Wide Web:
  []
 
 
-Underfull \hbox (badness 5548) in paragraph at lines 915--916
+Underfull \hbox (badness 5548) in paragraph at lines 993--994
 []\OT1/cmr/m/n/12 STRAVA: \OT1/cmr/m/it/12 About\OT1/cmr/m/n/12 . [cit. 10. 3. 
 2015]. Do-stupn^^Se na World Wide Web:
  []
 
 
-Underfull \hbox (badness 3000) in paragraph at lines 924--925
+Underfull \hbox (badness 3000) in paragraph at lines 1002--1003
 []\OT1/cmr/m/n/12 MBOSTOCK: \OT1/cmr/m/it/12 D3\OT1/cmr/m/n/12 . [cit. 20. 12. 
 2014]. Do-stupn^^Se na World Wide Web:
  []
@@ -1426,19 +1448,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[47]
+[49]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 15.71667pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[48] (./thesis.aux) ) 
+[50] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 15225 strings out of 494919
- 289515 string characters out of 6179680
- 346063 words of memory out of 5000000
- 18190 multiletter control sequences out of 15000+600000
+ 15238 strings out of 494919
+ 289914 string characters out of 6179680
+ 346088 words of memory out of 5000000
+ 18201 multiletter control sequences out of 15000+600000
  10604 words of font info for 38 fonts, out of 8000000 for 9000
  24 hyphenation exceptions out of 8191
  55i,16n,54p,1103b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1457,10 +1479,10 @@ sl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (48 pages, 1867076 bytes).
+Output written on thesis.pdf (50 pages, 1997945 bytes).
 PDF statistics:
- 260 PDF objects out of 1000 (max. 8388607)
- 162 compressed objects within 2 object streams
+ 270 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 128 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

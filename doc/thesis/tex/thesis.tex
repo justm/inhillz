@@ -40,7 +40,7 @@
 \begin{table}[H]
   \centering
   \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}} c} % l r text align left right 
-    Bratislava, dòa 21. 05. 2015 & \\
+    Bratislava, dòa 20. 05. 2016 & \\
     & . . . . . . . . . . . . . . . . . . . .  \\
     & Bc. Matúš Maèák\\
   \end{tabular*}
@@ -63,11 +63,11 @@ Fakulta: Fakulta elektrotechniky a informatiky\\
 Autor: Bc. Matúš Maèák\\
 Názov práce: Aproximácia wattového vıkonu športovca\\
 Vedúci práce: Ing. Stanislav Marèek\\
-Bratislava 2015
+Bratislava 2016
 \\\\
-\indent Diplomová práca sa zaoberá h¾adaním algoritmu pre odhadnutie wattového vıkonu športovca, cyklistu. V úvode práce je vysvetlená dôleitos sledovania vıkonu ako hlavného ukazovate¾a v tréningu. Popisuje zariadenia, aplikácie a štandardy, ktoré sú vyvinuté za úèelom sledovania tréningovıch údajov. Jadro práce pojednáva o problematike odhadovania vıkonu z rôznych údajov a prezentuje riešenie, ktoré umoòuje urèi pribliné hodnoty vıkonu bez jeho priameho merania. Záver práce je venovanı rozboru a analıze presnosti údajov odhadnutıch algoritmom.
+\indent Diplomová práca sa zaoberá h¾adaním algoritmu pre odhadnutie wattového vıkonu športovca, cyklistu. V úvode práce je vysvetlená dôleitos sledovania vıkonu ako hlavného ukazovate¾a v tréningu. Popisuje zariadenia, aplikácie a štandardy, ktoré sú vyvinuté za úèelom sledovania tréningovıch údajov. Jadro práce pojednáva o problematike odhadovania vıkonu z rôznych údajov a prezentuje riešenie, ktoré vïaka strojovému uèeniu umoòuje urèi pribliné hodnoty vıkonu bez jeho priameho merania. Záver práce je venovanı rozboru a analıze presnosti údajov odhadnutıch algoritmom.
 \\\\   
-\indent K¾úèové slová: šport, cyklistika, vıkon, ANT+
+\indent K¾úèové slová: šport, cyklistika, vıkon, ANT+, umelá neurónová sie
 
 \newpage
 \thispagestyle{empty}
@@ -79,11 +79,11 @@ Training workplace: Institute of Computer Science and Mathematics\\
 Author: Matúš Maèák\\
 Title: Approximation of athlete power output\\
 Thesis supervisor: Ing. Stanislav Marèek\\
-Bratislava 2015
+Bratislava 2016
 \\\\
-\indent This master thesis describes the research of algorithm for estimating the power effort of an athlete, cyclist. First part explains the importance of monitoring the power as the main indicator in training. It describes devices, software and standards that are developed to track sport activity. The main part deals with common problems in power estimation from various data and presents the solution that allows approximating the value of athlete's power without a direct measurement. The conclusion is devoted to review and analyze the accuracy of the algorithm.
+\indent This master thesis describes the research of algorithm for estimating the power effort of an athlete, cyclist. First part explains the importance of monitoring the power as the main indicator in training. It describes devices, software and standards that are developed to track sport activity. The main part deals with common problems in power estimation from various data and presents the solution based on machine learning that allows approximating the value of athlete's power without a direct measurement. The conclusion is devoted to review and analyze the accuracy of the algorithm.
 \\\\
-\indent Keywords: sport, cycling, power, ANT+
+\indent Keywords: sport, cycling, power, ANT+, artificial neural network
 
 \newpage 
 \thispagestyle{empty}
@@ -96,14 +96,14 @@ Bratislava 2015
 \newpage
 \addtocounter{section}{-1}
 \section{Úvod}
-Technologickı pokrok je bezpochyby dôvodom, preèo sa rôzne inteligentné zariadenia stávajú naším najdôleitejším nástrojom pri kadodennej rutine, ale aj v krízovıch situáciách. Inak tomu nie je ani v športe, najmä ak sa jedná o vytrvalostné disciplíny. Na pulte takmer kadej športovej predajne sú k dispozícii meraèe srdcového tepu, športové hodinky, cyklopoèítaèe s GPS a podobne. Nielen tréning pod¾a vlastného pocitu, ale podriadenie tréningovej záae údajom na meracom zariadení sa stáva k¾úèom k postupnému zvyšovaniu vıkonnosti. Vysoká dostupnos technológií a \emph{know-how} vyrovnáva schopnosti konkurencie. Víazia športové drustvá, ktoré okrem mimoriadneho talentu dokáu tréning najlepšie zmera, vyhodnoti a opätovne naplánova.\\
-\indent V práci sa zameriavame na analızu vytrvalostného športu - cyklistiky, ktorú môeme v globále urobi z údajov ako je dåka tréningu v hodinách, tzv. tréningovı objem, vzdialenos, rıchlos, tepová frekvencia. Tréning pod¾a tepovej frekvencie môe by pre športovca obrovskım prínosom za predpokladu, e má správne stanovené tréningové zóny, ktoré by mali odzrkad¾ova zaaenie organizmu \cite{kontrolovany_trening}. Tepovú frekvenciu u môeme v dnešnej dobe povaova za pomerne nenákladnı spôsob usmernenia tréningu, no má však jednu nevıhodu. Tep srdca reaguje na stúpajúce zaaenie s miernım oneskorením a môe by skreslenı pri vıkyve vnútornej rovnováhy organizmu. V cyklistike, kde na reálny vıkon, vyjadrite¾nı fyzikálnou velièinou, vplıva ve¾ké mnostvo faktorov, je aktuálna rıchlos síce okamitım, ale ve¾mi nepresnım ukazovate¾om. Preto je meraè rıchlosti aj tepovej frekvencie postupne nahrádzanı meraèom vıkonu.\\
-\indent Meranie vıkonu v cyklistike nám poskytuje okamitú odpoveï na otázky: ako ve¾mi sa športovec namáha, akou silou pôsobí na pedále. Subjektívny pocit námahy nahrádza konkrétny èíselnı údaj, štandardne vyjadrenı v jednotkách \emph{Watt [W]}. Problémom je však cenová dostupnos takéhoto merania. U profesionálnych športovcov mono cenová nároènos nehrá rolu, avšak sú aj športoví nadšenci, amatérski pretekári, ktorí si chcú zmera svoj progres, prípadne sa porovna s najlepšími. Vıkon je miera toho ako rıchlo vykonáva urèitá sila prácu \cite{obecna_fyzika}. Je to fyzikálna velièina, a teda by malo by by moné ho vypoèíta na základe údajov ako je stúpanie, rıchlos, vzdialenos. Práve tımto vıpoètom sa snaíme odhadnú vıkon športovca.
+Technologickı pokrok je bezpochyby dôvodom, preèo sa rôzne inteligentné zariadenia stávajú naším najdôleitejším nástrojom pri kadodennej rutine, ale aj v krízovıch situáciách. Inak tomu nie je ani v športe, najmä ak sa jedná o vytrvalostné disciplíny. Na pulte takmer kadej športovej predajne sú k dispozícii meraèe srdcového tepu, športové hodinky, cyklopoèítaèe s GPS, a podobne. Nielen tréning pod¾a vlastného pocitu, ale podriadenie tréningovej záae údajom na meracom zariadení sa stáva k¾úèom k postupnému zvyšovaniu vıkonnosti. Vysoká dostupnos technológií a \emph{know-how} vyrovnáva schopnosti konkurencie. Víazia športové drustvá, ktoré okrem mimoriadneho talentu dokáu tréning najlepšie zmera, vyhodnoti a opätovne naplánova.\\
+\indent V práci sa zameriavame na analızu vytrvalostného športu - cyklistiky, ktorú môeme v globále uskutoèni z údajov, ako je dåka tréningu v hodinách, tzv. tréningovı objem, vzdialenos, rıchlos, tepová frekvencia. Tréning pod¾a tepovej frekvencie môe by pre športovca obrovskım prínosom za predpokladu, e má správne stanovené tréningové zóny, ktoré by mali odzrkad¾ova zaaenie organizmu \cite{kontrolovany_trening}. Tepovú frekvenciu u môeme v dnešnej dobe povaova za pomerne nenákladnı spôsob usmernenia tréningu, no má však jednu nevıhodu. Tep srdca reaguje na stúpajúce zaaenie s miernım oneskorením a môe by skreslenı pri vıkyve vnútornej rovnováhy organizmu. V cyklistike, kde na reálny vıkon vyjadrite¾nı fyzikálnou velièinou vplıva ve¾ké mnostvo faktorov, je aktuálna rıchlos síce okamitım, ale ve¾mi nepresnım ukazovate¾om. Preto je meraè rıchlosti aj tepovej frekvencie postupne nahrádzanı meraèom vıkonu.\\
+\indent Meranie vıkonu v cyklistike nám poskytuje okamitú odpoveï na otázky: ako ve¾mi sa športovec namáha, akou silou pôsobí na pedále. Subjektívny pocit námahy nahrádza konkrétny èíselnı údaj, štandardne vyjadrenı v jednotkách \emph{Watt [W]}. Problémom je však cenová dostupnos takéhoto merania. U profesionálnych športovcov mono cenová nároènos nehrá rolu, avšak sú aj športoví nadšenci, amatérski pretekári, ktorí si chcú zmera svoj progres, prípadne sa porovna s najlepšími. Vıkon je miera toho ako rıchlo vykonáva urèitá sila prácu \cite{obecna_fyzika}. Je to fyzikálna velièina, a teda by malo by moné ho vypoèíta na základe údajov, ako je stúpanie, rıchlos, vzdialenos. Práve tımto vıpoètom sa snaíme odhadnú vıkon športovca.
 
 \newpage
 \section{Analıza problému}
 \subsection{Vıznam velièiny vıkon v tréningu cyklistu}
-Ako sme spomenuli v úvode, obrovská dostupnos informácií a prostriedkov umoòuje vykonáva kontrolovanı tréning takmer kadému záujemcovi. Pokia¾ máme záujem o perspektívne zlepšovanie, prvım krokom by malo by absolvovanie vıkonnostného testu u športového lekára, tzv. funkèného testu. Lekár by na základe anamnézy, predchádzajúcich skúseností so športom a aktuálnej vıkonnosti mal odporuèi primerané tréningové zaaenie. Èo je však najdôleitejšie, mal by stanovi aj tréningové zóny, v ktorıch by sa športovec pri tréningu mal pohybova a v akom trvaní, teda odporuèi tréningovı plán \cite{kontrolovany_trening}. Tréning cyklistu nemôe by postavenı iba na odjazdení urèitej vzdialenosti v èo najkratšom èase, a ani trénovaní vytrvalosti tım, e sa trénuje èo najdlhšie. Tréning cyklistu je zloenı z rôznych intenzít, úsekov, opakovaní a cvièení, kedy sa trénujúci športovec vedome pohybuje v urèite tréningovej zóne aby docielil ideálny tréningovı impulz.\\
+Ako sme spomenuli v úvode, obrovská dostupnos informácií a prostriedkov umoòuje vykonáva kontrolovanı tréning takmer kadému záujemcovi. V tejto podkapitole sa opierame o poznatky zo štúdií literatúry \cite{kontrolovany_trening}. Pokia¾ máme záujem o perspektívne zlepšovanie, prvım krokom by malo by absolvovanie vıkonnostného testu u športového lekára, tzv. funkèného testu. Lekár by na základe anamnézy, aktuálnej vıkonnosti a predchádzajúcich skúseností so športom mal odporuèi primerané tréningové zaaenie. Èo je však najdôleitejšie, mal by stanovi aj tréningové zóny, v ktorıch by sa športovec pri tréningu mal pohybova a v akom trvaní, teda odporuèi tréningovı plán. Tréning cyklistu nemôe by postavenı iba na odjazdení urèitej vzdialenosti v èo najkratšom èase, a ani trénovaní vytrvalosti tım, e sa trénuje èo najdlhšie. Tréning cyklistu je zloenı z rôznych intenzít, úsekov, opakovaní a cvièení, kedy sa trénujúci športovec vedome pohybuje v urèite tréningovej zóne aby docielil ideálny tréningovı impulz.\\
 \indent Zámerne pouívame slovné spojenie tréningová zóna a nielen tepová zóna, hoci sa tieto slovné spojenia èasto zamieòajú. Tréningová zóna je však úroveò fyzického zaaenia, ktoré priebieha v ¾udskom organizme. Najjednoduchšie odporúèané delenie je: 
 \begin{itemize}
  \item Aeróbne pásmo 
@@ -111,9 +111,9 @@ Ako sme spomenuli v úvode, obrovská dostupnos informácií a prostriedkov umoòuj
  \item Anaeróbny prah 
  \item Anaeróbne pásmo
 \end{itemize}
-Ako sú tréningové zóny kontrolované poèas tréningu je len na samotnıch monostiach športovca. Najideálnejším ukazovate¾om by bola hladinu laktátu v krvi. Túto metódu však do kadodenného tréningu aplikova nemôeme, nako¾ko odber krvi z prsta alebo ucha a následné vyhodnotenie vzorky je zdåhavé. Najdostupnejšia je metóda merania tepovej frekvencie, ktorá však nie je vdy spo¾ahlivá.\\
-\indent Kadı ¾udskı organizmus je unikátny komplexnı biologickı systém. Tlak krvi, hormonálna rovnováha, krvnı obraz a iné faktory neustále ovplyvòujú tep srdca. Mierny rozdiel v tepovej frekvencii pri rovnakej záai môeme pozorova u pri porovnaní tréningu ráno a veèer. Pred prichádzajúcim ochorením môeme zaznamena zvıšenie tepovej frekvencie. Niší tep športovci vykazujú po nieko¾kıch dòoch nároèného tréningu. Taktie sme sa stretli s prípadmi, keï subjektívny pocit športovca bola únava a oproti normálu mal mierne zníenú tepovú frekvenciu, ale jeho wattovı vıkon v nároènom tréningu bol porovnate¾nı, niekedy aj lepší ako v iné dni. Vyšší tep sa dá jasne pozorova u pri ve¾mi miernej dehydratácii, napr. na konci dlhého tréningu v teplom poèasí. Sledovanie faktorov, ktoré ovplyvòujú tepovú frekvenciu nie je predmetom tejto práce. Je však dôleité poznamena, e z poh¾adu finaènej nároènosti a vıpovednej hodnoty je tepová frekvencia stále ve¾mi dobrım kontrolnım mechanizmom pre riadenie tréningu. \\
-\indent Okamité hodnoty, ktoré reprezentujú zaaenie organizmu a ve¾mi dobrú presnos, získame meraním vıkonu. Môeme urèi intenzitu pri krátkych zrıchlenıch úsekoch, kedy tepová frekvencia ešte nestihne vystúpi na hodnotu zodpovedajúcu fyzickému zaaeniu. Môeme presnejšie analyzova podanı vıkon pri dlhších úsekoch v maximálnom úsilí, kedy zrıchlenie/spomalenie môe odzrkad¾ova zmena tepová frekvencia o 1 tep, ale rozdiel vo vıkone môe by aj o 10\%. Obr. \ref{fig:bpm_watt_comparsion} zobrazuje, ako sa môe meni vıkon športovca v porovnaní s tepovou frekvenciou.
+Ako sú tréningové zóny kontrolované poèas tréningu je len na samotnıch monostiach športovca. Najideálnejším ukazovate¾om by bola hladinu laktátu v krvi. Túto metódu však do kadodenného tréningu aplikova nemôeme, nako¾ko odber krvi z prsta alebo ucha a následné vyhodnotenie vzorky je zdåhavé a nepraktické. Najdostupnejšia metóda je meranie tepovej frekvencie, ktoré však nie je vdy spo¾ahlivé.\\
+\indent Kadı ¾udskı organizmus je unikátny komplexnı biologickı systém. Tlak krvi, hormonálna rovnováha, krvnı obraz a iné faktory neustále ovplyvòujú tep srdca. Mierny rozdiel v tepovej frekvencii pri rovnakej záai môeme pozorova u pri porovnaní tréningu ráno a veèer. Pred prichádzajúcim ochorením môeme zaznamena zvıšenie tepovej frekvencie. Niší tep športovci vykazujú po nieko¾kıch dòoch nároèného tréningu. Taktie sme sa stretli s prípadmi, keï športovec pocioval únavu a oproti normálu mal mierne zníenú tepovú frekvenciu, ale jeho wattovı vıkon v nároènom tréningu bol porovnate¾nı, niekedy aj lepší ako v iné dni. Vyšší tep sa dá jasne pozorova u pri ve¾mi miernej dehydratácii, napr. na konci dlhého tréningu v teplom poèasí. Sledovanie faktorov, ktoré ovplyvòujú tepovú frekvenciu nie je predmetom tejto práce. Je však dôleité poznamena, e z poh¾adu finaènej nároènosti a vıpovednej hodnoty je tepová frekvencia stále ve¾mi dobrım kontrolnım mechanizmom pre riadenie tréningu. \\
+\indent Okamité hodnoty s dobrou presnosou, ktoré reprezentujú zaaenie organizmu, získame meraním vıkonu. Intenzitu môeme urèi pri krátkych zrıchlenıch úsekoch, kedy tepová frekvencia ešte nestihne vystúpi na hodnotu zodpovedajúcu fyzickému zaaeniu. Môeme presnejšie analyzova podanı vıkon pri dlhších úsekoch v maximálnom úsilí, kedy zrıchlenie/spomalenie môe odzrkad¾ova zmena tepová frekvencia o 1 tep, ale rozdiel vo vıkone môe by aj o 10\%. Obr. \ref{fig:bpm_watt_comparsion} zobrazuje, ako sa môe meni vıkon športovca v porovnaní s tepovou frekvenciou.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.65]{images/bpm_watt_comparsion.png}
@@ -129,13 +129,13 @@ GPX je rozšírenie formátu XML vytvorené za úèelom štandardizácie prenosu GPS súr
 \subsubsection{TCX}
 TCX alebo plnım názvom Training Center XML je dátovı formát predstavenı v roku 2007, opä firmou Garmin ako súèas ich Training Center produktov. Formát XML je ve¾mi podobnı štandardu GPX, avšak postupnos súradníc reprezentuje skôr ako fyzickú aktivitu ne len trasu. Predstavuje štandard prenosu údajov zo športovıch meraèov ako je  tepová frekvencia, kalórie, frekvencia šliapania (bicykel) alebo kroku (beh) a mnohé ïalšie. Tie môe obsahova sumarizované údaje pre celú aktivitu aj~jednotlivé okruhy \cite{thisisant}.
 \subsubsection{ANT}
-ANT je nízko-energetickı\footnote{z angl. Ultra-low power} bezdrôtovı protokol prenosu dát medzi zariadeniami. Robustnı ale ve¾mi flexibilnı protokol nachádza vyuititie v PAN\footnote{PAN - personal area network} alebo LAN\footnote{LAN - local area network} sieach. Je ideálny pre športové aktivity, fitness a welness.\\
+Pod¾a \cite{thisisant} je ANT nízko-energetickı\footnote{z angl. Ultra-low power} bezdrôtovı protokol prenosu dát medzi zariadeniami. Robustnı ale ve¾mi flexibilnı protokol nachádza vyuititie v PAN\footnote{PAN - personal area network} alebo LAN\footnote{LAN - local area network} sieach. Je ideálny pre športové aktivity, fitness a welness.\\
 \indent ANT prenos dát prebieha na frekvencii medzi 2400 MHz a 2524 MHz s vınimkou frekvencie 2457 MHz, ktorá je rezervovaná pre ANT+ zariadenia.\\
 \indent ANT+ je mnoina definícií, ktoré upresòujú, èo reprezentujú informácie posielané v sieti ANT. Definícia sa nazıva \emph{device profile} a obvykle je vytvorená na základe urèitého prípadu pouitia. Napríklad senzor rıchlosti na bicykli bude odosiela informácie o rıchlosti, preto implementuje profil \emph{Speed monitor}.\\
 \indent Kadé ANT+ zariadenie musí pristupova do ANT+ siete so sieovım k¾úèom a implementova minimálne jeden \emph{device profile}. Zariadenie s danım profilom je moné spoji s ïalšími zariadeniami, ktoré implementujú rovnakı profil. Jedno zariadenie môe samozrejme implementova aj viac profilov. Napr. športové hodinky môu prijíma údaje o rıchlosti, tepovej frekvencii, vıkone a pre kadı údaj implementujú samostanı \emph{device profile}.\\
 \indent V ANT+ sieti obvykle rozlišujeme dva typy zariadení. Meracie zariadenie, ktoré je pod¾a špecifikácie nazıvané \emph{sensor} a zobrazovacie zariadenie, \emph{display}. ANT+ umoòuje pripojenie jedného, alebo aj viacerıch zariadení typu \emph{sensor} na jedno zariadenie typu \emph{display}. Na jednıch športovıch hodinkách teda môeme zobrazi viacero meranıch velièín, alebo pripoji jedno zariadenie typu \emph{sensor} na viac zariadení typu \emph{display}.
 \subsubsection{FIT}
-The Flexible and Interoperable Data Transfer (FIT) protokol bol navrhnutı špeciálne pre ukladanie a prenos dát pochádzajúcich zo športovıch aktivít. Definuje nieko¾ko šablón pre ukladanie dát, tzv. \emph{Fit message}. Môu v nich by uloené informácie o pouívate¾skom profile, dáta zo športovej aktivity a podobne. Bol navrhnutı tak aby bol kompaktnı, interoperabilnı a rozšírite¾nı.\\
+Na základe informácií z \cite{thisisant}, The Flexible and Interoperable Data Transfer (FIT) je protokol, navrhnutı špeciálne pre ukladanie a prenos dát pochádzajúcich zo športovıch aktivít. Definuje nieko¾ko šablón pre ukladanie dát, tzv. \emph{Fit message}. Môu v nich by uloené informácie o pouívate¾skom profile, dáta zo športovej aktivity a podobne. Bol navrhnutı tak aby bol kompaktnı, interoperabilnı a rozšírite¾nı.\\
 FIT protokol pozostáva z:
 \begin{itemize}
  \item Definície štrukúry .fit súboru
@@ -146,14 +146,14 @@ FIT súbor obsahuje dátové reazce, prièom kadı reazec je zostavenı z hlavièky 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.65]{images/fit_protocol.png}
-\caption{Zjednodušená štruktúra FIT súboru}
+\caption{Zjednodušená štruktúra FIT súboru \cite{thisisant}}
 \label{fig:fit_protocol}
 \end{figure}
 Na konverziu bitového FIT súboru vyuijeme konverznı nástroj v jazyku JAVA. Vıstupom konverzie sú dva CSV súbory. Prvı súbor je textovou reprezentáciou dát z FIT súboru, èo znamená, e niektoré riadky sú definíciou nasledujúcich údajov a niektoré riadky nesú údaje. Zároveò je potrebné si všimnú, e údaje nie sú rozdelené fixne pod¾a ståpcov. Ståpec \emph{Field N} oznamuje, èo reprezentuje hodnota v ståpci \emph{Value N}, ståpec \emph{Units N} definuje jednotky pre túto hodnotu, prièom N$>$0. Jeden ståpec \emph{Field N} nemusí nies vdy rovnakı údaj. Príklad uvádzame na obr. \ref{fig:fit_file1}.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{images/fit_file1.png}
-\caption{CSV súbor po konverzii z FIT}
+\caption{CSV súbor po konverzii z FIT \cite{thisisant}}
 \label{fig:fit_file1}
 \end{figure}
 Druhı súbor, ktorı je vıstupom z konverzie má príponou \emph{\_data.csv} a obsahuje všetky dáta usporiadané vo forme ståpcov. Jeden ståpec reprezentuje vdy konkrétny údaj pod¾a hlavièky, napr. \emph{event.timestamp[s]}, \emph{record.altitude[m]}, \emph{record.speed[m/s]}... Jednotky sú uvádzané v hranatej zátvorke v záhlaví ståpca. Oba súbory teda obsahujú všetky dáta, rozdielna je iba ich postupnos. Rozhodli sme sa pouíva prvú spomenutú štruktúru. Najdôleitejšie sú riadky, kde ståpec \emph{Type} nadobúda hodnotu \emph{Data}, v ståpci \emph{Message} sú hodnoty \emph{record} pre jednotlivé body v tréningu, \emph{session} pre sumarizáciu alebo \emph{lap} pre informáciu o stlaèení medzièasu.
@@ -161,7 +161,7 @@ Druhı súbor, ktorı je vıstupom z konverzie má príponou \emph{\_data.csv} a obsah
 \subsection{Meranie vıkonu}
 Pre správne pochopenie problematiky sa musíme oboznámi so zauívanım spôsobom merania vıkonu cyklistu. Vıkon je meranı špeciálnym snímaèom, ktorı je vo väèšine prípadoch zabudovanı priamo v komponente bicykla. Jedná sa o komponent, ktorı sa priamo stará o prenos sily  pôsobiacej na pedál do pohonu zadného kolesa. Môe to by náboj zadného kolesa, jedna alebo obe k¾uky stredového zloenia, prípadne pedále. To, kde je snímaè umiestnenı, záleí od konkrétneho vırobcu a jeho techniky merania. Snímaè nazıvame meraè vıkonu\footnote{z angl.: Power Meter}. \\
 \indent Najdôleitejším prvkom meraèa je tenzometer. Ide o súèiastku s uzavretnım elektrickım okruhom a konštatnım elektrickım odporom. Ak je tenzometer vystavenı pôsobeniu mechanickej sily, dochádza k jeho deformácii, zmene odporu a vïaka piezolektrickému javu aj k zmene napätia. Správnou konfiguráciou je teda moné zisti presnú silu pôsobiacu na túto súèiastku.\\ 
-\indent Ako sme uviedli v predchádzajúcej èasti, vıkon je mierou toho ako rıchlo vykonáva urèitá silu prácu. Vezmime do úvahy jednoduchı vzah: 
+\indent Ako sme uviedli v predchádzajúcej èasti, vıkon je mierou toho ako rıchlo vykonáva urèitá silu prácu. Vezmime do úvahy jednoduchı vzah \cite{encyklopedie_fyziky}: 
 \begin{equation} \label{eq:power_trivial1}
 P = F\ \cfrac{\partial d}{\partial t}
 \end{equation}
@@ -170,16 +170,16 @@ Vıkon \emph{P} je rovnı sile, ktorú je potrebné vyvinú, aby sme teleso s urèito
 P = F\ v 
 \end{equation}
 To je podstata fungovania meraèa vıkonu vo ve¾mi zjednodušenej forme. Sila zmeraná tenzometrom je odoslaná do cyklopoèítaèa/športovıch hodiniek, tam je násobená aktuálnou rıchlosou a zobrazí sa vıkon v jednotkách \emph{Watt}. Podrobnejšie skúmanie toho, ako konkrétne typy meraèov merajú vıkon a jeho ïalšie fyzikálne vyjadrenie nie je predmetom tejto práce, keïe sa budeme snai odhadova vıkon na základe pohybu vo vonkajšom prostredí. Sily, ktoré pôsobia proti pohybu športovca pri jazde na bicykli blišie rozoberáme v kapitole \ref{Physics}.\\
-\indent Prvı meraè vıkonu bol dostupnı verejnosti v roku 1989. Jednalo sa o znaèku SRM (Schoberer Rad Messtechnik), ktorá svoj produkt testovala s profesionálnymi športovcami od zaèiatku osemdesiatych rokov.\cite{cyclingweekly_power}\\
+\indent Prvı meraè vıkonu bol dostupnı verejnosti v roku 1989. Jednalo sa o znaèku SRM (Schoberer Rad Messtechnik), ktorá svoj produkt testovala s profesionálnymi športovcami od zaèiatku osemdesiatych rokov \cite{cyclingweekly_power}.\\
 \indent Väèšina vırobcov v súèasnosti uvádza pre svoje meraèe odchılku do 2\%. Moné odchılky môu by spôsobené stratou pri prenose sily z pedálu na pohon zadného kolesa, t.j. napnutím reaze, prunosou rámu, prunosou kolesa, kalibráciou meraèa atï. Je dôleité si uvedomi, e iaden meraè, ktorı je súèasou bicykla, z tıchto dôvodov nebude ukazova presnı vıkon podávanı športovcom. Ak však športovec dlhodobo pouíva rovnakú metódu merania, porovnávanie jeho vıkonov má ve¾kı vıznam.
 
-\subsection{Softvér pre vyhodnotenie tréningu}
+\subsection{Systémy pre vyhodnotenie tréningu}
 \subsubsection{Strava}
 Strava je portál, ktorı sa snaí zdruova komunity športovcov po celom svete. Nosnım pilierom Strava je webová aplikácia na adrese \emph{http://www.strava.com}, ktorá ponúka komplexnú analızu tréningovıch dát a mnostvo sociálnych funkcií. Ako uvádza priamo Strava\cite{strava}, pouívate¾ovi umoòuje zai tzv. \emph{social fitness}, èo by malo predstavova spojenie, porovnanie a súaenie s ïalšími športovcami. Okrem webovej aplikácie je moné vyui aj mobilnú aplikáciu pre platformu Android a iOS. Primárne je Strava urèená pre becov a cyklistov, grafy a analıza pre ich aktivity sú najpodrobnejšie. Trénigovı denník si však môu vies aj ïalší športovci.\\
 \indent Princíp fungovania Strava môeme popísa tromi krokmi. Prvım je absolvovanie tréningu a jeho zaznamenanie na zariadenie s GPS, resp. na ich mobilnú aplikáciu. Druhım krokom je uloenie tréningového záznamu na server Strava. Vïaka vyuitiu API vırobcov ako je Garmin, Suunto, TomTom, Timex a niektorıch dalších umoòuje Strava priame uloenie tréningovıch dát na server ihneï po pripojení zariadenia/športovıch hodiniek do poèítaèa. Priame ukladanie funguje na platformách Windows a OSX. Ak pouívate¾ pouíva inı operaènı systém alebo má záujem uloi tréning z iného zariadenia, môe tak urobi nahraním súboru, ktorı je vo formáte GPX, TCX alebo FIT. Tretím krokom je zobrazenie detailu tréningu a analıza. Údaje môeme prehliada vo forme mapy alebo grafov, ktoré zobrazujú priebeh celého tréningu, hodnoty aktuálnej nadmorskej vıšky, rıchlosti, tepovej frekvencie, frekvencie šliapania a~teploty v jednotlivıch pozíciách, viï obr. \ref{fig:strava_analysis}.
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.40]{images/strava_analysis.png}
+\includegraphics[scale=0.60]{images/strava_analysis.png}
 \caption{Strava - Analıza tréningu}
 \label{fig:strava_analysis}
 \end{figure}
@@ -200,7 +200,7 @@ Druhı tréning bol zaznamenanı tie cyklopoèítaèom Garmin Edge 500 ale bez merani
 \label{fig:strava_estwatts}
 \end{figure}
 
-Poslednı záznam je meranı mobilnou aplikáciou Strava, viï obr. \ref{fig:strava_estwatts_agps}. V tréningu sme vıkon opä nemerali a grafe môeme vidie odhadnuté hodnoty. Obrovské vıkyvy prisudzujeme odchılkam v pozícii a aj nadmorskej vıške. Pouitı mobilnı telefón Samsung Galaxy S4 mini nedisponuje barometrickım vıškomerom, hodnota nadmorskej vıšky je získaná z pozície. Ako je známe, GPS èip v mobilnıch telefónoch nedosahuje takú vysokú presnos ako špeciálne športové zariadenia a pozícia je èasto korigovaná aj mobilnımi sieami.
+Poslednı záznam je meranı mobilnou aplikáciou Strava, viï obr. \ref{fig:strava_estwatts_agps}. V tréningu sme vıkon opä nemerali a v grafe môeme vidie odhadnuté hodnoty. Obrovské vıkyvy prisudzujeme odchılkam v pozícii a aj nadmorskej vıške. Pouitı mobilnı telefón Samsung Galaxy S4 mini nedisponuje barometrickım vıškomerom, teda hodnota nadmorskej vıšky je získaná z pozície. Ako je známe, GPS èip v mobilnıch telefónoch nedosahuje takú vysokú presnos ako špeciálne športové zariadenia a pozícia je èasto korigovaná aj mobilnımi sieami.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.60]{images/strava_uphill_chart_mobileGPS.png}
@@ -219,7 +219,7 @@ Druhı systém relevantnı nášmu vıskumu nájdeme na webovej stránke\\ \emph{http://
 \label{fig:bikecalculator_form}
 \end{figure}
 
-Otestovali sme ho pre 12 úsekov, z ktorıch kadı sme absolvovali 2-5 krát a vıkon merali zariadením PowerTap G3. Pri kadom meraní sa športovec snail dodriava rovnomernı vıkon. Nako¾ko Bike Calculator ani neumoòuje vkladanie èiastkovıch údajov, pouili sme priemer nameranıch hodnôt pre kadı úsek. V tabu¾ke \ref{table:bikecalculator_table} uvádzame porovnanie hodnôt z meraní a vypoèítanıch hodnôt.\\
+Otestovali sme ho pre 12 úsekov, z ktorıch kadı sme absolvovali 2-5 krát a vıkon merali zariadením PowerTap G3. Pri kadom meraní sa športovec snail dodriava rovnomernı vıkon. Nako¾ko Bike Calculator neumoòuje vkladanie èiastkovıch údajov, pouili sme priemer nameranıch hodnôt pre kadı úsek. V tabu¾ke \ref{table:bikecalculator_table} uvádzame porovnanie hodnôt z meraní a vypoèítanıch hodnôt.
 \begin{table}[h]
 \begin{tabular}{cccccccc}
 \textbf{Úsek} & \textbf{\begin{tabular}[c]{@{}c@{}}dåka\\ {[}m{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}priemer.\\ stúpanie\\ {[}\%{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}priemer.\\ rıchlos\\ {[}km/h{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}reálny\\ vıkon\\ {[}W{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Bike\\ Calculator\\ {[}W{]}\end{tabular}} & \textbf{Rozdiel} & \textbf{\begin{tabular}[c]{@{}c@{}}Rozdiel\\ {[}\%{]}\end{tabular}} \\ \hline
@@ -241,12 +241,12 @@ Otestovali sme ho pre 12 úsekov, z ktorıch kadı sme absolvovali 2-5 krát a vıko
 \end{table}
 \\
 \indent Z tabu¾ky si môeme všimnú, e celková dåka segmentu neovplyvòuje rozdiel medzi reálnou a vypoèítavanou hodnotou. Zámerne však neuvádzame úseky dlhé iba nieko¾ko desiatok metrov, aby sme mohli poukáza na fakt, e práve stúpajúci sklon (priem. stúpanie) robí vıpoèet presnejším. Minimalizuje sa toti aerodynamickı odpor spôsobenı vetrom, ktorého smer aj intenzitu je ve¾mi aké odhadnú a stúpa podiel sily potrebnej na prekonanie zemskej tiae.\\
-\indent Ako môeme vidie vo formulári na obr. \ref{fig:bikecalculator_form}, typ pneumatík a pozíciu športovca na bicykli vyberáme z predvolenıch hodnôt. Pre typ pneumatík sú to tri hodnoty, a to pláše, galusky alebo MTB. Pozíciu môeme zvoli pod¾a bicykla - vzpriamená, mierne vzpriamená, zohnutá, aerodynamická. Pod¾a vybraného vstupu Bike Calculator pouije predvolenı koeficient valivého odporu, resp. aerodynamického odporu.\\
+\indent Ako môeme vidie vo formulári na obr. \ref{fig:bikecalculator_form}, typ pneumatík a pozíciu športovca na bicykli vyberáme z predvolenıch hodnôt. Pre typ pneumatík sú to tri hodnoty, a to pláše, galusky alebo MTB\footnote{MTB - mountain bike - horskı bicykel}. Pozíciu môeme zvoli pod¾a bicykla - vzpriamená, mierne vzpriamená, zohnutá, aerodynamická. Pod¾a vybraného vstupu Bike Calculator pouije predvolenı koeficient valivého odporu, resp. aerodynamického odporu.\\
 \indent Koeficient aerodynamického odporu je však závislı aj od obleèenia cyklistu, od bicykla, od kolies. Koeficient valivého odporu je rozdielny pre jednotlivé modely plášov, hodnotu ich nahustenia. Môeme poveda, e je rozdielny pre kadú jednu dvojicu športovec-bicykel. Dôkladnejšie vysvetlenie tejto problematiky uvádzame v kapitole \ref{Physics}.
 
 \newpage
 \section{Pôsobenie síl} \label{Physics}
-Vıkon, ktorı musí cyklista vyvíja aby sa dokázal pohybova urèitou rıchlosou je úmernı odporovım silám, ktoré na neho a bicykel poèas jazdy pôsobia. V tejto kapitole sa budeme tımto odporovım silám venova podrobnejšie, aby sme v dostatoènej miere poznali na akıch velièinách sú závislé. Tieto znalosti následne vyuijeme pri návrhu algoritmu strojového uèenia. Jednotlivé zloky síl, ktoré pôsobia na cyklistu poèas jazdy sa menia v závislosti od zmeny terénu a poveternostnıch podmienok.
+Vıkon, ktorı musí cyklista vyvíja aby sa dokázal pohybova urèitou rıchlosou je úmernı odporovım silám, ktoré na neho a bicykel poèas jazdy pôsobia. V tejto kapitole sa budeme tımto odporovım silám venova podrobnejšie, aby sme v dostatoènej miere poznali, na akıch velièinách sú závislé. Tieto znalosti následne vyuijeme pri návrhu algoritmu strojového uèenia. Jednotlivé zloky síl, ktoré pôsobia na cyklistu poèas jazdy, sa menia v závislosti od zmeny terénu a poveternostnıch podmienok.
 \begin{itemize}
  \item Gravitaèná sila
  \item Aerodynamickı odpor
@@ -267,18 +267,18 @@ Pri pohybe cyklistu a bicykla v horizontálnej rovine je reakciou na gravitaènú s
 \label{fig:inclined_plane}
 \end{figure}
 
-Silu pôsobiacu proti pohybu cyklistu v smere z kopca vyjadríme vzahom $F_g = m\ g \sin \alpha$. Kde $m$ je hmotnos sústavy, v našom prípade hmotnos športovca a bicykla a $g$ je gravitaèné zrıchlenie. Sínus pre uhol sklonu môeme vypoèíta zo zmeny nadmorskej vıšky $\Delta altitude$ a prejdenej vzdialenosti $d$:
+Silu pôsobiacu proti pohybu cyklistu v smere z kopca vyjadríme vzahom $F_g = m\ g \sin \alpha$. Kde $m$ je hmotnos sústavy, v našom prípade súèet hmotností športovca a bicykla a $g$ je gravitaèné zrıchlenie. Sínus pre uhol sklonu môeme vypoèíta zo zmeny nadmorskej vıšky $\Delta altitude$ a prejdenej vzdialenosti $d$ \cite{encyklopedie_fyziky}:
 \begin{equation} \label{eq:force_gravity}
 F_g = m\ g\ \cfrac{\Delta altitude}{d}
 \end{equation}
 
-\noindent Ve¾kos normálovej sily, $F_g = m\ g \cos \alpha$, vyjadríme vzahom \ref{eq:force_normal}
+\noindent Ve¾kos normálovej sily, $F_n = m\ g \cos \alpha$, vyjadríme vzahom \ref{eq:force_normal} \cite{encyklopedie_fyziky}
 \begin{equation} \label{eq:force_normal}
 F_n = m\ g\ \sqrt{1 - \left(\cfrac{\Delta altitude}{d}\right)^{2}}
 \end{equation}
 
 \subsection{Aerodynamickı odpor}
-Aerodynamickı odpor je v poslednom období v cyklistike èasto preberanou tématikou. Upravujú sa tvary trubiek bicyklov, menia sa profily kolies, vylepšujú sa materiály a strih obleèenia, všetko s cie¾om dosahovania vyšších rıchlostí bez nutnosti zvyšova vıkon. Zo vzahu \ref{eq:force_drag} \cite{drag_equation}
+Aerodynamickı odpor je v poslednom období v cyklistike èasto preberanou tématikou. Upravujú sa tvary trubiek bicyklov, menia sa profily kolies, vylepšujú sa materiály a strih obleèenia. Všetko s cie¾om dosahovania vyšších rıchlostí bez nutnosti zvyšova vıkon. Zo vzahu \ref{eq:force_drag} \cite{drag_equation}
 \begin{equation} \label{eq:force_drag}
 F_d = \cfrac{1}{2}\ \rho\ v^2\ C_d\ A
 \end{equation}
@@ -334,7 +334,7 @@ Valivım odporom môeme nazva silu, ktorá vzniká, keï sa teleso kruhového priere
 \caption{Valivı odpor \cite{encyklopedie_fyziky}}
 \end{figure}
 
-\noindent Silu \emph{F}, ktorou predmet udríme v rovnomernom pohybe vyjadríme vzahom:
+\noindent Silu \emph{F}, ktorou predmet udríme v rovnomernom pohybe vyjadríme vzahom \cite{encyklopedie_fyziky}:
 \begin{equation} \label{eq:rolling_trivial1}
 F = F_n\ \tan \alpha
 \end{equation}
@@ -345,7 +345,7 @@ F = \cfrac{\xi}{R}\ F_n
 \end{equation}
 
 \noindent Normálovú silu na naklonenej rovine vypoèítame pod¾a vzahu \ref{eq:force_normal}.\\
-\indent V praxi by ale bolo ve¾mi nároèné zmera vzdialenos $\xi$, preto sa podiel vo vzahu \ref{eq:rolling_trivial2} èasto nahrádza koeficientom valivého odporu $C_{rr}$. Koeficient môeme nájs pre rôzne typy pneumatík v tabu¾kách. Definovaním štandardov pri testovaní pneumatík ako je napríklad štandard SAE J2452 \cite{sae_test} sa vymedzujú podmienky testu. Pre potreby tejto práce je dôleité povaova podloku, povrch vozovky, ako dokonale pevnú a koeficienty valivého odporu galusiek alebo plášov cestného bicykla v rozsahu od 0.002 do 0.006 \cite{roller_data}. Na tıchto dátach môeme vykona ïalšiu simuláciu a prezentova, akı vplyv má koeficient odporu $C_{rr}$ na vıkon potrebnı pre udranie konštantnej rıchlosti 30 $km\ h^{-1}$, viï obr. \ref{fig:crr_watt_comparsion}. Dáta sú simulované s konštantami: $A$ = 0.4, $C_d$ = 1.0, $T$ = 15°C, $h$ = 100m n.m.
+\indent V praxi by ale bolo ve¾mi nároèné zmera vzdialenos $\xi$, preto sa podiel vo vzahu \ref{eq:rolling_trivial2} èasto nahrádza koeficientom valivého odporu $C_{rr}$. Koeficient môeme nájs pre rôzne typy pneumatík v tabu¾kách. Definovaním štandardov pri testovaní pneumatík ako je napríklad štandard SAE J2452 \cite{sae_test} sa vymedzujú podmienky testu. Na tıchto dátach môeme vykona ïalšiu simuláciu a prezentova, akı vplyv má koeficient odporu $C_{rr}$ na vıkon potrebnı pre udranie konštantnej rıchlosti 30 $km\ h^{-1}$, viï obr. \ref{fig:crr_watt_comparsion}. Dáta sú simulované s konštantami: $A$ = 0.4, $C_d$ = 1.0, $T$ = 15°C, $h$ = 100m n.m.
 
 \begin{figure}[H]
 \centering
@@ -373,7 +373,7 @@ a do 15\%\\
 \newpage
 \section{Opis riešenia}
 Doposia¾ prezentovanú štúdiu nenecháme iba v teoretickej rovine, ale implementujeme èas webovej aplikácie, ktorá pouívate¾ovi umoní nahranie súboru s tréningovımi dátami na server, odhadne podávanı vıkon a zobrazí dáta vo forme grafov a mapy. Vısledná funkèná èas bude nadväzova na aplikáciu z našej bakalárskej práce \emph{Webovı organizér}. Spoloène budú tvori funkènı celok s monosami komplexnej analızy tréningu.\\
-\indent Hlavnım cie¾om tejto práce je aproximácia podávaného vıkonu na základe údajov z nepriamych meraní. U pred zaèaním prác bola na mieste otázka, èi je moné odhadova vıkon v tak premenlivıch podmienkach, aké môeme pri pohybe na bicykli vo vonkajšom prostredí uvaova. Na základe empirickıch skúseností sme usúdili, e s vınimkou extremnıch podmienok v okolitom prostredí, by mohla by aproximácia relatívne presná. Následne bolo otázne, èi údaje, ktoré poèas tréningu zaznamenáme, postaèova na to, aby vısledok aproximácie mohol do urèitej miery konkurova cenovo nároènému komponentu, meraèu vıkonu. Pri analıze sme zoh¾adnili moné nepresnosti:
+\indent Hlavnım cie¾om tejto práce je aproximácia podávaného vıkonu na základe údajov z nepriamych meraní. U pred zaèaním prác bola na mieste otázka, èi je moné odhadova vıkon v tak premenlivıch podmienkach, aké môeme pri pohybe na bicykli vo vonkajšom prostredí uvaova. Na základe empirickıch skúseností sme usúdili, e s vınimkou extrémnych podmienok v okolitom prostredí, by mohla by aproximácia relatívne presná. Následne bolo otázne, èi údaje, ktoré poèas tréningu zaznamenáme, postaèova na to, aby vısledok aproximácie mohol do urèitej miery konkurova cenovo nároènému komponentu, meraèu vıkonu. Pri analıze sme zoh¾adnili moné nepresnosti:
 \begin{itemize}
   \item pri urèovaní polohy cez GPS a teda aj nepresnos vo vzdialenosti a rıchlosti
   \item pri zázname zmeny nadmorskej vıšky barometrickım vıškomerom, pri zmenách tlaku, teploty
@@ -382,56 +382,76 @@ Doposia¾ prezentovanú štúdiu nenecháme iba v teoretickej rovine, ale implementuj
   \item vplyv zotrvaènosti pri krátkych zmenách v rıchlosti pohybu.
 \end{itemize}
 Po dôslednejšom preskúmaní dát, ktoré sú z meraèov k dispozícii sme ia¾ museli pripusti, e nie sú nato¾ko presné, aby sme z nich mohli aproximova krátke nieko¾ko sekundové intenzívne vıkony. Vıkon pri krátkych zrıchleniach (3 a 5 sekúnd) pri súèasnej presnosti dát nedokáeme odhadnú s uspokojujúcou presnosou. Uvaovali sme teda o rozdelení priebehu tréningu na úseky dlhé v priemere 40 a 150 m a pracova s priemernım stúpaním a rıchlosou, od èoho sme si s¾ubovali odstránenie nepresností pri vıpoète.\\
-\indent Popísaním odporovıch síl, pôsobiacich na cyklistu, vzahmi \ref{eq:force_gravity}, \ref{eq:force_drag}, \ref{eq:rolling_trivial1}, sme zistili, e k fyzikálnemu vıpoètu vıkonu by boli potrebné koeficienty $C_d$, $A$, $C_{rr}$, ktoré nevieme zisti jednoduchım meraním, ani ich globálne zovšeobecni pre všetkıch športovcov. Ako vhodné sa javí pouitie strojového uèenia, pod¾a \cite{machine_learning}, oblasti umelej inteligencie, ktorá sa snaí automaticky h¾ada zmysluplné vzory v dátach.
+\indent Popísaním odporovıch síl pôsobiacich na cyklistu (vzahmi \ref{eq:force_gravity}, \ref{eq:force_drag}, \ref{eq:rolling_trivial1}) sme zistili, e k fyzikálnemu vıpoètu vıkonu by boli potrebné koeficienty $C_d$, $A$, $C_{rr}$, ktoré nevieme zisti jednoduchım meraním, ani ich globálne zovšeobecni pre všetkıch športovcov. Ako vhodné sa javí pouitie strojového uèenia, pod¾a \cite{machine_learning}, oblasti umelej inteligencie, ktorá sa snaí automaticky h¾ada zmysluplné vzory v dátach.
 
 \subsection{Strojové uèenie}
-Podstatou strojového uèenia je vyuitie automatizovanıch procedúr zaloenıch na logickıch alebo binárnych operáciách, pomocou ktorıch sa stroj z dát uèí a zároveò dáta prevdída. V strojovom uèení je dôleitı pojem zovšeobecnenie\footnote{zovšeobecnenie - z angl. generalization}, v zmysle schopnosti primerane reagova na nové vstupné vzorky, po rozpoznaní vzorov v trénovacej mnoine. Algoritmy strojového uèenia pracujú s vytvorenım modelom vstupov a majú za cie¾ predvída alebo klasifikova vıstupy. Pod¾a \cite{machine_learning}, na základe druhu uèenia rozoznávame tri základné typy strojového uèenia:
+Podstatou strojového uèenia je vyuitie automatizovanıch procedúr zaloenıch na logickıch alebo binárnych operáciách, pomocou ktorıch sa stroj z dát uèí a zároveò dáta predvída. V strojovom uèení je dôleitı pojem zovšeobecnenie\footnote{zovšeobecnenie - z angl. generalization}, v zmysle schopnosti primerane reagova na nové vstupné vzorky, po rozpoznaní vzorov v trénovacej mnoine. Algoritmy strojového uèenia pracujú s vytvorenım modelom vstupov a majú za cie¾ predvída alebo klasifikova vıstupy. Pod¾a \cite{machine_learning}, na základe druhu uèenia rozoznávame tri základné typy strojového uèenia:
 \begin{itemize}
-  \item \emph{Supervised} - uèenie so vzrom - k vektoru vstupnıch trénovacích dát je danı vzorovı vektor vıstupov.
+  \item \emph{Supervised} - uèenie so vzorom - k vektoru vstupnıch trénovacích dát je danı vzorovı vektor vıstupov.
   \item \emph{Unsupervised} - uèenie bez vzoru- k vstupnım dátam nie je danı vıstup.
   \item \emph{Reinforcement} - uèenie so spätnou väzbou - na základe vstupnıch dát je vykonávaná akcia, jej vhodnos je bodovo hodnotená. Algoritmus upraví stratégiu s cie¾om získa èo najvyššie bodové hodnotenie. Pouívanı hlavne v robotike.
 \end{itemize}
 
 \indent Existuje ve¾ké mnostvo konkrétnych algoritmov, preto ich nebudeme individuálne menova, ale posnaíme sa obmedzi vıber na základe nášho cie¾a. Ak by sme chceli získa chıbajúce koeficienty $C_d$, $A$, $C_{rr}$ museli by sme zvoli \emph{unsupervised learning} - uèenie bez vzoru, pretoe trénovacie dáta pre tieto koeficienty nemáme k dispozícii. V tomto smere sa však nenaskytoval iaden vhodnı postup, ktorım by sme mohli nájs koeficienty ako vıstup z funkcie vstupov. \\
-\indent Vhodnejšie sa teda javí zvoli uèenie so vzorom. Zostavíme model vstupov (dostupnıch tréningovıch dát) a pre ne ako vzor zodpovedajúci vıkon cyklistu. Pri vıbere vhodnıch trénovacích dát, správnej konfigurácii a tréningu, by algoritmus mohol by schopnı rozpozna vzahy medzi vstupmi a vzorovım vıstupom a v praxi potom aproximova vıkon cyklistu iba na základe vstupov z nepriamych meraní.\\
-\indent Ak z úvah vylúèime algoritmy strojového uèenia, ktoré sa pouívajú na klasifikáciu vzoriek do tried, a zameráme sa na tie, ktorımi môeme aproximova funkciu, pripadajú do úvahy \emph{Umelé neurónové siete} a \emph{Rozhodovacie regresné stromy}.\\
-\indent \textbf{Rozhodovacie regresné stromy} predpovedajú vıstup na základe podmienok v postupnom slede od koreòa stromu a ku koncovım uzlom. Koncové uzly majú hodnotu vıstupu stromu.\\
-\indent \textbf{Umelé neurónové siete} je model vıpoètu inšpirovanı štruktúrou ¾udského nervového systému. Nervovı systém v zjednodušenom ponímaní pozostáva z ve¾kého poètu základnıch vıpoètovıch jednotiek - \textbf{neurónov} navzájom pospájanıch \textbf{dendritmi} do komplexnej siete, v ktorej medzi sebou komunikujú. Umelá neurónová sie je formálna vıpoètová konštrukcia zaloená na tejto štruktúre. Môeme ju popísa ako orientovanı graf, ktorého uzly zodpovedajú neurónom a hrany medzi nimi reprezentujú dendrity. Spoloènım znakom umelıch neurónovıch sietí je mnoina adaptívnych hrán, ktoré sa upravujú tréningom. Práve vïaka adaptívnym spojovacím hranám, má neurónová sie schopnos uèenia sa. Aplikácie neurónovıch siete nájdeme pre viacero problémov, ve¾mi èasto sa okrem klasifikácie do tried pouívajú aj na aproximáciu vo všeobecnosti neznámych funkcii viacerıch vstupov.
+\indent Vhodnejšie sa teda javí zvoli uèenie so vzorom. Zostavíme model vstupov (dostupnıch tréningovıch dát) a pre ne, ako vzor vıstupu, zodpovedajúci vıkon cyklistu. Pri vıbere vhodnıch trénovacích dát, správnej konfigurácii a tréningu, by algoritmus mohol by schopnı rozpozna vzahy medzi vstupmi a vzorovım vıstupom a v praxi potom aproximova vıkon cyklistu iba na základe vstupov z nepriamych meraní.\\
+\indent Ak z úvah vylúèime algoritmy strojového uèenia, ktoré sa pouívajú na klasifikáciu vzoriek do tried, a zameráme sa na tie, ktorımi môeme aproximova funkciu, pripadajú do úvahy \emph{Umelé neurónové siete} a \emph{Rozhodovacie regresné stromy}.
+
+\subsubsection{Rozhodovacie regresné stromy}
+Ako uvádza \cite{machine_learning_introduction}, klasifikaèné a regresné stromy sú typom strojového uèenia ktoré vyuívajú štruktúru rozhodovacích stromov. Cie¾om klasifikaènıch stromov je priradenie vstupu do definovanıch tried, regresné stromy majú za úlohu urèi numerickú hodotu vıstupu na základe vstupnıch dát. Vstupné dáta postupne prehádzajú štruktúrou stromu na základe definovanıch kritérií a podmienok, a sa dostanú do tzv. listu - \emph{leaf}, ktorı reprezentuje vıstupnú hodnotu. Koreò reprezentuje vstupnú hodnotu. Podmienky sú reprezentované uzlami a vetvami. Pre ilustráciu uvádzame obrázok \ref{fig:regression_tree}.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.35]{images/regression_tree.png}
+\caption{Rozhodovací strom}
+\label{fig:regression_tree}
+\end{figure}
+\indent Cie¾om regresného stromu je èo najpresnejšie urèi vıstupnú hodnotu \textbf{Y} na základe vstupného vektoru \textbf{X}. Vıstupná hodnota \textbf{Y} patrí mnoine reálnych èísel $R$. Pomocou algoritmov implementujúcich regresnı strom sa mnoina reálnych èísel rozdelí na menšie mnoiny, ktoré reprezentujú vıstupnú hodnotu. Na obrázku è.\ref{fig:regression_alg_example} je znázornenı príklad regresného stromu a rozdelenie mnoiny vıstupnıch hodnôt na základe tohto stromu. Pri tıchto vıstupoch musíme ráta s istou odchılkou vıstupnej hodnoty.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.35]{images/regression_alg_example.png}
+\caption{Rozdelenie mnoiny hodnôt}
+\label{fig:regression_alg_example}
+\end{figure}
+\indent Regresnı strom má ako rekurzívny model dve hlavné vıhody: interpretovatelnos a modelovanie interakcií. Naproti tomu, jeho ve¾kımi nevıhodami sú nestabilita a obtianos zachyti jednoduché vzahy\cite{machine_learning_introduction}. Majú tendenciu ma vysokú variabilitu, v tom zmysle, e ve¾mi malá zmena v dátach môe produkova ve¾mi odlišné rozdelenie hodnôt. Príèinou toho je, e akáko¾vek zmena v hornej úrovni stromu sa šíri do dolnıch èastí a ovplyvòuje ostatné vetvy. 
+
+\subsubsection{Umelé neurónové siete}
+Umelé neurónové siete sú modelom vıpoètu inšpirovanı štruktúrou ¾udského nervového systému. Nervovı systém v zjednodušenom ponímaní pozostáva z ve¾kého poètu základnıch vıpoètovıch jednotiek - \textbf{neurónov} navzájom pospájanıch \textbf{dendritmi} do komplexnej siete, v ktorej medzi sebou komunikujú. Umelá neurónová sie je formálna vıpoètová konštrukcia zaloená na tejto štruktúre. Môeme ju popísa ako orientovanı graf, ktorého uzly zodpovedajú neurónom a hrany medzi nimi reprezentujú dendrity. Spoloènım znakom umelıch neurónovıch sietí je mnoina adaptívnych hrán, ktoré sa upravujú tréningom. Práve vïaka adaptívnym spojovacím hranám, má neurónová sie schopnos uèenia sa. Aplikácie neurónovıch siete nájdeme pre viacero problémov, ve¾mi èasto sa okrem klasifikácie do tried pouívajú aj na aproximáciu vo všeobecnosti neznámych funkcii viacerıch vstupov.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.1]{images/neural_net.png}
 \caption{Neurónová sie}
 \end{figure}
 
-Neurónová sie je zloená zo vstupnej a vıstupnej vrstvy. Volite¾ne, pod¾a aplikácie na konkrétny problém, môe ma sie aj jednu a viac skrytıch vrstiev. Sie bez skrytej vrstvy sa nazıva perceptrón a pouíva sa na klasifikáciu vstupov do dvoch tried\cite{machine_learning}. Vstupná vrstva pokrıva poèet vstupov/atribútov, distribuuje vstupné signály do ïalšej vrstvy siete. Poèet neurónov vo vıstupnej vrstve zodpovedá iadanému poètu vıstupov. Skrytá a vıstupná vrstva majú vıpoètové funkcie.
+Neurónová sie je zloená zo vstupnej a vıstupnej vrstvy. Volite¾ne, pod¾a zloitosti konkrétneho problému, môe ma sie aj jednu a viac skrytıch vrstiev. Sie bez skrytej vrstvy sa nazıva \emph{perceptrón} a pouíva sa na klasifikáciu vstupov do dvoch tried\cite{machine_learning}. Vstupná vrstva pokrıva poèet vstupov/atribútov, distribuuje vstupné signály do ïalšej vrstvy siete. Poèet neurónov vo vıstupnej vrstve zodpovedá iadanému poètu vıstupov. Skrytá a vıstupná vrstva majú vıpoètové funkcie.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.25]{images/neuron.png}
 \caption{Neurón}
 \end{figure}
 
-Kadı neurón prijíma ako vstup váenı súèet vıstupov neurónov pripojenıch k jeho vstupnım hranám. Vıstup nerónu zoh¾adnuje prah citlivosti neurónu a \emph{aktivaènú funkciu} neurónu, èo môeme popísa vzahom \ref{eq:combination_function}. Niektoré zdroje, napr. \cite{efficient_backprop} to referujú ako \emph{kombinaèná funkcia}. Vstupom do kombinaènej funkcie je vektor hodnôt (x), vıstupom skalárna hodnota (y).
+Kadı neurón prijíma ako vstup váenı súèet vıstupov neurónov pripojenıch k jeho vstupnım hranám. Vıstup nerónu zoh¾adnuje prah citlivosti $\theta$ neurónu a \emph{aktivaènú funkciu} \textbf{f(a)}, èo môeme popísa vzahom \ref{eq:combination_function}. Niektoré zdroje, napr. \cite{efficient_backprop} to referujú ako \emph{kombinaèná funkcia}. Vstupom do kombinaènej funkcie je vektor hodnôt \textbf{x}, vıstupom skalárna hodnota \textbf{y}, $w_i$ reprezentujú váhy vstupnıch hrán.
 
 \begin{equation} \label{eq:combination_function}
 y = f\Big(\sum_{i=1}^{n}(w_i x_i)-\theta \Big) = f(a)
 \end{equation}
 
-Cie¾om pri uèení neurónovej siete je opakovanım spracovaním tréningovıch vzoriek a úpravou váh minimalizova rozdiel (chybu) medzi vıstupom siete a poadovanım (vzorovım) vıstupom. Mnostvo algoritmov pouívanıch na trénovanie neurónovej siete je zaloenıch na vıpoète gradientu chyby. Algoritmom spätného šírenia chyby sa vypoèítava podiel váhy hrany na celkovej chybe, na základe ktorého sú jednotlivé hrany postupne upravované.
+Cie¾om pri uèení neurónovej siete je opakovanım spracovaním tréningovıch vzoriek a úpravou váh minimalizova rozdiel (chybu) medzi vıstupom siete a poadovanım (vzorovım) vıstupom. Mnostvo algoritmov pouívanıch na trénovanie neurónovej siete je zaloenıch na vıpoète gradientu chyby. Algoritmom spätného šírenia chyby sa vypoèítava podiel váhy hrany na celkovej chybe, na základe ktorého sú jednotlivé hrany postupne upravované.\\
+\indent Nevıhodou neurónovıch sietí je, e sú nieèo ako èierna skrinka, so vstupmi a vıstupmi, ale je nároèné skúma ako danı problém riešia. Èo má dopad aj na programovú stránku. Riešenie nesprávnej funkènosti siete a h¾adanie chıb je komplikované. Tréning je do ve¾kej miery závislı na správnom nastavení siete a vıbere vzorovıch dát, prièom konfigurácia siete si èasto vyaduje postup metódou \emph{pokus-omyl}. Aj napriek nevıhodám je ich ve¾kou silou schopnos nájs vzah medzi komplikovanımi alebo nepresnımi dátami, èo umoòuje ich pouitie aj na problémy, ktoré nie sú riešite¾né èlovekom alebo inımi poèítaèovımi technológiami.
 
 \subsection{Pouité technológie a riešenia}
-Bakalárska práca \emph{Webovı organizér}, predstavovala webovú aplikáciu s monosou manuálneho ukladania absolvovaného aj plánovaného tréningu s monosami sumarizácie tréningového objemu pre vybrané obdobie. Ponúkala aj jednoduché sociálne funkcie, ako napríklad vyh¾adávanie priate¾ov a nastavenie súkromia. Serverová strana aplikácie \emph{Webovı organizér} bola naprogramovaná v jazyku PHP s pouitím frameworku \emph{Yii}. Ako databázovı server bol pouitı MySQL. Klientská èas stála na jazyku HTML, JavaScript a samozrejme CSS.\\
-\indent V nadstavbe, ktorá bude vytvorená v rámci diplomovej práce, sa o serverovú stranu bude stara rovnako programovı kód v jazyku PHP, avšak pre naše potreby sme vytvorili vlastnı minimalistickı framework. Hlavnım dôvodom bola snaha dosiahnú vyššiu rıchlos spracovania skriptov, a to minimalizovaním volaní nepotrebnıch funkcií frameworku a jednoduchšia rozšírite¾nos. Vytvorenı framework implementuje návrhovı vzor \emph{Model-View-Controller} a \emph{Singleton}. Presnı popis štruktúry ani fungovanie frameworku uvádza nebudeme, nako¾ko nie je predmetom tejto práce, ani by ho nebolo moné vtesna do rozsahu vyhradeného pre túto kapitolu. Zjednošenú architektúru vytvorenej aplikácie uvádzame na obr. \ref{fig:mcore}.
+Bakalárska práca \emph{Webovı organizér}, predstavovala webovú aplikáciu s monosou manuálneho ukladania absolvovaného aj plánovaného tréningu s monosami sumarizácie tréningového objemu pre vybrané obdobie. Ponúkala aj jednoduché sociálne funkcie, ako napríklad vyh¾adávanie priate¾ov a nastavenie súkromia. Serverová strana aplikácie \emph{Webovı organizér} je naprogramovaná v jazyku PHP s pouitím frameworku \emph{Yii}. Ako databázovı server pouíva MySQL. Klientská èas stojí na jazyku HTML, JavaScript a samozrejme CSS.\\
+\indent V nadstavbe, ktorá je vytvorená v rámci diplomovej práce, sa o serverovú stranu stará rovnako programovı kód v jazyku PHP, avšak pre naše potreby sme vytvorili vlastnı minimalistickı framework. Vytvorenı framework implementuje návrhovı vzor \emph{Model-View-Controller} a \emph{Singleton}. Presnı popis štruktúry ani fungovanie frameworku uvádza nebudeme, nako¾ko nie je predmetom tejto práce. Zjednošenú architektúru vytvorenej aplikácie uvádzame na obr. \ref{fig:mcore}.
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.33]{images/mcore.png}
+\includegraphics[scale=0.3]{images/mcore.png}
 \caption{Architektúra webovej aplikácie}
 \label{fig:mcore}
 \end{figure}
 
-\indent Nová èas aplikácie úplne preberie na starosti ukladanie a zobrazovanie tréningov. Oproti bakalárskej práci bude pozmenená monos uloenia manuálneho záznamu tréningu a zobrazenie tréningov. Navyše bude pridané ukladanie tréningu s nahraním dátového súboru a jeho analıza, tj. zobrazenie dát v grafoch a aproximácia vıkonu.\\
-\indent Na ukladanie dát vyuijeme existujúce schémy z bakalárskej práce v MySQL databáze, ktoré len mierne modifikujeme, pridáme niektoré tabu¾ky a nieko¾ko novıch ståpcov spolu s cudzími k¾úèmi.\\
-\indent Údaje o tréningu, ktoré aplikácia prijme vo forme FIT súboru, konvertujeme pouitím \emph{FIT SDK conversion tool} do CSV a uloíme do databázy. Nako¾ko hodnoty sú športovımi hodinkami poèas tréningu ukladané pribline kadú sekundu a kadıch pä sekúnd, v priemere pracujeme so súbormi, ktoré obsahujú od 1 000 do 30 000 jednotlivıch bodov a pre kadı informácie o polohe, èase, rıchlosti, nadmorskej vıške, teplote, tepovej frekvencii, frekvencii šliapania, vıkone atï. Spoèiatku sme sa obávali ve¾kosti tıchto dát a poètu riadkov v príslušnej databázovej tabu¾ke. Pre prvotné úèely aplikácie, by však MySQL databáza mala by postaèujúca. V produkènom móde môe by tabu¾ka pre tréningové dáta nahradená dátovım úloiskom \emph{Big Table} alebo podobne. \\
-\indent Vıstup serverovej èasti aplikácie bude vo forme HTML5, ktorı na strane klienta do finálneho zobrazenia dotvorí programovı kód v jazyku JavaScript. Jedná sa najmä o vykreslenie grafov, èo umoòuje kninica \emph{D3.js}\cite{d3js}.\\
+\indent Nová èas aplikácie úplne preberie na staros ukladanie a zobrazovanie tréningov. Oproti bakalárskej práci je pozmenená monos uloenia manuálneho záznamu tréningu a zobrazenie tréningov. Navyše je pridané ukladanie tréningu s nahraním dátového súboru a jeho analıza, tj. zobrazenie dát v grafoch a aproximácia vıkonu.\\
+\indent Na ukladanie dát vyuívame existujúce schémy z bakalárskej práce v MySQL databáze, ktoré sme len mierne modifikovali, pridali niektoré tabu¾ky a nieko¾ko novıch ståpcov spolu s cudzími k¾úèmi.\\
+\indent Údaje o tréningu, ktoré aplikácia prijme vo forme FIT súboru, konvertujeme pouitím \emph{FIT SDK conversion tool} do CSV a uloíme do databázy. Nako¾ko hodnoty sú športovımi hodinkami poèas tréningu ukladané v priblinom intervale 1-5 sekúnd, pracujeme so súbormi, ktoré obsahujú od 1 000 do 30 000 jednotlivıch bodov. Kadı obsahuje informácie o polohe, èase, rıchlosti, nadmorskej vıške, teplote, tepovej frekvencii, frekvencii šliapania, vıkone atï. Spoèiatku sme sa obávali ve¾kosti tıchto dát a poètu riadkov v príslušnej databázovej tabu¾ke. Pre prvotné úèely aplikácie, by však MySQL databáza mala by postaèujúca. V produkènom móde môe by tabu¾ka pre tréningové dáta nahradená dátovım úloiskom \emph{Big Table} alebo inım. \\
+\indent Na odhad vıkonu sme sa rozhodli implementova doprednú neurónovú sie, ktorú povaujeme pre tento prípad aproximácie funkcie ako najvhodnejší prístup. Zároveò s touto oblasou máme predchádzajúce praktické skúsenosti.\\
+\indent Vıstup serverovej èasti aplikácie je vo forme HTML5, ktorı na strane klienta do finálneho zobrazenia dotvorí programovı kód v jazyku JavaScript. Jedná sa najmä o vykreslenie grafov, èo umoòuje kninica \emph{D3.js}\cite{d3js}.\\
 \indent Jednoduchı, prezentovate¾nı dizajn vytvoríme v CSS s pouítím frameworku \emph{Bootstrap}\cite{bootstrap}, vïaka ktorému aplikácia získa responzívny dizajn.
 
 \subsection{Prípady pouitia} \label{use_case_section}
@@ -490,22 +510,14 @@ Nišie uvádzame popisy jednotlivıch prípadov pouitia, ktoré pokrıva naša apliká
 \end{figure}
 
 \subsection{Diagram aktivít}
-V tejto èasti uvádzame diagram pre priebeh najdôleitejšej aktivity v aplikácii. Nasledujúci diagram aktivít konkrétne popisuje akcie, ktoré sú vykonané v prípade pouitia \emph{UC\_03}.
+V tejto èasti uvádzame diagram pre priebeh najdôleitejšej aktivity v aplikácii, konkrétne prípadu pouitia \emph{UC\_03}. Ako sme spomenuli v predchádzajúcej èasti, po nahraní dátového súboru pouívate¾om na server nasleduje jeho rozbor a naèítanie dát. V prípade, e sa jedná o binárny FIT súbor, naèítaniu predchádza konverzia súboru do CSV formátu. Tok v systéme pokraèuje uloením údajov do~databázy. Ak bol tréning absolvovanı s meraèom vıkonu, záznam z tréningu sa zobrazí pouívate¾ovi. Ak vıkon medzi údajmi chıba, detekujú sa segmenty, na ktorıch bude odhadovanı vıkon. Následne sa inicializuje vopred natrénovaná neurónová sie a údaje zo segmentov sa postupnej posielajú na jej vstup. Vıstup siete sa pridá medzi údaje o tréningu, a tie sa uloia do databázy. Pri ïalšom zobrazení tréningu vıpoèet cez neurónovú sie u neprebieha, pouijú sa uloené dáta. Postupnos krokov je ilustrovaná na nasledujúcom diagrame aktivít.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.22]{images/diagram_activity.png}
 \caption{Diagram aktivít}
 \label{fig:diagram_activity}
 \end{figure}
-\noindent Ako sme spomenuli v predchádzajúcej èasti, po nahraní dátového súboru pouívate¾om na server nasleduje jeho rozbor a naèítanie dát. V prípade, e sa jedná o binárny FIT súbor, naèítaniu predchádza konverzia súboru do CSV formátu. Tok v systéme pokraèuje uloením údajov do~databázy. Ak bol tréning absolvovanı s meraèom vıkonu, záznam z tréningu sa zobrazí pouívate¾ovi. Ak vıkon medzi údajmi chıba detekujú sa segmenty, na ktorıch bude odhadovanı vıkon. Následne sa inicializuje vopred natrénovaná neurónová sie a údaje zo segmentov sa postupnej posielajú na jej vstup. Vıstup siete sa pridá medzi údaje o tréningu a tie sa uloia do databázy. Pri ïalšom zobrazení tréningu vıpoèet cez neurónovú sie u neprebieha, pouijú sa uloené dáta.\\
 
-%
-%
-%
-% PRETRIEDI
-%
-%
-%
 \subsection{Implementácia}
 V tejto èasti podrobne preberieme implementáciu algoritmu pre aproximáciu vıkonu cyklistu. V predchádzajúcich èastiach sme sa zaoberali úvahami o presnosti rôznych odhadov, vysvetlili sme vıpoèet a ukázali podiel jednotlivıch zloiek na celkovej sile potrebnej pri pohybe cyklistu. Táto štúdia nás viedla k záveru, e dostatoènú presnos môeme dosiahnú pri aproximácii vıkonu v úsekoch, v ktorıch je priemernı sklon aspoò 3\%, celková dåka úseku aspoò 500 metrov a násobok sklonu v èíselnom vyjadrení a dåky úseku je väèší ako 40. Môe teda ís o kratšie, prudšie úseky alebo dlhšie s miernejším stúpaním. Hranièné príklady úsekov sú napr.:
 \begin{itemize}
@@ -525,42 +537,8 @@ else{
     $this->render('files', array() );
 }
 \end{Verbatim}
-Aplikácia umoòuje nahra viac súborov súèasne. Jediné obmedzenie je na strane servera, v konfigurácii PHP treba obmedzi parametre \emph{upload\_max\_filesize} a \emph{post\_max\_size} na poadovanú ve¾kos. Pred presunutím súboru na server sa skontroluje, èi sa jedná o súbor FIT a PHP funkciou \emph{move\_uploaded\_file} je následne presunutı do zloky \emph{/uploads/activities\_raw/}, pod názvom s nasledujúcim tvarom: \emph{IDpouívate¾a\_hashNázvu.fit}.\\
-\indent Ihneï po presunutí súboru na server vykonáme jeho konverziu. Nasledujúci úryvok kódu spustí Java program, ktorı konvertuje binárny FIT súbor do CSV.
-
-\begin{Verbatim}[baselinestretch=0.75]
-exec(
-    'java -jar ' . MCORE_APP_PATH . 'libraries/FitCSVTool.jar -b '.
-    "{$inputpath} {$outputpath}"
-);
-\end{Verbatim}
-
-Ïalším krokom v metóde \emph{files()} je spracovanie CSV súboru, k èomu je urèená trieda \emph{Csv\_activity\_parser}. Tá dedí od všeobecnej triedy \emph{CSVparser}, ktorú sme naimplementovali ako súèas kniníc vo frameworku a postará sa o otvorenie súboru a naèítanie hlavièky. Keïe v CSV súbore je ve¾ké mnostvo riadkov, metóda, ktorá èíta zo súboru musí by èo najrıchlejšia. V tomto stave pouívate¾ stále èaká na spracovanie jeho vstupnıch súborov. Nišie uvedenı kód uloí do po¾a všetky riadky s príznakom \emph{session} alebo \emph{record}.
-
-\begin{Verbatim}[baselinestretch=0.75]
-while(($row = fgetcsv($this->f, 0, $this->dlm, $this->enc)) != NULL){
-            
-    if( $row[2] == 'record' && $row[0] == 'Data' ){   
-	$i = $field1_start;
-	
-	while( $i+2 <= count($row) ){
-	    $this->record[$data_index][$row[$i]] = $row[$i+1];
-	    $this->units[$row[$i]] = $row[$i+2];
-	    $i+=3;
-	}
-	$data_index++;
-    }
-    elseif( $row[2] == 'session' && $row[0] == 'Data'){
-	$i = $field1_start;
-	while( $i+2 <= count($row) ){
-	    $this->session[$row[$i]] = $row[$i+1];
-	    $i+=3;
-	}
-    }   
-}
-\end{Verbatim}
-
-Presunieme pozornos spä do triedy \emph{UploadController}. Na konci metódy \emph{files()} je ešte potrebné uloi údaje do databázy a umoni pouívate¾ovi pridanie názvu a popisu. Sumarizáciu tréningu uloíme do tabu¾ky \emph{training\_entry} cez model \emph{WorkoutModel}
+Aplikácia umoòuje nahra viac súborov súèasne. Jediné obmedzenie je na strane servera, v konfigurácii PHP treba obmedzi parametre \emph{upload\_max\_filesize} a \emph{post\_max\_size} na poadovanú ve¾kos. Pred presunutím súboru na server sa skontroluje, èi sa jedná o jeden z podporovanıch súborov (FIT, GPX, TCX) a PHP funkciou \emph{move\_uploaded\_file} je následne presunutı do zloky \emph{/uploads/activities\_raw/}, pod názvom s nasledujúcim tvarom: \emph{IDpouívate¾a\_hashNázvu.priponaSuboru}.\\ Ak server prijal binárny súbor formátu FIT, ihneï po jeho presunutí vykonáme konverziu pouitím nástroja na konverziu z \emph{FIT SDK}.\\
+Ïalším krokom v metóde \emph{files()} je spracovanie CSV súboru (konvertovaného z FIT) alebo XML súborov (GPX, TCX). K tomu je urèená trieda \emph{ActivityParser}. Na konci metódy \emph{files()} je ešte potrebné uloi údaje do databázy. Sumarizáciu tréningu uloíme do tabu¾ky \emph{training\_entry} cez model \emph{WorkoutModel} a priebeh tréningu z dátového súboru do tabu¾ky \emph{training\_entry\_record} cez model \emph{ActivityModel}. Tımto je nahratie súborov ukonèené a pouívate¾ovi sa zobrazí stránka, na ktorej môe zmeni typ športu, prida tréningu názov a popis.
 
 \begin{Verbatim}[baselinestretch=0.75]
 $w_model = new WorkoutModel(); 
@@ -582,8 +560,6 @@ if( $w_model->save(TRUE) ){
     );
 }
 \end{Verbatim}
-
-Tımto je nahratie súborov ukonèené a pouívate¾ovi sa zobrazí stránka, na ktorej môe zmeni typ športu, prida tréningu názov a popis.
 
 \subsubsection{Detekcia stúpaní}
 Aby mohla by vykonaná samotná aproximácia vıkonu, musí by z priebehu tréningu detekované, kde sa zaèínajú a konèia stúpania, ktoré vyhovujú stanovenım podmienkam (minimálne 3\% sklon a 500 m dåka). V skutoènosti je priebeh tréningu síce spojitı, no hodnoty, s ktorımi pracujeme sú diskrétne. Najjednoduchšou monosou detekcie je teda iterácia cez všetky body a overovanie nadmorskej vıšky. Aby sme zjednotili údaje, ktoré reprezentujú vybranı úsek v tréningu a udrali programovı kód konzistentnı, vytvorili sme jednoduchú triedu \emph{SegmentModel}\\
@@ -623,7 +599,7 @@ class SegmentModel {
 }
 \end{Verbatim}
 
-Detekciu úsekov ako aj aproximáciu vıkonu, ku ktorej sa dostaneme neskôr, má na starosti trieda \emph{Analyzer}. V prvom kroku metódy \emph{detect\_climbs()} sú detekované všetky neklesajúce úseky, následne sú nevyhovujúce odstránené.
+Detekciu úsekov má na starosti trieda \emph{Analyzer}. V prvom kroku metódy \emph{detectClimbs()} sú detekované všetky neklesajúce úseky, následne sú nevyhovujúce odstránené.
 
 \begin{Verbatim}[baselinestretch=0.75]
 public function detect_climbs( WorkoutModel $workout ){
@@ -658,7 +634,7 @@ public function detect_climbs( WorkoutModel $workout ){
 }
 \end{Verbatim}
 
-V tomto momente máme detekované stúpania, v ktorıch chceme vıkon aproximova. Ideálna by bola aproximácia, ktorá by pre kadı uloenı bod v tıchto stúpaniach urèila konkrétnu hodnotu vıkonu. Vyrátavali by sa teda priemerné vıkony medzi jednotlivımi bodmi, ktoré boli uloené na tréningu v priebehu stúpaní. Od tejto úvahy sme však upustili, nako¾ko si myslíme, e by nepresnos GPS a barometrického vıškomera pri vıpoète znásobovala odchılku od reálneho vıkonu. Preto v ïalšom kroku delíme stúpania na menšie èasti, tzv. segmenty, na ktorıch je konštantné stúpanie a pri snahe športovca o èo najplynulejšiu jazdu predpokladáme aj rovnomernú rıchlos.\\
+V tomto momente máme detekované stúpania, v ktorıch chceme vıkon aproximova. Ideálna by bola aproximácia, ktorá by pre kadı uloenı bod v tıchto stúpaniach urèila konkrétnu hodnotu vıkonu. Vyrátavali by sa teda priemerné vıkony medzi jednotlivımi bodmi, ktoré boli uloené na tréningu v priebehu stúpaní. Tımto postupom sme však nedostahovali uspokojívé vısledky, nako¾ko nepresnos GPS a barometrického vıškomera pri vıpoète znásobovala odchılku od reálneho vıkonu. Tento problém sme videli aj pri aproximácii vıkonu portálom \emph{Strava}. Z tohto dôvodu v ïalšom kroku delíme stúpania na menšie èasti, tzv. segmenty, na ktorıch je konštantné stúpanie a pri snahe športovca o èo najplynulejšiu jazdu predpokladáme aj rovnomernú rıchlos.\\
 \indent H¾adanie úsekov s konštantnım stúpaním nevykonávame jednoduchım prechádzaním cez všetky dáta a vzájomnım porovnávaním aktuálneho a nasledujúceho bodu. Lepšie rozdelenie stúpania dostávame h¾adaním, pri ktorom vytvárame úseèku z bodu \emph{N} a {N+x}, kde \emph{x} je vopred definovanı krok. Túto úseèku následne porovnáme s úseèkou vytvorenou medzi \emph{N+1} a {N+x+1}. Nároènos algoritmu je rovnaká ako v prípade, kedy by sme porovnávali body medzi sebou jednotlivo, cyklus prejde cez všetky body. Vytváraním dlhších úseèiek však minimalizujeme odchılky vıškomera. Kım prvou spomenutou metódou by sme dostávali úseky tvorené 2 a 3 bodmi, pouitou metódou je to v priemere 5 a 10 bodov, tj. v priemere 40 a 150 m, v závislosti od rıchlosti pohybu a frekvencie ukladania dát.\\
 \indent Princíp detekcie segmentov pre lepšiu predstavivos zobrazujeme na obr. \ref{fig:segment_determination}. Kadá úseèka je vytvorená medzi bodmi \emph{N} a {N+x}, kedy N je navyšované pri kadej iterácii. Sklon úseèky 1 je porovnanı so sklonom úseèky 2. Ak je rozdiel sklonu väèší ako 0.005 predpokladáme, e leia nad samostatnımi segmentami. Pri tomto porovnávaní však môeme natrafi na prípad, kedy by nasledujúci segment mal zaèína pod úseèkou, presne ako na obr. \ref{fig:segment_determination}, pod úseèkou 2. Preto po nájdení úseèiek s rozdielnımi sklonmi ešte rozdelíme aj samotnú úseèku a celı proces porovnania sklonov zopakujeme, kım nie je urèenı koniec jedného segmentu a zaèiatok nového. 
 
@@ -781,7 +757,7 @@ var root = d3.select("#chart-canvas").append("svg")
 
 chart_draw(chart_data);
 \end{Verbatim}
-Premennú \emph{\$chart\_def} inicializujeme ešte v PHP, obsahuje definície velièín, ktorá sa majú zobrazi, tj. ku ktorım existujú dáta. Táto premenná obsahuje aj jednotky pre jednotlivé velièiny a poèet desatinnıch miest pri zobrazení. Riadok 6 zabezpeèí vloenie elementu \emph{$<$svg$>$} do HTML s fixnou vıškou a šírkou. O vykreslenie sa bude stara funkcia \emph{chart\_draw()}.
+Premennú \emph{\$chart\_def} inicializujeme ešte v PHP, obsahuje definície velièín, ktorá sa majú zobrazi, tj. ku ktorım existujú dáta. Táto premenná obsahuje aj jednotky pre jednotlivé velièiny a poèet desatinnıch miest pri zobrazení. Riadok 6 zabezpeèí vloenie elementu \emph{$<$svg$>$} do HTML s fixnou vıškou a šírkou. O vykreslenie sa stará funkcia \emph{chart\_draw()}.
 
 \begin{Verbatim}[baselinestretch=0.75]
 function chart_draw(chart_data){
@@ -836,6 +812,105 @@ Vykres¾ovanie osí grafu nebudeme rozvádza dopodrobna. Graf disponuje interaktiv
 \caption{Zvıraznenie vıberu pred priblíením konkrétnej èasti tréningu}
 \end{figure}
 
+\subsubsection{Aproximácia vıkonu neurónovou sieou}
+Ako sme uviedli v predchádzajúcich èastiach práce, na aproximáciu vıkonu sme sa rozhodli implementova doprednú neurónovú sie. Základnım komponentom neurónovej siete je neurón, ktorı má urèitı poèet vstupov a váhy vstupujúcich hrán. Na základe toho máme jednoduchú triedu neurón, ktorej konštruktor sa postará o náhodnú inicializáciu váh v intervale $<$-1, 1$>$:
+\begin{Verbatim}[baselinestretch=0.75]
+class Neuron {
+
+    /** @var int Poèet vstupov do neurónu */
+    public $numInputs = 0;
+    
+    /** @var array Váha pre kadı vstup do neurónu */
+    public $weights = [];
+    
+    /** @param int $numImputs */
+    public function __construct($numImputs) {
+        $this->numInputs = $numImputs;
+        
+        //Váha pre prah neurónu - preto +1
+        for($i = 0; $i <= $this->numInputs; $i++){ 
+            array_push($this->weights, Helper::random(-1,1)); 
+        }
+    }
+}
+\end{Verbatim}
+
+Neurónová sie pozostáva z vrstiev. Kadá skrytá a vıstupná vrstva má urèitı poèet neurónov na základe konfigurácie siete. Konštruktor triedy \emph{NeuralLayer} sa postará o vytvorenie neurónov obsiahnutıch vo vrstve:
+\begin{Verbatim}[baselinestretch=0.75]
+class NeuronLayer {
+    
+    /** @var int Poèet neurónov vo vrstve */
+    public $numNeurons = 0;
+    
+    /** @var array of Neuron - Neurony vo vrstve */
+    public $neurons = [];
+    
+    /**
+     * @param int $numNeurons
+     * @param int $numInputsPerNeuron
+     */
+    public function __construct($numNeurons, $numInputsPerNeuron) {
+        $this->numNeurons = $numNeurons;
+        
+        for ($i = 0; $i < $numNeurons; $i++) {
+            array_push($this->neurons, new Neuron($numInputsPerNeuron));
+        }
+    }
+}
+\end{Verbatim}
+
+Inštanciu neurónovej siete vytvárame z triedy \emph{NeuralNet}. Skrátenú definíciu uvádzame na nasledujúcich riadkoch.
+\begin{Verbatim}[baselinestretch=0.75]
+class NeuralNet {
+
+    // atribúty
+      /** @var int Poèet vstupov siete */
+    private $numInputs; 
+      /** @var int Poèet vıstupov siete */
+    private $numOutputs; 
+      /** @var int Poèet skrytıch vrstiev */
+    private $numHiddenLayers; 
+      /** @var array Poèet neurónov v skrytej vrstve */ 
+    private $numNeuronsPerLayer = [];  
+      /** @var array Pole všetkıch vrstiev siete aj s vıstupnou vrstvou */
+    private $layers = []; 
+      /** @var array Vstupy pre aktuálny vıpoèet */
+    private $inputs = []; 
+      /** @var array vısledok vıpoètu count($outputs) == $numOutputs */
+    private $outputs = []; 
+      /** @var array Viacrozmerne pole s vıstupmi pre kadú vrstvu */
+    private $partialOutputs = []; 
+    
+    //metódy
+      /** Konštruktor */
+    public function __construct(); 
+      /** Vytvorenie neurónovej siete */
+    public function createNet(); 
+      /** Vráti váhy siete */
+    public function getWeights(); 
+      /** Nastaví váhy  */
+    public function putWeights($weights); 
+      /** Vypoèíta vıstup zo vstupov */
+    public function compute($in); 
+      /** Trénovanie siete */
+    public function train($trainData); */
+      /** Spúša normalizáciu dát pred vıpoètom
+    public function preProcessing($data); 
+      /** Spúša prevod dát na pôvodné hodnoty, po vıpoète */
+    public function postProcessing($data); 
+      /** Poèíta gradient chyby spätnım šírením */
+    private function computeDeltas($outputs, $desired); 
+      /** Upraví váhy v priebehu tréningu */
+    private function updateWeights($deltas, $learnRate); 
+      /** error function */
+    private function meanSquaredError($outputs, $desired); 
+      /** Volá aktivaènú funkciu pod¾a konfigurácie vrstvy */
+    private function transfer($layer, $value);
+      /** Volá deriváciu aktivaènej funkcie */
+    private function deriveTransfer($layer, $value); 
+}
+\end{Verbatim}
+
 \subsection{Porovnanie vısledkov}
 Záver tejto kapitoly venujeme porovnaniu odhadnutıch hodnôt s hodnotami, ktoré boli reálne zmerané meraèom vıkonu. Vısledky, ktoré prezentujeme, sú na základe dát, získanıch v období september 2014 a máj 2016 tromi rôznymi športovcami a tromi rozdielnımi meraèmi vıkonu. Jedná sa o stúpania v rôznych nadmorskıch vıškach, od 0 do 1200 m n.m. v rôznych teplotnıch podmienkach, od 0 do 35°C a s rôznym priemernım sklonom, od 4 do 12\%. \\\\
 
@@ -862,7 +937,10 @@ Záver tejto kapitoly venujeme porovnaniu odhadnutıch hodnôt s hodnotami, ktoré b
   
   \bibitem{machine_learning}
   MARSLAND, S.: \emph{Machine Learning: An Algorithmic Perspective}. Chapman and Hall/CRC, 2009. 406s. ISBN 978-1420067187
-  
+    
+  \bibitem{machine_learning_introduction}
+  ALPAYDIN, E.: \emph{Introduction to Machine Learning}, 2.vydanie. Cambridge, Massachusetts: The MIT Press, 2009. 584s. ISBN 978-0262012430
+
   \bibitem{efficient_backprop}
   MONTAVON, G. - ORR, G. - MÜLLER, K. L.: \emph{Neural Networks: Tricks of the Trade}, 2. vydanie. Berlin: Springer-Verlag, 2012. 769s. ISBN 978-3-642-35288-1
   
