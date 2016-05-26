@@ -51,7 +51,7 @@
 \thispagestyle{empty}
 \section*{Poïakovanie}
 \vspace{10mm}
-Ïakujem rodine, priate¾ke Anne a môjmu trénerovi, Mgr. Patrikovi Kurilovi, ktorı ma o tréningu nauèil všetko, èo som mohol vyui pri návrhu algoritmu.
+Ïakujem rodine, priate¾ke Anne, vedúcemu Ing. Stanislavovi Marèekovi a môjmu trénerovi, Mgr. Patrikovi Kurilovi, ktorı ma o tréningu nauèil všetko, èo som mohol vyui pri návrhu algoritmu.
 
 \newpage
 \thispagestyle{empty}
@@ -220,7 +220,7 @@ Druhı systém relevantnı nášmu vıskumu nájdeme na webovej stránke\\ \emph{http://
 \end{figure}
 
 Otestovali sme ho pre 12 úsekov, z ktorıch kadı sme absolvovali 2-5 krát a vıkon merali zariadením PowerTap G3. Pri kadom meraní sa športovec snail dodriava rovnomernı vıkon. Nako¾ko Bike Calculator neumoòuje vkladanie èiastkovıch údajov, pouili sme priemer nameranıch hodnôt pre kadı úsek. V tabu¾ke \ref{table:bikecalculator_table} uvádzame porovnanie hodnôt z meraní a vypoèítanıch hodnôt.
-\begin{table}[h]
+\begin{table}[H]
 \begin{tabular}{cccccccc}
 \textbf{Úsek} & \textbf{\begin{tabular}[c]{@{}c@{}}dåka\\ {[}m{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}priemer.\\ stúpanie\\ {[}\%{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}priemer.\\ rıchlos\\ {[}km/h{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}reálny\\ vıkon\\ {[}W{]}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Bike\\ Calculator\\ {[}W{]}\end{tabular}} & \textbf{Rozdiel} & \textbf{\begin{tabular}[c]{@{}c@{}}Rozdiel\\ {[}\%{]}\end{tabular}} \\ \hline
 1. & 1000 & 7.4 & 13.5 & 269 & 247 & -22 & -8.18\% \\ \hline
@@ -239,8 +239,8 @@ Otestovali sme ho pre 12 úsekov, z ktorıch kadı sme absolvovali 2-5 krát a vıko
 \caption{Bike Calculator - porovnanie vıpoètu}
 \label{table:bikecalculator_table}
 \end{table}
-\\
-\indent Z tabu¾ky si môeme všimnú, e celková dåka segmentu neovplyvòuje rozdiel medzi reálnou a vypoèítavanou hodnotou. Zámerne však neuvádzame úseky dlhé iba nieko¾ko desiatok metrov, aby sme mohli poukáza na fakt, e práve stúpajúci sklon (priem. stúpanie) robí vıpoèet presnejším. Minimalizuje sa toti aerodynamickı odpor spôsobenı vetrom, ktorého smer aj intenzitu je ve¾mi aké odhadnú a stúpa podiel sily potrebnej na prekonanie zemskej tiae.\\
+
+Z tabu¾ky si môeme všimnú, e celková dåka segmentu neovplyvòuje rozdiel medzi reálnou a vypoèítavanou hodnotou. Zámerne však neuvádzame úseky dlhé iba nieko¾ko desiatok metrov, aby sme mohli poukáza na fakt, e práve stúpajúci sklon (priem. stúpanie) robí vıpoèet presnejším. Minimalizuje sa toti aerodynamickı odpor spôsobenı vetrom, ktorého smer aj intenzitu je ve¾mi aké odhadnú a stúpa podiel sily potrebnej na prekonanie zemskej tiae.\\
 \indent Ako môeme vidie vo formulári na obr. \ref{fig:bikecalculator_form}, typ pneumatík a pozíciu športovca na bicykli vyberáme z predvolenıch hodnôt. Pre typ pneumatík sú to tri hodnoty, a to pláše, galusky alebo MTB\footnote{MTB - mountain bike - horskı bicykel}. Pozíciu môeme zvoli pod¾a bicykla - vzpriamená, mierne vzpriamená, zohnutá, aerodynamická. Pod¾a vybraného vstupu Bike Calculator pouije predvolenı koeficient valivého odporu, resp. aerodynamického odporu.\\
 \indent Koeficient aerodynamického odporu je však závislı aj od obleèenia cyklistu, od bicykla, od kolies. Koeficient valivého odporu je rozdielny pre jednotlivé modely plášov, hodnotu ich nahustenia. Môeme poveda, e je rozdielny pre kadú jednu dvojicu športovec-bicykel. Dôkladnejšie vysvetlenie tejto problematiky uvádzame v kapitole \ref{Physics}.
 
@@ -426,6 +426,7 @@ Neurónová sie je zloená zo vstupnej a vıstupnej vrstvy. Volite¾ne, pod¾a zloi
 \centering
 \includegraphics[scale=0.25]{images/neuron.png}
 \caption{Neurón}
+\label{fig:neuron}
 \end{figure}
 
 Kadı neurón prijíma ako vstup váenı súèet vıstupov neurónov pripojenıch k jeho vstupnım hranám. Vıstup nerónu zoh¾adnuje prah citlivosti $\theta$ neurónu a \emph{aktivaènú funkciu} \textbf{f(a)}, èo môeme popísa vzahom \ref{eq:combination_function}. Niektoré zdroje, napr. \cite{efficient_backprop} to referujú ako \emph{kombinaèná funkcia}. Vstupom do kombinaènej funkcie je vektor hodnôt \textbf{x}, vıstupom skalárna hodnota \textbf{y}, $w_i$ reprezentujú váhy vstupnıch hrán.
@@ -634,7 +635,7 @@ public function detect_climbs( WorkoutModel $workout ){
 }
 \end{Verbatim}
 
-V tomto momente máme detekované stúpania, v ktorıch chceme vıkon aproximova. Ideálna by bola aproximácia, ktorá by pre kadı uloenı bod v tıchto stúpaniach urèila konkrétnu hodnotu vıkonu. Vyrátavali by sa teda priemerné vıkony medzi jednotlivımi bodmi, ktoré boli uloené na tréningu v priebehu stúpaní. Tımto postupom sme však nedostahovali uspokojívé vısledky, nako¾ko nepresnos GPS a barometrického vıškomera pri vıpoète znásobovala odchılku od reálneho vıkonu. Tento problém sme videli aj pri aproximácii vıkonu portálom \emph{Strava}. Z tohto dôvodu v ïalšom kroku delíme stúpania na menšie èasti, tzv. segmenty, na ktorıch je konštantné stúpanie a pri snahe športovca o èo najplynulejšiu jazdu predpokladáme aj rovnomernú rıchlos.\\
+V tomto momente máme detekované stúpania, v ktorıch chceme vıkon aproximova. Ideálna by bola aproximácia, ktorá by pre kadı uloenı bod v tıchto stúpaniach urèila konkrétnu hodnotu vıkonu. Vyrátavali by sa teda priemerné vıkony medzi jednotlivımi bodmi, ktoré boli uloené na tréningu v priebehu stúpaní. Tımto postupom sme však nedostahovali uspokojivé vısledky, nako¾ko nepresnos GPS a barometrického vıškomera pri vıpoète znásobovala odchılku od reálneho vıkonu. Tento problém sme videli aj pri aproximácii vıkonu portálom \emph{Strava}. Z tohto dôvodu v ïalšom kroku delíme stúpania na menšie èasti, tzv. segmenty, na ktorıch je konštantné stúpanie a pri snahe športovca o èo najplynulejšiu jazdu predpokladáme aj rovnomernú rıchlos.\\
 \indent H¾adanie úsekov s konštantnım stúpaním nevykonávame jednoduchım prechádzaním cez všetky dáta a vzájomnım porovnávaním aktuálneho a nasledujúceho bodu. Lepšie rozdelenie stúpania dostávame h¾adaním, pri ktorom vytvárame úseèku z bodu \emph{N} a {N+x}, kde \emph{x} je vopred definovanı krok. Túto úseèku následne porovnáme s úseèkou vytvorenou medzi \emph{N+1} a {N+x+1}. Nároènos algoritmu je rovnaká ako v prípade, kedy by sme porovnávali body medzi sebou jednotlivo, cyklus prejde cez všetky body. Vytváraním dlhších úseèiek však minimalizujeme odchılky vıškomera. Kım prvou spomenutou metódou by sme dostávali úseky tvorené 2 a 3 bodmi, pouitou metódou je to v priemere 5 a 10 bodov, tj. v priemere 40 a 150 m, v závislosti od rıchlosti pohybu a frekvencie ukladania dát.\\
 \indent Princíp detekcie segmentov pre lepšiu predstavivos zobrazujeme na obr. \ref{fig:segment_determination}. Kadá úseèka je vytvorená medzi bodmi \emph{N} a {N+x}, kedy N je navyšované pri kadej iterácii. Sklon úseèky 1 je porovnanı so sklonom úseèky 2. Ak je rozdiel sklonu väèší ako 0.005 predpokladáme, e leia nad samostatnımi segmentami. Pri tomto porovnávaní však môeme natrafi na prípad, kedy by nasledujúci segment mal zaèína pod úseèkou, presne ako na obr. \ref{fig:segment_determination}, pod úseèkou 2. Preto po nájdení úseèiek s rozdielnımi sklonmi ešte rozdelíme aj samotnú úseèku a celı proces porovnania sklonov zopakujeme, kım nie je urèenı koniec jedného segmentu a zaèiatok nového. 
 
@@ -668,7 +669,7 @@ for( $i = $i+1; $i <= $climb->get_index_end() - $step; $i++ ){
 
 \subsubsection{Zobrazenie tréningu}
 Hlavnou poiadavkou pri zobrazení tréningu s GPS údajmi, je monos prehliada absolvovanı tréning na mape a monos zobrazi jednotlivé body ¾ahko èitate¾nou formou, teda ideálne formou grafu.\\
-\indent Prvú poiadavku splníme vïaka API od Google Maps. Aplikaèné rozhranie umoòuje zobrazi a vycentrova mapu pre konkrétnu polohu alebo mnoinu bodov, vykresli body alebo ich spojením priamo vytvori krivku. Prikreslením ïalšej krivky do mapy môeme zvırazni konkrétny úsek v tréningu pod¾a priblíenia/selekcie v grafe. Do mapy je taktie moné prida ukazovate¾ pozície. O vykreslenie mapy s tımito monosami sa postará nasledovnı kód, ktorı sa nachádza v náh¾adovom súbore \emph{/views/workout/view.chart.php}. Keïe sa jedná o Javascript, je len odoslanı do prehliadaèa a svoju funkciu vykoná sa a na strane klienta. Vısledok je následne zobrazenı na obr. \ref{fig:inhillz_map}
+\indent Prvú poiadavku splníme vïaka API od Google Maps. Aplikaèné rozhranie umoòuje zobrazi a vycentrova mapu pre konkrétnu polohu alebo mnoinu bodov, vykresli body alebo ich spojením priamo vytvori krivku. Prikreslením ïalšej krivky do mapy môeme zvırazni konkrétny úsek v tréningu pod¾a priblíenia/selekcie v grafe. Do mapy je taktie moné prida ukazovate¾ pozície. O vykreslenie mapy s tımito monosami sa postará nasledovnı kód, ktorı sa nachádza v náh¾adovom súbore \emph{/views/workout/view.chart.php}. Keïe sa jedná o Javascript, je len odoslanı do prehliadaèa a svoju funkciu vykoná a na strane klienta. Vısledok je následne zobrazenı na obr. \ref{fig:inhillz_map}
 
 \begin{Verbatim}[baselinestretch=0.75]
 <script type="text/javascript">
@@ -812,7 +813,7 @@ Vykres¾ovanie osí grafu nebudeme rozvádza dopodrobna. Graf disponuje interaktiv
 \caption{Zvıraznenie vıberu pred priblíením konkrétnej èasti tréningu}
 \end{figure}
 
-\subsubsection{Aproximácia vıkonu neurónovou sieou}
+\subsubsection{Implementácia neurónovej siete}
 Ako sme uviedli v predchádzajúcich èastiach práce, na aproximáciu vıkonu sme sa rozhodli implementova doprednú neurónovú sie. Základnım komponentom neurónovej siete je neurón, ktorı má urèitı poèet vstupov a váhy vstupujúcich hrán. Na základe toho máme jednoduchú triedu neurón, ktorej konštruktor sa postará o náhodnú inicializáciu váh v intervale $<$-1, 1$>$:
 \begin{Verbatim}[baselinestretch=0.75]
 class Neuron {
@@ -903,33 +904,193 @@ class NeuralNet {
       /** Upraví váhy v priebehu tréningu */
     private function updateWeights($deltas, $learnRate); 
       /** error function */
-    private function meanSquaredError($outputs, $desired); 
+    private function meanSquaredError($output, $desired); 
       /** Volá aktivaènú funkciu pod¾a konfigurácie vrstvy */
     private function transfer($layer, $value);
       /** Volá deriváciu aktivaènej funkcie */
     private function deriveTransfer($layer, $value); 
 }
 \end{Verbatim}
+Metóda \emph{compute()} je implementácia vzorca \ref{eq:combination_function}, preto ju nebudeme detailnejšie rozvádza. Vıstupy kadej vrstvy siete sú uloené do po¾a \emph{partialOutputs}. Aktivaènú funkciu \textbf{f(a)} neurónu je moné zvoli v konfigurácii pre kadú vrstvu individuálne, keïe sme z dôvodu testovania implementovali hyperbolickı tangens aj sigmoidu. Nako¾ko sa vıstupné dáta nenachádzajú v obore hodnôt tıchto funkcií, vıstupná vrstvu pouíva lineárnu aktivaènú funkciu.
+
+\subsubsection{Trénovanie neurónovej siete}
+Na trénovanie neurónovej siete sme zvolili algoritmus spätného šírenia chyby\footnote{Error-backpropagation algorithm}. Trénovanie je moné vykonáva inkrementálne alebo dávkovo. Pri inkrementálnom sú váhy neurónov upravované po vypoèítaní chyby kadej vzorky dát. Naopak, dávkové uèenie upravuje váhy a po prejdení celej mnoiny trénovacích dát. Po otestovaní oboch spôsobov sme sa priklonili ku inkrementálnemu uèeniu, pretoe vıstupy rıchlejšie konvergovali k oèakávanım hodnotám, ako to odporúèal aj zdroj \cite{efficient_backprop}. Inkrementálne trénovanie sa vykonáva v nasledujúcich krokoch:
+\begin{enumerate}
+  \item Pre kadú trénovaciu vzorku vykonaj:
+  \begin{itemize}
+      \item Vıpoèet vıstupu \textbf{y($x_i$)}
+      \item Vıpoèet chyby
+      \item Korekcia váh
+  \end{itemize}
+  \item Krok 1 opakuj kım nie je dosiahnutı \textbf{N} poèet epoch alebo nie je splnená iná ukonèovacia podmienka
+\end{enumerate}
+\indent \textbf{Vıpoèet celkovej chyby} vykonávame v metóde \emph{meanSquaredError()} pomocou nasledujúceho vzahu \cite{efficient_backprop}:
+\begin{equation} \label{eq:error_function}
+E = \sum \cfrac{1}{2} (desired-output)^2
+\end{equation}
+Po ukonèení jednej epochy urobíme priemer chıb kadej vzorky a táto hodnota je jednou z ukonèovacích podmienok trénovania.\\
+
+\noindent\textbf{Spätné šírenie a úprava váh}. Cie¾om spätného šírenia je úprava váh siete tak, aby bol vypoèítanı vıstup blišie k vzorovému vıstupu. Vıstupnı signál šírime sieou spätne a poèítame podiel konkrétnej váhy na celkovej chybe. Úpravu váhy vykonávame pod¾a nasledujúceho vzahu \cite{efficient_backprop}:
+\begin{equation} 
+w_i(t) = w_i(t-1) - \eta \cfrac{\partial E}{\partial w_i}
+\end{equation}
+Kde, $w_i(t)$ je nová váha hrany $i$,\\
+$w_i(t-1)$ je pôvodná váha hrany $i$,\\
+$\eta$ je stupeò uèenia\footnote{learning rate} definovanı v konfigurácii,\\
+$\cfrac{\partial E}{\partial w_i}$ je podiel váhy hrany $i$ na celkovej chybe.\\
+
+\noindent Ak hrana $w_i$ vstupuje do j-teho neurónu k-tej vrstvy, potom podiel $\cfrac{\partial E}{\partial w_i}$ vypoèítame na základe:
+\begin{equation}\label{eq:err_derive}
+\cfrac{\partial E}{\partial w_i} = \cfrac{\partial E}{\partial out_{kj}} * \cfrac{\partial out_{kj}}{\partial net_{kj}} * \cfrac{\partial net_{kj}}{\partial w_i}
+\end{equation}
+
+\noindent kde, $out_{kj}$ je vıstup j-teho neurónu k-tej vrstvy,\\
+$net_{kj}$ je vısledok vnútornej aktivity j-teho neurónu k-tej vrstvy, na obr.\ref{fig:neuron} ako \textbf{a}.\\
+
+Signál chyby šírime spätne, zaèína na vıstupnej vrstve, pre ktorú èiastkové vıpoèty poèítame nasledovne:\\
+\begin{equation}\cfrac{\partial E}{\partial out_{kj}} = -(desired_j - output_j)\end{equation}
+$\cfrac{\partial out_{kj}}{\partial net_{kj}}$ je derivácia aktivaènej funkcie pod¾a ováhovanıch vstupov, líšia sa pod¾a aktivaènej funkcie. Súèin tıchto dvoch hodnôt ukladáme do po¾a ako $\delta_{kj}$, kvôli vıpoètom zmeny váh v predchádzajúcich vrstvách. A posledná èas:
+\begin{equation}\cfrac{\partial net_{kj}}{\partial w_i} = out_{(k-1)i}\end{equation}
+                 
+\indent Pri vıpoète zmeny váh skrytıch vrstiev nastáva zmena pri vıpoète èlenu $\cfrac{\partial E}{\partial out_{kj}}$ rovnice \ref{eq:err_derive}.
+\begin{equation}
+\cfrac{\partial E}{\partial out_{kj}} = \sum_{n=1}^m \delta_{(k+1)n} w_n
+\end{equation}
+kde $m$ je poèet neurónov k+1 vrstvy, \\
+n je n-tı neurón k+1 vrsvty, \\
+$w_n$ je váha hrany, ktorá vystpuje z j-tého neurónu k-tej vrstvy a vstupuje do n-tého neurónu, k+1 vrstvy.\\
+Opä ukladáme súèin prvı dvoch èlenov rovnice \ref{eq:err_derive} ako $\delta_{kj}$, pre prípad viacerıch skrytıch vrstiev.\\
+\indent Po prejdení všetkıch hrán a úprave ich váh pokraèuje trénovanie siete ïalšou trénovacou vzorkou. Tento postup sa opakuje, pokia¾ nie je splnená jedna z ukonèovacích podmienok:
+\begin{itemize}
+ \item dosiahnutie predpísanej presnosti celkovej chyby,
+ \item dosiahnutie definovaného poètu epoch,
+ \item nárast celkovej chyby.
+\end{itemize}
+
 
 \subsection{Porovnanie vısledkov}
-Záver tejto kapitoly venujeme porovnaniu odhadnutıch hodnôt s hodnotami, ktoré boli reálne zmerané meraèom vıkonu. Vısledky, ktoré prezentujeme, sú na základe dát, získanıch v období september 2014 a máj 2016 tromi rôznymi športovcami a tromi rozdielnımi meraèmi vıkonu. Jedná sa o stúpania v rôznych nadmorskıch vıškach, od 0 do 1200 m n.m. v rôznych teplotnıch podmienkach, od 0 do 35°C a s rôznym priemernım sklonom, od 4 do 12\%. \\\\
+Záver tejto kapitoly venujeme porovnaniu odhadnutıch hodnôt s hodnotami, ktoré boli reálne zmerané meraèom vıkonu. Niektoré merania sme opakovali viackrát a niektoré sme vykonali s dvomi športovımi meraèmi. Na Garmin Edge 500 sme mali pripojenı meraè vıkonu Stages Rival alebo PowerTap G3, prièom sme dáta nahrali do nášho systému a dáta z druhého, PowerTap Joule GPS, sme nahrali na server Strava, aby sme mohli vısledky porovna. Z viacerıch meraní sme vybrali tie, pri ktorıch nedochádzalo k vıpadkom signálu, èi u GPS alebo meraèa vıkonu. Merania prebiehali v rôznych teplotnıch podmienkach, od 10 do 350°C a v úsekoch s rôznym priemernım sklonom, od 3 do 12\%. \\
 
-1. meranie \textbf{Kaèín} (48.1903622, 17.0818403) dåka 2.9km, prevıšenie 98m, priemerné stúpanie 3\%, èas 8:45, teplota 28°C, 232~m~n.m.
-2. meranie -- -- teplota 18°C
-3. meranie \textbf{Pekná cesta} (48.2014473, 17.1273581) dåka 2.0km, prevıšenie 167m, priemerné stúpanie 8\%, èas 9:00, teplota 22°C, 222~m~n.m.
-4. meranie \textbf{Stúpanie na Biely Krí} (48.2285839, 17.1407578), dåka 2.4km, prevıšenie 150m, priemerné stúpanie 6\%, èas 10:25, teplota 18°C, 163~m~n.m.
-5. meranie \textbf{Zámok Náchod} (50.4227016, 16.1647466), dåka 0.5 km, prevıšenie 60 m, priemerné stúpanie 11.0\%, èas 1:51, teplota 12°C, 341~m~n.m.
-6. meranie -- --
-7. meranie -- -- 
+\newpage
+\indent \textbf{Meranie è.1, úsek è.1 - Kaèín} (48.1903622, 17.0818403) dåka 2.9km, prevıšenie 98m, priemerné stúpanie 3\%, èas 8:45, teplota 28°C, nadmorská vıška štartu 232~m~n.m. Graf zmeraného a odhadnutého vıkonu môeme vidie na obrázku è. \ref{fig:meranie1usek1} a následne aj hodnoty v tabu¾ke \ref{table:meranie1usek1}.\\
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.65]{images/strava_comparsion_sample01.png}
+\caption{Porovanie aproximácie vıkonu - úsek è.1 - meranie è.1}
+\label{fig:meranie1usek1}
+\end{figure}
 
+\begin{table}[H]
+\centering
+\caption{Meranie è.1, úsek è.1}
+\label{table:meranie1usek1}
+\begin{tabular}{llrr}
+\hline
+ & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Nameranı vıkon \\ {[}W{]}\end{tabular}} & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Odhad vıkonu\\ algoritmom\\ {[}W{]}\end{tabular}} & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Odhad vıkonu \\ cez Strava\\ {[}W{]}\end{tabular}} \\ \hline
+priemernı vıkon & \multicolumn{1}{r}{\textbf{250.49}} & 225.26 & 286.13 \\ \hline
+\begin{tabular}[c]{@{}l@{}}priemerná hodnota rozdielu \\ nameraného a odhadnutého\\ vıkonu\end{tabular} &  & 40.61 & 253.86 \\ \hline
+smerodajná odchılka rozdielu &  & 35.68 & 203.75 \\ \hline
+\end{tabular}
+\end{table}
+
+\newpage
+\indent \textbf{Meranie è.2, úsek è.1} - Bolo zopakované na úseku \textbf{Kaèín} ale v nasledujúci deò pri teplote 18°C. Graf zmeraného a odhadnutého vıkonu môeme vidie na obrázku è. \ref{fig:meranie2usek1} a následne aj hodnoty v tabu¾ke \ref{table:meranie2usek1}.\\
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.65]{images/strava_comparsion_sample02.png}
 \caption{Porovanie aproximácie vıkonu - úsek è.1 - meranie è.2}
+\label{fig:meranie2usek1}
 \end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Meranie è.2, úsek è.1}
+\label{table:meranie2usek1}
+\begin{tabular}{llrr}
+\hline
+ & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Nameranı vıkon \\ {[}W{]}\end{tabular}} & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Odhad vıkonu\\ algoritmom\\ {[}W{]}\end{tabular}} & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Odhad vıkonu \\ cez Strava\\ {[}W{]}\end{tabular}} \\ \hline
+priemernı vıkon & \multicolumn{1}{r}{\textbf{261.43}} & 235.19 & 255.65 \\ \hline
+\begin{tabular}[c]{@{}l@{}}priemerná hodnota rozdielu \\ nameraného a odhadnutého\\ vıkonu\end{tabular} &  & 39.44 & 241.71 \\ \hline
+smerodajná odchılka rozdielu &  & 26.01 & 180.01 \\ \hline
+\end{tabular}
+\end{table}
+
+\newpage
+\indent \textbf{Meranie è.3, úsek è.2 - Pekná cesta} (48.2014473, 17.1273581) dåka 2.0km, prevıšenie 167m, priemerné stúpanie 8\%, èas 9:00, teplota 22°C, nadmorská vıška štartu 222~m~n.m.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.65]{images/strava_comparsion_sample03.png}
+\caption{Porovanie aproximácie vıkonu - úsek è.2 - meranie è.3}
+\label{fig:meranie3usek2}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Meranie è.3, úsek è.2}
+\label{table:meranie3usek2}
+\begin{tabular}{llrr}
+\hline
+ & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Nameranı vıkon \\ {[}W{]}\end{tabular}} & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Odhad vıkonu\\ algoritmom\\ {[}W{]}\end{tabular}} & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Odhad vıkonu \\ cez Strava\\ {[}W{]}\end{tabular}} \\ \hline
+priemernı vıkon & \multicolumn{1}{r}{\textbf{268.59}} & 242.40 & 275.50 \\ \hline
+\begin{tabular}[c]{@{}l@{}}priemerná hodnota rozdielu \\ nameraného a odhadnutého\\ vıkonu\end{tabular} &  & 34.86 & 113.30 \\ \hline
+smerodajná odchılka rozdielu &  & 31.47 & 96.56 \\ \hline
+\end{tabular}
+\end{table}
+
+\newpage
+\indent \textbf{Meranie è.4, úsek è.3 - Zámok Náchod} (50.4227016, 16.1647466), dåka 0.5 km, prevıšenie 60 m, priemerné stúpanie 11.0\%, èas 1:51, teplota 12°C,  nadmorská vıška štartu 341~m~n.m.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.65]{images/strava_comparsion_sample05.png}
+\caption{Porovanie aproximácie vıkonu - úsek è.3 - meranie è.4}
+\label{fig:meranie4usek3}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Meranie è.4, úsek è.3}
+\label{table:meranie4usek3}
+\begin{tabular}{llr}
+\hline
+ & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Nameranı vıkon \\ {[}W{]}\end{tabular}} & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Odhad vıkonu\\ algoritmom\\ {[}W{]}\end{tabular}} \\ \hline
+priemernı vıkon & \multicolumn{1}{r}{\textbf{461.07}} & 476.49 \\ \hline
+\begin{tabular}[c]{@{}l@{}}priemerná hodnota rozdielu \\ nameraného a odhadnutého\\ vıkonu\end{tabular} &  & 41.49 \\ \hline
+smerodajná odchılka rozdielu &  & 36.05 \\ \hline
+\end{tabular}
+\end{table}
+
+\newpage
+\indent \textbf{Meranie è.5, úsek è.3} - Bolo zopakované na úseku è.3 \textbf{Zámok Náchod} v rovnakı deò
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.65]{images/strava_comparsion_sample06.png}
+\caption{Porovanie aproximácie vıkonu - úsek è.3 - meranie è.5}
+\label{fig:meranie5usek3}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Meranie è.5, úsek è.3}
+\label{table:meranie5usek3}
+\begin{tabular}{llr}
+\hline
+ & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Nameranı vıkon \\ {[}W{]}\end{tabular}} & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Odhad vıkonu\\ algoritmom\\ {[}W{]}\end{tabular}} \\ \hline
+priemernı vıkon & \multicolumn{1}{r}{\textbf{368.93}} & 381.11 \\ \hline
+\begin{tabular}[c]{@{}l@{}}priemerná hodnota rozdielu \\ nameraného a odhadnutého\\ vıkonu\end{tabular} &  & 37.40 \\ \hline
+smerodajná odchılka rozdielu &  & 29.48 \\ \hline
+\end{tabular}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
 \section{Záver}
+Vısledkom našej práce je algoritmus, ktorı aproximuje vıkon cyklistu v k¾úèovıch stúpaniach na trase tréningu na základe hodnôt z nepriamych meraní. Algoritmus pozostáva z troch krokov: detekcia stúpaní, rozdelenie stúpaní na èiastkové segmenty, odhad vıkonu neurónovou sieou.
+Algoritmus sme implementovali do webovej aplikácie, ktorá umoòuje nahranie súboru s údajmi o športovej aktivite a jej vyhodnotenie. Aplikácia podporuje viacero formátov vstupnıch súborov (FIT, GPX, TCX), ktorı bene pouívajú zriadenia pracujúce s protokolom ANT+. \\
+\indent Je zrejmé, e presnı momentovı vıkon športovca z pozície, rıchlosti a zmeny nadmorskej vıšky nikdy presne urèi nebudeme vedie. Podstatou nášho algoritmu, je rozdelenie celého stúpania na menšie èasti s nemennım sklonom, tzv. segmenty. Pre tieto èasti následne vypoèítame vıkon, akoby ho športovec podával celı èas konštantnı. Vytıèenie segmentov v rámci stúpania sme sa snaili navhrnú tak, aby segmenty boli dlhé nato¾ko, aby odchılky v pozícii alebo nadmorskej vıške mali minimálny vplyv na vısledok vıpoètu. Na druhej strane sa však segmenty snaíme udra relatívne krátke, aby sme v nich mohli aspoò èiastoène zachyti náhle, nieko¾ko sekundové zmeny tempa. V skutoènosti teda nepredpovedáme momentovı vıkon ale nieko¾ko sekundovı priemernı vıkon. Myslíme si, e je to jediná monos ako z dostupnıch dát vıkon aproximova a po porovnaní reálnych a vypoèítanıch hodnôt na nieko¾kıch rôznych vzorkách a dosiahnutıch odchılkach sme sa v tomto názore utvrdili. \\
+\indent Aj napriek skutoènosti, e priemernı vıkon odhadnutı našim systémom bol horší ako vıkon odhadnutı portálom Strava, je dôleité poukáza na presnejšie hodnoty momentálnych vıkonov a menšie odchılky od nameranıch hodnôt.\\
+\indent Cie¾om tejto práce nebolo konkurova existújúcim systémom v mnostve funkcionality. Cie¾om práce bolo umoni finanène dostupnı tréning, ktorı je riadenı pod¾a hodnôt vıkonu športovca. \\
+\indent Na záver práce nám u len ostáva skonštatova, e v tomto vıskume je stále priestor na doplnenie. Pri dostatoènom testovaní v rôznych podmienkach, ideálne však vo veternom tuneli by mohol by vytvorenı algoritmus pre aproximáciu vıkonu aj v rovinatıch èastiach tréningu, ktorı nám momentálne chıba. I keï práve stúpania sú k¾úèovım miestom, kde sa rozhodujú preteky, nemálo nároènıch tréningov a pretekov je situovanıch v rovinatom prostredí.
+
 
 \newpage
 \lhead{}%clear left side header, from this point to the end of the document
