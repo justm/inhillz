@@ -44,6 +44,20 @@ class NeuralNet {
     private $inputs = [];
     
     /**
+     * Priemer z dát, podľa vstupného/výstupného atribútu siete
+     * Používa sa pri normalizácii
+     * @var array 
+     */
+    private $mean = [];
+    
+    /**
+     * Smerodajná odchýlka z dát, podľa vstupného/výstupného atribútu siete
+     * Používa sa pri normalizácii
+     * @var array 
+     */
+    private $deviation = [];
+    
+    /**
      * @var array výsledok výpočtu count($outputs) == $numOutputs
      */
     private $outputs = [];
@@ -238,13 +252,15 @@ class NeuralNet {
      */
     public function train($trainData){
         
-        $end = $epoch = 0;
+        $epoch = 0;
         
-        echo '<pre>';
         $log = fopen(__DIR__ . '/mse.log', 'w');
-        
+        $iol = fopen(__DIR__ . '/io.log', 'w');
+        $wgh = fopen(__DIR__ . '/weights.php', 'w');
+
+        $this->preProcessing($trainData); //normalize
+
         while($epoch < Params::$numEpochs){
-            echo '<br/><br/>Epoch ' . $epoch . '<br/>';
             $cmse = 0;
             
             foreach ($trainData as $index => $sample) {
@@ -257,10 +273,13 @@ class NeuralNet {
                 
                 $cmse += $mse = $this->meanSquaredError($outputs, $desired);
 
-                echo $index . ' - ' . $mse . ' ';
-//                echo 'Inputs: '; var_dump($inputs);
-                echo 'Desired: ' . $desired[0] . ' ';
-                echo 'Outputs: ' . $outputs[0] . '<br/>';
+                if($epoch % 50 == 0){
+                    fwrite($iol, 
+                        $index . ' - ' . $mse 
+                        . ' Desired: ' . ($this->mean[0] + ($desired[0] * $this->deviation[0]))
+                        . ' Outputs: ' . ($this->mean[0] + ($outputs[0] * $this->deviation[0])) . PHP_EOL
+                    );
+                }
             }
             
             fwrite($log, $cmse / count($trainData) . PHP_EOL);
@@ -271,7 +290,82 @@ class NeuralNet {
             $epoch++;
         }
         
-//        var_dump($this->getWeights());
+        $this->preProcessing($trainData); //denormalize
+
+        fwrite($wgh, '<?php $weights = ' .  var_export($this->getWeights(), TRUE) . '; ?>');
+    }
+    
+    /**
+     * Spustí normalizáciu vstupov a výstupov pred započatím trénovania     
+     * @param array $trainData
+     */
+    public function preProcessing(&$trainData){
+        
+        foreach (['inputs', 'outputs'] as $side){
+            $this->normalize($trainData, $side);
+        }
+    }
+    
+    /**
+     * Spustí prevod dát na pôvodné hodnoty po skončení trénovania
+     * @param type $trainData
+     */
+    public function postProcessing(&$trainData){
+        $this->denormalize($trainData, 'outputs');
+    }
+    
+    /**
+     * Normalizácia dát
+     * Pre každý vstupný atribút vypočíta priemer hodnôt a smerodajnú odchýlku
+     * Každú hodnotu potom normalizuje, odčítaním priemeru a vydelením smerodajnou odchýlkou
+     * @param array $trainData
+     * @param string $side 'inputs' alebo 'outputs'
+     */
+    private function normalize(&$trainData, $side){
+        
+        $this->deviation = $this->mean = $sum = [];
+        
+        foreach ($trainData as $sample){ // spočita hodnoty vstupov jednotlivo
+            foreach($sample[$side] as $input => $value){
+                $sum[$input] += $value;
+            }
+        }
+        
+        foreach ($sum as $input => $input_sum){ // priemerna hodnota pre každý atribút
+            $this->mean[$input] = $input_sum / count($trainData);
+        }
+        
+        $sum = []; //reset pomocnej 
+        
+        foreach ($trainData as $sample){ // sumuje hodnoty pre varianciu
+            foreach($sample[$side] as $input => $value){
+                $sum[$input] += pow($value - $this->mean[$input],2);
+            }
+        }
+        
+        foreach ($sum as $input => $input_sum){ // smerodajná odchýlka pre každý atribút
+            $this->deviation[$input] = sqrt($input_sum / count($trainData));
+        }
+        
+        foreach ($trainData as $key => $sample){ // normalizuje dáta
+            foreach($sample[$side] as $input => $value){
+                $trainData[$key][$side][$input] = ($value - $this->mean[$input]) / $this->deviation[$input];
+            }
+        }
+    }
+    
+    /**
+     * Denormalizuje dáta späť na pôvodné hodnoty
+     * @param array $trainData
+     * @param string $side
+     */
+    private function denormalize(&$trainData, $side){
+        
+        foreach ($trainData as $key => $sample){ 
+            foreach($sample[$side] as $input => $value){
+                $trainData[$key][$side][$input] = $this->mean[$input] + ($value * $this->deviation[$input]);
+            }
+        }
     }
     
     /**
@@ -412,7 +506,7 @@ class NeuralNet {
      */
     private function tanh($value){
         
-        return (exp(2 * $value) - 1) / (exp(2 * $value) + 1);
+        return tanh($value);
     }
     
     /**

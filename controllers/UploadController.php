@@ -137,6 +137,7 @@ class UploadController extends AbstractWebController{
 
                 $w_model->id_user     = $user_id;
                 $w_model->id_activity = 1;
+                $w_model->id_gear     = 1; //temp, editable by user
                 $w_model->start_time  = $session_data->start_time;
                 $w_model->title       = date("Y/m/d", $w_model->start_time) . ' Activity';
 

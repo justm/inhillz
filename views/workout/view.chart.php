@@ -386,6 +386,14 @@ use orchidphp\Orchid;
             chart_draw(dt);
             map_selection(dt);
             
+            //** Log segment selection
+            var outpt = '[';
+            $(dt).each(function(i, val){
+                outpt += JSON.stringify(val) + ', ';
+            });
+            console.log(outpt + ']');
+            //**
+            
             isDrag     = false;
             isSelected = true;
             isFocused = false;

@@ -47,6 +47,19 @@ class BrainController extends AbstractWebController{
         $f = fopen(PROJECT_PATH . 'components/ann/train.data.php', 'w');
         fwrite($f, '<?php '.PHP_EOL.'$train_data = ' . PHP_EOL . var_export($train_data, TRUE) . PHP_EOL . ';');
     }
+        
+    public function clean(){
+        
+        require PROJECT_PATH . 'components/ann/train.data.php';
+        
+        foreach($train_data as $key => $sample){
+            $train_data[$key]['inputs']['weight'] = $sample['inputs']['bike_weight'] + $sample['inputs']['athlete_weight'];
+            unset($train_data[$key]['inputs']['bike_weight'], $train_data[$key]['inputs']['athlete_weight']);
+        }
+        
+        $f = fopen(PROJECT_PATH . 'components/ann/train.data.new.php', 'w');
+        fwrite($f, '<?php '.PHP_EOL.'$train_data = ' . PHP_EOL . var_export($train_data, TRUE) . PHP_EOL . ';'); 
+    }
     
     /**
      * Trénovanie neurónovej siete
@@ -55,7 +68,7 @@ class BrainController extends AbstractWebController{
         
         ini_set('memory_limit', '2048M');
         
-        require PROJECT_PATH . 'components/ann/train.data.php';
+        require PROJECT_PATH . 'components/ann/train.data.new.php';
         echo '<pre>';
         shuffle($train_data);
         $net = new NeuralNet();

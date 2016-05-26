@@ -12,32 +12,19 @@ namespace inhillz\components\ann;
  */
 class Params {
 
-    public static $numInputs = 6;
+    public static $numInputs = 5;
     public static $numOutputs = 1;
     public static $numHidden = 2;
-    public static $numNeuronsPerLayer = 15;
+    public static $numNeuronsPerLayer = 10;
 
-    public static $activationFunction = ['sigmoid', 'sigmoid', 'linear'];
+    public static $activationFunction = ['tanh', 'tanh', 'linear'];
     
-    //for tweeking the sigmoid function
     public static $sigmoidActivationResponse = 1;
     
-    //bias value
     public static $bias = -1;
     
-    public static $numEpochs = 100;
-    public static $learnRate = 0.001;
+    public static $numEpochs = 1000;
+    public static $learnRate = 0.000001;
     
-    public static $mseTarget = 0.0000002;
-    
-    //---------------------------------------GA parameters
-//    public static $dCrossoverRate = 0.7;
-//    public static $dMutationRate = 0.1;
-//
-//    //the maximum amount the ga may mutate each weight by
-//    public static $dMaxPerturbation = 0.3;
-//
-//    //used for elitism
-//    public static $iNumElite = 4;
-//    public static $iNumCopiesElite = 1;
+    public static $mseTarget = 0.02;
 }

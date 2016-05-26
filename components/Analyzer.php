@@ -72,21 +72,20 @@ class Analyzer {
         
         $this->data_record = ActivityModel::getRecord($workout->id, $workout->data_file);
         $this->workout = $workout;
-        
+                
         if ($workout->id_activity == 1){
-                            
             $this->athlete = UserModel::model()->findById($this->workout->id_user);
             $this->bike    = GearModel::model()->findById($this->workout->id_gear);
 
-            if( empty($this->athlete) || empty($this->bike) ){
+            if(empty($this->athlete) || empty($this->bike)){
                 return $this->data_record;
             }
             
-            if(empty(array_column($this->data_record, 'power')) && empty(array_column($this->data_record, 'est_power'))){
+            //if(Helper::is_array_null(array_column($this->data_record, 'power')) && Helper::is_array_null(array_column($this->data_record, 'est_power'))){ //** production
+            if(Helper::is_array_null(array_column($this->data_record, 'est_power'))){
                 $this->detectClimbs();
-
                 foreach ($this->segments as $seg){
-                    $this->estimatePower($seg);
+                    $this->estimate_power($seg);
                 }
                 ActivityModel::saveRecord($this->data_record, $workout->id);
             }
@@ -266,12 +265,11 @@ class Analyzer {
     public function segmentData(SegmentModel $segment){
         
         return [
-            'grade'          => (float) $segment->grade(),
-            'altitude'       => (float) $this->data_record[$segment->get_index_start()]['altitude'],
-            'temperature'    => (float) $this->data_record[$segment->get_index_start()]['temperature'],
-            'speed'          => (float) ($segment->get_length() / ($this->data_record[$segment->get_index_end()]['timestamp'] - $this->data_record[$segment->get_index_start()]['timestamp'])),
-            'bike_weight'    => (float) $this->bike->weight,
-            'athlete_weight' => (float) $this->athlete->weight,
+            'grade'       => (float) $segment->grade(),
+            'altitude'    => (float) $this->data_record[$segment->get_index_start()]['altitude'],
+            'temperature' => (float) $this->data_record[$segment->get_index_start()]['temperature'],
+            'speed'       => (float) ($segment->get_length() / ($this->data_record[$segment->get_index_end()]['timestamp'] - $this->data_record[$segment->get_index_start()]['timestamp'])),
+            'weight'      => (float) $this->bike->weight + $this->athlete->weight,
         ];
     }
 
@@ -282,4 +280,54 @@ class Analyzer {
     public function getSegments() {
         return $this->segments;
     }
+    
+    // ** 
+    // **
+    // ** Version 1.0 estimation
+    // **
+    // **
+    
+    /**
+     * Odhadne wattový výkon pre vstupný úsek
+     * @param SegmentModel $segment
+     */
+    private function estimate_power( SegmentModel $segment ){
+
+        $P = $this->calculate_power(
+                $segment,
+                $this->bike->crr_coef,
+                $this->bike->cda_coef,
+                $this->athlete->weight + $this->bike->weight
+            );
+
+        for($i = $segment->get_index_start(); $i < $segment->get_index_end(); $i++){
+            $this->data_record[$i]['est_power'] = round($P);
+        }
+    }
+
+    /**
+     * Fyzikálny výpočet výkonu
+     * @param SegmentModel $segment
+     * @param float $crr_coef
+     * @param float $cda_coef
+     * @param float $weight
+     * @return float
+     */
+    private function calculate_power( SegmentModel $segment, $crr_coef, $cda_coef, $weight ){
+
+        $Fg = $weight * $this->constants['g'] * $segment->grade(); // Gravity
+        $Fr = $weight * $this->constants['g'] * cos(asin($segment->grade())) * $crr_coef; // Rolling resistance
+
+        $p1 = $this->constants['p0'] * pow(
+                1-($this->constants['L'] * $this->data_record[$segment->get_index_start()]['altitude'] / $this->constants['T0']),
+                $this->constants['gm_rl']
+            ); // Air pressure
+        $ro = $p1 * $this->constants['M'] / ($this->constants['R'] * ($this->data_record[$segment->get_index_start()]['temperature']+273.15) ); // Air density
+        $v  = $segment->get_length() / ($this->data_record[$segment->get_index_end()]['timestamp'] - $this->data_record[$segment->get_index_start()]['timestamp']);
+
+        $Fd = 0.5 * $ro * $cda_coef * pow($v, 2); //Drag resistance
+
+        return ($Fg+$Fd+$Fr) * $v;
+    }
+
 }

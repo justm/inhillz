@@ -28,7 +28,7 @@ use inhillz\models\WorkoutModel;
     $chart_def .= !empty( array_column($data->workout_data, 'altitude') )?  'altitude:{name:"Altitude",precision:0,unit:"m"},' : '';   
         
     //** Pripraví data
-    for ($i = 0; $i< count($data->workout_data); $i+=4){
+    for ($i = 0; $i< count($data->workout_data); $i++){
         $r = $data->workout_data[$i];
         
         //** map

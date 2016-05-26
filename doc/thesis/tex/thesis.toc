@@ -17,13 +17,13 @@
 \contentsline {subsection}{\numberline {2.3}Valiv\'y odpor}{23}
 \contentsline {subsection}{\numberline {2.4}Podiel jednotliv\'ych zlo\v ziek na celkovom odpore}{24}
 \contentsline {section}{\numberline {3}Opis rie\v senia}{26}
-\contentsline {subsection}{\numberline {3.1}Pou\v zit\'e technol\'ogie a rie\v senia}{26}
-\contentsline {subsection}{\numberline {3.2}Pr\IeC {\'\i }pady pou\v zitia}{28}
-\contentsline {subsection}{\numberline {3.3}Diagram aktiv\IeC {\'\i }t}{30}
-\contentsline {subsection}{\numberline {3.4}Implement\'acia}{31}
-\contentsline {subsubsection}{\numberline {3.4.1}Nahranie a konverzia s\'uboru}{31}
-\contentsline {subsubsection}{\numberline {3.4.2}Detekcia st\'upan\IeC {\'\i }}{33}
-\contentsline {subsubsection}{\numberline {3.4.3}Aproxim\'acia v\'ykonu}{36}
-\contentsline {subsubsection}{\numberline {3.4.4}Zobrazenie tr\'eningu}{37}
-\contentsline {subsection}{\numberline {3.5}Porovnanie v\'ysledkov}{41}
-\contentsline {section}{\numberline {4}Z\'aver}{42}
+\contentsline {subsection}{\numberline {3.1}Strojov\'e u\v cenie}{27}
+\contentsline {subsection}{\numberline {3.2}Pou\v zit\'e technol\'ogie a rie\v senia}{29}
+\contentsline {subsection}{\numberline {3.3}Pr\IeC {\'\i }pady pou\v zitia}{31}
+\contentsline {subsection}{\numberline {3.4}Diagram aktiv\IeC {\'\i }t}{33}
+\contentsline {subsection}{\numberline {3.5}Implement\'acia}{35}
+\contentsline {subsubsection}{\numberline {3.5.1}Nahranie a konverzia s\'uboru}{35}
+\contentsline {subsubsection}{\numberline {3.5.2}Detekcia st\'upan\IeC {\'\i }}{37}
+\contentsline {subsubsection}{\numberline {3.5.3}Zobrazenie tr\'eningu}{40}
+\contentsline {subsection}{\numberline {3.6}Porovnanie v\'ysledkov}{44}
+\contentsline {section}{\numberline {4}Z\'aver}{45}

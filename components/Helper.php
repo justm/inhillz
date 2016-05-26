@@ -118,7 +118,17 @@ class Helper extends \orchidphp\AbstractController{
      */
     public static function array_trim($array){
         
-        return array_filter($array, function ($v){ return !empty($v); });
+        return array_filter($array, function ($v){ return !is_null($v); });
+    }
+    
+    /**
+     * Skontroluje či pole obsahuje nejaké NOT NULL hodnoty a vráti logickú hodnotu
+     * @param $arr
+     * @return boolean
+     */
+    public static function is_array_null($arr){
+        
+        return empty(array_filter($arr, function($v){ return !is_null($v); }));
     }
     
     /**

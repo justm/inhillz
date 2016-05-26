@@ -38,6 +38,7 @@ class ActivityModel {
         else{
             $data_model  = new ActivityParser(PROJECT_PATH . 'uploads/activities_data/' . $data_file);
             $data_stream = $data_model->getRecord();
+            self::saveRecord($data_stream, $id);
             
             return $data_stream;
         }
