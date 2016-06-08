@@ -116,12 +116,14 @@ class Analyzer {
     public function estimatePower(SegmentModel $segment){
         
         $net = new NeuralNet();
-        //$net->putWeights(); //vopred trénované váhy
+        $data = $this->segmentData($segment);
+        $net->wakeup();
+        $net->normalize([['inputs' => $data]], 'inputs');
         
-        $P = $net->compute([
-            
-        ]);
+        $P = $net->compute($data);
         
+        $net->denormalize([['outputs' => $P]], 'outputs');
+
         for($i = $segment->get_index_start(); $i < $segment->get_index_end(); $i++){
             $this->data_record[$i]['est_power'] = round($P);
         }

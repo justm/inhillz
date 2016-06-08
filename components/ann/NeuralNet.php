@@ -292,16 +292,58 @@ class NeuralNet {
         
         $this->preProcessing($trainData); //denormalize
 
-        fwrite($wgh, '<?php $weights = ' .  var_export($this->getWeights(), TRUE) . '; ?>');
+        fwrite($wgh, 
+            '<?php ' . PHP_EOL
+            . '$weights = ' .  var_export($this->getWeights(), TRUE) . '; ' . PHP_EOL 
+            . '$mean = ' . var_export($this->mean, TRUE) . PHP_EOL 
+            . '$deviation = ' . var_export($this->mean, TRUE) . PHP_EOL 
+        );
     }
     
     /**
-     * Spustí normalizáciu vstupov a výstupov pred započatím trénovania     
+     * Inicializuje sieť na natrénované váhy
+     */
+    public function wakeup(){
+        
+        require __DIR__ . '/weights.php';
+        
+        $this->mean = $mean;
+        $this->deviation = $deviation;
+        $this->putWeights($weights);
+    }
+    /**
+     * Spustí normalizáciu vstupov a výstupov pred započatím trénovania 
+     * Pre každý vstupný atribút vypočíta priemer hodnôt a smerodajnú odchýlku    
      * @param array $trainData
      */
-    public function preProcessing(&$trainData){
+    private function preProcessing(&$trainData){
+        
+        $this->deviation = $this->mean = $sum = [];
         
         foreach (['inputs', 'outputs'] as $side){
+            
+            foreach ($trainData as $sample){ // spočita hodnoty vstupov jednotlivo
+                foreach($sample[$side] as $input => $value){
+                    $sum[$input] += $value;
+                }
+            }
+
+            foreach ($sum as $input => $input_sum){ // priemerna hodnota pre každý atribút
+                $this->mean[$input] = $input_sum / count($trainData);
+            }
+
+            $sum = []; //reset pomocnej 
+
+            foreach ($trainData as $sample){ // sumuje hodnoty pre varianciu
+                foreach($sample[$side] as $input => $value){
+                    $sum[$input] += pow($value - $this->mean[$input],2);
+                }
+            }
+
+            foreach ($sum as $input => $input_sum){ // smerodajná odchýlka pre každý atribút
+                $this->deviation[$input] = sqrt($input_sum / count($trainData));
+            }
+        
             $this->normalize($trainData, $side);
         }
     }
@@ -310,43 +352,19 @@ class NeuralNet {
      * Spustí prevod dát na pôvodné hodnoty po skončení trénovania
      * @param type $trainData
      */
-    public function postProcessing(&$trainData){
+    private function postProcessing(&$trainData){
+        
         $this->denormalize($trainData, 'outputs');
     }
     
     /**
      * Normalizácia dát
-     * Pre každý vstupný atribút vypočíta priemer hodnôt a smerodajnú odchýlku
      * Každú hodnotu potom normalizuje, odčítaním priemeru a vydelením smerodajnou odchýlkou
      * @param array $trainData
      * @param string $side 'inputs' alebo 'outputs'
      */
-    private function normalize(&$trainData, $side){
-        
-        $this->deviation = $this->mean = $sum = [];
-        
-        foreach ($trainData as $sample){ // spočita hodnoty vstupov jednotlivo
-            foreach($sample[$side] as $input => $value){
-                $sum[$input] += $value;
-            }
-        }
-        
-        foreach ($sum as $input => $input_sum){ // priemerna hodnota pre každý atribút
-            $this->mean[$input] = $input_sum / count($trainData);
-        }
-        
-        $sum = []; //reset pomocnej 
-        
-        foreach ($trainData as $sample){ // sumuje hodnoty pre varianciu
-            foreach($sample[$side] as $input => $value){
-                $sum[$input] += pow($value - $this->mean[$input],2);
-            }
-        }
-        
-        foreach ($sum as $input => $input_sum){ // smerodajná odchýlka pre každý atribút
-            $this->deviation[$input] = sqrt($input_sum / count($trainData));
-        }
-        
+    public function normalize(&$trainData, $side){
+                
         foreach ($trainData as $key => $sample){ // normalizuje dáta
             foreach($sample[$side] as $input => $value){
                 $trainData[$key][$side][$input] = ($value - $this->mean[$input]) / $this->deviation[$input];
@@ -359,7 +377,7 @@ class NeuralNet {
      * @param array $trainData
      * @param string $side
      */
-    private function denormalize(&$trainData, $side){
+    public function denormalize(&$trainData, $side){
         
         foreach ($trainData as $key => $sample){ 
             foreach($sample[$side] as $input => $value){
