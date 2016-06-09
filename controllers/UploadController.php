@@ -7,6 +7,7 @@ use inhillz\components\ActivityParser;
 use inhillz\models\WorkoutModel;
 use orchidphp\Orchid;
 
+
 /**
  * Súbor obsahuje ovládač UploadController
  * Vytvorenie záznamu o tréningu
