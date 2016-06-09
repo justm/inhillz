@@ -38,7 +38,7 @@ class PageController extends AbstractWebController{
      * Zobrazenie hlavnej stránky, HOMEPAGE
      */
     public function index() {        
-        
+
         $this->render('index');
     }
     

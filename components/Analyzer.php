@@ -297,8 +297,8 @@ class Analyzer {
 
         $P = $this->calculate_power(
                 $segment,
-                $this->bike->crr_coef,
-                $this->bike->cda_coef,
+                0.0044,
+                0.51,
                 $this->athlete->weight + $this->bike->weight
             );
 
